@@ -99,6 +99,18 @@ class FinalQualityControlTests(unittest.TestCase):
     def test_required_opening_passes(self):
         self.assertTrue(brand_compliance_checker(self.render, self.script, self.visual, root=ROOT)["brand_opening_present"])
 
+    def test_brand_motion_standard_passes(self):
+        report = brand_compliance_checker(self.render, self.script, self.visual, root=ROOT)
+        self.assertTrue(report["brand_motion_standard"]["mandatory_checks"]["persistent_corner_logo"])
+        self.assertTrue(report["brand_motion_standard"]["mandatory_checks"]["opening_sting"])
+
+    def test_missing_brand_motion_standard_fails(self):
+        render = copy.deepcopy(self.render)
+        render["render_validation_report"]["brand_motion_report"] = {"checks": {}}
+        report = brand_compliance_checker(render, self.script, self.visual, root=ROOT)
+        self.assertEqual(report["approval_status"], "blocked")
+        self.assertTrue(any("mandatory brand motion missing" in issue for issue in report["issues_found"]))
+
     def test_missing_opening_fails(self):
         script = copy.deepcopy(self.script)
         script["final_voiceover"] = "No opening here. " + script["final_voiceover"]

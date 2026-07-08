@@ -14,6 +14,7 @@ SRC = ROOT / "editorial-brain" / "production" / "rendering-engine" / "shared"
 sys.path.insert(0, str(SRC))
 
 from rendering_engine.core import (
+    BRAND_MOTION_STANDARD,
     CreatomateAdapter,
     FFmpegAdapter,
     RemotionAdapter,
@@ -57,6 +58,11 @@ class RenderingEngineTests(unittest.TestCase):
         payload = CreatomateAdapter().build_render_payload(self.package)
         self.assertEqual(payload["renderer"], "creatomate")
         self.assertGreater(len(payload["modifications"]), 0)
+
+    def test_brand_motion_standard_is_embedded(self):
+        payload = CreatomateAdapter().build_render_payload(self.package)
+        self.assertEqual(payload["brand_motion_standard"]["standard_id"], "IF-BMS-1.0")
+        self.assertTrue(BRAND_MOTION_STANDARD["persistent_logo"]["required"])
 
     def test_creatomate_missing_api_key_does_not_fail_dry_run(self):
         with patch.dict(os.environ, {}, clear=True):
@@ -118,6 +124,11 @@ class RenderingEngineTests(unittest.TestCase):
     def test_job_includes_render_settings(self):
         renderer = get_renderer("placeholder")
         self.assertIn("output_settings", RenderJobBuilder().build(self.package, renderer, renderer.build_render_payload(self.package)))
+
+    def test_job_includes_brand_motion_standard(self):
+        renderer = get_renderer("placeholder")
+        job = RenderJobBuilder().build(self.package, renderer, renderer.build_render_payload(self.package))
+        self.assertEqual(job["brand_motion_standard"]["standard_id"], "IF-BMS-1.0")
 
     def test_job_estimates_duration(self):
         renderer = get_renderer("placeholder")
@@ -206,6 +217,13 @@ class RenderingEngineTests(unittest.TestCase):
         job, status, artifacts = self.validator_inputs()
         self.assertEqual(render_validator(self.package, job, status, artifacts)["approval_status"], "approved")
 
+    def test_brand_motion_missing_fails_validation(self):
+        job, status, artifacts = self.validator_inputs()
+        job["brand_motion_standard"] = {}
+        report = render_validator(self.package, job, status, artifacts)
+        self.assertEqual(report["approval_status"], "blocked")
+        self.assertFalse(report["checks"]["brand_motion_standard"])
+
     def test_missing_video_placeholder_accepted(self):
         job, status, artifacts = self.validator_inputs()
         self.assertTrue(render_validator(self.package, job, status, artifacts, allow_placeholder=True)["checks"]["video_exists_or_placeholder"])
@@ -241,6 +259,10 @@ class RenderingEngineTests(unittest.TestCase):
 
     def test_placeholder_mode_documented(self):
         self.assertTrue(run_all(ROOT)["render_complete_package"]["render_validation_report"]["placeholder_mode"])
+
+    def test_final_package_includes_brand_motion_standard(self):
+        package = run_all(ROOT)["render_complete_package"]
+        self.assertEqual(package["brand_motion_standard"]["standard_id"], "IF-BMS-1.0")
 
     def test_next_component(self):
         self.assertEqual(run_all(ROOT)["render_complete_package"]["next_component"], "Final Quality Control")

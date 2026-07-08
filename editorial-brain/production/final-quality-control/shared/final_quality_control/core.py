@@ -122,11 +122,23 @@ def brand_compliance_checker(render: dict[str, Any], script: dict[str, Any], vis
     if "robotic" in text.lower():
         warnings.append("robotic phrasing warning")
     dashboard_scenes = [s for s in visual["dashboard_plan"]["dashboard_cards"]]
+    brand_motion_report = render.get("render_validation_report", {}).get("brand_motion_report", {})
+    brand_motion_checks = brand_motion_report.get("checks", {})
+    mandatory_brand_checks = {
+        "persistent_corner_logo": brand_motion_checks.get("persistent_corner_logo") is True,
+        "opening_sting": brand_motion_checks.get("opening_sting") is True,
+        "transition_sting": brand_motion_checks.get("transition_sting") is True,
+        "end_card": brand_motion_checks.get("end_card") is True,
+    }
+    missing_brand = [name for name, passed in mandatory_brand_checks.items() if not passed]
+    if missing_brand:
+        issues.extend(f"mandatory brand motion missing: {name}" for name in missing_brand)
     score = _score(issues, warnings, base=94)
     report = {
         "production_id": render["production_id"], "component_id": "IF-FQC04", "component_name": "Brand Compliance Checker", "timestamp": now(),
         "brand_opening_present": opening, "tone_status": "conversational", "central_question_present": not any("central question" in i for i in issues),
         "story_clarity_score": 92, "dashboard_clarity_score": 90 if len(dashboard_scenes) <= 5 else 75, "cta_status": "present" if "tell us below" in text.lower() else "missing",
+        "brand_motion_standard": {"standard_id": render.get("brand_motion_standard", {}).get("standard_id"), "mandatory_checks": mandatory_brand_checks, "source_report": brand_motion_report},
         "forbidden_language_found": forbidden, "issues_found": issues, "warnings": warnings, "score": score, "approval_status": "approved" if not issues else "blocked",
     }
     _write(root, "brand_compliance_report.json", report, "brand-compliance")
