@@ -67,6 +67,14 @@ def main() -> int:
             [ROOT / "editorial-brain" / "editorial-orchestrator" / "src"],
         ),
         run_step(
+            "rendering_engine",
+            [python, "-m", "render_validator.cli", "--renderer-profile", os.environ.get("INSIGHT_FOOTBALL_RENDERER_PROFILE", "placeholder")],
+            [
+                ROOT / "editorial-brain" / "production" / "rendering-engine" / "shared",
+                ROOT / "editorial-brain" / "production" / "rendering-engine" / "render-validator" / "src",
+            ],
+        ),
+        run_step(
             "publish_readiness_gate",
             [python, "-m", "publish_readiness_gate.cli"],
             [
@@ -133,4 +141,3 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-

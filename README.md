@@ -112,9 +112,11 @@ The daily workflow:
 
 - Runs the full regression test suite.
 - Runs the daily dry-run production script.
+- Refreshes the render package before Final QC.
 - Generates the approval package.
 - Keeps platform publishing in dry-run mode.
 - Sends a Telegram approval request when Telegram approval secrets are configured.
+- Attaches `final_video.mp4` when a real MP4 render exists.
 - Uploads approval artifacts to the GitHub Actions run.
 
 Manual execution is also available from GitHub Actions using `workflow_dispatch`.
@@ -180,6 +182,26 @@ FFMPEG_BINARY_PATH=/path/to/ffmpeg
 ```
 
 If FFmpeg is unavailable, real rendering fails clearly and no publishable MP4 is produced.
+
+## Telegram Approval With Video
+
+The Telegram approval sender checks the production artifacts for a real MP4:
+
+```text
+publish-ready-package.final_video_path
+render-complete-package.final_video_path
+render_artifacts.final_video_path
+```
+
+If the path exists and ends in `.mp4`, Telegram receives the video via `sendVideo` plus the full approval context as a follow-up message. Placeholder JSON renders are ignored and the approval falls back to text-only.
+
+Set the daily renderer with:
+
+```text
+INSIGHT_FOOTBALL_RENDERER_PROFILE=ffmpeg
+```
+
+Use `placeholder` only for safe contract runs where no MP4 is expected.
 
 ## Human Approval Gate
 

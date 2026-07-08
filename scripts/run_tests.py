@@ -6,7 +6,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-TEST_ROOTS = ("editorial-brain", "distribution", "analytics")
+TEST_ROOTS = ("editorial-brain", "distribution", "analytics", "scripts")
 
 
 def discover_tests() -> list[str]:
@@ -31,4 +31,3 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-

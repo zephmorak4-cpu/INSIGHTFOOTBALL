@@ -28,6 +28,19 @@ class FinalQualityControlTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.render = load_json(OUT / "render-complete-package.json")
+        cls.render["brand_motion_standard"] = {"standard_id": "IF-BMS-1.0"}
+        cls.render.setdefault("render_validation_report", {})["brand_motion_report"] = {
+            "standard_id": "IF-BMS-1.0",
+            "checks": {
+                "persistent_corner_logo": True,
+                "opening_sting": True,
+                "transition_sting": True,
+                "end_card": True,
+                "thumbnail_logo": True,
+            },
+            "issues": [],
+            "passed": True,
+        }
         cls.script = load_json(OUT / "final-script-package.json")
         cls.voice = load_json(OUT / "voice-production-package.json")
         cls.visual = load_json(OUT / "visual-production-package.json")

@@ -42,9 +42,11 @@ The entrypoint:
 
 1. Runs the full regression suite.
 2. Runs the daily dry-run production flow.
-3. Generates the approval package.
-4. Sends a Telegram approval request when Telegram secrets are configured.
-5. Performs no live publishing.
+3. Refreshes the render package using `INSIGHT_FOOTBALL_RENDERER_PROFILE`.
+4. Generates the approval package.
+5. Sends a Telegram approval request when Telegram secrets are configured.
+6. Attaches the real `final_video.mp4` when one exists.
+7. Performs no live publishing.
 
 ## Required Render Environment Variables
 
@@ -74,6 +76,7 @@ INSIGHT_FOOTBALL_ENV=production
 INSIGHT_FOOTBALL_DRY_RUN=true
 INSIGHT_FOOTBALL_REQUIRE_HUMAN_APPROVAL=true
 INSIGHT_FOOTBALL_RUN_TESTS_ON_RENDER=true
+INSIGHT_FOOTBALL_RENDERER_PROFILE=placeholder
 DAILY_INPUT_PATH=editorial-brain/examples/liverpool-arsenal-daily-input.json
 ```
 
