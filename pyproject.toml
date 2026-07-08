@@ -1,0 +1,11 @@
+[project]
+name = "insight-football"
+version = "0.1.0"
+description = "AI-assisted football media production system."
+requires-python = ">=3.12"
+dependencies = []
+
+[tool.insight-football]
+default_mode = "dry-run"
+test_runner = "scripts/run_tests.py"
+
