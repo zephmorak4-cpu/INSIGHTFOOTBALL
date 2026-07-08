@@ -1,0 +1,73 @@
+name: Approved Production Publish
+
+on:
+  workflow_dispatch:
+    inputs:
+      approval_statement:
+        description: "Type APPROVED to confirm human approval"
+        required: true
+      live_publish:
+        description: "Set to true only after real video, credentials, and review are complete"
+        required: true
+        default: "false"
+
+jobs:
+  approved-publish:
+    name: Human-approved publishing gate
+    runs-on: ubuntu-latest
+    env:
+      INSIGHT_FOOTBALL_REQUIRE_HUMAN_APPROVAL: "true"
+      YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
+      YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
+      YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
+      YOUTUBE_CHANNEL_ID: ${{ secrets.YOUTUBE_CHANNEL_ID }}
+      FACEBOOK_PAGE_ID: ${{ secrets.FACEBOOK_PAGE_ID }}
+      FACEBOOK_PAGE_ACCESS_TOKEN: ${{ secrets.FACEBOOK_PAGE_ACCESS_TOKEN }}
+      TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+      TELEGRAM_CHANNEL_ID: ${{ secrets.TELEGRAM_CHANNEL_ID }}
+
+    steps:
+      - name: Validate approval statement
+        run: |
+          if [ "${{ github.event.inputs.approval_statement }}" != "APPROVED" ]; then
+            echo "Publishing blocked: approval_statement must be APPROVED."
+            exit 1
+          fi
+
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements.txt
+
+      - name: Run publishing workflow
+        env:
+          PYTHONPATH: distribution/publishing-engine/shared:distribution/publishing-engine/publishing-report-generator/src
+        run: |
+          if [ "${{ github.event.inputs.live_publish }}" = "true" ]; then
+            python -m publishing_report_generator.cli --live
+          else
+            python -m publishing_report_generator.cli
+          fi
+
+      - name: Upload publishing artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: insight-football-publishing-result
+          path: |
+            editorial-brain/output/publishing_metadata.json
+            editorial-brain/output/youtube_publish_payload.json
+            editorial-brain/output/facebook_publish_payload.json
+            editorial-brain/output/telegram_publish_payload.json
+            editorial-brain/output/publishing_validation_report.json
+            editorial-brain/output/publishing_status.json
+            editorial-brain/output/publishing_report.json
+            editorial-brain/output/published-package.json
+          if-no-files-found: warn

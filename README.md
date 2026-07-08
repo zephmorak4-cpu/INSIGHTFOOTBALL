@@ -93,6 +93,63 @@ Live publishing should only be enabled after:
 - Platform credentials are configured as secrets.
 - Human approval has been recorded.
 
+## Daily Production Run
+
+GitHub Actions contains a scheduled dry-run workflow:
+
+```text
+.github/workflows/daily-production.yml
+```
+
+It runs every day at:
+
+```text
+10:00 Africa/Lagos
+09:00 UTC
+```
+
+The daily workflow:
+
+- Runs the full regression test suite.
+- Runs the daily dry-run production script.
+- Generates the approval package.
+- Keeps platform publishing in dry-run mode.
+- Sends a Telegram approval request when Telegram approval secrets are configured.
+- Uploads approval artifacts to the GitHub Actions run.
+
+Manual execution is also available from GitHub Actions using `workflow_dispatch`.
+
+Required approval secrets:
+
+```text
+TELEGRAM_BOT_TOKEN
+TELEGRAM_APPROVAL_CHAT_ID
+```
+
+Use `TELEGRAM_APPROVAL_CHAT_ID` for the private approval chat, group, or channel that receives review requests. Keep it separate from `TELEGRAM_CHANNEL_ID`, which is reserved for the eventual public publishing destination.
+
+## Human Approval Gate
+
+Production publishing is separated from daily package generation.
+
+```text
+.github/workflows/approved-production-publish.yml
+```
+
+This workflow only runs manually. It requires:
+
+```text
+approval_statement=APPROVED
+```
+
+By default, this workflow still runs publishing in dry-run mode. Set `live_publish=true` only after:
+
+- The approval package has been reviewed.
+- The render is a real platform-ready video.
+- All required secrets are configured.
+- The publish-ready package has no blocking issues.
+- Human approval has been explicitly given.
+
 ## Analytics Run
 
 ```powershell
@@ -121,4 +178,3 @@ Never commit real API keys, bot tokens, OAuth credentials, channel IDs, or acces
 - Tokens pasted into chat or committed anywhere should be considered exposed.
 - Rotate exposed credentials before production use.
 - Keep live publishing disabled until real media, verified data, and review gates pass.
-
