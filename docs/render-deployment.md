@@ -58,6 +58,7 @@ TELEGRAM_APPROVAL_CHAT_ID
 Optional but recommended:
 
 ```text
+FFMPEG_BINARY_PATH
 OPENAI_API_KEY
 APP_FOOTBALL_API_KEY
 NEWS_API_KEY
@@ -75,6 +76,8 @@ INSIGHT_FOOTBALL_REQUIRE_HUMAN_APPROVAL=true
 INSIGHT_FOOTBALL_RUN_TESTS_ON_RENDER=true
 DAILY_INPUT_PATH=editorial-brain/examples/liverpool-arsenal-daily-input.json
 ```
+
+`FFMPEG_BINARY_PATH` is required when `ffmpeg` is not available on the Render PATH. The real MP4 renderer fails loudly instead of falling back to a placeholder video.
 
 ## GitHub Secrets For Render Deploys
 
@@ -107,4 +110,3 @@ approval_statement=APPROVED
 ```
 
 Do not set `live_publish=true` until the render output is a real `.mp4` and all review warnings are cleared.
-

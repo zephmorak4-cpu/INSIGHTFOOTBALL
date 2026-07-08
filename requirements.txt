@@ -1,3 +1,1 @@
-# The current deterministic INSIGHT FOOTBALL test suite uses only the Python standard library.
-# Add pinned third-party dependencies here when live providers or deploy adapters require them.
-
+Pillow>=10,<13

@@ -93,8 +93,8 @@ class RenderingEngineTests(unittest.TestCase):
 
     def test_ffmpeg_creates_placeholder_when_incomplete(self):
         with tempfile.TemporaryDirectory() as temp:
-            artifacts = FFmpegAdapter().download_artifacts("job", Path(temp))
-            self.assertTrue(Path(artifacts["final_video_path"]).exists())
+            with self.assertRaises(RuntimeError):
+                FFmpegAdapter().download_artifacts("job", Path(temp))
 
     def test_ffmpeg_failure_when_unavailable(self):
         with patch("shutil.which", return_value=None):
@@ -103,9 +103,24 @@ class RenderingEngineTests(unittest.TestCase):
             self.assertFalse(result["success"])
 
     def test_ffmpeg_output_path(self):
+        payload = FFmpegAdapter().build_render_payload(self.package)
+        self.assertEqual(payload["output_format"], "mp4")
+        self.assertGreater(len(payload["segments"]), 0)
+        self.assertEqual(payload["segments"][0]["kind"], "opening_sting")
+
+    def test_ffmpeg_real_artifact_contract(self):
         with tempfile.TemporaryDirectory() as temp:
-            artifacts = FFmpegAdapter().download_artifacts("job", Path(temp))
-            self.assertIn("final_video", artifacts["final_video_path"])
+            renderer = FFmpegAdapter()
+            payload = renderer.build_render_payload(self.package)
+
+            def fake_encode(ffmpeg_path, concat_path, video_path):
+                Path(video_path).write_bytes(b"fake mp4")
+
+            with patch("rendering_engine.core._ffmpeg_path", return_value="ffmpeg"), patch("rendering_engine.core._run_ffmpeg_encode", side_effect=fake_encode):
+                artifacts = renderer.download_artifacts("job", Path(temp))
+            self.assertTrue(Path(artifacts["final_video_path"]).exists())
+            self.assertTrue(Path(artifacts["thumbnail_path"]).exists())
+            self.assertFalse(artifacts["placeholder"])
 
     def test_ffmpeg_does_not_silently_fail(self):
         with patch("shutil.which", return_value=None):

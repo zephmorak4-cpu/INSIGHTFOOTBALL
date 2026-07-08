@@ -18,6 +18,8 @@ services:
         value: "true"
       - key: DAILY_INPUT_PATH
         value: editorial-brain/examples/liverpool-arsenal-daily-input.json
+      - key: FFMPEG_BINARY_PATH
+        sync: false
       - key: OPENAI_API_KEY
         sync: false
       - key: APP_FOOTBALL_API_KEY
@@ -36,4 +38,3 @@ services:
         sync: false
       - key: CREATOMATE_TEMPLATE_ID
         sync: false
-

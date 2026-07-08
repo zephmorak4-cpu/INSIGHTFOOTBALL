@@ -157,6 +157,30 @@ Render setup details are in:
 docs/render-deployment.md
 ```
 
+## Real MP4 Rendering
+
+The FFmpeg renderer can generate a real 9:16 `final_video.mp4` from:
+
+```text
+editorial-brain/output/renderer-ready-package.json
+```
+
+It applies the mandatory INSIGHT FOOTBALL brand standard:
+
+- 1.5-second opening sting.
+- Persistent corner logo.
+- 0.3-second section transition stings.
+- Branded panels and lower thirds.
+- 4-second end card.
+
+The renderer requires `ffmpeg` on PATH or:
+
+```text
+FFMPEG_BINARY_PATH=/path/to/ffmpeg
+```
+
+If FFmpeg is unavailable, real rendering fails clearly and no publishable MP4 is produced.
+
 ## Human Approval Gate
 
 Production publishing is separated from daily package generation.

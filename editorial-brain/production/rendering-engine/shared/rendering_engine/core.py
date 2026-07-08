@@ -3,9 +3,13 @@ from __future__ import annotations
 import hashlib
 import os
 import shutil
+import subprocess
+import textwrap
 from abc import ABC, abstractmethod
 from pathlib import Path
 from typing import Any
+
+from PIL import Image, ImageDraw, ImageFont
 
 from .io import StructuredLogger, load_json, now, write_json
 
@@ -181,23 +185,41 @@ class FFmpegAdapter(PlaceholderAdapter):
     renderer_profile = "ffmpeg"
 
     def validate_package(self, package: dict[str, Any], *, dry_run: bool = True) -> dict[str, Any]:
-        ffmpeg_path = shutil.which("ffmpeg")
-        return {"success": bool(ffmpeg_path), "ffmpeg_path": ffmpeg_path, "error": None if ffmpeg_path else "FFmpeg executable not found on PATH.", "dry_run": dry_run}
+        ffmpeg_path = _ffmpeg_path()
+        return {"success": bool(ffmpeg_path), "ffmpeg_path": ffmpeg_path, "error": None if ffmpeg_path else "FFmpeg executable not found. Set FFMPEG_BINARY_PATH or install ffmpeg on PATH.", "dry_run": dry_run}
 
     def build_render_payload(self, package: dict[str, Any]) -> dict[str, Any]:
-        payload = {"renderer": self.renderer_profile, "ffmpeg_path": shutil.which("ffmpeg"), "output_resolution": "1080x1920", "fps": 30, "brand_motion_standard": BRAND_MOTION_STANDARD, "scene_text": [scene["caption_text"] for scene in package["timeline"]["scenes"]], "fallback_render_enabled": True}
+        segments = _build_branded_segments(package)
+        payload = {
+            "renderer": self.renderer_profile,
+            "ffmpeg_path": _ffmpeg_path(),
+            "output_resolution": "1080x1920",
+            "fps": 30,
+            "output_format": "mp4",
+            "brand_motion_standard": BRAND_MOTION_STANDARD,
+            "segments": segments,
+            "scene_text": [scene["caption_text"] for scene in package["timeline"]["scenes"]],
+            "fallback_render_enabled": False,
+        }
+        self._last_package = package
+        self._last_payload = payload
         write_json(OUTPUT / "ffmpeg_render_payload.json", payload)
         return payload
 
     def submit_render(self, payload: dict[str, Any], *, dry_run: bool = True) -> dict[str, Any]:
         if not payload.get("ffmpeg_path"):
-            return {"success": False, "status": "failed", "error": "FFmpeg executable not found on PATH; structured placeholder required.", "dry_run": dry_run}
+            return {"success": False, "status": "failed", "error": "FFmpeg executable not found. Real MP4 rendering requires ffmpeg.", "dry_run": dry_run}
         return {"success": True, "status": "completed", "external_job_id": "ffmpeg-local", "dry_run": dry_run}
 
     def download_artifacts(self, job_id: str, artifact_root: Path) -> dict[str, Any]:
-        if not shutil.which("ffmpeg"):
-            return _write_placeholder_artifacts(artifact_root, self.renderer_profile, "FFmpeg unavailable; structured placeholder artifact created instead of MP4.")
-        return _write_placeholder_artifacts(artifact_root, self.renderer_profile, "FFmpeg rendering is intentionally minimal in Sprint 10 placeholder mode.")
+        payload = getattr(self, "_last_payload", None)
+        package = getattr(self, "_last_package", None)
+        ffmpeg_path = _ffmpeg_path()
+        if not payload or not package:
+            raise RuntimeError("FFmpeg render payload missing; build_render_payload must run before download_artifacts.")
+        if not ffmpeg_path:
+            raise RuntimeError("FFmpeg executable not found. Cannot generate final_video.mp4.")
+        return _render_ffmpeg_artifacts(package, payload, artifact_root, ffmpeg_path)
 
 
 def get_renderer(profile: str) -> RendererInterface:
@@ -304,6 +326,249 @@ def _write_placeholder_artifacts(root: Path, renderer: str, reason: str) -> dict
     write_json(video, {"artifact_type": "structured_video_placeholder", "renderer": renderer, "reason": reason, "created_at": now(), "expected_final_name": "final_video.mp4"})
     write_json(thumb, {"artifact_type": "structured_thumbnail_placeholder", "renderer": renderer, "reason": reason, "created_at": now(), "expected_final_name": "thumbnail_frame.png"})
     return {"final_video_path": str(video), "thumbnail_path": str(thumb), "placeholder": True, "reason": reason}
+
+
+def _ffmpeg_path() -> str | None:
+    configured = os.environ.get("FFMPEG_BINARY_PATH")
+    if configured and Path(configured).exists():
+        return configured
+    return shutil.which("ffmpeg")
+
+
+def _build_branded_segments(package: dict[str, Any]) -> list[dict[str, Any]]:
+    transition_points = {"hook_to_analysis", "analysis_to_tactical_view", "tactical_view_to_wild_card", "wild_card_to_conclusion"}
+    scenes = [scene for scene in package["timeline"]["scenes"] if scene.get("scene_type") not in {"Brand Opening", "End Card", "Outro"}]
+    if not scenes:
+        scenes = package["timeline"]["scenes"]
+    transition_count = min(4, max(0, len(scenes) - 1))
+    reserved = BRAND_MOTION_STANDARD["opening_sting"]["duration_seconds"] + BRAND_MOTION_STANDARD["end_card"]["duration_seconds"] + transition_count * BRAND_MOTION_STANDARD["transition_sting"]["duration_seconds"]
+    content_budget = max(1.0, float(package["timeline"]["total_duration_seconds"]) - reserved)
+    source_total = sum(float(scene.get("duration_seconds", 1.0)) for scene in scenes) or 1.0
+    segments: list[dict[str, Any]] = [{"kind": "opening_sting", "duration_seconds": 1.5, "title": "INSIGHT FOOTBALL", "subtitle": BRAND_MOTION_STANDARD["end_card"]["tagline"]}]
+    for index, scene in enumerate(scenes):
+        scaled = round(content_budget * float(scene.get("duration_seconds", 1.0)) / source_total, 2)
+        segments.append({
+            "kind": "content_scene",
+            "duration_seconds": max(1.0, scaled),
+            "scene_id": scene.get("scene_id"),
+            "scene_type": scene.get("scene_type", "Analysis"),
+            "title": scene.get("scene_type", "INSIGHT"),
+            "body": scene.get("caption_text") or scene.get("voiceover_text", ""),
+            "voiceover_text": scene.get("voiceover_text", ""),
+            "brand_panel": True,
+            "lower_third": True,
+            "persistent_logo": True,
+        })
+        if index < transition_count:
+            transition_name = list(transition_points)[index] if index < len(transition_points) else "section_transition"
+            segments.append({"kind": "transition_sting", "duration_seconds": 0.3, "transition": transition_name, "persistent_logo": True})
+    segments.append({"kind": "end_card", "duration_seconds": 4.0, "title": "INSIGHT FOOTBALL", "tagline": BRAND_MOTION_STANDARD["end_card"]["tagline"], "cta": BRAND_MOTION_STANDARD["end_card"]["cta"]})
+    return segments
+
+
+def _render_ffmpeg_artifacts(package: dict[str, Any], payload: dict[str, Any], artifact_root: Path, ffmpeg_path: str) -> dict[str, Any]:
+    artifact_root.mkdir(parents=True, exist_ok=True)
+    frames_dir = artifact_root / "frames"
+    frames_dir.mkdir(exist_ok=True)
+    frame_entries = []
+    for index, segment in enumerate(payload["segments"]):
+        frame_path = frames_dir / f"segment_{index:03d}_{segment['kind']}.png"
+        _draw_segment_frame(package, segment, frame_path)
+        frame_entries.append({"path": frame_path, "duration": float(segment["duration_seconds"])})
+    video_path = artifact_root / "final_video.mp4"
+    thumbnail_path = artifact_root / "thumbnail_frame.png"
+    concat_path = frames_dir / "concat.txt"
+    _write_concat_file(concat_path, frame_entries)
+    _run_ffmpeg_encode(ffmpeg_path, concat_path, video_path)
+    shutil.copyfile(frame_entries[1]["path"] if len(frame_entries) > 2 else frame_entries[0]["path"], thumbnail_path)
+    manifest = {
+        "artifact_type": "real_mp4_render",
+        "renderer": "ffmpeg",
+        "created_at": now(),
+        "production_id": package["production_id"],
+        "duration_seconds": round(sum(entry["duration"] for entry in frame_entries), 2),
+        "resolution": "1080x1920",
+        "fps": payload["fps"],
+        "brand_motion_standard": payload["brand_motion_standard"]["standard_id"],
+        "segments": payload["segments"],
+    }
+    write_json(artifact_root / "render_manifest.json", manifest)
+    return {"final_video_path": str(video_path), "thumbnail_path": str(thumbnail_path), "manifest_path": str(artifact_root / "render_manifest.json"), "placeholder": False, "reason": "FFmpeg generated a real MP4 render."}
+
+
+def _draw_segment_frame(package: dict[str, Any], segment: dict[str, Any], path: Path) -> None:
+    width, height = 1080, 1920
+    colors = BRAND_MOTION_STANDARD["colors"]
+    image = Image.new("RGB", (width, height), colors["deep_navy"])
+    draw = ImageDraw.Draw(image)
+    _draw_stadium_background(draw, width, height, segment["kind"])
+    if segment["kind"] == "opening_sting":
+        _draw_center_logo(draw, width, height, scale=1.55)
+        _draw_text_center(draw, segment["subtitle"], y=1200, size=42, fill=colors["clean_white"], max_width=880)
+        _draw_red_streak(draw, width, height, y=1040)
+    elif segment["kind"] == "transition_sting":
+        _draw_transition(draw, width, height)
+    elif segment["kind"] == "end_card":
+        _draw_center_logo(draw, width, height, scale=1.25)
+        _draw_text_center(draw, "KNOW MORE.\nSEE MORE.\nWIN MORE.", y=1080, size=58, fill=colors["clean_white"], max_width=880)
+        _draw_text_center(draw, segment["cta"], y=1360, size=36, fill=colors["clean_white"], max_width=900)
+        _draw_social_icons(draw, width, height)
+    else:
+        _draw_corner_logo(draw)
+        _draw_brand_panel(draw, segment, package)
+        _draw_lower_third(draw, segment)
+    image.save(path)
+
+
+def _font(size: int) -> ImageFont.FreeTypeFont | ImageFont.ImageFont:
+    candidates = [
+        "C:/Windows/Fonts/arialbd.ttf",
+        "C:/Windows/Fonts/arial.ttf",
+        "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",
+        "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
+    ]
+    for candidate in candidates:
+        if Path(candidate).exists():
+            return ImageFont.truetype(candidate, size=size)
+    return ImageFont.load_default()
+
+
+def _draw_stadium_background(draw: ImageDraw.ImageDraw, width: int, height: int, kind: str) -> None:
+    colors = BRAND_MOTION_STANDARD["colors"]
+    for y in range(0, height, 8):
+        ratio = y / height
+        blue = int(43 + 45 * (1 - ratio))
+        draw.rectangle([0, y, width, y + 8], fill=(3, 12, blue))
+    for x in range(-80, width + 120, 180):
+        draw.polygon([(x, 0), (x + 90, 0), (width // 2, 760)], fill=(25, 42, 70))
+    draw.rectangle([0, 1380, width, height], fill=(6, 12, 22))
+    for x in range(90, width, 150):
+        draw.ellipse([x - 12, 120, x + 12, 144], fill=(245, 245, 245))
+        draw.line([x, 145, width // 2, 760], fill=(45, 60, 88), width=2)
+    if kind in {"opening_sting", "end_card"}:
+        for x in range(0, width, 80):
+            draw.point((x + 20, 540 + (x % 9) * 14), fill=colors["clean_white"])
+
+
+def _draw_center_logo(draw: ImageDraw.ImageDraw, width: int, height: int, *, scale: float) -> None:
+    colors = BRAND_MOTION_STANDARD["colors"]
+    font_if = _font(int(180 * scale))
+    font_name = _font(int(76 * scale))
+    x = width // 2 - int(250 * scale)
+    y = height // 2 - int(190 * scale)
+    draw.text((x, y), "I", font=font_if, fill=colors["clean_white"])
+    draw.text((x + int(112 * scale), y), "F", font=font_if, fill=colors["espn_red"])
+    draw.ellipse([x + int(8 * scale), y + int(160 * scale), x + int(92 * scale), y + int(244 * scale)], outline=colors["clean_white"], width=max(4, int(5 * scale)))
+    draw.arc([x - int(18 * scale), y + int(142 * scale), x + int(185 * scale), y + int(280 * scale)], 15, 165, fill=colors["espn_red"], width=max(5, int(8 * scale)))
+    draw.text((x + int(270 * scale), y + int(70 * scale)), "INSIGHT", font=font_name, fill=colors["clean_white"])
+    draw.text((x + int(270 * scale), y + int(150 * scale)), "FOOTBALL", font=font_name, fill=colors["espn_red"])
+
+
+def _draw_corner_logo(draw: ImageDraw.ImageDraw) -> None:
+    colors = BRAND_MOTION_STANDARD["colors"]
+    draw.rounded_rectangle([48, 48, 188, 138], radius=16, fill=(7, 14, 28), outline=(245, 245, 245), width=2)
+    draw.text((65, 54), "I", font=_font(64), fill=colors["clean_white"])
+    draw.text((105, 54), "F", font=_font(64), fill=colors["espn_red"])
+    draw.ellipse([69, 104, 99, 134], outline=colors["clean_white"], width=3)
+
+
+def _draw_brand_panel(draw: ImageDraw.ImageDraw, segment: dict[str, Any], package: dict[str, Any]) -> None:
+    colors = BRAND_MOTION_STANDARD["colors"]
+    draw.rounded_rectangle([72, 280, 1008, 1330], radius=28, fill=(8, 19, 43), outline=(28, 52, 82), width=4)
+    draw.rectangle([72, 280, 94, 1330], fill=colors["espn_red"])
+    scene_type = str(segment.get("scene_type", "ANALYSIS")).upper()
+    match = package.get("match", {})
+    title = f"{match.get('home_team', 'HOME')} vs {match.get('away_team', 'AWAY')}"
+    draw.text((124, 330), scene_type, font=_font(48), fill=colors["espn_red"])
+    draw.text((124, 405), title, font=_font(58), fill=colors["clean_white"])
+    _draw_text_box(draw, segment.get("body", ""), x=124, y=540, max_width=820, line_height=72, size=58)
+    draw.line([124, 1160, 956, 1160], fill=colors["espn_red"], width=5)
+    draw.text((124, 1200), "DATA-DRIVEN FOOTBALL INTELLIGENCE", font=_font(34), fill=(210, 220, 235))
+
+
+def _draw_lower_third(draw: ImageDraw.ImageDraw, segment: dict[str, Any]) -> None:
+    colors = BRAND_MOTION_STANDARD["colors"]
+    draw.rounded_rectangle([72, 1490, 1008, 1638], radius=20, fill=(7, 14, 28), outline=(34, 58, 86), width=3)
+    draw.rectangle([72, 1490, 96, 1638], fill=colors["espn_red"])
+    draw.text((124, 1515), "INSIGHT FOOTBALL", font=_font(32), fill=colors["clean_white"])
+    draw.text((124, 1562), str(segment.get("scene_type", "Analysis")), font=_font(44), fill=colors["espn_red"])
+
+
+def _draw_transition(draw: ImageDraw.ImageDraw, width: int, height: int) -> None:
+    colors = BRAND_MOTION_STANDARD["colors"]
+    draw.polygon([(-120, 0), (340, 0), (width + 120, height), (650, height)], fill=colors["espn_red"])
+    draw.polygon([(260, 0), (450, 0), (width + 120, height), (930, height)], fill=(245, 245, 245))
+    _draw_center_logo(draw, width, height, scale=0.8)
+
+
+def _draw_red_streak(draw: ImageDraw.ImageDraw, width: int, height: int, *, y: int) -> None:
+    colors = BRAND_MOTION_STANDARD["colors"]
+    draw.polygon([(0, y), (width, y - 95), (width, y - 30), (0, y + 65)], fill=colors["espn_red"])
+
+
+def _draw_social_icons(draw: ImageDraw.ImageDraw, width: int, height: int) -> None:
+    colors = BRAND_MOTION_STANDARD["colors"]
+    y = 1530
+    draw.rounded_rectangle([width // 2 - 160, y, width // 2 - 40, y + 92], radius=20, fill=colors["espn_red"])
+    draw.polygon([(width // 2 - 112, y + 24), (width // 2 - 112, y + 68), (width // 2 - 72, y + 46)], fill=colors["clean_white"])
+    draw.ellipse([width // 2 + 40, y, width // 2 + 160, y + 92], fill=(0, 136, 204))
+    draw.polygon([(width // 2 + 70, y + 48), (width // 2 + 138, y + 20), (width // 2 + 115, y + 72)], fill=colors["clean_white"])
+
+
+def _draw_text_center(draw: ImageDraw.ImageDraw, text: str, *, y: int, size: int, fill: str, max_width: int) -> None:
+    lines = []
+    for raw_line in text.splitlines():
+        lines.extend(textwrap.wrap(raw_line, width=max(8, max_width // max(size // 2, 1))) or [""])
+    font = _font(size)
+    total_height = len(lines) * int(size * 1.25)
+    current_y = y - total_height // 2
+    for line in lines:
+        bbox = draw.textbbox((0, 0), line, font=font)
+        draw.text(((1080 - (bbox[2] - bbox[0])) // 2, current_y), line, font=font, fill=fill)
+        current_y += int(size * 1.25)
+
+
+def _draw_text_box(draw: ImageDraw.ImageDraw, text: str, *, x: int, y: int, max_width: int, line_height: int, size: int) -> None:
+    colors = BRAND_MOTION_STANDARD["colors"]
+    font = _font(size)
+    lines = textwrap.wrap(str(text), width=max(10, max_width // max(size // 2, 1)))[:7]
+    for index, line in enumerate(lines):
+        draw.text((x, y + index * line_height), line, font=font, fill=colors["clean_white"])
+
+
+def _write_concat_file(path: Path, frame_entries: list[dict[str, Any]]) -> None:
+    lines = []
+    for entry in frame_entries:
+        frame = str(entry["path"]).replace("\\", "/").replace("'", "'\\''")
+        lines.append(f"file '{frame}'")
+        lines.append(f"duration {entry['duration']:.2f}")
+    if frame_entries:
+        frame = str(frame_entries[-1]["path"]).replace("\\", "/").replace("'", "'\\''")
+        lines.append(f"file '{frame}'")
+    path.write_text("\n".join(lines) + "\n", encoding="utf-8")
+
+
+def _run_ffmpeg_encode(ffmpeg_path: str, concat_path: Path, video_path: Path) -> None:
+    command = [
+        ffmpeg_path,
+        "-y",
+        "-f",
+        "concat",
+        "-safe",
+        "0",
+        "-i",
+        str(concat_path),
+        "-vf",
+        "scale=1080:1920,format=yuv420p",
+        "-r",
+        "30",
+        "-movflags",
+        "+faststart",
+        str(video_path),
+    ]
+    result = subprocess.run(command, text=True, capture_output=True)
+    if result.returncode != 0:
+        raise RuntimeError(f"FFmpeg render failed: {result.stderr[-1000:]}")
 
 
 def _brand_motion_checks(job: dict[str, Any]) -> dict[str, Any]:
