@@ -1,0 +1,190 @@
+{
+  "production_id": "if-2026-07-06-liverpool-arsenal",
+  "component_id": "IF-TL04",
+  "component_name": "Caption Synchronizer",
+  "timestamp": "2026-07-08T11:37:42.273920+00:00",
+  "captions": [
+    {
+      "caption_id": "caption-01",
+      "scene_id": "scene-01",
+      "text": "Before the first whistle here's the insight",
+      "start_time_seconds": 0.0,
+      "end_time_seconds": 2.91,
+      "position": "lower_safe",
+      "max_line_count": 2,
+      "max_words_per_line": 7,
+      "highlight_words": [],
+      "style_ref": "lower_safe_two_line",
+      "safe_area_status": "compliant",
+      "readability_score": 95
+    },
+    {
+      "caption_id": "caption-02",
+      "scene_id": "scene-02",
+      "text": "Sample data Liverpool have started quickly in\nrecent home matches while Arsenal",
+      "start_time_seconds": 2.91,
+      "end_time_seconds": 10.48,
+      "position": "lower_safe",
+      "max_line_count": 2,
+      "max_words_per_line": 7,
+      "highlight_words": [
+        "Liverpool",
+        "Arsenal"
+      ],
+      "style_ref": "lower_safe_two_line",
+      "safe_area_status": "compliant",
+      "readability_score": 95
+    },
+    {
+      "caption_id": "caption-03",
+      "scene_id": "scene-03",
+      "text": "So the real question is Can Arsenal\nsurvive Liverpool's fast start",
+      "start_time_seconds": 10.48,
+      "end_time_seconds": 15.06,
+      "position": "lower_safe",
+      "max_line_count": 2,
+      "max_words_per_line": 7,
+      "highlight_words": [
+        "Liverpool",
+        "Arsenal"
+      ],
+      "style_ref": "lower_safe_two_line",
+      "safe_area_status": "compliant",
+      "readability_score": 95
+    },
+    {
+      "caption_id": "caption-04",
+      "scene_id": "scene-04",
+      "text": "Liverpool usually start aggressively pressing high and\nforcing rushed decisions",
+      "start_time_seconds": 15.06,
+      "end_time_seconds": 19.22,
+      "position": "lower_safe",
+      "max_line_count": 2,
+      "max_words_per_line": 7,
+      "highlight_words": [
+        "Liverpool",
+        "press"
+      ],
+      "style_ref": "lower_safe_two_line",
+      "safe_area_status": "compliant",
+      "readability_score": 95
+    },
+    {
+      "caption_id": "caption-05",
+      "scene_id": "scene-05",
+      "text": "Arsenal have enough quality to play through\nit but a messy opening",
+      "start_time_seconds": 19.22,
+      "end_time_seconds": 26.71,
+      "position": "lower_safe",
+      "max_line_count": 2,
+      "max_words_per_line": 7,
+      "highlight_words": [
+        "Arsenal"
+      ],
+      "style_ref": "lower_safe_two_line",
+      "safe_area_status": "compliant",
+      "readability_score": 95
+    },
+    {
+      "caption_id": "caption-06",
+      "scene_id": "scene-06",
+      "text": "The evidence is simple Liverpool usually make\nopponents uncomfortable early at home",
+      "start_time_seconds": 26.71,
+      "end_time_seconds": 31.7,
+      "position": "lower_safe",
+      "max_line_count": 2,
+      "max_words_per_line": 7,
+      "highlight_words": [
+        "Liverpool"
+      ],
+      "style_ref": "lower_safe_two_line",
+      "safe_area_status": "compliant",
+      "readability_score": 95
+    },
+    {
+      "caption_id": "caption-07",
+      "scene_id": "scene-07",
+      "text": "The balance matters too Arsenal may be\nbetter prepared for pressure than",
+      "start_time_seconds": 31.7,
+      "end_time_seconds": 37.94,
+      "position": "lower_safe",
+      "max_line_count": 2,
+      "max_words_per_line": 7,
+      "highlight_words": [
+        "Arsenal",
+        "press"
+      ],
+      "style_ref": "lower_safe_two_line",
+      "safe_area_status": "compliant",
+      "readability_score": 95
+    },
+    {
+      "caption_id": "caption-08",
+      "scene_id": "scene-08",
+      "text": "That makes it a slight home edge\nnot a prediction",
+      "start_time_seconds": 37.94,
+      "end_time_seconds": 42.11,
+      "position": "lower_safe",
+      "max_line_count": 2,
+      "max_words_per_line": 7,
+      "highlight_words": [
+        "edge"
+      ],
+      "style_ref": "lower_safe_two_line",
+      "safe_area_status": "compliant",
+      "readability_score": 95
+    },
+    {
+      "caption_id": "caption-09",
+      "scene_id": "scene-09",
+      "text": "Watch the opening phase closely it may\ntell you how the rest",
+      "start_time_seconds": 42.11,
+      "end_time_seconds": 49.18,
+      "position": "lower_safe",
+      "max_line_count": 2,
+      "max_words_per_line": 7,
+      "highlight_words": [],
+      "style_ref": "lower_safe_two_line",
+      "safe_area_status": "compliant",
+      "readability_score": 95
+    },
+    {
+      "caption_id": "caption-10",
+      "scene_id": "scene-10",
+      "text": "The x-factor is arsenal's ability to escape\nliverpool's first press",
+      "start_time_seconds": 49.18,
+      "end_time_seconds": 53.35,
+      "position": "lower_safe",
+      "max_line_count": 2,
+      "max_words_per_line": 7,
+      "highlight_words": [
+        "Liverpool",
+        "Arsenal",
+        "press"
+      ],
+      "style_ref": "lower_safe_two_line",
+      "safe_area_status": "compliant",
+      "readability_score": 95
+    },
+    {
+      "caption_id": "caption-11",
+      "scene_id": "scene-11",
+      "text": "Can Arsenal survive the first 20 minutes\nor will Liverpool take control",
+      "start_time_seconds": 53.35,
+      "end_time_seconds": 60.0,
+      "position": "lower_safe",
+      "max_line_count": 2,
+      "max_words_per_line": 7,
+      "highlight_words": [
+        "Liverpool",
+        "Arsenal"
+      ],
+      "style_ref": "lower_safe_two_line",
+      "safe_area_status": "compliant",
+      "readability_score": 95
+    }
+  ],
+  "warnings": [],
+  "approval_status": "approved",
+  "next_component": "Audio Synchronizer"
+}

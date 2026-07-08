@@ -1,0 +1,1980 @@
+{
+  "production_id": "if-2026-07-06-liverpool-arsenal",
+  "match": {
+    "home_team": "Liverpool",
+    "away_team": "Arsenal",
+    "competition": "Premier League",
+    "kickoff_time": "20:00",
+    "country": "England"
+  },
+  "competition": "Premier League",
+  "source_asset_package": "if-2026-07-06-liverpool-arsenal",
+  "source_visual_package": "if-2026-07-06-liverpool-arsenal",
+  "brand_assets": [
+    {
+      "asset_id": "background_graphic",
+      "asset_name": "Clean match background",
+      "asset_type": "background",
+      "category": "brand",
+      "required": true,
+      "scenes_used": [
+        "scene-01"
+      ],
+      "purpose": "Support scene-01",
+      "recommended_format": "png",
+      "recommended_dimensions": "1080x1920",
+      "source_strategy": "custom graphic",
+      "legal_status": "approved",
+      "fallback_strategy": "Use custom vector/template graphic from internal library.",
+      "priority": "high"
+    },
+    {
+      "asset_id": "brand_logo",
+      "asset_name": "INSIGHT FOOTBALL logo",
+      "asset_type": "logo",
+      "category": "brand",
+      "required": true,
+      "scenes_used": [
+        "scene-01"
+      ],
+      "purpose": "Support scene-01",
+      "recommended_format": "svg/png",
+      "recommended_dimensions": "512x512",
+      "source_strategy": "internal approved brand kit",
+      "legal_status": "approved",
+      "fallback_strategy": "Use custom vector/template graphic from internal library.",
+      "priority": "high"
+    },
+    {
+      "asset_id": "intro_frame",
+      "asset_name": "Intro frame",
+      "asset_type": "template",
+      "category": "brand",
+      "required": true,
+      "scenes_used": [],
+      "purpose": "Support the video package",
+      "recommended_format": "png/json",
+      "recommended_dimensions": "1080x1920",
+      "source_strategy": "template graphic",
+      "legal_status": "approved",
+      "fallback_strategy": "Use custom vector/template graphic from internal library.",
+      "priority": "high"
+    },
+    {
+      "asset_id": "outro_frame",
+      "asset_name": "Outro frame",
+      "asset_type": "template",
+      "category": "brand",
+      "required": true,
+      "scenes_used": [],
+      "purpose": "Support the video package",
+      "recommended_format": "png/json",
+      "recommended_dimensions": "1080x1920",
+      "source_strategy": "template graphic",
+      "legal_status": "approved",
+      "fallback_strategy": "Use custom vector/template graphic from internal library.",
+      "priority": "high"
+    },
+    {
+      "asset_id": "watermark",
+      "asset_name": "INSIGHT FOOTBALL watermark",
+      "asset_type": "logo",
+      "category": "brand",
+      "required": true,
+      "scenes_used": [],
+      "purpose": "Support the video package",
+      "recommended_format": "png",
+      "recommended_dimensions": "512x512",
+      "source_strategy": "internal approved brand kit",
+      "legal_status": "approved",
+      "fallback_strategy": "Use custom vector/template graphic from internal library.",
+      "priority": "high"
+    },
+    {
+      "asset_id": "wordmark",
+      "asset_name": "INSIGHT FOOTBALL wordmark",
+      "asset_type": "logo",
+      "category": "brand",
+      "required": true,
+      "scenes_used": [],
+      "purpose": "Support the video package",
+      "recommended_format": "svg/png",
+      "recommended_dimensions": "512x512",
+      "source_strategy": "internal approved brand kit",
+      "legal_status": "approved",
+      "fallback_strategy": "Use custom vector/template graphic from internal library.",
+      "priority": "high"
+    }
+  ],
+  "team_badges": {
+    "home_badge": {
+      "asset_id": "team_logo_home",
+      "asset_name": "Liverpool badge fallback",
+      "asset_type": "fallback",
+      "category": "fallback",
+      "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\team_logo_home.svg",
+      "file_format": "svg",
+      "dimensions": "512x512",
+      "legal_status": "approved_placeholder",
+      "source": "deterministic_placeholder",
+      "scenes_used": [],
+      "reusable": true,
+      "checksum": "fc94dc5c1295f878cdc71c3857e0c7896386a1083007217574ce3518a00d77e6",
+      "fallback": true
+    },
+    "away_badge": {
+      "asset_id": "team_logo_away",
+      "asset_name": "Arsenal badge fallback",
+      "asset_type": "fallback",
+      "category": "fallback",
+      "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\team_logo_away.svg",
+      "file_format": "svg",
+      "dimensions": "512x512",
+      "legal_status": "approved_placeholder",
+      "source": "deterministic_placeholder",
+      "scenes_used": [],
+      "reusable": true,
+      "checksum": "47717e649df8e2b2abceb5d3141ab109a029247aa07372e6f91d7ea89750e41d",
+      "fallback": true
+    }
+  },
+  "competition_assets": {
+    "production_id": "if-2026-07-06-liverpool-arsenal",
+    "component_id": "IF-MAE03",
+    "component_name": "Competition Logo Manager",
+    "timestamp": "2026-07-08T11:37:14.222030+00:00",
+    "competition": "Premier League",
+    "competition_logo": null,
+    "fallback_logo": {
+      "asset_id": "competition_logo",
+      "asset_name": "Premier League text logo fallback",
+      "asset_type": "fallback",
+      "category": "fallback",
+      "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\competition_logo.svg",
+      "file_format": "svg",
+      "dimensions": "512x512",
+      "legal_status": "approved_placeholder",
+      "source": "deterministic_placeholder",
+      "scenes_used": [],
+      "reusable": true,
+      "checksum": "b4be60057d71cabb008d2672c14c2afe7f24b2e7c875531703a2aa949bb1334f",
+      "fallback": true
+    },
+    "missing_logo": true,
+    "legal_warnings": [
+      "Premier League logo requires rights confirmation."
+    ],
+    "approval_status": "approved",
+    "next_component": "Background Asset Manager"
+  },
+  "background_assets": [
+    {
+      "asset_id": "background_graphic",
+      "asset_name": "Clean match background fallback background",
+      "asset_type": "fallback",
+      "category": "fallback",
+      "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\background_graphic.svg",
+      "file_format": "svg",
+      "dimensions": "512x512",
+      "legal_status": "approved_placeholder",
+      "source": "deterministic_placeholder",
+      "scenes_used": [],
+      "reusable": true,
+      "checksum": "f542d3fc2ca1dc73f244e4b07760cfdb2def684ab28fb33cf3f516aa6bde47b3",
+      "fallback": true
+    },
+    {
+      "asset_id": "pitch_graphic",
+      "asset_name": "Pitch background fallback background",
+      "asset_type": "fallback",
+      "category": "fallback",
+      "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\pitch_graphic.svg",
+      "file_format": "svg",
+      "dimensions": "512x512",
+      "legal_status": "approved_placeholder",
+      "source": "deterministic_placeholder",
+      "scenes_used": [],
+      "reusable": true,
+      "checksum": "73df0b7d2c54361c2d77a76a8af480c0f1bc7bee8a4df9c1771ad943cd7d1c5b",
+      "fallback": true
+    }
+  ],
+  "icon_assets": [
+    {
+      "asset_id": "comment_icon",
+      "asset_name": "Comment icon fallback icon",
+      "asset_type": "fallback",
+      "category": "fallback",
+      "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\comment_icon.svg",
+      "file_format": "svg",
+      "dimensions": "512x512",
+      "legal_status": "approved_placeholder",
+      "source": "deterministic_placeholder",
+      "scenes_used": [],
+      "reusable": true,
+      "checksum": "0a6378a09c1c9d3e6867936ae11c63c7ff6ddeb6315cb24c54e1bc3653540b47",
+      "fallback": true
+    },
+    {
+      "asset_id": "dashboard_icon",
+      "asset_name": "Dashboard Icon fallback icon",
+      "asset_type": "fallback",
+      "category": "fallback",
+      "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\dashboard_icon.svg",
+      "file_format": "svg",
+      "dimensions": "512x512",
+      "legal_status": "approved_placeholder",
+      "source": "deterministic_placeholder",
+      "scenes_used": [],
+      "reusable": true,
+      "checksum": "947944bff66c117c4e428a305d513949f4fb4bca9a1314ec2aaf04e1a74d7005",
+      "fallback": true
+    },
+    {
+      "asset_id": "goal_icon",
+      "asset_name": "Goal icon fallback icon",
+      "asset_type": "fallback",
+      "category": "fallback",
+      "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\goal_icon.svg",
+      "file_format": "svg",
+      "dimensions": "512x512",
+      "legal_status": "approved_placeholder",
+      "source": "deterministic_placeholder",
+      "scenes_used": [],
+      "reusable": true,
+      "checksum": "cf9c8b1278c5102f5148f7cbee115fe358d5934ef9e630a2fb148360920ccea4",
+      "fallback": true
+    },
+    {
+      "asset_id": "press_icon",
+      "asset_name": "Press Icon fallback icon",
+      "asset_type": "fallback",
+      "category": "fallback",
+      "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\press_icon.svg",
+      "file_format": "svg",
+      "dimensions": "512x512",
+      "legal_status": "approved_placeholder",
+      "source": "deterministic_placeholder",
+      "scenes_used": [],
+      "reusable": true,
+      "checksum": "ad3ffac4f9805f8eb5dc52ba87fe73260da37b30fab3ad0511000a8f1bf73b19",
+      "fallback": true
+    },
+    {
+      "asset_id": "pressing_icon",
+      "asset_name": "Pressing icon fallback icon",
+      "asset_type": "fallback",
+      "category": "fallback",
+      "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\pressing_icon.svg",
+      "file_format": "svg",
+      "dimensions": "512x512",
+      "legal_status": "approved_placeholder",
+      "source": "deterministic_placeholder",
+      "scenes_used": [],
+      "reusable": true,
+      "checksum": "8fdddc95a318572a7967f782b76fa8f8ce09447364114c9f43f37c7656ea9dcc",
+      "fallback": true
+    },
+    {
+      "asset_id": "tactical_arrow",
+      "asset_name": "Tactical Arrow fallback icon",
+      "asset_type": "fallback",
+      "category": "fallback",
+      "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\tactical_arrow.svg",
+      "file_format": "svg",
+      "dimensions": "512x512",
+      "legal_status": "approved_placeholder",
+      "source": "deterministic_placeholder",
+      "scenes_used": [],
+      "reusable": true,
+      "checksum": "2d64f6cdba21c7cb75b3cb2d60abb92286e0bd8db15eb7278bea12d0e7397ad8",
+      "fallback": true
+    },
+    {
+      "asset_id": "tactical_arrows",
+      "asset_name": "Tactical arrows fallback icon",
+      "asset_type": "fallback",
+      "category": "fallback",
+      "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\tactical_arrows.svg",
+      "file_format": "svg",
+      "dimensions": "512x512",
+      "legal_status": "approved_placeholder",
+      "source": "deterministic_placeholder",
+      "scenes_used": [],
+      "reusable": true,
+      "checksum": "71f70871d18008278336b277f4e2bd326dab878472a1104b06dcde79dc3fde3d",
+      "fallback": true
+    },
+    {
+      "asset_id": "uncertainty_icon",
+      "asset_name": "Uncertainty Icon fallback icon",
+      "asset_type": "fallback",
+      "category": "fallback",
+      "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\uncertainty_icon.svg",
+      "file_format": "svg",
+      "dimensions": "512x512",
+      "legal_status": "approved_placeholder",
+      "source": "deterministic_placeholder",
+      "scenes_used": [],
+      "reusable": true,
+      "checksum": "253decb4d9e3ccb467e53d44a1ff680a14ca68df46fd3fe6a7c1d7a7f11e2a9d",
+      "fallback": true
+    },
+    {
+      "asset_id": "warning_icon",
+      "asset_name": "Warning Icon fallback icon",
+      "asset_type": "fallback",
+      "category": "fallback",
+      "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\warning_icon.svg",
+      "file_format": "svg",
+      "dimensions": "512x512",
+      "legal_status": "approved_placeholder",
+      "source": "deterministic_placeholder",
+      "scenes_used": [],
+      "reusable": true,
+      "checksum": "9e37401d14cde983a81c0d3be9a4e78bdd9975c502cb70dc0750a741f9eabaf3",
+      "fallback": true
+    },
+    {
+      "asset_id": "x_factor_icon",
+      "asset_name": "X Factor Icon fallback icon",
+      "asset_type": "fallback",
+      "category": "fallback",
+      "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\x_factor_icon.svg",
+      "file_format": "svg",
+      "dimensions": "512x512",
+      "legal_status": "approved_placeholder",
+      "source": "deterministic_placeholder",
+      "scenes_used": [],
+      "reusable": true,
+      "checksum": "ee3613f5d8c3cc1dbfda2cba43ddce96cc8c4eddf39e8724c5fff1275afbfd88",
+      "fallback": true
+    }
+  ],
+  "illustration_assets": [
+    {
+      "task_id": "generate-stadium_image",
+      "asset_id": "stadium_image",
+      "asset_type": "generated_illustration",
+      "prompt": "Confirm or prepare Stadium-style background",
+      "negative_prompt": "No player likeness, no broadcast screenshot, no copyrighted match footage, no betting aesthetic.",
+      "style_notes": "Clean football intelligence dashboard, premium dark sports interface, safe abstract shapes.",
+      "dimensions": "1080x1920",
+      "scenes_used": [],
+      "provider": "static_placeholder",
+      "legal_notes": "Legal status: approved. Use custom vector/template graphic from internal library.",
+      "priority": "low"
+    },
+    {
+      "task_id": "generate-background_graphic",
+      "asset_id": "background_graphic",
+      "asset_type": "background",
+      "prompt": "Create a clean football intelligence background; avoid broadcast footage.",
+      "negative_prompt": "No player likeness, no broadcast screenshot, no copyrighted match footage, no betting aesthetic.",
+      "style_notes": "Clean football intelligence dashboard, premium dark sports interface, safe abstract shapes.",
+      "dimensions": "1080x1920",
+      "scenes_used": [
+        "scene-01"
+      ],
+      "provider": "static_placeholder",
+      "legal_notes": "Use internally generated or placeholder background only.",
+      "priority": "high"
+    },
+    {
+      "task_id": "generate-pitch_graphic",
+      "asset_id": "pitch_graphic",
+      "asset_type": "background",
+      "prompt": "Create a clean football intelligence background; avoid broadcast footage.",
+      "negative_prompt": "No player likeness, no broadcast screenshot, no copyrighted match footage, no betting aesthetic.",
+      "style_notes": "Clean football intelligence dashboard, premium dark sports interface, safe abstract shapes.",
+      "dimensions": "1080x1920",
+      "scenes_used": [
+        "scene-04",
+        "scene-10"
+      ],
+      "provider": "static_placeholder",
+      "legal_notes": "Use internally generated or placeholder background only.",
+      "priority": "high"
+    }
+  ],
+  "placeholder_assets": [
+    "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\stadium_image.svg",
+    "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\background_graphic.svg",
+    "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\pitch_graphic.svg"
+  ],
+  "graphic_assets": [
+    {
+      "asset_id": "dashboard_panel",
+      "asset_name": "Insight dashboard panel",
+      "asset_type": "card",
+      "category": "dashboard",
+      "required": true,
+      "scenes_used": [
+        "scene-08",
+        "scene-09"
+      ],
+      "purpose": "Support scene-08, scene-09",
+      "recommended_format": "json/png",
+      "recommended_dimensions": "900x520",
+      "source_strategy": "template graphic",
+      "legal_status": "approved",
+      "fallback_strategy": "Use custom vector/template graphic from internal library.",
+      "priority": "high"
+    },
+    {
+      "asset_id": "data_card",
+      "asset_name": "Surprising detail card",
+      "asset_type": "card",
+      "category": "dashboard",
+      "required": true,
+      "scenes_used": [
+        "scene-02",
+        "scene-06"
+      ],
+      "purpose": "Support scene-02, scene-06",
+      "recommended_format": "json/png",
+      "recommended_dimensions": "900x520",
+      "source_strategy": "template graphic",
+      "legal_status": "approved",
+      "fallback_strategy": "Use custom vector/template graphic from internal library.",
+      "priority": "high"
+    },
+    {
+      "asset_id": "intro_frame",
+      "asset_name": "Intro frame",
+      "asset_type": "template",
+      "category": "brand",
+      "required": true,
+      "scenes_used": [],
+      "purpose": "Support the video package",
+      "recommended_format": "png/json",
+      "recommended_dimensions": "1080x1920",
+      "source_strategy": "template graphic",
+      "legal_status": "approved",
+      "fallback_strategy": "Use custom vector/template graphic from internal library.",
+      "priority": "high"
+    },
+    {
+      "asset_id": "outro_frame",
+      "asset_name": "Outro frame",
+      "asset_type": "template",
+      "category": "brand",
+      "required": true,
+      "scenes_used": [],
+      "purpose": "Support the video package",
+      "recommended_format": "png/json",
+      "recommended_dimensions": "1080x1920",
+      "source_strategy": "template graphic",
+      "legal_status": "approved",
+      "fallback_strategy": "Use custom vector/template graphic from internal library.",
+      "priority": "high"
+    },
+    {
+      "asset_id": "pitch_graphic",
+      "asset_name": "Pitch background",
+      "asset_type": "pitch",
+      "category": "football",
+      "required": true,
+      "scenes_used": [
+        "scene-04",
+        "scene-10"
+      ],
+      "purpose": "Support scene-04, scene-10",
+      "recommended_format": "svg/png",
+      "recommended_dimensions": "1080x1080",
+      "source_strategy": "custom pitch diagram",
+      "legal_status": "approved",
+      "fallback_strategy": "Use custom vector/template graphic from internal library.",
+      "priority": "high"
+    }
+  ],
+  "scene_asset_map": [
+    {
+      "scene_id": "scene-01",
+      "required_asset_ids": [
+        "background_graphic",
+        "brand_logo",
+        "graphic-match_title_card"
+      ],
+      "resolved_asset_ids": [
+        "background_graphic"
+      ],
+      "fallback_asset_ids": [
+        "background_graphic"
+      ]
+    },
+    {
+      "scene_id": "scene-02",
+      "required_asset_ids": [
+        "data_card",
+        "graphic-surprising_fact_card",
+        "team_logos"
+      ],
+      "resolved_asset_ids": [],
+      "fallback_asset_ids": []
+    },
+    {
+      "scene_id": "scene-03",
+      "required_asset_ids": [
+        "graphic-central_question_card",
+        "team_logos"
+      ],
+      "resolved_asset_ids": [],
+      "fallback_asset_ids": []
+    },
+    {
+      "scene_id": "scene-04",
+      "required_asset_ids": [
+        "graphic-tactical_pitch_diagram",
+        "pitch_graphic",
+        "team_logos"
+      ],
+      "resolved_asset_ids": [
+        "pitch_graphic"
+      ],
+      "fallback_asset_ids": [
+        "pitch_graphic"
+      ]
+    },
+    {
+      "scene_id": "scene-05",
+      "required_asset_ids": [
+        "graphic-team_comparison_card",
+        "team_logos"
+      ],
+      "resolved_asset_ids": [],
+      "fallback_asset_ids": []
+    },
+    {
+      "scene_id": "scene-06",
+      "required_asset_ids": [
+        "data_card",
+        "graphic-evidence_card",
+        "team_logo_home"
+      ],
+      "resolved_asset_ids": [
+        "team_logo_home"
+      ],
+      "fallback_asset_ids": [
+        "team_logo_home"
+      ]
+    },
+    {
+      "scene_id": "scene-07",
+      "required_asset_ids": [
+        "graphic-team_comparison_card",
+        "team_logos"
+      ],
+      "resolved_asset_ids": [],
+      "fallback_asset_ids": []
+    },
+    {
+      "scene_id": "scene-08",
+      "required_asset_ids": [
+        "dashboard_panel",
+        "graphic-insight_dashboard",
+        "team_logos"
+      ],
+      "resolved_asset_ids": [],
+      "fallback_asset_ids": []
+    },
+    {
+      "scene_id": "scene-09",
+      "required_asset_ids": [
+        "dashboard_panel",
+        "graphic-insight_dashboard",
+        "team_logos"
+      ],
+      "resolved_asset_ids": [],
+      "fallback_asset_ids": []
+    },
+    {
+      "scene_id": "scene-10",
+      "required_asset_ids": [
+        "graphic-x_factor_card",
+        "pitch_graphic",
+        "player_image"
+      ],
+      "resolved_asset_ids": [
+        "pitch_graphic"
+      ],
+      "fallback_asset_ids": [
+        "pitch_graphic"
+      ]
+    },
+    {
+      "scene_id": "scene-11",
+      "required_asset_ids": [
+        "comment_icon",
+        "graphic-cta_card",
+        "team_logos"
+      ],
+      "resolved_asset_ids": [
+        "comment_icon"
+      ],
+      "fallback_asset_ids": [
+        "comment_icon"
+      ]
+    }
+  ],
+  "asset_cache_index": {
+    "production_id": "if-2026-07-06-liverpool-arsenal",
+    "component_id": "IF-MAE07",
+    "component_name": "Asset Cache Manager",
+    "timestamp": "2026-07-08T11:37:14.572143+00:00",
+    "cache_entries": [
+      {
+        "asset_id": "team_logo_home",
+        "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\team_logo_home.svg",
+        "checksum": "fc94dc5c1295f878cdc71c3857e0c7896386a1083007217574ce3518a00d77e6",
+        "legal_status": "approved_placeholder",
+        "source": "deterministic_placeholder",
+        "reusable": true
+      },
+      {
+        "asset_id": "team_logo_away",
+        "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\team_logo_away.svg",
+        "checksum": "47717e649df8e2b2abceb5d3141ab109a029247aa07372e6f91d7ea89750e41d",
+        "legal_status": "approved_placeholder",
+        "source": "deterministic_placeholder",
+        "reusable": true
+      },
+      {
+        "asset_id": "team_logo_home",
+        "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\team_logo_home.svg",
+        "checksum": "fc94dc5c1295f878cdc71c3857e0c7896386a1083007217574ce3518a00d77e6",
+        "legal_status": "approved_placeholder",
+        "source": "deterministic_placeholder",
+        "reusable": true
+      },
+      {
+        "asset_id": "team_logo_away",
+        "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\team_logo_away.svg",
+        "checksum": "47717e649df8e2b2abceb5d3141ab109a029247aa07372e6f91d7ea89750e41d",
+        "legal_status": "approved_placeholder",
+        "source": "deterministic_placeholder",
+        "reusable": true
+      },
+      {
+        "asset_id": "competition_logo",
+        "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\competition_logo.svg",
+        "checksum": "b4be60057d71cabb008d2672c14c2afe7f24b2e7c875531703a2aa949bb1334f",
+        "legal_status": "approved_placeholder",
+        "source": "deterministic_placeholder",
+        "reusable": true
+      },
+      {
+        "asset_id": "background_graphic",
+        "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\background_graphic.svg",
+        "checksum": "4a50b8cc41d193ee539510d2f1b304abff444e3c0d48836e0a4a3d586a78cb9e",
+        "legal_status": "approved_placeholder",
+        "source": "deterministic_placeholder",
+        "reusable": true
+      },
+      {
+        "asset_id": "pitch_graphic",
+        "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\pitch_graphic.svg",
+        "checksum": "07096082c38c24d106372044b461ef8f4574e2e4a658dec4a6bc8040994a0da1",
+        "legal_status": "approved_placeholder",
+        "source": "deterministic_placeholder",
+        "reusable": true
+      },
+      {
+        "asset_id": "background_graphic",
+        "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\background_graphic.svg",
+        "checksum": "4a50b8cc41d193ee539510d2f1b304abff444e3c0d48836e0a4a3d586a78cb9e",
+        "legal_status": "approved_placeholder",
+        "source": "deterministic_placeholder",
+        "reusable": true
+      },
+      {
+        "asset_id": "pitch_graphic",
+        "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\pitch_graphic.svg",
+        "checksum": "07096082c38c24d106372044b461ef8f4574e2e4a658dec4a6bc8040994a0da1",
+        "legal_status": "approved_placeholder",
+        "source": "deterministic_placeholder",
+        "reusable": true
+      },
+      {
+        "asset_id": "comment_icon",
+        "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\comment_icon.svg",
+        "checksum": "0a6378a09c1c9d3e6867936ae11c63c7ff6ddeb6315cb24c54e1bc3653540b47",
+        "legal_status": "approved_placeholder",
+        "source": "deterministic_placeholder",
+        "reusable": true
+      },
+      {
+        "asset_id": "dashboard_icon",
+        "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\dashboard_icon.svg",
+        "checksum": "947944bff66c117c4e428a305d513949f4fb4bca9a1314ec2aaf04e1a74d7005",
+        "legal_status": "approved_placeholder",
+        "source": "deterministic_placeholder",
+        "reusable": true
+      },
+      {
+        "asset_id": "goal_icon",
+        "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\goal_icon.svg",
+        "checksum": "cf9c8b1278c5102f5148f7cbee115fe358d5934ef9e630a2fb148360920ccea4",
+        "legal_status": "approved_placeholder",
+        "source": "deterministic_placeholder",
+        "reusable": true
+      },
+      {
+        "asset_id": "press_icon",
+        "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\press_icon.svg",
+        "checksum": "ad3ffac4f9805f8eb5dc52ba87fe73260da37b30fab3ad0511000a8f1bf73b19",
+        "legal_status": "approved_placeholder",
+        "source": "deterministic_placeholder",
+        "reusable": true
+      },
+      {
+        "asset_id": "pressing_icon",
+        "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\pressing_icon.svg",
+        "checksum": "8fdddc95a318572a7967f782b76fa8f8ce09447364114c9f43f37c7656ea9dcc",
+        "legal_status": "approved_placeholder",
+        "source": "deterministic_placeholder",
+        "reusable": true
+      },
+      {
+        "asset_id": "tactical_arrow",
+        "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\tactical_arrow.svg",
+        "checksum": "2d64f6cdba21c7cb75b3cb2d60abb92286e0bd8db15eb7278bea12d0e7397ad8",
+        "legal_status": "approved_placeholder",
+        "source": "deterministic_placeholder",
+        "reusable": true
+      },
+      {
+        "asset_id": "tactical_arrows",
+        "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\tactical_arrows.svg",
+        "checksum": "71f70871d18008278336b277f4e2bd326dab878472a1104b06dcde79dc3fde3d",
+        "legal_status": "approved_placeholder",
+        "source": "deterministic_placeholder",
+        "reusable": true
+      },
+      {
+        "asset_id": "uncertainty_icon",
+        "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\uncertainty_icon.svg",
+        "checksum": "253decb4d9e3ccb467e53d44a1ff680a14ca68df46fd3fe6a7c1d7a7f11e2a9d",
+        "legal_status": "approved_placeholder",
+        "source": "deterministic_placeholder",
+        "reusable": true
+      },
+      {
+        "asset_id": "warning_icon",
+        "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\warning_icon.svg",
+        "checksum": "9e37401d14cde983a81c0d3be9a4e78bdd9975c502cb70dc0750a741f9eabaf3",
+        "legal_status": "approved_placeholder",
+        "source": "deterministic_placeholder",
+        "reusable": true
+      },
+      {
+        "asset_id": "x_factor_icon",
+        "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\x_factor_icon.svg",
+        "checksum": "ee3613f5d8c3cc1dbfda2cba43ddce96cc8c4eddf39e8724c5fff1275afbfd88",
+        "legal_status": "approved_placeholder",
+        "source": "deterministic_placeholder",
+        "reusable": true
+      },
+      {
+        "asset_id": "comment_icon",
+        "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\comment_icon.svg",
+        "checksum": "0a6378a09c1c9d3e6867936ae11c63c7ff6ddeb6315cb24c54e1bc3653540b47",
+        "legal_status": "approved_placeholder",
+        "source": "deterministic_placeholder",
+        "reusable": true
+      },
+      {
+        "asset_id": "dashboard_icon",
+        "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\dashboard_icon.svg",
+        "checksum": "947944bff66c117c4e428a305d513949f4fb4bca9a1314ec2aaf04e1a74d7005",
+        "legal_status": "approved_placeholder",
+        "source": "deterministic_placeholder",
+        "reusable": true
+      },
+      {
+        "asset_id": "goal_icon",
+        "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\goal_icon.svg",
+        "checksum": "cf9c8b1278c5102f5148f7cbee115fe358d5934ef9e630a2fb148360920ccea4",
+        "legal_status": "approved_placeholder",
+        "source": "deterministic_placeholder",
+        "reusable": true
+      },
+      {
+        "asset_id": "press_icon",
+        "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\press_icon.svg",
+        "checksum": "ad3ffac4f9805f8eb5dc52ba87fe73260da37b30fab3ad0511000a8f1bf73b19",
+        "legal_status": "approved_placeholder",
+        "source": "deterministic_placeholder",
+        "reusable": true
+      },
+      {
+        "asset_id": "pressing_icon",
+        "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\pressing_icon.svg",
+        "checksum": "8fdddc95a318572a7967f782b76fa8f8ce09447364114c9f43f37c7656ea9dcc",
+        "legal_status": "approved_placeholder",
+        "source": "deterministic_placeholder",
+        "reusable": true
+      },
+      {
+        "asset_id": "tactical_arrow",
+        "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\tactical_arrow.svg",
+        "checksum": "2d64f6cdba21c7cb75b3cb2d60abb92286e0bd8db15eb7278bea12d0e7397ad8",
+        "legal_status": "approved_placeholder",
+        "source": "deterministic_placeholder",
+        "reusable": true
+      },
+      {
+        "asset_id": "tactical_arrows",
+        "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\tactical_arrows.svg",
+        "checksum": "71f70871d18008278336b277f4e2bd326dab878472a1104b06dcde79dc3fde3d",
+        "legal_status": "approved_placeholder",
+        "source": "deterministic_placeholder",
+        "reusable": true
+      },
+      {
+        "asset_id": "uncertainty_icon",
+        "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\uncertainty_icon.svg",
+        "checksum": "253decb4d9e3ccb467e53d44a1ff680a14ca68df46fd3fe6a7c1d7a7f11e2a9d",
+        "legal_status": "approved_placeholder",
+        "source": "deterministic_placeholder",
+        "reusable": true
+      },
+      {
+        "asset_id": "warning_icon",
+        "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\warning_icon.svg",
+        "checksum": "9e37401d14cde983a81c0d3be9a4e78bdd9975c502cb70dc0750a741f9eabaf3",
+        "legal_status": "approved_placeholder",
+        "source": "deterministic_placeholder",
+        "reusable": true
+      },
+      {
+        "asset_id": "x_factor_icon",
+        "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\x_factor_icon.svg",
+        "checksum": "ee3613f5d8c3cc1dbfda2cba43ddce96cc8c4eddf39e8724c5fff1275afbfd88",
+        "legal_status": "approved_placeholder",
+        "source": "deterministic_placeholder",
+        "reusable": true
+      },
+      {
+        "asset_id": "stadium_image",
+        "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\stadium_image.svg",
+        "checksum": "289ea3670f5f4746a54263bdf68d8f35f69668000a08afdd48024f702a9ce2fa",
+        "legal_status": "approved_placeholder",
+        "source": "sprint8",
+        "reusable": true
+      },
+      {
+        "asset_id": "background_graphic",
+        "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\background_graphic.svg",
+        "checksum": "4a50b8cc41d193ee539510d2f1b304abff444e3c0d48836e0a4a3d586a78cb9e",
+        "legal_status": "approved_placeholder",
+        "source": "sprint8",
+        "reusable": true
+      },
+      {
+        "asset_id": "pitch_graphic",
+        "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\pitch_graphic.svg",
+        "checksum": "07096082c38c24d106372044b461ef8f4574e2e4a658dec4a6bc8040994a0da1",
+        "legal_status": "approved_placeholder",
+        "source": "sprint8",
+        "reusable": true
+      }
+    ],
+    "duplicate_assets": [
+      {
+        "checksum": "fc94dc5c1295f878cdc71c3857e0c7896386a1083007217574ce3518a00d77e6",
+        "asset_ids": [
+          "team_logo_home",
+          "team_logo_home"
+        ]
+      },
+      {
+        "checksum": "47717e649df8e2b2abceb5d3141ab109a029247aa07372e6f91d7ea89750e41d",
+        "asset_ids": [
+          "team_logo_away",
+          "team_logo_away"
+        ]
+      },
+      {
+        "checksum": "4a50b8cc41d193ee539510d2f1b304abff444e3c0d48836e0a4a3d586a78cb9e",
+        "asset_ids": [
+          "background_graphic",
+          "background_graphic"
+        ]
+      },
+      {
+        "checksum": "07096082c38c24d106372044b461ef8f4574e2e4a658dec4a6bc8040994a0da1",
+        "asset_ids": [
+          "pitch_graphic",
+          "pitch_graphic"
+        ]
+      },
+      {
+        "checksum": "0a6378a09c1c9d3e6867936ae11c63c7ff6ddeb6315cb24c54e1bc3653540b47",
+        "asset_ids": [
+          "comment_icon",
+          "comment_icon"
+        ]
+      },
+      {
+        "checksum": "947944bff66c117c4e428a305d513949f4fb4bca9a1314ec2aaf04e1a74d7005",
+        "asset_ids": [
+          "dashboard_icon",
+          "dashboard_icon"
+        ]
+      },
+      {
+        "checksum": "cf9c8b1278c5102f5148f7cbee115fe358d5934ef9e630a2fb148360920ccea4",
+        "asset_ids": [
+          "goal_icon",
+          "goal_icon"
+        ]
+      },
+      {
+        "checksum": "ad3ffac4f9805f8eb5dc52ba87fe73260da37b30fab3ad0511000a8f1bf73b19",
+        "asset_ids": [
+          "press_icon",
+          "press_icon"
+        ]
+      },
+      {
+        "checksum": "8fdddc95a318572a7967f782b76fa8f8ce09447364114c9f43f37c7656ea9dcc",
+        "asset_ids": [
+          "pressing_icon",
+          "pressing_icon"
+        ]
+      },
+      {
+        "checksum": "2d64f6cdba21c7cb75b3cb2d60abb92286e0bd8db15eb7278bea12d0e7397ad8",
+        "asset_ids": [
+          "tactical_arrow",
+          "tactical_arrow"
+        ]
+      },
+      {
+        "checksum": "71f70871d18008278336b277f4e2bd326dab878472a1104b06dcde79dc3fde3d",
+        "asset_ids": [
+          "tactical_arrows",
+          "tactical_arrows"
+        ]
+      },
+      {
+        "checksum": "253decb4d9e3ccb467e53d44a1ff680a14ca68df46fd3fe6a7c1d7a7f11e2a9d",
+        "asset_ids": [
+          "uncertainty_icon",
+          "uncertainty_icon"
+        ]
+      },
+      {
+        "checksum": "9e37401d14cde983a81c0d3be9a4e78bdd9975c502cb70dc0750a741f9eabaf3",
+        "asset_ids": [
+          "warning_icon",
+          "warning_icon"
+        ]
+      },
+      {
+        "checksum": "ee3613f5d8c3cc1dbfda2cba43ddce96cc8c4eddf39e8724c5fff1275afbfd88",
+        "asset_ids": [
+          "x_factor_icon",
+          "x_factor_icon"
+        ]
+      },
+      {
+        "checksum": "4a50b8cc41d193ee539510d2f1b304abff444e3c0d48836e0a4a3d586a78cb9e",
+        "asset_ids": [
+          "background_graphic",
+          "background_graphic"
+        ]
+      },
+      {
+        "checksum": "07096082c38c24d106372044b461ef8f4574e2e4a658dec4a6bc8040994a0da1",
+        "asset_ids": [
+          "pitch_graphic",
+          "pitch_graphic"
+        ]
+      }
+    ],
+    "reused_assets": [
+      {
+        "asset_id": "team_logo_home",
+        "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\team_logo_home.svg",
+        "checksum": "fc94dc5c1295f878cdc71c3857e0c7896386a1083007217574ce3518a00d77e6",
+        "legal_status": "approved_placeholder",
+        "source": "deterministic_placeholder",
+        "reusable": true
+      },
+      {
+        "asset_id": "team_logo_away",
+        "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\team_logo_away.svg",
+        "checksum": "47717e649df8e2b2abceb5d3141ab109a029247aa07372e6f91d7ea89750e41d",
+        "legal_status": "approved_placeholder",
+        "source": "deterministic_placeholder",
+        "reusable": true
+      },
+      {
+        "asset_id": "background_graphic",
+        "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\background_graphic.svg",
+        "checksum": "4a50b8cc41d193ee539510d2f1b304abff444e3c0d48836e0a4a3d586a78cb9e",
+        "legal_status": "approved_placeholder",
+        "source": "deterministic_placeholder",
+        "reusable": true
+      },
+      {
+        "asset_id": "pitch_graphic",
+        "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\pitch_graphic.svg",
+        "checksum": "07096082c38c24d106372044b461ef8f4574e2e4a658dec4a6bc8040994a0da1",
+        "legal_status": "approved_placeholder",
+        "source": "deterministic_placeholder",
+        "reusable": true
+      },
+      {
+        "asset_id": "comment_icon",
+        "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\comment_icon.svg",
+        "checksum": "0a6378a09c1c9d3e6867936ae11c63c7ff6ddeb6315cb24c54e1bc3653540b47",
+        "legal_status": "approved_placeholder",
+        "source": "deterministic_placeholder",
+        "reusable": true
+      },
+      {
+        "asset_id": "dashboard_icon",
+        "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\dashboard_icon.svg",
+        "checksum": "947944bff66c117c4e428a305d513949f4fb4bca9a1314ec2aaf04e1a74d7005",
+        "legal_status": "approved_placeholder",
+        "source": "deterministic_placeholder",
+        "reusable": true
+      },
+      {
+        "asset_id": "goal_icon",
+        "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\goal_icon.svg",
+        "checksum": "cf9c8b1278c5102f5148f7cbee115fe358d5934ef9e630a2fb148360920ccea4",
+        "legal_status": "approved_placeholder",
+        "source": "deterministic_placeholder",
+        "reusable": true
+      },
+      {
+        "asset_id": "press_icon",
+        "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\press_icon.svg",
+        "checksum": "ad3ffac4f9805f8eb5dc52ba87fe73260da37b30fab3ad0511000a8f1bf73b19",
+        "legal_status": "approved_placeholder",
+        "source": "deterministic_placeholder",
+        "reusable": true
+      },
+      {
+        "asset_id": "pressing_icon",
+        "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\pressing_icon.svg",
+        "checksum": "8fdddc95a318572a7967f782b76fa8f8ce09447364114c9f43f37c7656ea9dcc",
+        "legal_status": "approved_placeholder",
+        "source": "deterministic_placeholder",
+        "reusable": true
+      },
+      {
+        "asset_id": "tactical_arrow",
+        "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\tactical_arrow.svg",
+        "checksum": "2d64f6cdba21c7cb75b3cb2d60abb92286e0bd8db15eb7278bea12d0e7397ad8",
+        "legal_status": "approved_placeholder",
+        "source": "deterministic_placeholder",
+        "reusable": true
+      },
+      {
+        "asset_id": "tactical_arrows",
+        "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\tactical_arrows.svg",
+        "checksum": "71f70871d18008278336b277f4e2bd326dab878472a1104b06dcde79dc3fde3d",
+        "legal_status": "approved_placeholder",
+        "source": "deterministic_placeholder",
+        "reusable": true
+      },
+      {
+        "asset_id": "uncertainty_icon",
+        "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\uncertainty_icon.svg",
+        "checksum": "253decb4d9e3ccb467e53d44a1ff680a14ca68df46fd3fe6a7c1d7a7f11e2a9d",
+        "legal_status": "approved_placeholder",
+        "source": "deterministic_placeholder",
+        "reusable": true
+      },
+      {
+        "asset_id": "warning_icon",
+        "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\warning_icon.svg",
+        "checksum": "9e37401d14cde983a81c0d3be9a4e78bdd9975c502cb70dc0750a741f9eabaf3",
+        "legal_status": "approved_placeholder",
+        "source": "deterministic_placeholder",
+        "reusable": true
+      },
+      {
+        "asset_id": "x_factor_icon",
+        "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\x_factor_icon.svg",
+        "checksum": "ee3613f5d8c3cc1dbfda2cba43ddce96cc8c4eddf39e8724c5fff1275afbfd88",
+        "legal_status": "approved_placeholder",
+        "source": "deterministic_placeholder",
+        "reusable": true
+      },
+      {
+        "asset_id": "background_graphic",
+        "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\background_graphic.svg",
+        "checksum": "4a50b8cc41d193ee539510d2f1b304abff444e3c0d48836e0a4a3d586a78cb9e",
+        "legal_status": "approved_placeholder",
+        "source": "sprint8",
+        "reusable": true
+      },
+      {
+        "asset_id": "pitch_graphic",
+        "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\pitch_graphic.svg",
+        "checksum": "07096082c38c24d106372044b461ef8f4574e2e4a658dec4a6bc8040994a0da1",
+        "legal_status": "approved_placeholder",
+        "source": "sprint8",
+        "reusable": true
+      }
+    ],
+    "new_assets": [
+      {
+        "asset_id": "team_logo_home",
+        "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\team_logo_home.svg",
+        "checksum": "fc94dc5c1295f878cdc71c3857e0c7896386a1083007217574ce3518a00d77e6",
+        "legal_status": "approved_placeholder",
+        "source": "deterministic_placeholder",
+        "reusable": true
+      },
+      {
+        "asset_id": "team_logo_away",
+        "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\team_logo_away.svg",
+        "checksum": "47717e649df8e2b2abceb5d3141ab109a029247aa07372e6f91d7ea89750e41d",
+        "legal_status": "approved_placeholder",
+        "source": "deterministic_placeholder",
+        "reusable": true
+      },
+      {
+        "asset_id": "competition_logo",
+        "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\competition_logo.svg",
+        "checksum": "b4be60057d71cabb008d2672c14c2afe7f24b2e7c875531703a2aa949bb1334f",
+        "legal_status": "approved_placeholder",
+        "source": "deterministic_placeholder",
+        "reusable": true
+      },
+      {
+        "asset_id": "background_graphic",
+        "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\background_graphic.svg",
+        "checksum": "4a50b8cc41d193ee539510d2f1b304abff444e3c0d48836e0a4a3d586a78cb9e",
+        "legal_status": "approved_placeholder",
+        "source": "deterministic_placeholder",
+        "reusable": true
+      },
+      {
+        "asset_id": "pitch_graphic",
+        "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\pitch_graphic.svg",
+        "checksum": "07096082c38c24d106372044b461ef8f4574e2e4a658dec4a6bc8040994a0da1",
+        "legal_status": "approved_placeholder",
+        "source": "deterministic_placeholder",
+        "reusable": true
+      },
+      {
+        "asset_id": "comment_icon",
+        "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\comment_icon.svg",
+        "checksum": "0a6378a09c1c9d3e6867936ae11c63c7ff6ddeb6315cb24c54e1bc3653540b47",
+        "legal_status": "approved_placeholder",
+        "source": "deterministic_placeholder",
+        "reusable": true
+      },
+      {
+        "asset_id": "dashboard_icon",
+        "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\dashboard_icon.svg",
+        "checksum": "947944bff66c117c4e428a305d513949f4fb4bca9a1314ec2aaf04e1a74d7005",
+        "legal_status": "approved_placeholder",
+        "source": "deterministic_placeholder",
+        "reusable": true
+      },
+      {
+        "asset_id": "goal_icon",
+        "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\goal_icon.svg",
+        "checksum": "cf9c8b1278c5102f5148f7cbee115fe358d5934ef9e630a2fb148360920ccea4",
+        "legal_status": "approved_placeholder",
+        "source": "deterministic_placeholder",
+        "reusable": true
+      },
+      {
+        "asset_id": "press_icon",
+        "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\press_icon.svg",
+        "checksum": "ad3ffac4f9805f8eb5dc52ba87fe73260da37b30fab3ad0511000a8f1bf73b19",
+        "legal_status": "approved_placeholder",
+        "source": "deterministic_placeholder",
+        "reusable": true
+      },
+      {
+        "asset_id": "pressing_icon",
+        "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\pressing_icon.svg",
+        "checksum": "8fdddc95a318572a7967f782b76fa8f8ce09447364114c9f43f37c7656ea9dcc",
+        "legal_status": "approved_placeholder",
+        "source": "deterministic_placeholder",
+        "reusable": true
+      },
+      {
+        "asset_id": "tactical_arrow",
+        "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\tactical_arrow.svg",
+        "checksum": "2d64f6cdba21c7cb75b3cb2d60abb92286e0bd8db15eb7278bea12d0e7397ad8",
+        "legal_status": "approved_placeholder",
+        "source": "deterministic_placeholder",
+        "reusable": true
+      },
+      {
+        "asset_id": "tactical_arrows",
+        "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\tactical_arrows.svg",
+        "checksum": "71f70871d18008278336b277f4e2bd326dab878472a1104b06dcde79dc3fde3d",
+        "legal_status": "approved_placeholder",
+        "source": "deterministic_placeholder",
+        "reusable": true
+      },
+      {
+        "asset_id": "uncertainty_icon",
+        "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\uncertainty_icon.svg",
+        "checksum": "253decb4d9e3ccb467e53d44a1ff680a14ca68df46fd3fe6a7c1d7a7f11e2a9d",
+        "legal_status": "approved_placeholder",
+        "source": "deterministic_placeholder",
+        "reusable": true
+      },
+      {
+        "asset_id": "warning_icon",
+        "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\warning_icon.svg",
+        "checksum": "9e37401d14cde983a81c0d3be9a4e78bdd9975c502cb70dc0750a741f9eabaf3",
+        "legal_status": "approved_placeholder",
+        "source": "deterministic_placeholder",
+        "reusable": true
+      },
+      {
+        "asset_id": "x_factor_icon",
+        "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\x_factor_icon.svg",
+        "checksum": "ee3613f5d8c3cc1dbfda2cba43ddce96cc8c4eddf39e8724c5fff1275afbfd88",
+        "legal_status": "approved_placeholder",
+        "source": "deterministic_placeholder",
+        "reusable": true
+      },
+      {
+        "asset_id": "stadium_image",
+        "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\stadium_image.svg",
+        "checksum": "289ea3670f5f4746a54263bdf68d8f35f69668000a08afdd48024f702a9ce2fa",
+        "legal_status": "approved_placeholder",
+        "source": "sprint8",
+        "reusable": true
+      }
+    ],
+    "cache_health_score": 100,
+    "warnings": [],
+    "approval_status": "approved",
+    "next_component": "Asset Bundle Validator"
+  },
+  "legal_warnings": [
+    "Arsenal badge requires rights confirmation.",
+    "Liverpool badge requires rights confirmation.",
+    "Liverpool and Arsenal badges requires rights confirmation.",
+    "Premier League logo requires rights confirmation."
+  ],
+  "missing_assets": [
+    {
+      "asset_id": "background_graphic",
+      "asset_name": "Clean match background",
+      "asset_type": "background",
+      "category": "brand",
+      "required": true,
+      "scenes_used": [
+        "scene-01"
+      ],
+      "legal_status": "approved",
+      "fallback_strategy": "Use custom vector/template graphic from internal library.",
+      "priority": "high"
+    },
+    {
+      "asset_id": "brand_logo",
+      "asset_name": "INSIGHT FOOTBALL logo",
+      "asset_type": "logo",
+      "category": "brand",
+      "required": true,
+      "scenes_used": [
+        "scene-01"
+      ],
+      "legal_status": "approved",
+      "fallback_strategy": "Use custom vector/template graphic from internal library.",
+      "priority": "high"
+    },
+    {
+      "asset_id": "comment_icon",
+      "asset_name": "Comment icon",
+      "asset_type": "icon",
+      "category": "football",
+      "required": true,
+      "scenes_used": [
+        "scene-11"
+      ],
+      "legal_status": "approved",
+      "fallback_strategy": "Use custom vector/template graphic from internal library.",
+      "priority": "high"
+    },
+    {
+      "asset_id": "competition_logo",
+      "asset_name": "Premier League logo",
+      "asset_type": "logo",
+      "category": "match",
+      "required": true,
+      "scenes_used": [],
+      "legal_status": "needs_review",
+      "fallback_strategy": "Use text initials in approved template until badge is confirmed.",
+      "priority": "high"
+    },
+    {
+      "asset_id": "dashboard_panel",
+      "asset_name": "Insight dashboard panel",
+      "asset_type": "card",
+      "category": "dashboard",
+      "required": true,
+      "scenes_used": [
+        "scene-08",
+        "scene-09"
+      ],
+      "legal_status": "approved",
+      "fallback_strategy": "Use custom vector/template graphic from internal library.",
+      "priority": "high"
+    },
+    {
+      "asset_id": "data_card",
+      "asset_name": "Surprising detail card",
+      "asset_type": "card",
+      "category": "dashboard",
+      "required": true,
+      "scenes_used": [
+        "scene-02",
+        "scene-06"
+      ],
+      "legal_status": "approved",
+      "fallback_strategy": "Use custom vector/template graphic from internal library.",
+      "priority": "high"
+    },
+    {
+      "asset_id": "goal_icon",
+      "asset_name": "Goal icon",
+      "asset_type": "icon",
+      "category": "football",
+      "required": true,
+      "scenes_used": [],
+      "legal_status": "approved",
+      "fallback_strategy": "Use custom vector/template graphic from internal library.",
+      "priority": "high"
+    },
+    {
+      "asset_id": "intro_frame",
+      "asset_name": "Intro frame",
+      "asset_type": "template",
+      "category": "brand",
+      "required": true,
+      "scenes_used": [],
+      "legal_status": "approved",
+      "fallback_strategy": "Use custom vector/template graphic from internal library.",
+      "priority": "high"
+    },
+    {
+      "asset_id": "outro_frame",
+      "asset_name": "Outro frame",
+      "asset_type": "template",
+      "category": "brand",
+      "required": true,
+      "scenes_used": [],
+      "legal_status": "approved",
+      "fallback_strategy": "Use custom vector/template graphic from internal library.",
+      "priority": "high"
+    },
+    {
+      "asset_id": "pitch_graphic",
+      "asset_name": "Pitch background",
+      "asset_type": "pitch",
+      "category": "football",
+      "required": true,
+      "scenes_used": [
+        "scene-04",
+        "scene-10"
+      ],
+      "legal_status": "approved",
+      "fallback_strategy": "Use custom vector/template graphic from internal library.",
+      "priority": "high"
+    },
+    {
+      "asset_id": "pressing_icon",
+      "asset_name": "Pressing icon",
+      "asset_type": "icon",
+      "category": "football",
+      "required": true,
+      "scenes_used": [],
+      "legal_status": "approved",
+      "fallback_strategy": "Use custom vector/template graphic from internal library.",
+      "priority": "high"
+    },
+    {
+      "asset_id": "tactical_arrows",
+      "asset_name": "Tactical arrows",
+      "asset_type": "icon",
+      "category": "football",
+      "required": true,
+      "scenes_used": [],
+      "legal_status": "approved",
+      "fallback_strategy": "Use custom vector/template graphic from internal library.",
+      "priority": "high"
+    },
+    {
+      "asset_id": "team_logo_away",
+      "asset_name": "Arsenal badge",
+      "asset_type": "logo",
+      "category": "match",
+      "required": true,
+      "scenes_used": [],
+      "legal_status": "needs_review",
+      "fallback_strategy": "Use text initials in approved template until badge is confirmed.",
+      "priority": "high"
+    },
+    {
+      "asset_id": "team_logo_home",
+      "asset_name": "Liverpool badge",
+      "asset_type": "logo",
+      "category": "match",
+      "required": true,
+      "scenes_used": [
+        "scene-06"
+      ],
+      "legal_status": "needs_review",
+      "fallback_strategy": "Use text initials in approved template until badge is confirmed.",
+      "priority": "high"
+    },
+    {
+      "asset_id": "team_logos",
+      "asset_name": "Liverpool and Arsenal badges",
+      "asset_type": "logo",
+      "category": "match",
+      "required": true,
+      "scenes_used": [
+        "scene-02",
+        "scene-03",
+        "scene-04",
+        "scene-05",
+        "scene-07",
+        "scene-08",
+        "scene-09",
+        "scene-11"
+      ],
+      "legal_status": "needs_review",
+      "fallback_strategy": "Use text initials in approved template until badge is confirmed.",
+      "priority": "high"
+    },
+    {
+      "asset_id": "watermark",
+      "asset_name": "INSIGHT FOOTBALL watermark",
+      "asset_type": "logo",
+      "category": "brand",
+      "required": true,
+      "scenes_used": [],
+      "legal_status": "approved",
+      "fallback_strategy": "Use custom vector/template graphic from internal library.",
+      "priority": "high"
+    },
+    {
+      "asset_id": "wordmark",
+      "asset_name": "INSIGHT FOOTBALL wordmark",
+      "asset_type": "logo",
+      "category": "brand",
+      "required": true,
+      "scenes_used": [],
+      "legal_status": "approved",
+      "fallback_strategy": "Use custom vector/template graphic from internal library.",
+      "priority": "high"
+    }
+  ],
+  "fallback_assets": [
+    {
+      "asset_id": "team_logo_home",
+      "asset_name": "Liverpool badge fallback",
+      "asset_type": "fallback",
+      "category": "fallback",
+      "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\team_logo_home.svg",
+      "file_format": "svg",
+      "dimensions": "512x512",
+      "legal_status": "approved_placeholder",
+      "source": "deterministic_placeholder",
+      "scenes_used": [],
+      "reusable": true,
+      "checksum": "fc94dc5c1295f878cdc71c3857e0c7896386a1083007217574ce3518a00d77e6",
+      "fallback": true
+    },
+    {
+      "asset_id": "team_logo_away",
+      "asset_name": "Arsenal badge fallback",
+      "asset_type": "fallback",
+      "category": "fallback",
+      "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\team_logo_away.svg",
+      "file_format": "svg",
+      "dimensions": "512x512",
+      "legal_status": "approved_placeholder",
+      "source": "deterministic_placeholder",
+      "scenes_used": [],
+      "reusable": true,
+      "checksum": "47717e649df8e2b2abceb5d3141ab109a029247aa07372e6f91d7ea89750e41d",
+      "fallback": true
+    },
+    {
+      "asset_id": "team_logo_home",
+      "asset_name": "Liverpool badge fallback",
+      "asset_type": "fallback",
+      "category": "fallback",
+      "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\team_logo_home.svg",
+      "file_format": "svg",
+      "dimensions": "512x512",
+      "legal_status": "approved_placeholder",
+      "source": "deterministic_placeholder",
+      "scenes_used": [],
+      "reusable": true,
+      "checksum": "fc94dc5c1295f878cdc71c3857e0c7896386a1083007217574ce3518a00d77e6",
+      "fallback": true
+    },
+    {
+      "asset_id": "team_logo_away",
+      "asset_name": "Arsenal badge fallback",
+      "asset_type": "fallback",
+      "category": "fallback",
+      "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\team_logo_away.svg",
+      "file_format": "svg",
+      "dimensions": "512x512",
+      "legal_status": "approved_placeholder",
+      "source": "deterministic_placeholder",
+      "scenes_used": [],
+      "reusable": true,
+      "checksum": "47717e649df8e2b2abceb5d3141ab109a029247aa07372e6f91d7ea89750e41d",
+      "fallback": true
+    },
+    {
+      "asset_id": "competition_logo",
+      "asset_name": "Premier League text logo fallback",
+      "asset_type": "fallback",
+      "category": "fallback",
+      "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\competition_logo.svg",
+      "file_format": "svg",
+      "dimensions": "512x512",
+      "legal_status": "approved_placeholder",
+      "source": "deterministic_placeholder",
+      "scenes_used": [],
+      "reusable": true,
+      "checksum": "b4be60057d71cabb008d2672c14c2afe7f24b2e7c875531703a2aa949bb1334f",
+      "fallback": true
+    },
+    {
+      "asset_id": "background_graphic",
+      "asset_name": "Clean match background fallback background",
+      "asset_type": "fallback",
+      "category": "fallback",
+      "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\background_graphic.svg",
+      "file_format": "svg",
+      "dimensions": "512x512",
+      "legal_status": "approved_placeholder",
+      "source": "deterministic_placeholder",
+      "scenes_used": [],
+      "reusable": true,
+      "checksum": "f542d3fc2ca1dc73f244e4b07760cfdb2def684ab28fb33cf3f516aa6bde47b3",
+      "fallback": true
+    },
+    {
+      "asset_id": "pitch_graphic",
+      "asset_name": "Pitch background fallback background",
+      "asset_type": "fallback",
+      "category": "fallback",
+      "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\pitch_graphic.svg",
+      "file_format": "svg",
+      "dimensions": "512x512",
+      "legal_status": "approved_placeholder",
+      "source": "deterministic_placeholder",
+      "scenes_used": [],
+      "reusable": true,
+      "checksum": "73df0b7d2c54361c2d77a76a8af480c0f1bc7bee8a4df9c1771ad943cd7d1c5b",
+      "fallback": true
+    },
+    {
+      "asset_id": "background_graphic",
+      "asset_name": "Clean match background fallback background",
+      "asset_type": "fallback",
+      "category": "fallback",
+      "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\background_graphic.svg",
+      "file_format": "svg",
+      "dimensions": "512x512",
+      "legal_status": "approved_placeholder",
+      "source": "deterministic_placeholder",
+      "scenes_used": [],
+      "reusable": true,
+      "checksum": "f542d3fc2ca1dc73f244e4b07760cfdb2def684ab28fb33cf3f516aa6bde47b3",
+      "fallback": true
+    },
+    {
+      "asset_id": "pitch_graphic",
+      "asset_name": "Pitch background fallback background",
+      "asset_type": "fallback",
+      "category": "fallback",
+      "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\pitch_graphic.svg",
+      "file_format": "svg",
+      "dimensions": "512x512",
+      "legal_status": "approved_placeholder",
+      "source": "deterministic_placeholder",
+      "scenes_used": [],
+      "reusable": true,
+      "checksum": "73df0b7d2c54361c2d77a76a8af480c0f1bc7bee8a4df9c1771ad943cd7d1c5b",
+      "fallback": true
+    },
+    {
+      "asset_id": "comment_icon",
+      "asset_name": "Comment icon fallback icon",
+      "asset_type": "fallback",
+      "category": "fallback",
+      "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\comment_icon.svg",
+      "file_format": "svg",
+      "dimensions": "512x512",
+      "legal_status": "approved_placeholder",
+      "source": "deterministic_placeholder",
+      "scenes_used": [],
+      "reusable": true,
+      "checksum": "0a6378a09c1c9d3e6867936ae11c63c7ff6ddeb6315cb24c54e1bc3653540b47",
+      "fallback": true
+    },
+    {
+      "asset_id": "dashboard_icon",
+      "asset_name": "Dashboard Icon fallback icon",
+      "asset_type": "fallback",
+      "category": "fallback",
+      "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\dashboard_icon.svg",
+      "file_format": "svg",
+      "dimensions": "512x512",
+      "legal_status": "approved_placeholder",
+      "source": "deterministic_placeholder",
+      "scenes_used": [],
+      "reusable": true,
+      "checksum": "947944bff66c117c4e428a305d513949f4fb4bca9a1314ec2aaf04e1a74d7005",
+      "fallback": true
+    },
+    {
+      "asset_id": "goal_icon",
+      "asset_name": "Goal icon fallback icon",
+      "asset_type": "fallback",
+      "category": "fallback",
+      "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\goal_icon.svg",
+      "file_format": "svg",
+      "dimensions": "512x512",
+      "legal_status": "approved_placeholder",
+      "source": "deterministic_placeholder",
+      "scenes_used": [],
+      "reusable": true,
+      "checksum": "cf9c8b1278c5102f5148f7cbee115fe358d5934ef9e630a2fb148360920ccea4",
+      "fallback": true
+    },
+    {
+      "asset_id": "press_icon",
+      "asset_name": "Press Icon fallback icon",
+      "asset_type": "fallback",
+      "category": "fallback",
+      "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\press_icon.svg",
+      "file_format": "svg",
+      "dimensions": "512x512",
+      "legal_status": "approved_placeholder",
+      "source": "deterministic_placeholder",
+      "scenes_used": [],
+      "reusable": true,
+      "checksum": "ad3ffac4f9805f8eb5dc52ba87fe73260da37b30fab3ad0511000a8f1bf73b19",
+      "fallback": true
+    },
+    {
+      "asset_id": "pressing_icon",
+      "asset_name": "Pressing icon fallback icon",
+      "asset_type": "fallback",
+      "category": "fallback",
+      "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\pressing_icon.svg",
+      "file_format": "svg",
+      "dimensions": "512x512",
+      "legal_status": "approved_placeholder",
+      "source": "deterministic_placeholder",
+      "scenes_used": [],
+      "reusable": true,
+      "checksum": "8fdddc95a318572a7967f782b76fa8f8ce09447364114c9f43f37c7656ea9dcc",
+      "fallback": true
+    },
+    {
+      "asset_id": "tactical_arrow",
+      "asset_name": "Tactical Arrow fallback icon",
+      "asset_type": "fallback",
+      "category": "fallback",
+      "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\tactical_arrow.svg",
+      "file_format": "svg",
+      "dimensions": "512x512",
+      "legal_status": "approved_placeholder",
+      "source": "deterministic_placeholder",
+      "scenes_used": [],
+      "reusable": true,
+      "checksum": "2d64f6cdba21c7cb75b3cb2d60abb92286e0bd8db15eb7278bea12d0e7397ad8",
+      "fallback": true
+    },
+    {
+      "asset_id": "tactical_arrows",
+      "asset_name": "Tactical arrows fallback icon",
+      "asset_type": "fallback",
+      "category": "fallback",
+      "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\tactical_arrows.svg",
+      "file_format": "svg",
+      "dimensions": "512x512",
+      "legal_status": "approved_placeholder",
+      "source": "deterministic_placeholder",
+      "scenes_used": [],
+      "reusable": true,
+      "checksum": "71f70871d18008278336b277f4e2bd326dab878472a1104b06dcde79dc3fde3d",
+      "fallback": true
+    },
+    {
+      "asset_id": "uncertainty_icon",
+      "asset_name": "Uncertainty Icon fallback icon",
+      "asset_type": "fallback",
+      "category": "fallback",
+      "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\uncertainty_icon.svg",
+      "file_format": "svg",
+      "dimensions": "512x512",
+      "legal_status": "approved_placeholder",
+      "source": "deterministic_placeholder",
+      "scenes_used": [],
+      "reusable": true,
+      "checksum": "253decb4d9e3ccb467e53d44a1ff680a14ca68df46fd3fe6a7c1d7a7f11e2a9d",
+      "fallback": true
+    },
+    {
+      "asset_id": "warning_icon",
+      "asset_name": "Warning Icon fallback icon",
+      "asset_type": "fallback",
+      "category": "fallback",
+      "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\warning_icon.svg",
+      "file_format": "svg",
+      "dimensions": "512x512",
+      "legal_status": "approved_placeholder",
+      "source": "deterministic_placeholder",
+      "scenes_used": [],
+      "reusable": true,
+      "checksum": "9e37401d14cde983a81c0d3be9a4e78bdd9975c502cb70dc0750a741f9eabaf3",
+      "fallback": true
+    },
+    {
+      "asset_id": "x_factor_icon",
+      "asset_name": "X Factor Icon fallback icon",
+      "asset_type": "fallback",
+      "category": "fallback",
+      "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\x_factor_icon.svg",
+      "file_format": "svg",
+      "dimensions": "512x512",
+      "legal_status": "approved_placeholder",
+      "source": "deterministic_placeholder",
+      "scenes_used": [],
+      "reusable": true,
+      "checksum": "ee3613f5d8c3cc1dbfda2cba43ddce96cc8c4eddf39e8724c5fff1275afbfd88",
+      "fallback": true
+    },
+    {
+      "asset_id": "comment_icon",
+      "asset_name": "Comment icon fallback icon",
+      "asset_type": "fallback",
+      "category": "fallback",
+      "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\comment_icon.svg",
+      "file_format": "svg",
+      "dimensions": "512x512",
+      "legal_status": "approved_placeholder",
+      "source": "deterministic_placeholder",
+      "scenes_used": [],
+      "reusable": true,
+      "checksum": "0a6378a09c1c9d3e6867936ae11c63c7ff6ddeb6315cb24c54e1bc3653540b47",
+      "fallback": true
+    },
+    {
+      "asset_id": "dashboard_icon",
+      "asset_name": "Dashboard Icon fallback icon",
+      "asset_type": "fallback",
+      "category": "fallback",
+      "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\dashboard_icon.svg",
+      "file_format": "svg",
+      "dimensions": "512x512",
+      "legal_status": "approved_placeholder",
+      "source": "deterministic_placeholder",
+      "scenes_used": [],
+      "reusable": true,
+      "checksum": "947944bff66c117c4e428a305d513949f4fb4bca9a1314ec2aaf04e1a74d7005",
+      "fallback": true
+    },
+    {
+      "asset_id": "goal_icon",
+      "asset_name": "Goal icon fallback icon",
+      "asset_type": "fallback",
+      "category": "fallback",
+      "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\goal_icon.svg",
+      "file_format": "svg",
+      "dimensions": "512x512",
+      "legal_status": "approved_placeholder",
+      "source": "deterministic_placeholder",
+      "scenes_used": [],
+      "reusable": true,
+      "checksum": "cf9c8b1278c5102f5148f7cbee115fe358d5934ef9e630a2fb148360920ccea4",
+      "fallback": true
+    },
+    {
+      "asset_id": "press_icon",
+      "asset_name": "Press Icon fallback icon",
+      "asset_type": "fallback",
+      "category": "fallback",
+      "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\press_icon.svg",
+      "file_format": "svg",
+      "dimensions": "512x512",
+      "legal_status": "approved_placeholder",
+      "source": "deterministic_placeholder",
+      "scenes_used": [],
+      "reusable": true,
+      "checksum": "ad3ffac4f9805f8eb5dc52ba87fe73260da37b30fab3ad0511000a8f1bf73b19",
+      "fallback": true
+    },
+    {
+      "asset_id": "pressing_icon",
+      "asset_name": "Pressing icon fallback icon",
+      "asset_type": "fallback",
+      "category": "fallback",
+      "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\pressing_icon.svg",
+      "file_format": "svg",
+      "dimensions": "512x512",
+      "legal_status": "approved_placeholder",
+      "source": "deterministic_placeholder",
+      "scenes_used": [],
+      "reusable": true,
+      "checksum": "8fdddc95a318572a7967f782b76fa8f8ce09447364114c9f43f37c7656ea9dcc",
+      "fallback": true
+    },
+    {
+      "asset_id": "tactical_arrow",
+      "asset_name": "Tactical Arrow fallback icon",
+      "asset_type": "fallback",
+      "category": "fallback",
+      "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\tactical_arrow.svg",
+      "file_format": "svg",
+      "dimensions": "512x512",
+      "legal_status": "approved_placeholder",
+      "source": "deterministic_placeholder",
+      "scenes_used": [],
+      "reusable": true,
+      "checksum": "2d64f6cdba21c7cb75b3cb2d60abb92286e0bd8db15eb7278bea12d0e7397ad8",
+      "fallback": true
+    },
+    {
+      "asset_id": "tactical_arrows",
+      "asset_name": "Tactical arrows fallback icon",
+      "asset_type": "fallback",
+      "category": "fallback",
+      "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\tactical_arrows.svg",
+      "file_format": "svg",
+      "dimensions": "512x512",
+      "legal_status": "approved_placeholder",
+      "source": "deterministic_placeholder",
+      "scenes_used": [],
+      "reusable": true,
+      "checksum": "71f70871d18008278336b277f4e2bd326dab878472a1104b06dcde79dc3fde3d",
+      "fallback": true
+    },
+    {
+      "asset_id": "uncertainty_icon",
+      "asset_name": "Uncertainty Icon fallback icon",
+      "asset_type": "fallback",
+      "category": "fallback",
+      "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\uncertainty_icon.svg",
+      "file_format": "svg",
+      "dimensions": "512x512",
+      "legal_status": "approved_placeholder",
+      "source": "deterministic_placeholder",
+      "scenes_used": [],
+      "reusable": true,
+      "checksum": "253decb4d9e3ccb467e53d44a1ff680a14ca68df46fd3fe6a7c1d7a7f11e2a9d",
+      "fallback": true
+    },
+    {
+      "asset_id": "warning_icon",
+      "asset_name": "Warning Icon fallback icon",
+      "asset_type": "fallback",
+      "category": "fallback",
+      "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\warning_icon.svg",
+      "file_format": "svg",
+      "dimensions": "512x512",
+      "legal_status": "approved_placeholder",
+      "source": "deterministic_placeholder",
+      "scenes_used": [],
+      "reusable": true,
+      "checksum": "9e37401d14cde983a81c0d3be9a4e78bdd9975c502cb70dc0750a741f9eabaf3",
+      "fallback": true
+    },
+    {
+      "asset_id": "x_factor_icon",
+      "asset_name": "X Factor Icon fallback icon",
+      "asset_type": "fallback",
+      "category": "fallback",
+      "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\x_factor_icon.svg",
+      "file_format": "svg",
+      "dimensions": "512x512",
+      "legal_status": "approved_placeholder",
+      "source": "deterministic_placeholder",
+      "scenes_used": [],
+      "reusable": true,
+      "checksum": "ee3613f5d8c3cc1dbfda2cba43ddce96cc8c4eddf39e8724c5fff1275afbfd88",
+      "fallback": true
+    }
+  ],
+  "manual_review_tasks": [
+    {
+      "asset_id": "competition_logo",
+      "asset_name": "Premier League logo",
+      "asset_type": "logo",
+      "category": "match",
+      "required": true,
+      "scenes_used": [],
+      "legal_status": "needs_review",
+      "fallback_strategy": "Use text initials in approved template until badge is confirmed.",
+      "priority": "high"
+    },
+    {
+      "asset_id": "team_logo_away",
+      "asset_name": "Arsenal badge",
+      "asset_type": "logo",
+      "category": "match",
+      "required": true,
+      "scenes_used": [],
+      "legal_status": "needs_review",
+      "fallback_strategy": "Use text initials in approved template until badge is confirmed.",
+      "priority": "high"
+    },
+    {
+      "asset_id": "team_logo_home",
+      "asset_name": "Liverpool badge",
+      "asset_type": "logo",
+      "category": "match",
+      "required": true,
+      "scenes_used": [
+        "scene-06"
+      ],
+      "legal_status": "needs_review",
+      "fallback_strategy": "Use text initials in approved template until badge is confirmed.",
+      "priority": "high"
+    },
+    {
+      "asset_id": "team_logos",
+      "asset_name": "Liverpool and Arsenal badges",
+      "asset_type": "logo",
+      "category": "match",
+      "required": true,
+      "scenes_used": [
+        "scene-02",
+        "scene-03",
+        "scene-04",
+        "scene-05",
+        "scene-07",
+        "scene-08",
+        "scene-09",
+        "scene-11"
+      ],
+      "legal_status": "needs_review",
+      "fallback_strategy": "Use text initials in approved template until badge is confirmed.",
+      "priority": "high"
+    }
+  ],
+  "render_readiness_status": "needs_manual_assets",
+  "approval_status": "approved",
+  "next_component": "Timeline Builder"
+}

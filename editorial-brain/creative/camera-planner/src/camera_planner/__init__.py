@@ -1,0 +1,2 @@
+"""INSIGHT FOOTBALL Camera Planner."""
+

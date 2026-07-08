@@ -1,0 +1,45 @@
+{
+  "production_id": "if-2026-07-06-liverpool-arsenal",
+  "agent_id": "IF-A02",
+  "agent_name": "Story Hunter",
+  "prompt_id": "IF-PROMPT-02-STORY-HUNTER",
+  "prompt_version": "v1.0",
+  "input_version": "v1",
+  "output_version": "v1",
+  "timestamp": "2026-07-06T12:20:21.142423+00:00",
+  "selected_match": {
+    "home_team": "Liverpool",
+    "away_team": "Arsenal",
+    "competition": "Premier League",
+    "kickoff_time": "20:00",
+    "country": "England"
+  },
+  "story_angle": "Liverpool may have the edge if they turn the first 20 minutes into pressure, but Arsenal have enough quality to punish one mistake.",
+  "central_question": "Can Arsenal survive Liverpool's fast start?",
+  "surprising_fact": "Sample data: Liverpool have started quickly in recent home matches, while Arsenal have sometimes needed longer to settle away.",
+  "why_this_matters": "The opening spell could decide whether the away team plays calmly or spends the match reacting.",
+  "why_fans_should_care": "Both fanbases will have strong opinions about whether the away team can handle that early pressure.",
+  "supporting_context": [
+    "Liverpool recent form note: Sample: strong home starts",
+    "Arsenal recent form note: Sample: slower away starts",
+    "Tactical note: Liverpool early pressure vs Arsenal buildup"
+  ],
+  "rejected_angles": [
+    "Generic match preview",
+    "Basic head-to-head angle"
+  ],
+  "story_confidence": 86,
+  "warnings": [
+    "FACT_CHECK_REQUIRED: sample claims must be verified before publishing."
+  ],
+  "human_review_flags": [
+    "FACT_CHECK_REQUIRED"
+  ],
+  "locked_fields": {
+    "story_angle": "Liverpool may have the edge if they turn the first 20 minutes into pressure, but Arsenal have enough quality to punish one mistake.",
+    "central_question": "Can Arsenal survive Liverpool's fast start?",
+    "surprising_fact": "Sample data: Liverpool have started quickly in recent home matches, while Arsenal have sometimes needed longer to settle away."
+  },
+  "approval_status": "approved",
+  "next_agent": "IF-A03"
+}

@@ -1,0 +1,20 @@
+{
+  "production_id": "if-2026-07-06-liverpool-arsenal",
+  "component_id": "IF-FQC02",
+  "component_name": "Audio QC",
+  "timestamp": "2026-07-08T11:37:05.285416+00:00",
+  "audio_exists": false,
+  "duration_seconds": 10,
+  "loudness_status": "not_inspectable_placeholder",
+  "silence_warnings": [],
+  "clipping_status": "not_inspectable_placeholder",
+  "voice_sync_status": "aligned",
+  "music_balance_status": "no_music_bed",
+  "issues_found": [],
+  "warnings": [
+    "Audio track not inspectable in placeholder mode.",
+    "Voice duration differs from rendered duration by more than two seconds."
+  ],
+  "score": 80,
+  "approval_status": "approved"
+}

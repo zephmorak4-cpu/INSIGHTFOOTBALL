@@ -1,0 +1,17 @@
+{
+  "production_id": "if-2026-07-06-liverpool-arsenal",
+  "component_id": "IF-FQC03",
+  "component_name": "Caption QC",
+  "timestamp": "2026-07-08T11:37:05.271282+00:00",
+  "captions_exist": true,
+  "caption_count": 11,
+  "timing_status": "aligned",
+  "readability_score": 96,
+  "safe_area_status": "compliant",
+  "line_length_violations": [],
+  "spelling_warnings": [],
+  "issues_found": [],
+  "warnings": [],
+  "score": 96,
+  "approval_status": "approved"
+}

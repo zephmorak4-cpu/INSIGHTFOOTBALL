@@ -1,0 +1,21 @@
+{
+  "production_id": "if-2026-07-06-liverpool-arsenal",
+  "component_id": "S3-C02",
+  "component_name": "Hook Optimizer",
+  "timestamp": "2026-07-07T08:10:05.704355+00:00",
+  "original_hook": "Sample data: Liverpool have started quickly in recent home matches, while Arsenal have sometimes needed longer to settle away.",
+  "hook_options": [
+    "Sample data: Liverpool have started quickly in recent home matches, while Arsenal have sometimes needed longer to settle away.",
+    "The first big answer may come before the match settles: Sample data: Liverpool have started quickly in recent home matches, while Arsenal have sometimes needed longer to settle away.",
+    "Watch the opening phase closely, because Sample data: Liverpool have started quickly in recent home matches, while Arsenal have sometimes needed longer to settle away."
+  ],
+  "selected_hook": "Sample data: Liverpool have started quickly in recent home matches, while Arsenal have sometimes needed longer to settle away.",
+  "selection_reason": "The selected hook is specific, factual, simple, and avoids clickbait.",
+  "rejected_hooks": [
+    "The first big answer may come before the match settles: Sample data: Liverpool have started quickly in recent home matches, while Arsenal have sometimes needed longer to settle away.",
+    "Watch the opening phase closely, because Sample data: Liverpool have started quickly in recent home matches, while Arsenal have sometimes needed longer to settle away."
+  ],
+  "locked_fields_preserved": true,
+  "warnings": [],
+  "approval_status": "approved"
+}

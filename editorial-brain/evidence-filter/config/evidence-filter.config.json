@@ -1,0 +1,47 @@
+{
+  "module": "Evidence Filter",
+  "agent_id": "IF-A03",
+  "prompt_version": "v1.0",
+  "prompt_library_path": "blueprints/INSIGHT_FOOTBALL_Prompt_Library_v1.0.md",
+  "daily_input_schema_path": "editorial-brain/evidence-filter/schemas/daily-input.schema.json",
+  "match_selection_schema_path": "editorial-brain/evidence-filter/schemas/match-selection.schema.json",
+  "story_hunter_schema_path": "editorial-brain/evidence-filter/schemas/story-hunter.schema.json",
+  "output_schema_path": "editorial-brain/evidence-filter/schemas/evidence-filter.schema.json",
+  "model_selection": {
+    "default_provider": "openai",
+    "default_model": "gpt-4.1",
+    "fallback_model": "claude-sonnet"
+  },
+  "llm_provider": {
+    "provider": "deterministic",
+    "endpoint": "https://api.openai.com/v1/chat/completions",
+    "api_key_env": "OPENAI_API_KEY",
+    "timeout_seconds": 60
+  },
+  "generation": {
+    "temperature": 0.2,
+    "max_tokens": 2500
+  },
+  "retry_policy": {
+    "max_retries": 1,
+    "retry_on_invalid_json": true,
+    "retry_on_missing_required_fields": true,
+    "retry_on_low_confidence": false
+  },
+  "validation_policy": {
+    "minimum_confidence": 70,
+    "stop_on_human_review_required": false,
+    "stop_on_locked_field_change": true,
+    "require_valid_json": true
+  },
+  "required_inputs": [
+    "daily_input_json",
+    "match_selector_output_json",
+    "approved_story_hunter_output_json"
+  ],
+  "next_agent": "IF-A04",
+  "output": {
+    "log_directory": "editorial-brain/logs",
+    "package_directory": "editorial-brain/output"
+  }
+}

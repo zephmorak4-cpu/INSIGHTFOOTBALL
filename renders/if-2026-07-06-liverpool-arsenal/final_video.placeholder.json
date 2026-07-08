@@ -1,0 +1,7 @@
+{
+  "artifact_type": "structured_video_placeholder",
+  "renderer": "placeholder",
+  "reason": "Placeholder renderer selected; no video encoding attempted.",
+  "created_at": "2026-07-08T11:37:19.645268+00:00",
+  "expected_final_name": "final_video.mp4"
+}

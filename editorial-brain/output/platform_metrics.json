@@ -1,0 +1,139 @@
+{
+  "production_id": "if-2026-07-06-liverpool-arsenal",
+  "component_id": "IF-AN01",
+  "component_name": "Metrics Collector",
+  "timestamp": "2026-07-08T11:38:31.427292+00:00",
+  "platforms": [
+    {
+      "platform": "youtube",
+      "views": 1240,
+      "watch_time_seconds": 18200,
+      "average_view_duration_seconds": 14.68,
+      "audience_retention": [
+        {
+          "second": 0,
+          "retention_percent": 100
+        },
+        {
+          "second": 10,
+          "retention_percent": 78
+        },
+        {
+          "second": 20,
+          "retention_percent": 61
+        },
+        {
+          "second": 30,
+          "retention_percent": 48
+        },
+        {
+          "second": 42,
+          "retention_percent": 31
+        },
+        {
+          "second": 60,
+          "retention_percent": 21
+        }
+      ],
+      "ctr_percent": 5.8,
+      "likes": 53,
+      "comments": 34,
+      "shares": 18,
+      "subscribers_gained": 7,
+      "revenue": 0.0,
+      "rpm": 0.0,
+      "source": "provider_adapter"
+    },
+    {
+      "platform": "facebook",
+      "views": 860,
+      "watch_time_seconds": 11900,
+      "average_view_duration_seconds": 13.84,
+      "audience_retention": [
+        {
+          "second": 0,
+          "retention_percent": 100
+        },
+        {
+          "second": 10,
+          "retention_percent": 78
+        },
+        {
+          "second": 20,
+          "retention_percent": 61
+        },
+        {
+          "second": 30,
+          "retention_percent": 48
+        },
+        {
+          "second": 42,
+          "retention_percent": 31
+        },
+        {
+          "second": 60,
+          "retention_percent": 21
+        }
+      ],
+      "ctr_percent": 4.2,
+      "likes": 37,
+      "comments": 19,
+      "shares": 26,
+      "subscribers_gained": 5,
+      "revenue": 0.0,
+      "rpm": 0.0,
+      "source": "provider_adapter"
+    },
+    {
+      "platform": "telegram",
+      "views": 420,
+      "watch_time_seconds": 5200,
+      "average_view_duration_seconds": 12.38,
+      "audience_retention": [
+        {
+          "second": 0,
+          "retention_percent": 100
+        },
+        {
+          "second": 10,
+          "retention_percent": 78
+        },
+        {
+          "second": 20,
+          "retention_percent": 61
+        },
+        {
+          "second": 30,
+          "retention_percent": 48
+        },
+        {
+          "second": 42,
+          "retention_percent": 31
+        },
+        {
+          "second": 60,
+          "retention_percent": 21
+        }
+      ],
+      "ctr_percent": 3.6,
+      "likes": 18,
+      "comments": 11,
+      "shares": 14,
+      "subscribers_gained": 3,
+      "revenue": 0.0,
+      "rpm": 0.0,
+      "source": "provider_adapter"
+    }
+  ],
+  "totals": {
+    "views": 2520,
+    "watch_time_seconds": 35300,
+    "likes": 108,
+    "comments": 64,
+    "shares": 58,
+    "subscribers_gained": 15,
+    "average_view_duration_seconds": 14.01
+  },
+  "warnings": [],
+  "approval_status": "approved"
+}

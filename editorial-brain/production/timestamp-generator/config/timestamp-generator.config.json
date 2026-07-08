@@ -1,0 +1,18 @@
+{
+  "component_id": "IF-V04",
+  "component_name": "Timestamp Generator",
+  "output": {
+    "output_directory": "editorial-brain/output",
+    "log_directory": "editorial-brain/logs"
+  },
+  "speech_rate": 145,
+  "pause_estimation": {
+    "sentence": 0.03,
+    "comma": 0.02,
+    "semicolon": 0.03,
+    "colon": 0.03,
+    "question": 0.04
+  },
+  "max_duration_seconds": 60,
+  "next_component": "Audio Quality Control"
+}

@@ -1,0 +1,15 @@
+{
+  "component_id": "S6-C01",
+  "component_name": "Visual Director",
+  "storyboard_schema": "editorial-brain/creative/visual-director/schemas/final-storyboard-package.schema.json",
+  "asset_package_schema": "editorial-brain/creative/visual-director/schemas/final-asset-package.schema.json",
+  "output_schema": "editorial-brain/creative/visual-director/schemas/visual-plan.schema.json",
+  "output": {
+    "output_directory": "editorial-brain/output",
+    "log_directory": "editorial-brain/logs"
+  },
+  "allowed_templates": ["brand_opening", "stat_card", "question_card", "pitch_tactics", "comparison_split", "evidence_card", "insight_dashboard", "player_focus", "cta_card"],
+  "allowed_layouts": ["center_brand", "stat_focus", "question_focus", "pitch_board", "split_comparison", "evidence_card", "dashboard", "player_focus", "cta_focus", "card"],
+  "next_component": "Camera Planner"
+}
+

@@ -1,0 +1,41 @@
+{
+  "sprint": "Sprint 1",
+  "system": "INSIGHT FOOTBALL Editorial Brain",
+  "scope": "Match Selector -> Story Hunter -> Evidence Filter -> Insight Engine",
+  "model_selection": {
+    "default_provider": "openai",
+    "default_model": "gpt-4.1",
+    "fallback_model": "claude-sonnet"
+  },
+  "generation": {
+    "temperature": 0.3,
+    "max_tokens": 2500
+  },
+  "retry_policy": {
+    "max_retries": 1,
+    "retry_on_invalid_json": true,
+    "retry_on_missing_required_fields": true,
+    "retry_on_low_confidence": false
+  },
+  "timeout": {
+    "agent_timeout_seconds": 60,
+    "pipeline_timeout_seconds": 300
+  },
+  "validation_policy": {
+    "minimum_confidence": 70,
+    "stop_on_human_review_required": true,
+    "stop_on_locked_field_change": true,
+    "require_valid_json": true
+  },
+  "prompt_versions": {
+    "IF-A01": "IF-PROMPT-01-MATCH-SELECTOR@v1.0",
+    "IF-A02": "IF-PROMPT-02-STORY-HUNTER@v1.0",
+    "IF-A03": "IF-PROMPT-03-EVIDENCE-FILTER@v1.0",
+    "IF-A04": "IF-PROMPT-04-INSIGHT-ENGINE@v1.0"
+  },
+  "execution_order": ["IF-A01", "IF-A02", "IF-A03", "IF-A04"],
+  "output": {
+    "package_directory": "editorial-brain/output",
+    "log_directory": "editorial-brain/logs"
+  }
+}

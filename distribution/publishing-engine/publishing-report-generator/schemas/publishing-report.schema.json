@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","type":"object","required":["production_id","component_id","platforms_attempted","platforms_published","platforms_failed","dry_run","platform_results","final_status"],"properties":{"component_id":{"const":"IF-PUB08"},"final_status":{"enum":["dry_run_complete","published","partially_published","failed","cancelled"]}}}

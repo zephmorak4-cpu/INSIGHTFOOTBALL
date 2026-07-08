@@ -1,0 +1,40 @@
+{
+  "component_id": "IF-AN09",
+  "component_name": "Daily Performance Reporter",
+  "report_type": "monthly",
+  "generated_at": "2026-07-08T11:38:31.705547+00:00",
+  "top_video": "if-2026-07-06-liverpool-arsenal",
+  "worst_video": "baseline-data",
+  "best_hook": "question",
+  "best_thumbnail": "question_text_card",
+  "best_publishing_time": "2026-07-08T11:37:47.774353+00:00",
+  "retention_summary": {
+    "second": 42,
+    "retention_percent": 31
+  },
+  "ctr_summary": {
+    "average_ctr_percent": 4.53
+  },
+  "revenue_summary": {
+    "revenue": 0.0,
+    "rpm": 0.0
+  },
+  "recommendations": [
+    {
+      "area": "retention",
+      "recommendation": "Bring the dashboard insight earlier than 42 seconds.",
+      "priority": "high"
+    },
+    {
+      "area": "hook",
+      "recommendation": "Keep testing short question hooks; they currently lead the hook leaderboard.",
+      "priority": "medium"
+    },
+    {
+      "area": "governance",
+      "recommendation": "Do not automatically rewrite prompts; route these findings to human editorial review.",
+      "priority": "required"
+    }
+  ],
+  "approval_status": "approved"
+}

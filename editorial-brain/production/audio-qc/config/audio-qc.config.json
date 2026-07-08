@@ -1,0 +1,14 @@
+{
+  "component_id": "IF-V05",
+  "component_name": "Audio Quality Control",
+  "output": {
+    "output_directory": "editorial-brain/output",
+    "log_directory": "editorial-brain/logs"
+  },
+  "min_quality_score": 85,
+  "max_wpm": 145,
+  "min_wpm": 120,
+  "max_duration_seconds": 60,
+  "forbidden_language": ["bet", "odds", "banker", "guaranteed", "lock", "wager", "tipster"],
+  "compatible_providers": ["google_cloud_tts", "azure_speech", "elevenlabs", "openai_tts", "cartesia", "playht"]
+}

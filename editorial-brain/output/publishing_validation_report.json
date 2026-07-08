@@ -1,0 +1,19 @@
+{
+  "production_id": "if-2026-07-06-liverpool-arsenal",
+  "component_id": "IF-PUB07",
+  "component_name": "Publishing Validator",
+  "timestamp": "2026-07-08T11:37:48.039644+00:00",
+  "package_status": "rejected",
+  "video_status": "exists_or_placeholder",
+  "metadata_status": "approved",
+  "credential_status": "dry_run_allowed",
+  "legal_status": "warnings_present",
+  "platform_payload_status": "approved",
+  "blocking_issues": [
+    "publish-ready package rejected by QC"
+  ],
+  "warnings": [
+    "manual review assets present"
+  ],
+  "approval_status": "blocked"
+}

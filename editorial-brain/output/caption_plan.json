@@ -1,0 +1,191 @@
+{
+  "production_id": "if-2026-07-06-liverpool-arsenal",
+  "component_id": "S6-C04",
+  "component_name": "Caption Designer",
+  "timestamp": "2026-07-07T10:56:16.429751+00:00",
+  "source_visual_plan": "if-2026-07-06-liverpool-arsenal",
+  "scenes": [
+    {
+      "scene_id": "scene-01",
+      "caption": "Before the first whistle",
+      "caption_position": "lower_third_safe",
+      "font_size": 46,
+      "font_weight": "semibold",
+      "highlight_words": [
+        "first"
+      ],
+      "background_style": "dark_translucent_strip",
+      "timing": {
+        "start_offset": 0.2,
+        "end_offset": -0.2
+      },
+      "safe_area_notes": "Lower third, inside center 80%, never over team badge or dashboard values."
+    },
+    {
+      "scene_id": "scene-02",
+      "caption": "Sample data: Liverpool have started quickly in\nrecent home",
+      "caption_position": "lower_third_safe",
+      "font_size": 46,
+      "font_weight": "semibold",
+      "highlight_words": [
+        "Liverpool"
+      ],
+      "background_style": "dark_translucent_strip",
+      "timing": {
+        "start_offset": 0.2,
+        "end_offset": -0.2
+      },
+      "safe_area_notes": "Lower third, inside center 80%, never over team badge or dashboard values."
+    },
+    {
+      "scene_id": "scene-03",
+      "caption": "Can Arsenal survive Liverpool's fast start?",
+      "caption_position": "lower_third_safe",
+      "font_size": 54,
+      "font_weight": "bold",
+      "highlight_words": [
+        "Liverpool",
+        "Arsenal",
+        "survive"
+      ],
+      "background_style": "dark_translucent_strip",
+      "timing": {
+        "start_offset": 0.2,
+        "end_offset": -0.2
+      },
+      "safe_area_notes": "Lower third, inside center 80%, never over team badge or dashboard values."
+    },
+    {
+      "scene_id": "scene-04",
+      "caption": "Liverpool usually start aggressively, pressing high and\nforcing rushed",
+      "caption_position": "lower_third_safe",
+      "font_size": 46,
+      "font_weight": "semibold",
+      "highlight_words": [
+        "Liverpool"
+      ],
+      "background_style": "dark_translucent_strip",
+      "timing": {
+        "start_offset": 0.2,
+        "end_offset": -0.2
+      },
+      "safe_area_notes": "Lower third, inside center 80%, never over team badge or dashboard values."
+    },
+    {
+      "scene_id": "scene-05",
+      "caption": "Arsenal have enough quality to play through\nit, but",
+      "caption_position": "lower_third_safe",
+      "font_size": 46,
+      "font_weight": "semibold",
+      "highlight_words": [
+        "Arsenal"
+      ],
+      "background_style": "dark_translucent_strip",
+      "timing": {
+        "start_offset": 0.2,
+        "end_offset": -0.2
+      },
+      "safe_area_notes": "Lower third, inside center 80%, never over team badge or dashboard values."
+    },
+    {
+      "scene_id": "scene-06",
+      "caption": "The evidence is simple: Liverpool usually make\nopponents uncomfortable",
+      "caption_position": "lower_third_safe",
+      "font_size": 46,
+      "font_weight": "semibold",
+      "highlight_words": [
+        "Liverpool"
+      ],
+      "background_style": "dark_translucent_strip",
+      "timing": {
+        "start_offset": 0.2,
+        "end_offset": -0.2
+      },
+      "safe_area_notes": "Lower third, inside center 80%, never over team badge or dashboard values."
+    },
+    {
+      "scene_id": "scene-07",
+      "caption": "The balance matters too: Arsenal may be\nbetter prepared",
+      "caption_position": "lower_third_safe",
+      "font_size": 46,
+      "font_weight": "semibold",
+      "highlight_words": [
+        "Arsenal"
+      ],
+      "background_style": "dark_translucent_strip",
+      "timing": {
+        "start_offset": 0.2,
+        "end_offset": -0.2
+      },
+      "safe_area_notes": "Lower third, inside center 80%, never over team badge or dashboard values."
+    },
+    {
+      "scene_id": "scene-08",
+      "caption": "Slight Home Edge",
+      "caption_position": "lower_third_safe",
+      "font_size": 46,
+      "font_weight": "bold",
+      "highlight_words": [
+        "edge"
+      ],
+      "background_style": "dark_translucent_strip",
+      "timing": {
+        "start_offset": 0.2,
+        "end_offset": -0.2
+      },
+      "safe_area_notes": "Lower third, inside center 80%, never over team badge or dashboard values."
+    },
+    {
+      "scene_id": "scene-09",
+      "caption": "Slight Home Edge",
+      "caption_position": "lower_third_safe",
+      "font_size": 46,
+      "font_weight": "bold",
+      "highlight_words": [
+        "edge"
+      ],
+      "background_style": "dark_translucent_strip",
+      "timing": {
+        "start_offset": 0.2,
+        "end_offset": -0.2
+      },
+      "safe_area_notes": "Lower third, inside center 80%, never over team badge or dashboard values."
+    },
+    {
+      "scene_id": "scene-10",
+      "caption": "The x-factor is arsenal's ability to escape\nliverpool's first",
+      "caption_position": "lower_third_safe",
+      "font_size": 46,
+      "font_weight": "semibold",
+      "highlight_words": [
+        "Liverpool",
+        "Arsenal",
+        "x-factor",
+        "first"
+      ],
+      "background_style": "dark_translucent_strip",
+      "timing": {
+        "start_offset": 0.2,
+        "end_offset": -0.2
+      },
+      "safe_area_notes": "Lower third, inside center 80%, never over team badge or dashboard values."
+    },
+    {
+      "scene_id": "scene-11",
+      "caption": "Tell us below",
+      "caption_position": "lower_third_safe",
+      "font_size": 54,
+      "font_weight": "semibold",
+      "highlight_words": [],
+      "background_style": "dark_translucent_strip",
+      "timing": {
+        "start_offset": 0.2,
+        "end_offset": -0.2
+      },
+      "safe_area_notes": "Lower third, inside center 80%, never over team badge or dashboard values."
+    }
+  ],
+  "warnings": [],
+  "approval_status": "approved",
+  "next_component": "Dashboard Composer"
+}

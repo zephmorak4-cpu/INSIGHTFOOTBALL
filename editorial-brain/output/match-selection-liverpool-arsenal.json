@@ -1,0 +1,31 @@
+{
+  "agent_id": "IF-A01",
+  "agent_name": "Match Selector",
+  "prompt_id": "IF-PROMPT-01-MATCH-SELECTOR",
+  "prompt_version": "v1.0",
+  "production_id": "if-2026-07-06-liverpool-arsenal",
+  "selected_match": {
+    "home_team": "Liverpool",
+    "away_team": "Arsenal",
+    "competition": "Premier League",
+    "kickoff_time": "20:00",
+    "country": "England"
+  },
+  "selected_reason": "Liverpool vs Arsenal has the strongest mix of audience interest, match importance, available data, and story potential.",
+  "selection_score": 91,
+  "audience_interest_score": 10,
+  "importance_score": 9,
+  "rivalry_score": 8,
+  "data_availability_score": 9,
+  "story_potential_score": 9,
+  "runner_up_matches": [],
+  "rejected_matches": [],
+  "data_gaps": [],
+  "confidence": {
+    "score": 91,
+    "reason": "Selection is based on audience interest, importance, rivalry, data availability, and story potential."
+  },
+  "human_review_flags": [],
+  "approval_status": "approved",
+  "next_agent": "IF-A02"
+}

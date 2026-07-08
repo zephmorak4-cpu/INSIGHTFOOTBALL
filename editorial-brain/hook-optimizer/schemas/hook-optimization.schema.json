@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "HookOptimization",
+  "type": "object",
+  "required": ["production_id", "component_id", "component_name", "timestamp", "original_hook", "hook_options", "selected_hook", "selection_reason", "rejected_hooks", "locked_fields_preserved", "warnings", "approval_status"],
+  "properties": {
+    "production_id": { "type": "string" },
+    "hook_options": { "type": "array" },
+    "selected_hook": { "type": "string" },
+    "rejected_hooks": { "type": "array" },
+    "locked_fields_preserved": { "type": "boolean" },
+    "warnings": { "type": "array" },
+    "approval_status": { "type": "string", "enum": ["approved", "blocked"] }
+  }
+}
+

@@ -1,0 +1,26 @@
+{
+  "agent_id": "IF-A06",
+  "agent_name": "Storyboard Generator",
+  "prompt_id": "IF-PROMPT-06-STORYBOARD-GENERATOR",
+  "prompt_version": "v1.0",
+  "prompt_path": "editorial-brain/storyboard-generator/prompts/storyboard-generator.prompt.md",
+  "script_package_schema": "editorial-brain/storyboard-generator/schemas/final-script-package.schema.json",
+  "output_schema": "editorial-brain/storyboard-generator/schemas/storyboard-draft.schema.json",
+  "generation": {
+    "model": "deterministic-local",
+    "temperature": 0.2,
+    "max_tokens": 1600,
+    "max_retries": 1
+  },
+  "timing": {
+    "min_scene_duration_seconds": 2,
+    "max_scene_duration_seconds": 7,
+    "target_visual_change_seconds": 4
+  },
+  "output": {
+    "output_directory": "editorial-brain/output",
+    "log_directory": "editorial-brain/logs"
+  },
+  "next_component": "Scene Planner"
+}
+

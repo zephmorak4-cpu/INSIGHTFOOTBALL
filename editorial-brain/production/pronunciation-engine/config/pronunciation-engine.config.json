@@ -1,0 +1,15 @@
+{
+  "component_id": "IF-V02",
+  "component_name": "Pronunciation Engine",
+  "output": {
+    "output_directory": "editorial-brain/output",
+    "log_directory": "editorial-brain/logs"
+  },
+  "supported_languages": ["en-GB", "en-US"],
+  "phonetic_standard": "plain-English broadcast phonetics",
+  "fallback_rules": {
+    "unknown_name": "spell with syllable breaks and flag for review",
+    "abbreviation": "pronounce each capital letter unless common football usage differs"
+  },
+  "next_component": "SSML Generator"
+}

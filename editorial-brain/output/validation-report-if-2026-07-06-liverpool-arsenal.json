@@ -1,0 +1,20 @@
+{
+  "production_id": "if-2026-07-06-liverpool-arsenal",
+  "validator_id": "S2-C01",
+  "validator_name": "Editorial Validator",
+  "timestamp": "2026-07-06T17:07:55.584336+00:00",
+  "input_package_version": "v1",
+  "validation_status": "approved",
+  "overall_score": 86.0,
+  "story_score": 85,
+  "evidence_score": 85,
+  "clarity_score": 85,
+  "insight_score": 85,
+  "brand_safety_score": 90,
+  "issues_found": [],
+  "required_fixes": [],
+  "warnings": [],
+  "human_review_flags": [],
+  "approval_status": "approved",
+  "next_component": "production-brief-generator"
+}

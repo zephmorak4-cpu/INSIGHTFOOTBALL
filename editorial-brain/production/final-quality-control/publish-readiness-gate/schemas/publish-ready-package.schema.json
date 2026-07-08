@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","type":"object","required":["production_id","match","competition","final_video_path","thumbnail_path","render_complete_package","qc_reports","publish_readiness_report","approval_status","next_component"],"properties":{"next_component":{"const":"Publishing Engine"}}}

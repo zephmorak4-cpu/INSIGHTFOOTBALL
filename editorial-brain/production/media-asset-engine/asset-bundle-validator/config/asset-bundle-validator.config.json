@@ -1,0 +1,1 @@
+{"component_id":"IF-MAE08","required_asset_policy":"required assets need local_path or fallback_strategy","legal_policy":"blocked assets excluded and needs_review surfaced","render_readiness_rules":["ready","ready_with_fallbacks","needs_manual_assets","blocked_legal_risk","failed_validation"]}

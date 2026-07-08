@@ -1,0 +1,1 @@
+{"component_id":"IF-TL03","default_layer_order":["background","background_overlay","pitch_or_dashboard_graphics","team_badges","player_or_icon_assets","data_cards","primary_text","captions","watermark","transitions"],"safe_area_rules":{"vertical_center":"80%"},"z_index_rules":{"background":1,"captions":8,"watermark":9},"next_component":"Caption Synchronizer"}

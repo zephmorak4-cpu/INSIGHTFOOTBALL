@@ -1,0 +1,14 @@
+{
+  "component_id": "S2-C01",
+  "component_name": "Editorial Validator",
+  "input_schema": "editorial-brain/editorial-validator/schemas/editorial-package.input.schema.json",
+  "output_schema": "editorial-brain/editorial-validator/schemas/validation-report.schema.json",
+  "validated_package_schema": "editorial-brain/editorial-validator/schemas/validated-editorial-package.schema.json",
+  "confidence_threshold": 70,
+  "publishability_threshold": 75,
+  "next_component": "production-brief-generator",
+  "output": {
+    "directory": "editorial-brain/output",
+    "log_directory": "editorial-brain/logs"
+  }
+}

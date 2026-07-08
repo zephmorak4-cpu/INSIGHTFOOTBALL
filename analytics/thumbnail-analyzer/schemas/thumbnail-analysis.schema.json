@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","type":"object","required":["component_id","thumbnail_leaderboard","best_thumbnail_style","approval_status"],"properties":{"component_id":{"const":"IF-AN05"}}}

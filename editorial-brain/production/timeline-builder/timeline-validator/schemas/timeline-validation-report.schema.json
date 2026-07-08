@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","type":"object","required":["production_id","component_id","checks","issues","warnings","render_readiness_status","approval_status"],"properties":{"component_id":{"const":"IF-TL07"},"render_readiness_status":{"enum":["ready","ready_with_warnings","needs_manual_review","failed_validation"]}}}

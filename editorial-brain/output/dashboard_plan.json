@@ -1,0 +1,56 @@
+{
+  "production_id": "if-2026-07-06-liverpool-arsenal",
+  "component_id": "S6-C05",
+  "component_name": "Dashboard Composer",
+  "timestamp": "2026-07-07T10:56:45.231065+00:00",
+  "source_storyboard_package": "if-2026-07-06-liverpool-arsenal",
+  "dashboard_cards": [
+    {
+      "card_type": "Match Edge",
+      "title": "Match Edge",
+      "content": "Slight Home Edge",
+      "icon": "edge_bar",
+      "animation": "Dashboard Reveal",
+      "display_time": 3.0
+    },
+    {
+      "card_type": "Key Advantage",
+      "title": "Key Advantage",
+      "content": "Liverpool's early pressure",
+      "icon": "pressing_icon",
+      "animation": "Highlight Pulse",
+      "display_time": 2.5
+    },
+    {
+      "card_type": "X-Factor",
+      "title": "X-Factor",
+      "content": "The x-factor is arsenal's ability to escape liverpool's first...",
+      "icon": "player_marker",
+      "animation": "Pop",
+      "display_time": 2.5
+    },
+    {
+      "card_type": "Uncertainty",
+      "title": "Uncertainty",
+      "content": "The balance matters too: Arsenal may be better prepared...",
+      "icon": "warning_icon",
+      "animation": "Fade",
+      "display_time": 2.5
+    },
+    {
+      "card_type": "Surprising Detail",
+      "title": "Surprising Detail",
+      "content": "Sample data: Liverpool have started quickly in recent home...",
+      "icon": "form_icon",
+      "animation": "Counter",
+      "display_time": 3.0
+    }
+  ],
+  "dashboard_scene_ids": [
+    "scene-08",
+    "scene-09"
+  ],
+  "warnings": [],
+  "approval_status": "approved",
+  "next_component": "Rendering Engine"
+}

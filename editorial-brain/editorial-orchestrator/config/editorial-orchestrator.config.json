@@ -1,0 +1,21 @@
+{
+  "module": "Editorial Orchestrator",
+  "provider": "deterministic",
+  "package_schema_path": "editorial-brain/editorial-orchestrator/schemas/editorial-package.schema.json",
+  "modules": {
+    "match_selector_config_path": "editorial-brain/match-selector/config/match-selector.config.json",
+    "story_hunter_config_path": "editorial-brain/story-hunter/config/story-hunter.config.json",
+    "evidence_filter_config_path": "editorial-brain/evidence-filter/config/evidence-filter.config.json",
+    "insight_engine_config_path": "editorial-brain/insight-engine/config/insight-engine.config.json"
+  },
+  "validation_policy": {
+    "minimum_confidence": 70,
+    "stop_on_stage_failure": true,
+    "stop_on_locked_field_change": true,
+    "require_package_schema_validation": true
+  },
+  "output": {
+    "package_directory": "editorial-brain/output",
+    "log_directory": "editorial-brain/logs"
+  }
+}

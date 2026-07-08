@@ -1,0 +1,22 @@
+{
+  "component_id": "S3-C03",
+  "component_name": "CTA Generator",
+  "prompt_path": "editorial-brain/cta-generator/prompts/cta-generator.prompt.md",
+  "script_schema": "editorial-brain/cta-generator/schemas/optimized-script-output.schema.json",
+  "brief_schema": "editorial-brain/cta-generator/schemas/production-brief.schema.json",
+  "cta_schema": "editorial-brain/cta-generator/schemas/cta-output.schema.json",
+  "final_package_schema": "editorial-brain/cta-generator/schemas/final-script-package.schema.json",
+  "output": {
+    "output_directory": "editorial-brain/output",
+    "log_directory": "editorial-brain/logs"
+  },
+  "max_cta_options": 3,
+  "target_duration_seconds": 60,
+  "generation": {
+    "temperature": 0.3,
+    "max_tokens": 900,
+    "max_retries": 1
+  },
+  "next_agent": "IF-A06"
+}
+

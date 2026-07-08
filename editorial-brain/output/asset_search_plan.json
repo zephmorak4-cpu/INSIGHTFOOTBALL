@@ -1,0 +1,224 @@
+{
+  "production_id": "if-2026-07-06-liverpool-arsenal",
+  "component_id": "S5-C02",
+  "component_name": "Search Planner",
+  "timestamp": "2026-07-07T09:18:28.103770+00:00",
+  "source_asset_manifest": "if-2026-07-06-liverpool-arsenal",
+  "search_tasks": [
+    {
+      "task_id": "task-competition_logo",
+      "asset_id": "competition_logo",
+      "task_type": "internal_library",
+      "description": "Confirm or prepare Premier League logo",
+      "suggested_query": "Premier League logo approved asset",
+      "approved_source_type": "approved_internal_or_rights_checked_source",
+      "legal_notes": "Legal status: needs_review. Use text initials in approved template until badge is confirmed.",
+      "priority": "high",
+      "fallback_option": "Use text initials in approved template until badge is confirmed.",
+      "required_before_render": true
+    },
+    {
+      "task_id": "task-team_logo_away",
+      "asset_id": "team_logo_away",
+      "task_type": "internal_library",
+      "description": "Confirm or prepare Arsenal badge",
+      "suggested_query": "Arsenal badge approved asset",
+      "approved_source_type": "approved_internal_or_rights_checked_source",
+      "legal_notes": "Legal status: needs_review. Use text initials in approved template until badge is confirmed.",
+      "priority": "high",
+      "fallback_option": "Use text initials in approved template until badge is confirmed.",
+      "required_before_render": true
+    },
+    {
+      "task_id": "task-team_logo_home",
+      "asset_id": "team_logo_home",
+      "task_type": "internal_library",
+      "description": "Confirm or prepare Liverpool badge",
+      "suggested_query": "Liverpool badge approved asset",
+      "approved_source_type": "approved_internal_or_rights_checked_source",
+      "legal_notes": "Legal status: needs_review. Use text initials in approved template until badge is confirmed.",
+      "priority": "high",
+      "fallback_option": "Use text initials in approved template until badge is confirmed.",
+      "required_before_render": true
+    },
+    {
+      "task_id": "task-team_logos",
+      "asset_id": "team_logos",
+      "task_type": "internal_library",
+      "description": "Confirm or prepare Liverpool and Arsenal badges",
+      "suggested_query": "Liverpool and Arsenal badges approved asset",
+      "approved_source_type": "approved_internal_or_rights_checked_source",
+      "legal_notes": "Legal status: needs_review. Use text initials in approved template until badge is confirmed.",
+      "priority": "high",
+      "fallback_option": "Use text initials in approved template until badge is confirmed.",
+      "required_before_render": true
+    }
+  ],
+  "manual_tasks": [
+    {
+      "task_id": "task-player_image",
+      "asset_id": "player_image",
+      "task_type": "manual_upload",
+      "description": "Confirm or prepare Player cutout",
+      "suggested_query": "Player cutout approved asset",
+      "approved_source_type": "manual_upload",
+      "legal_notes": "Legal status: needs_review. Replace with generated illustration or pitch graphic.",
+      "priority": "low",
+      "fallback_option": "Replace with generated illustration or pitch graphic.",
+      "required_before_render": false
+    }
+  ],
+  "generation_tasks": [
+    {
+      "task_id": "task-stadium_image",
+      "asset_id": "stadium_image",
+      "task_type": "generated_illustration",
+      "description": "Confirm or prepare Stadium-style background",
+      "suggested_query": "Stadium-style background approved asset",
+      "approved_source_type": "generated_illustration",
+      "legal_notes": "Legal status: approved. Use custom vector/template graphic from internal library.",
+      "priority": "low",
+      "fallback_option": "Use custom vector/template graphic from internal library.",
+      "required_before_render": false
+    }
+  ],
+  "blocked_assets": [],
+  "fallback_tasks": [
+    {
+      "task_id": "fallback-competition_logo",
+      "asset_id": "competition_logo",
+      "task_type": "fallback",
+      "description": "Use text initials in approved template until badge is confirmed.",
+      "suggested_query": "Premier League logo approved asset",
+      "approved_source_type": "approved_internal_or_rights_checked_source",
+      "legal_notes": "Legal status: needs_review. Use text initials in approved template until badge is confirmed.",
+      "priority": "high",
+      "fallback_option": "Use text initials in approved template until badge is confirmed.",
+      "required_before_render": false
+    },
+    {
+      "task_id": "fallback-team_logo_away",
+      "asset_id": "team_logo_away",
+      "task_type": "fallback",
+      "description": "Use text initials in approved template until badge is confirmed.",
+      "suggested_query": "Arsenal badge approved asset",
+      "approved_source_type": "approved_internal_or_rights_checked_source",
+      "legal_notes": "Legal status: needs_review. Use text initials in approved template until badge is confirmed.",
+      "priority": "high",
+      "fallback_option": "Use text initials in approved template until badge is confirmed.",
+      "required_before_render": false
+    },
+    {
+      "task_id": "fallback-team_logo_home",
+      "asset_id": "team_logo_home",
+      "task_type": "fallback",
+      "description": "Use text initials in approved template until badge is confirmed.",
+      "suggested_query": "Liverpool badge approved asset",
+      "approved_source_type": "approved_internal_or_rights_checked_source",
+      "legal_notes": "Legal status: needs_review. Use text initials in approved template until badge is confirmed.",
+      "priority": "high",
+      "fallback_option": "Use text initials in approved template until badge is confirmed.",
+      "required_before_render": false
+    },
+    {
+      "task_id": "fallback-team_logos",
+      "asset_id": "team_logos",
+      "task_type": "fallback",
+      "description": "Use text initials in approved template until badge is confirmed.",
+      "suggested_query": "Liverpool and Arsenal badges approved asset",
+      "approved_source_type": "approved_internal_or_rights_checked_source",
+      "legal_notes": "Legal status: needs_review. Use text initials in approved template until badge is confirmed.",
+      "priority": "high",
+      "fallback_option": "Use text initials in approved template until badge is confirmed.",
+      "required_before_render": false
+    },
+    {
+      "task_id": "fallback-player_image",
+      "asset_id": "player_image",
+      "task_type": "fallback",
+      "description": "Replace with generated illustration or pitch graphic.",
+      "suggested_query": "Player cutout approved asset",
+      "approved_source_type": "manual_upload",
+      "legal_notes": "Legal status: needs_review. Replace with generated illustration or pitch graphic.",
+      "priority": "low",
+      "fallback_option": "Replace with generated illustration or pitch graphic.",
+      "required_before_render": false
+    },
+    {
+      "task_id": "fallback-stadium_image",
+      "asset_id": "stadium_image",
+      "task_type": "fallback",
+      "description": "Use custom vector/template graphic from internal library.",
+      "suggested_query": "Stadium-style background approved asset",
+      "approved_source_type": "generated_illustration",
+      "legal_notes": "Legal status: approved. Use custom vector/template graphic from internal library.",
+      "priority": "low",
+      "fallback_option": "Use custom vector/template graphic from internal library.",
+      "required_before_render": false
+    }
+  ],
+  "legal_review_tasks": [
+    {
+      "task_id": "legal-competition_logo",
+      "asset_id": "competition_logo",
+      "task_type": "legal_review",
+      "description": "Confirm rights for Premier League logo",
+      "suggested_query": "Premier League logo approved asset",
+      "approved_source_type": "approved_internal_or_rights_checked_source",
+      "legal_notes": "Legal status: needs_review. Use text initials in approved template until badge is confirmed.",
+      "priority": "high",
+      "fallback_option": "Use text initials in approved template until badge is confirmed.",
+      "required_before_render": true
+    },
+    {
+      "task_id": "legal-team_logo_away",
+      "asset_id": "team_logo_away",
+      "task_type": "legal_review",
+      "description": "Confirm rights for Arsenal badge",
+      "suggested_query": "Arsenal badge approved asset",
+      "approved_source_type": "approved_internal_or_rights_checked_source",
+      "legal_notes": "Legal status: needs_review. Use text initials in approved template until badge is confirmed.",
+      "priority": "high",
+      "fallback_option": "Use text initials in approved template until badge is confirmed.",
+      "required_before_render": true
+    },
+    {
+      "task_id": "legal-team_logo_home",
+      "asset_id": "team_logo_home",
+      "task_type": "legal_review",
+      "description": "Confirm rights for Liverpool badge",
+      "suggested_query": "Liverpool badge approved asset",
+      "approved_source_type": "approved_internal_or_rights_checked_source",
+      "legal_notes": "Legal status: needs_review. Use text initials in approved template until badge is confirmed.",
+      "priority": "high",
+      "fallback_option": "Use text initials in approved template until badge is confirmed.",
+      "required_before_render": true
+    },
+    {
+      "task_id": "legal-team_logos",
+      "asset_id": "team_logos",
+      "task_type": "legal_review",
+      "description": "Confirm rights for Liverpool and Arsenal badges",
+      "suggested_query": "Liverpool and Arsenal badges approved asset",
+      "approved_source_type": "approved_internal_or_rights_checked_source",
+      "legal_notes": "Legal status: needs_review. Use text initials in approved template until badge is confirmed.",
+      "priority": "high",
+      "fallback_option": "Use text initials in approved template until badge is confirmed.",
+      "required_before_render": true
+    },
+    {
+      "task_id": "legal-player_image",
+      "asset_id": "player_image",
+      "task_type": "legal_review",
+      "description": "Confirm rights for Player cutout",
+      "suggested_query": "Player cutout approved asset",
+      "approved_source_type": "manual_upload",
+      "legal_notes": "Legal status: needs_review. Replace with generated illustration or pitch graphic.",
+      "priority": "low",
+      "fallback_option": "Replace with generated illustration or pitch graphic.",
+      "required_before_render": true
+    }
+  ],
+  "approval_status": "approved",
+  "next_component": "Graphic Planner"
+}

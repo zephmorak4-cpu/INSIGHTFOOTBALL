@@ -1,0 +1,43 @@
+{
+  "date": "YYYY-MM-DD",
+  "fixtures": [
+    {
+      "home_team": "",
+      "away_team": "",
+      "competition": "",
+      "kickoff_time": "",
+      "venue": "",
+      "team_popularity": 0,
+      "match_importance": 0,
+      "rivalry_level": 0,
+      "available_data_score": 0,
+      "expected_audience_interest": 0
+    }
+  ],
+  "selected_match_context": {
+    "team_form": {},
+    "injuries": [],
+    "head_to_head": {},
+    "home_away_performance": {},
+    "odds": {},
+    "recent_news": [],
+    "team_style_notes": {},
+    "raw_statistics": {},
+    "xg": {},
+    "goals_scored_conceded": {}
+  },
+  "brand_tone_rules": [
+    "Never sound like an analyst. Sound like a friend who happens to know football really well.",
+    "If a 16-year-old football fan would not naturally say it in conversation, do not use it.",
+    "Do not sound like a betting page.",
+    "Do not promise guaranteed outcomes.",
+    "Use simple football language."
+  ],
+  "brand_visual_rules": {
+    "format": "vertical 9:16",
+    "max_duration_seconds": 60,
+    "visual_change_interval_seconds": "3-5",
+    "captions": "always visible",
+    "style": "clean football intelligence dashboard"
+  }
+}

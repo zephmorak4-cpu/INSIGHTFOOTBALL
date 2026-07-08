@@ -1,0 +1,31 @@
+{
+  "production_id": "if-2026-07-06-liverpool-arsenal",
+  "component_id": "IF-RE08",
+  "component_name": "Render Validator",
+  "timestamp": "2026-07-08T11:37:19.878643+00:00",
+  "checks": {
+    "video_exists_or_placeholder": true,
+    "duration": true,
+    "aspect_ratio": false,
+    "resolution": true,
+    "fps": true,
+    "audio_documented": true,
+    "captions_documented": true,
+    "thumbnail_exists": true,
+    "job_terminal": true,
+    "legal": true
+  },
+  "issues": [
+    "wrong aspect ratio"
+  ],
+  "warnings": [
+    "Arsenal badge requires rights confirmation.",
+    "Liverpool badge requires rights confirmation.",
+    "Liverpool and Arsenal badges requires rights confirmation.",
+    "Premier League logo requires rights confirmation.",
+    "Media asset bundle status: needs_manual_assets",
+    "Structured placeholder video artifact used; no MP4 generated."
+  ],
+  "placeholder_mode": true,
+  "approval_status": "blocked"
+}

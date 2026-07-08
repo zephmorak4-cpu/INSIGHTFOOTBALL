@@ -1,0 +1,1623 @@
+{
+  "production_id": "if-2026-07-06-liverpool-arsenal",
+  "match": {
+    "home_team": "Liverpool",
+    "away_team": "Arsenal",
+    "competition": "Premier League",
+    "kickoff_time": "20:00",
+    "country": "England"
+  },
+  "competition": "Premier League",
+  "source_storyboard_package": "if-2026-07-06-liverpool-arsenal",
+  "asset_manifest": {
+    "production_id": "if-2026-07-06-liverpool-arsenal",
+    "component_id": "S5-C01",
+    "component_name": "Asset Planner",
+    "timestamp": "2026-07-07T09:18:15.507750+00:00",
+    "source_storyboard_package": "if-2026-07-06-liverpool-arsenal",
+    "match": {
+      "home_team": "Liverpool",
+      "away_team": "Arsenal",
+      "competition": "Premier League",
+      "kickoff_time": "20:00",
+      "country": "England"
+    },
+    "competition": "Premier League",
+    "required_assets": [
+      {
+        "asset_id": "background_graphic",
+        "asset_name": "Clean match background",
+        "asset_type": "background",
+        "category": "brand",
+        "required": true,
+        "scenes_used": [
+          "scene-01"
+        ],
+        "purpose": "Support scene-01",
+        "recommended_format": "png",
+        "recommended_dimensions": "1080x1920",
+        "source_strategy": "custom graphic",
+        "legal_status": "approved",
+        "fallback_strategy": "Use custom vector/template graphic from internal library.",
+        "priority": "high"
+      },
+      {
+        "asset_id": "brand_logo",
+        "asset_name": "INSIGHT FOOTBALL logo",
+        "asset_type": "logo",
+        "category": "brand",
+        "required": true,
+        "scenes_used": [
+          "scene-01"
+        ],
+        "purpose": "Support scene-01",
+        "recommended_format": "svg/png",
+        "recommended_dimensions": "512x512",
+        "source_strategy": "internal approved brand kit",
+        "legal_status": "approved",
+        "fallback_strategy": "Use custom vector/template graphic from internal library.",
+        "priority": "high"
+      },
+      {
+        "asset_id": "comment_icon",
+        "asset_name": "Comment icon",
+        "asset_type": "icon",
+        "category": "football",
+        "required": true,
+        "scenes_used": [
+          "scene-11"
+        ],
+        "purpose": "Support scene-11",
+        "recommended_format": "svg",
+        "recommended_dimensions": "256x256",
+        "source_strategy": "custom icon",
+        "legal_status": "approved",
+        "fallback_strategy": "Use custom vector/template graphic from internal library.",
+        "priority": "high"
+      },
+      {
+        "asset_id": "competition_logo",
+        "asset_name": "Premier League logo",
+        "asset_type": "logo",
+        "category": "match",
+        "required": true,
+        "scenes_used": [],
+        "purpose": "Support the video package",
+        "recommended_format": "svg/png",
+        "recommended_dimensions": "512x512",
+        "source_strategy": "approved competition source",
+        "legal_status": "needs_review",
+        "fallback_strategy": "Use text initials in approved template until badge is confirmed.",
+        "priority": "high"
+      },
+      {
+        "asset_id": "dashboard_panel",
+        "asset_name": "Insight dashboard panel",
+        "asset_type": "card",
+        "category": "dashboard",
+        "required": true,
+        "scenes_used": [
+          "scene-08",
+          "scene-09"
+        ],
+        "purpose": "Support scene-08, scene-09",
+        "recommended_format": "json/png",
+        "recommended_dimensions": "900x520",
+        "source_strategy": "template graphic",
+        "legal_status": "approved",
+        "fallback_strategy": "Use custom vector/template graphic from internal library.",
+        "priority": "high"
+      },
+      {
+        "asset_id": "data_card",
+        "asset_name": "Surprising detail card",
+        "asset_type": "card",
+        "category": "dashboard",
+        "required": true,
+        "scenes_used": [
+          "scene-02",
+          "scene-06"
+        ],
+        "purpose": "Support scene-02, scene-06",
+        "recommended_format": "json/png",
+        "recommended_dimensions": "900x520",
+        "source_strategy": "template graphic",
+        "legal_status": "approved",
+        "fallback_strategy": "Use custom vector/template graphic from internal library.",
+        "priority": "high"
+      },
+      {
+        "asset_id": "goal_icon",
+        "asset_name": "Goal icon",
+        "asset_type": "icon",
+        "category": "football",
+        "required": true,
+        "scenes_used": [],
+        "purpose": "Support the video package",
+        "recommended_format": "svg",
+        "recommended_dimensions": "256x256",
+        "source_strategy": "custom icon",
+        "legal_status": "approved",
+        "fallback_strategy": "Use custom vector/template graphic from internal library.",
+        "priority": "high"
+      },
+      {
+        "asset_id": "intro_frame",
+        "asset_name": "Intro frame",
+        "asset_type": "template",
+        "category": "brand",
+        "required": true,
+        "scenes_used": [],
+        "purpose": "Support the video package",
+        "recommended_format": "png/json",
+        "recommended_dimensions": "1080x1920",
+        "source_strategy": "template graphic",
+        "legal_status": "approved",
+        "fallback_strategy": "Use custom vector/template graphic from internal library.",
+        "priority": "high"
+      },
+      {
+        "asset_id": "outro_frame",
+        "asset_name": "Outro frame",
+        "asset_type": "template",
+        "category": "brand",
+        "required": true,
+        "scenes_used": [],
+        "purpose": "Support the video package",
+        "recommended_format": "png/json",
+        "recommended_dimensions": "1080x1920",
+        "source_strategy": "template graphic",
+        "legal_status": "approved",
+        "fallback_strategy": "Use custom vector/template graphic from internal library.",
+        "priority": "high"
+      },
+      {
+        "asset_id": "pitch_graphic",
+        "asset_name": "Pitch background",
+        "asset_type": "pitch",
+        "category": "football",
+        "required": true,
+        "scenes_used": [
+          "scene-04",
+          "scene-10"
+        ],
+        "purpose": "Support scene-04, scene-10",
+        "recommended_format": "svg/png",
+        "recommended_dimensions": "1080x1080",
+        "source_strategy": "custom pitch diagram",
+        "legal_status": "approved",
+        "fallback_strategy": "Use custom vector/template graphic from internal library.",
+        "priority": "high"
+      },
+      {
+        "asset_id": "pressing_icon",
+        "asset_name": "Pressing icon",
+        "asset_type": "icon",
+        "category": "football",
+        "required": true,
+        "scenes_used": [],
+        "purpose": "Support the video package",
+        "recommended_format": "svg",
+        "recommended_dimensions": "256x256",
+        "source_strategy": "custom icon",
+        "legal_status": "approved",
+        "fallback_strategy": "Use custom vector/template graphic from internal library.",
+        "priority": "high"
+      },
+      {
+        "asset_id": "tactical_arrows",
+        "asset_name": "Tactical arrows",
+        "asset_type": "icon",
+        "category": "football",
+        "required": true,
+        "scenes_used": [],
+        "purpose": "Support the video package",
+        "recommended_format": "svg",
+        "recommended_dimensions": "256x256",
+        "source_strategy": "custom vector",
+        "legal_status": "approved",
+        "fallback_strategy": "Use custom vector/template graphic from internal library.",
+        "priority": "high"
+      },
+      {
+        "asset_id": "team_logo_away",
+        "asset_name": "Arsenal badge",
+        "asset_type": "logo",
+        "category": "match",
+        "required": true,
+        "scenes_used": [],
+        "purpose": "Support the video package",
+        "recommended_format": "svg/png",
+        "recommended_dimensions": "512x512",
+        "source_strategy": "approved team badge source",
+        "legal_status": "needs_review",
+        "fallback_strategy": "Use text initials in approved template until badge is confirmed.",
+        "priority": "high"
+      },
+      {
+        "asset_id": "team_logo_home",
+        "asset_name": "Liverpool badge",
+        "asset_type": "logo",
+        "category": "match",
+        "required": true,
+        "scenes_used": [
+          "scene-06"
+        ],
+        "purpose": "Support scene-06",
+        "recommended_format": "svg/png",
+        "recommended_dimensions": "512x512",
+        "source_strategy": "approved team badge source",
+        "legal_status": "needs_review",
+        "fallback_strategy": "Use text initials in approved template until badge is confirmed.",
+        "priority": "high"
+      },
+      {
+        "asset_id": "team_logos",
+        "asset_name": "Liverpool and Arsenal badges",
+        "asset_type": "logo",
+        "category": "match",
+        "required": true,
+        "scenes_used": [
+          "scene-02",
+          "scene-03",
+          "scene-04",
+          "scene-05",
+          "scene-07",
+          "scene-08",
+          "scene-09",
+          "scene-11"
+        ],
+        "purpose": "Support scene-02, scene-03, scene-04, scene-05, scene-07, scene-08, scene-09, scene-11",
+        "recommended_format": "svg/png",
+        "recommended_dimensions": "512x512",
+        "source_strategy": "approved team badge source",
+        "legal_status": "needs_review",
+        "fallback_strategy": "Use text initials in approved template until badge is confirmed.",
+        "priority": "high"
+      },
+      {
+        "asset_id": "watermark",
+        "asset_name": "INSIGHT FOOTBALL watermark",
+        "asset_type": "logo",
+        "category": "brand",
+        "required": true,
+        "scenes_used": [],
+        "purpose": "Support the video package",
+        "recommended_format": "png",
+        "recommended_dimensions": "512x512",
+        "source_strategy": "internal approved brand kit",
+        "legal_status": "approved",
+        "fallback_strategy": "Use custom vector/template graphic from internal library.",
+        "priority": "high"
+      },
+      {
+        "asset_id": "wordmark",
+        "asset_name": "INSIGHT FOOTBALL wordmark",
+        "asset_type": "logo",
+        "category": "brand",
+        "required": true,
+        "scenes_used": [],
+        "purpose": "Support the video package",
+        "recommended_format": "svg/png",
+        "recommended_dimensions": "512x512",
+        "source_strategy": "internal approved brand kit",
+        "legal_status": "approved",
+        "fallback_strategy": "Use custom vector/template graphic from internal library.",
+        "priority": "high"
+      }
+    ],
+    "optional_assets": [
+      {
+        "asset_id": "player_image",
+        "asset_name": "Player cutout",
+        "asset_type": "photo",
+        "category": "optional",
+        "required": false,
+        "scenes_used": [
+          "scene-10"
+        ],
+        "purpose": "Support scene-10",
+        "recommended_format": "png",
+        "recommended_dimensions": "1080x1920",
+        "source_strategy": "manual upload only",
+        "legal_status": "needs_review",
+        "fallback_strategy": "Replace with generated illustration or pitch graphic.",
+        "priority": "low"
+      },
+      {
+        "asset_id": "stadium_image",
+        "asset_name": "Stadium-style background",
+        "asset_type": "illustration",
+        "category": "optional",
+        "required": false,
+        "scenes_used": [],
+        "purpose": "Support the video package",
+        "recommended_format": "png",
+        "recommended_dimensions": "1080x1920",
+        "source_strategy": "generated illustration",
+        "legal_status": "approved",
+        "fallback_strategy": "Use custom vector/template graphic from internal library.",
+        "priority": "low"
+      }
+    ],
+    "reusable_assets": [
+      {
+        "asset_id": "background_graphic",
+        "asset_name": "Clean match background",
+        "asset_type": "background",
+        "category": "brand",
+        "required": true,
+        "scenes_used": [
+          "scene-01"
+        ],
+        "purpose": "Support scene-01",
+        "recommended_format": "png",
+        "recommended_dimensions": "1080x1920",
+        "source_strategy": "custom graphic",
+        "legal_status": "approved",
+        "fallback_strategy": "Use custom vector/template graphic from internal library.",
+        "priority": "high"
+      },
+      {
+        "asset_id": "brand_logo",
+        "asset_name": "INSIGHT FOOTBALL logo",
+        "asset_type": "logo",
+        "category": "brand",
+        "required": true,
+        "scenes_used": [
+          "scene-01"
+        ],
+        "purpose": "Support scene-01",
+        "recommended_format": "svg/png",
+        "recommended_dimensions": "512x512",
+        "source_strategy": "internal approved brand kit",
+        "legal_status": "approved",
+        "fallback_strategy": "Use custom vector/template graphic from internal library.",
+        "priority": "high"
+      },
+      {
+        "asset_id": "comment_icon",
+        "asset_name": "Comment icon",
+        "asset_type": "icon",
+        "category": "football",
+        "required": true,
+        "scenes_used": [
+          "scene-11"
+        ],
+        "purpose": "Support scene-11",
+        "recommended_format": "svg",
+        "recommended_dimensions": "256x256",
+        "source_strategy": "custom icon",
+        "legal_status": "approved",
+        "fallback_strategy": "Use custom vector/template graphic from internal library.",
+        "priority": "high"
+      },
+      {
+        "asset_id": "dashboard_panel",
+        "asset_name": "Insight dashboard panel",
+        "asset_type": "card",
+        "category": "dashboard",
+        "required": true,
+        "scenes_used": [
+          "scene-08",
+          "scene-09"
+        ],
+        "purpose": "Support scene-08, scene-09",
+        "recommended_format": "json/png",
+        "recommended_dimensions": "900x520",
+        "source_strategy": "template graphic",
+        "legal_status": "approved",
+        "fallback_strategy": "Use custom vector/template graphic from internal library.",
+        "priority": "high"
+      },
+      {
+        "asset_id": "data_card",
+        "asset_name": "Surprising detail card",
+        "asset_type": "card",
+        "category": "dashboard",
+        "required": true,
+        "scenes_used": [
+          "scene-02",
+          "scene-06"
+        ],
+        "purpose": "Support scene-02, scene-06",
+        "recommended_format": "json/png",
+        "recommended_dimensions": "900x520",
+        "source_strategy": "template graphic",
+        "legal_status": "approved",
+        "fallback_strategy": "Use custom vector/template graphic from internal library.",
+        "priority": "high"
+      },
+      {
+        "asset_id": "goal_icon",
+        "asset_name": "Goal icon",
+        "asset_type": "icon",
+        "category": "football",
+        "required": true,
+        "scenes_used": [],
+        "purpose": "Support the video package",
+        "recommended_format": "svg",
+        "recommended_dimensions": "256x256",
+        "source_strategy": "custom icon",
+        "legal_status": "approved",
+        "fallback_strategy": "Use custom vector/template graphic from internal library.",
+        "priority": "high"
+      },
+      {
+        "asset_id": "intro_frame",
+        "asset_name": "Intro frame",
+        "asset_type": "template",
+        "category": "brand",
+        "required": true,
+        "scenes_used": [],
+        "purpose": "Support the video package",
+        "recommended_format": "png/json",
+        "recommended_dimensions": "1080x1920",
+        "source_strategy": "template graphic",
+        "legal_status": "approved",
+        "fallback_strategy": "Use custom vector/template graphic from internal library.",
+        "priority": "high"
+      },
+      {
+        "asset_id": "outro_frame",
+        "asset_name": "Outro frame",
+        "asset_type": "template",
+        "category": "brand",
+        "required": true,
+        "scenes_used": [],
+        "purpose": "Support the video package",
+        "recommended_format": "png/json",
+        "recommended_dimensions": "1080x1920",
+        "source_strategy": "template graphic",
+        "legal_status": "approved",
+        "fallback_strategy": "Use custom vector/template graphic from internal library.",
+        "priority": "high"
+      },
+      {
+        "asset_id": "pitch_graphic",
+        "asset_name": "Pitch background",
+        "asset_type": "pitch",
+        "category": "football",
+        "required": true,
+        "scenes_used": [
+          "scene-04",
+          "scene-10"
+        ],
+        "purpose": "Support scene-04, scene-10",
+        "recommended_format": "svg/png",
+        "recommended_dimensions": "1080x1080",
+        "source_strategy": "custom pitch diagram",
+        "legal_status": "approved",
+        "fallback_strategy": "Use custom vector/template graphic from internal library.",
+        "priority": "high"
+      },
+      {
+        "asset_id": "pressing_icon",
+        "asset_name": "Pressing icon",
+        "asset_type": "icon",
+        "category": "football",
+        "required": true,
+        "scenes_used": [],
+        "purpose": "Support the video package",
+        "recommended_format": "svg",
+        "recommended_dimensions": "256x256",
+        "source_strategy": "custom icon",
+        "legal_status": "approved",
+        "fallback_strategy": "Use custom vector/template graphic from internal library.",
+        "priority": "high"
+      },
+      {
+        "asset_id": "tactical_arrows",
+        "asset_name": "Tactical arrows",
+        "asset_type": "icon",
+        "category": "football",
+        "required": true,
+        "scenes_used": [],
+        "purpose": "Support the video package",
+        "recommended_format": "svg",
+        "recommended_dimensions": "256x256",
+        "source_strategy": "custom vector",
+        "legal_status": "approved",
+        "fallback_strategy": "Use custom vector/template graphic from internal library.",
+        "priority": "high"
+      },
+      {
+        "asset_id": "watermark",
+        "asset_name": "INSIGHT FOOTBALL watermark",
+        "asset_type": "logo",
+        "category": "brand",
+        "required": true,
+        "scenes_used": [],
+        "purpose": "Support the video package",
+        "recommended_format": "png",
+        "recommended_dimensions": "512x512",
+        "source_strategy": "internal approved brand kit",
+        "legal_status": "approved",
+        "fallback_strategy": "Use custom vector/template graphic from internal library.",
+        "priority": "high"
+      },
+      {
+        "asset_id": "wordmark",
+        "asset_name": "INSIGHT FOOTBALL wordmark",
+        "asset_type": "logo",
+        "category": "brand",
+        "required": true,
+        "scenes_used": [],
+        "purpose": "Support the video package",
+        "recommended_format": "svg/png",
+        "recommended_dimensions": "512x512",
+        "source_strategy": "internal approved brand kit",
+        "legal_status": "approved",
+        "fallback_strategy": "Use custom vector/template graphic from internal library.",
+        "priority": "high"
+      }
+    ],
+    "scene_asset_map": [
+      {
+        "scene_id": "scene-01",
+        "scene_type": "Brand Opening",
+        "asset_ids": [
+          "brand_logo",
+          "background_graphic"
+        ]
+      },
+      {
+        "scene_id": "scene-02",
+        "scene_type": "Surprising Fact",
+        "asset_ids": [
+          "team_logos",
+          "data_card"
+        ]
+      },
+      {
+        "scene_id": "scene-03",
+        "scene_type": "Central Question",
+        "asset_ids": [
+          "team_logos"
+        ]
+      },
+      {
+        "scene_id": "scene-04",
+        "scene_type": "Tactical Moment",
+        "asset_ids": [
+          "pitch_graphic",
+          "team_logos"
+        ]
+      },
+      {
+        "scene_id": "scene-05",
+        "scene_type": "Team Comparison",
+        "asset_ids": [
+          "team_logos"
+        ]
+      },
+      {
+        "scene_id": "scene-06",
+        "scene_type": "Evidence Card",
+        "asset_ids": [
+          "data_card",
+          "team_logo_home"
+        ]
+      },
+      {
+        "scene_id": "scene-07",
+        "scene_type": "Team Comparison",
+        "asset_ids": [
+          "team_logos"
+        ]
+      },
+      {
+        "scene_id": "scene-08",
+        "scene_type": "Insight Dashboard",
+        "asset_ids": [
+          "dashboard_panel",
+          "team_logos"
+        ]
+      },
+      {
+        "scene_id": "scene-09",
+        "scene_type": "Insight Dashboard",
+        "asset_ids": [
+          "dashboard_panel",
+          "team_logos"
+        ]
+      },
+      {
+        "scene_id": "scene-10",
+        "scene_type": "X-Factor Player",
+        "asset_ids": [
+          "player_image",
+          "pitch_graphic"
+        ]
+      },
+      {
+        "scene_id": "scene-11",
+        "scene_type": "Final Question / CTA",
+        "asset_ids": [
+          "team_logos",
+          "comment_icon"
+        ]
+      }
+    ],
+    "missing_assets": [
+      "competition_logo",
+      "player_image",
+      "team_logo_away",
+      "team_logo_home",
+      "team_logos"
+    ],
+    "legal_warnings": [
+      "Do not use copyrighted broadcast footage.",
+      "Do not use unlicensed player photos unless manually approved.",
+      "Use approved sources for club badges and competition marks.",
+      "Avoid unsafe scraped images and unclear source ownership."
+    ],
+    "asset_priority": {
+      "high": [
+        "background_graphic",
+        "brand_logo",
+        "comment_icon",
+        "competition_logo",
+        "dashboard_panel",
+        "data_card",
+        "goal_icon",
+        "intro_frame",
+        "outro_frame",
+        "pitch_graphic",
+        "pressing_icon",
+        "tactical_arrows",
+        "team_logo_away",
+        "team_logo_home",
+        "team_logos",
+        "watermark",
+        "wordmark"
+      ],
+      "medium": [],
+      "low": [
+        "player_image",
+        "stadium_image"
+      ]
+    },
+    "approval_status": "approved",
+    "next_component": "Search Planner"
+  },
+  "asset_search_plan": {
+    "production_id": "if-2026-07-06-liverpool-arsenal",
+    "component_id": "S5-C02",
+    "component_name": "Search Planner",
+    "timestamp": "2026-07-07T09:18:28.103770+00:00",
+    "source_asset_manifest": "if-2026-07-06-liverpool-arsenal",
+    "search_tasks": [
+      {
+        "task_id": "task-competition_logo",
+        "asset_id": "competition_logo",
+        "task_type": "internal_library",
+        "description": "Confirm or prepare Premier League logo",
+        "suggested_query": "Premier League logo approved asset",
+        "approved_source_type": "approved_internal_or_rights_checked_source",
+        "legal_notes": "Legal status: needs_review. Use text initials in approved template until badge is confirmed.",
+        "priority": "high",
+        "fallback_option": "Use text initials in approved template until badge is confirmed.",
+        "required_before_render": true
+      },
+      {
+        "task_id": "task-team_logo_away",
+        "asset_id": "team_logo_away",
+        "task_type": "internal_library",
+        "description": "Confirm or prepare Arsenal badge",
+        "suggested_query": "Arsenal badge approved asset",
+        "approved_source_type": "approved_internal_or_rights_checked_source",
+        "legal_notes": "Legal status: needs_review. Use text initials in approved template until badge is confirmed.",
+        "priority": "high",
+        "fallback_option": "Use text initials in approved template until badge is confirmed.",
+        "required_before_render": true
+      },
+      {
+        "task_id": "task-team_logo_home",
+        "asset_id": "team_logo_home",
+        "task_type": "internal_library",
+        "description": "Confirm or prepare Liverpool badge",
+        "suggested_query": "Liverpool badge approved asset",
+        "approved_source_type": "approved_internal_or_rights_checked_source",
+        "legal_notes": "Legal status: needs_review. Use text initials in approved template until badge is confirmed.",
+        "priority": "high",
+        "fallback_option": "Use text initials in approved template until badge is confirmed.",
+        "required_before_render": true
+      },
+      {
+        "task_id": "task-team_logos",
+        "asset_id": "team_logos",
+        "task_type": "internal_library",
+        "description": "Confirm or prepare Liverpool and Arsenal badges",
+        "suggested_query": "Liverpool and Arsenal badges approved asset",
+        "approved_source_type": "approved_internal_or_rights_checked_source",
+        "legal_notes": "Legal status: needs_review. Use text initials in approved template until badge is confirmed.",
+        "priority": "high",
+        "fallback_option": "Use text initials in approved template until badge is confirmed.",
+        "required_before_render": true
+      }
+    ],
+    "manual_tasks": [
+      {
+        "task_id": "task-player_image",
+        "asset_id": "player_image",
+        "task_type": "manual_upload",
+        "description": "Confirm or prepare Player cutout",
+        "suggested_query": "Player cutout approved asset",
+        "approved_source_type": "manual_upload",
+        "legal_notes": "Legal status: needs_review. Replace with generated illustration or pitch graphic.",
+        "priority": "low",
+        "fallback_option": "Replace with generated illustration or pitch graphic.",
+        "required_before_render": false
+      }
+    ],
+    "generation_tasks": [
+      {
+        "task_id": "task-stadium_image",
+        "asset_id": "stadium_image",
+        "task_type": "generated_illustration",
+        "description": "Confirm or prepare Stadium-style background",
+        "suggested_query": "Stadium-style background approved asset",
+        "approved_source_type": "generated_illustration",
+        "legal_notes": "Legal status: approved. Use custom vector/template graphic from internal library.",
+        "priority": "low",
+        "fallback_option": "Use custom vector/template graphic from internal library.",
+        "required_before_render": false
+      }
+    ],
+    "blocked_assets": [],
+    "fallback_tasks": [
+      {
+        "task_id": "fallback-competition_logo",
+        "asset_id": "competition_logo",
+        "task_type": "fallback",
+        "description": "Use text initials in approved template until badge is confirmed.",
+        "suggested_query": "Premier League logo approved asset",
+        "approved_source_type": "approved_internal_or_rights_checked_source",
+        "legal_notes": "Legal status: needs_review. Use text initials in approved template until badge is confirmed.",
+        "priority": "high",
+        "fallback_option": "Use text initials in approved template until badge is confirmed.",
+        "required_before_render": false
+      },
+      {
+        "task_id": "fallback-team_logo_away",
+        "asset_id": "team_logo_away",
+        "task_type": "fallback",
+        "description": "Use text initials in approved template until badge is confirmed.",
+        "suggested_query": "Arsenal badge approved asset",
+        "approved_source_type": "approved_internal_or_rights_checked_source",
+        "legal_notes": "Legal status: needs_review. Use text initials in approved template until badge is confirmed.",
+        "priority": "high",
+        "fallback_option": "Use text initials in approved template until badge is confirmed.",
+        "required_before_render": false
+      },
+      {
+        "task_id": "fallback-team_logo_home",
+        "asset_id": "team_logo_home",
+        "task_type": "fallback",
+        "description": "Use text initials in approved template until badge is confirmed.",
+        "suggested_query": "Liverpool badge approved asset",
+        "approved_source_type": "approved_internal_or_rights_checked_source",
+        "legal_notes": "Legal status: needs_review. Use text initials in approved template until badge is confirmed.",
+        "priority": "high",
+        "fallback_option": "Use text initials in approved template until badge is confirmed.",
+        "required_before_render": false
+      },
+      {
+        "task_id": "fallback-team_logos",
+        "asset_id": "team_logos",
+        "task_type": "fallback",
+        "description": "Use text initials in approved template until badge is confirmed.",
+        "suggested_query": "Liverpool and Arsenal badges approved asset",
+        "approved_source_type": "approved_internal_or_rights_checked_source",
+        "legal_notes": "Legal status: needs_review. Use text initials in approved template until badge is confirmed.",
+        "priority": "high",
+        "fallback_option": "Use text initials in approved template until badge is confirmed.",
+        "required_before_render": false
+      },
+      {
+        "task_id": "fallback-player_image",
+        "asset_id": "player_image",
+        "task_type": "fallback",
+        "description": "Replace with generated illustration or pitch graphic.",
+        "suggested_query": "Player cutout approved asset",
+        "approved_source_type": "manual_upload",
+        "legal_notes": "Legal status: needs_review. Replace with generated illustration or pitch graphic.",
+        "priority": "low",
+        "fallback_option": "Replace with generated illustration or pitch graphic.",
+        "required_before_render": false
+      },
+      {
+        "task_id": "fallback-stadium_image",
+        "asset_id": "stadium_image",
+        "task_type": "fallback",
+        "description": "Use custom vector/template graphic from internal library.",
+        "suggested_query": "Stadium-style background approved asset",
+        "approved_source_type": "generated_illustration",
+        "legal_notes": "Legal status: approved. Use custom vector/template graphic from internal library.",
+        "priority": "low",
+        "fallback_option": "Use custom vector/template graphic from internal library.",
+        "required_before_render": false
+      }
+    ],
+    "legal_review_tasks": [
+      {
+        "task_id": "legal-competition_logo",
+        "asset_id": "competition_logo",
+        "task_type": "legal_review",
+        "description": "Confirm rights for Premier League logo",
+        "suggested_query": "Premier League logo approved asset",
+        "approved_source_type": "approved_internal_or_rights_checked_source",
+        "legal_notes": "Legal status: needs_review. Use text initials in approved template until badge is confirmed.",
+        "priority": "high",
+        "fallback_option": "Use text initials in approved template until badge is confirmed.",
+        "required_before_render": true
+      },
+      {
+        "task_id": "legal-team_logo_away",
+        "asset_id": "team_logo_away",
+        "task_type": "legal_review",
+        "description": "Confirm rights for Arsenal badge",
+        "suggested_query": "Arsenal badge approved asset",
+        "approved_source_type": "approved_internal_or_rights_checked_source",
+        "legal_notes": "Legal status: needs_review. Use text initials in approved template until badge is confirmed.",
+        "priority": "high",
+        "fallback_option": "Use text initials in approved template until badge is confirmed.",
+        "required_before_render": true
+      },
+      {
+        "task_id": "legal-team_logo_home",
+        "asset_id": "team_logo_home",
+        "task_type": "legal_review",
+        "description": "Confirm rights for Liverpool badge",
+        "suggested_query": "Liverpool badge approved asset",
+        "approved_source_type": "approved_internal_or_rights_checked_source",
+        "legal_notes": "Legal status: needs_review. Use text initials in approved template until badge is confirmed.",
+        "priority": "high",
+        "fallback_option": "Use text initials in approved template until badge is confirmed.",
+        "required_before_render": true
+      },
+      {
+        "task_id": "legal-team_logos",
+        "asset_id": "team_logos",
+        "task_type": "legal_review",
+        "description": "Confirm rights for Liverpool and Arsenal badges",
+        "suggested_query": "Liverpool and Arsenal badges approved asset",
+        "approved_source_type": "approved_internal_or_rights_checked_source",
+        "legal_notes": "Legal status: needs_review. Use text initials in approved template until badge is confirmed.",
+        "priority": "high",
+        "fallback_option": "Use text initials in approved template until badge is confirmed.",
+        "required_before_render": true
+      },
+      {
+        "task_id": "legal-player_image",
+        "asset_id": "player_image",
+        "task_type": "legal_review",
+        "description": "Confirm rights for Player cutout",
+        "suggested_query": "Player cutout approved asset",
+        "approved_source_type": "manual_upload",
+        "legal_notes": "Legal status: needs_review. Replace with generated illustration or pitch graphic.",
+        "priority": "low",
+        "fallback_option": "Replace with generated illustration or pitch graphic.",
+        "required_before_render": true
+      }
+    ],
+    "approval_status": "approved",
+    "next_component": "Graphic Planner"
+  },
+  "graphic_requirements": {
+    "production_id": "if-2026-07-06-liverpool-arsenal",
+    "component_id": "S5-C03",
+    "component_name": "Graphic Planner",
+    "timestamp": "2026-07-07T09:18:45.216080+00:00",
+    "source_storyboard_package": "if-2026-07-06-liverpool-arsenal",
+    "required_graphics": [
+      {
+        "graphic_id": "graphic-match_title_card",
+        "graphic_name": "Match title card",
+        "graphic_type": "match_title_card",
+        "scenes_used": [
+          "scene-01"
+        ],
+        "purpose": "Support Brand Opening with a clean production graphic.",
+        "text_content": [
+          "Before the first whistle"
+        ],
+        "data_content": {
+          "voiceover": "Before the first whistle... here's the insight.",
+          "caption": "Before the first whistle... here's the insight"
+        },
+        "layout_requirements": "Vertical 9:16, safe-area centered, large readable headline.",
+        "animation_requirements": "logo_pulse",
+        "required_assets": [
+          "brand_logo",
+          "background_graphic"
+        ],
+        "recommended_format": "json/png",
+        "recommended_dimensions": "1080x1920",
+        "fallback_design": "Use minimal text card with internal icons and pitch texture."
+      },
+      {
+        "graphic_id": "graphic-surprising_fact_card",
+        "graphic_name": "Surprising fact card",
+        "graphic_type": "surprising_fact_card",
+        "scenes_used": [
+          "scene-02"
+        ],
+        "purpose": "Support Surprising Fact with a clean production graphic.",
+        "text_content": [
+          "Sample data: Liverpool have started quickly in recent home..."
+        ],
+        "data_content": {
+          "voiceover": "Sample data: Liverpool have started quickly in recent home matches, while Arsenal have sometimes needed longer to settle away.",
+          "caption": "Sample data: Liverpool have started quickly in recent home matches, while Arsenal..."
+        },
+        "layout_requirements": "Vertical 9:16, safe-area centered, large readable headline.",
+        "animation_requirements": "fact_reveal",
+        "required_assets": [
+          "team_logos",
+          "data_card"
+        ],
+        "recommended_format": "json/png",
+        "recommended_dimensions": "1080x1920",
+        "fallback_design": "Use minimal text card with internal icons and pitch texture."
+      },
+      {
+        "graphic_id": "graphic-central_question_card",
+        "graphic_name": "Central question card",
+        "graphic_type": "central_question_card",
+        "scenes_used": [
+          "scene-03"
+        ],
+        "purpose": "Support Central Question with a clean production graphic.",
+        "text_content": [
+          "Can Arsenal survive Liverpool's fast start?"
+        ],
+        "data_content": {
+          "voiceover": "So the real question is: Can Arsenal survive Liverpool's fast start?",
+          "caption": "So the real question is: Can Arsenal survive Liverpool's fast start?"
+        },
+        "layout_requirements": "Vertical 9:16, safe-area centered, large readable headline.",
+        "animation_requirements": "question_push",
+        "required_assets": [
+          "team_logos"
+        ],
+        "recommended_format": "json/png",
+        "recommended_dimensions": "1080x1920",
+        "fallback_design": "Use minimal text card with internal icons and pitch texture."
+      },
+      {
+        "graphic_id": "graphic-tactical_pitch_diagram",
+        "graphic_name": "Tactical pitch diagram",
+        "graphic_type": "tactical_pitch_diagram",
+        "scenes_used": [
+          "scene-04"
+        ],
+        "purpose": "Support Tactical Moment with a clean production graphic.",
+        "text_content": [
+          "Liverpool usually start aggressively, pressing high and forcing rushed..."
+        ],
+        "data_content": {
+          "voiceover": "Liverpool usually start aggressively, pressing high and forcing rushed decisions.",
+          "caption": "Liverpool usually start aggressively, pressing high and forcing rushed decisions"
+        },
+        "layout_requirements": "Vertical 9:16, safe-area centered, large readable headline.",
+        "animation_requirements": "pitch_pan",
+        "required_assets": [
+          "pitch_graphic",
+          "team_logos"
+        ],
+        "recommended_format": "json/png",
+        "recommended_dimensions": "1080x1920",
+        "fallback_design": "Use minimal text card with internal icons and pitch texture."
+      },
+      {
+        "graphic_id": "graphic-team_comparison_card",
+        "graphic_name": "Team comparison card",
+        "graphic_type": "team_comparison_card",
+        "scenes_used": [
+          "scene-05",
+          "scene-07"
+        ],
+        "purpose": "Support Team Comparison with a clean production graphic.",
+        "text_content": [
+          "Arsenal have enough quality to play through it, but...",
+          "The balance matters too: Arsenal may be better prepared..."
+        ],
+        "data_content": {
+          "voiceover": "Arsenal have enough quality to play through it, but a messy opening can drag them from their plan.",
+          "caption": "Arsenal have enough quality to play through it, but a messy opening..."
+        },
+        "layout_requirements": "Vertical 9:16, safe-area centered, large readable headline.",
+        "animation_requirements": "side_by_side",
+        "required_assets": [
+          "team_logos"
+        ],
+        "recommended_format": "json/png",
+        "recommended_dimensions": "1080x1920",
+        "fallback_design": "Use minimal text card with internal icons and pitch texture."
+      },
+      {
+        "graphic_id": "graphic-evidence_card",
+        "graphic_name": "Evidence card",
+        "graphic_type": "evidence_card",
+        "scenes_used": [
+          "scene-06"
+        ],
+        "purpose": "Support Evidence Card with a clean production graphic.",
+        "text_content": [
+          "The evidence is simple: Liverpool usually make opponents uncomfortable..."
+        ],
+        "data_content": {
+          "voiceover": "The evidence is simple: Liverpool usually make opponents uncomfortable early at home.",
+          "caption": "The evidence is simple: Liverpool usually make opponents uncomfortable early at home"
+        },
+        "layout_requirements": "Vertical 9:16, safe-area centered, large readable headline.",
+        "animation_requirements": "stat_slide",
+        "required_assets": [
+          "data_card",
+          "team_logo_home"
+        ],
+        "recommended_format": "json/png",
+        "recommended_dimensions": "1080x1920",
+        "fallback_design": "Use minimal text card with internal icons and pitch texture."
+      },
+      {
+        "graphic_id": "graphic-insight_dashboard",
+        "graphic_name": "Insight dashboard",
+        "graphic_type": "insight_dashboard",
+        "scenes_used": [
+          "scene-08",
+          "scene-09"
+        ],
+        "purpose": "Support Insight Dashboard with a clean production graphic.",
+        "text_content": [
+          "Slight Home Edge",
+          "Slight Home Edge"
+        ],
+        "data_content": {
+          "voiceover": "That makes it a slight home edge, not a prediction.",
+          "caption": "That makes it a slight home edge, not a prediction"
+        },
+        "layout_requirements": "Vertical 9:16, safe-area centered, large readable headline.",
+        "animation_requirements": "dashboard_build",
+        "required_assets": [
+          "dashboard_panel",
+          "team_logos"
+        ],
+        "recommended_format": "json/png",
+        "recommended_dimensions": "1080x1920",
+        "fallback_design": "Use minimal text card with internal icons and pitch texture."
+      },
+      {
+        "graphic_id": "graphic-x_factor_card",
+        "graphic_name": "X-factor card",
+        "graphic_type": "x_factor_card",
+        "scenes_used": [
+          "scene-10"
+        ],
+        "purpose": "Support X-Factor Player with a clean production graphic.",
+        "text_content": [
+          "The x-factor is arsenal's ability to escape liverpool's first..."
+        ],
+        "data_content": {
+          "voiceover": "The x-factor is arsenal's ability to escape liverpool's first press.",
+          "caption": "The x-factor is arsenal's ability to escape liverpool's first press"
+        },
+        "layout_requirements": "Vertical 9:16, safe-area centered, large readable headline.",
+        "animation_requirements": "spotlight",
+        "required_assets": [
+          "player_image",
+          "pitch_graphic"
+        ],
+        "recommended_format": "json/png",
+        "recommended_dimensions": "1080x1920",
+        "fallback_design": "Use minimal text card with internal icons and pitch texture."
+      },
+      {
+        "graphic_id": "graphic-cta_card",
+        "graphic_name": "CTA card",
+        "graphic_type": "cta_card",
+        "scenes_used": [
+          "scene-11"
+        ],
+        "purpose": "Support Final Question / CTA with a clean production graphic.",
+        "text_content": [
+          "Tell us below"
+        ],
+        "data_content": {
+          "voiceover": "Can Arsenal survive the first 20 minutes, or will Liverpool take control early? Tell us below.",
+          "caption": "Can Arsenal survive the first 20 minutes, or will Liverpool take control..."
+        },
+        "layout_requirements": "Vertical 9:16, safe-area centered, large readable headline.",
+        "animation_requirements": "final_push",
+        "required_assets": [
+          "team_logos",
+          "comment_icon"
+        ],
+        "recommended_format": "json/png",
+        "recommended_dimensions": "1080x1920",
+        "fallback_design": "Use minimal text card with internal icons and pitch texture."
+      }
+    ],
+    "dashboard_graphics": [
+      {
+        "graphic_id": "graphic-insight_dashboard",
+        "graphic_name": "Insight dashboard",
+        "graphic_type": "insight_dashboard",
+        "scenes_used": [
+          "scene-08",
+          "scene-09"
+        ],
+        "purpose": "Support Insight Dashboard with a clean production graphic.",
+        "text_content": [
+          "Slight Home Edge",
+          "Slight Home Edge"
+        ],
+        "data_content": {
+          "voiceover": "That makes it a slight home edge, not a prediction.",
+          "caption": "That makes it a slight home edge, not a prediction"
+        },
+        "layout_requirements": "Vertical 9:16, safe-area centered, large readable headline.",
+        "animation_requirements": "dashboard_build",
+        "required_assets": [
+          "dashboard_panel",
+          "team_logos"
+        ],
+        "recommended_format": "json/png",
+        "recommended_dimensions": "1080x1920",
+        "fallback_design": "Use minimal text card with internal icons and pitch texture."
+      }
+    ],
+    "tactical_graphics": [
+      {
+        "graphic_id": "graphic-tactical_pitch_diagram",
+        "graphic_name": "Tactical pitch diagram",
+        "graphic_type": "tactical_pitch_diagram",
+        "scenes_used": [
+          "scene-04"
+        ],
+        "purpose": "Support Tactical Moment with a clean production graphic.",
+        "text_content": [
+          "Liverpool usually start aggressively, pressing high and forcing rushed..."
+        ],
+        "data_content": {
+          "voiceover": "Liverpool usually start aggressively, pressing high and forcing rushed decisions.",
+          "caption": "Liverpool usually start aggressively, pressing high and forcing rushed decisions"
+        },
+        "layout_requirements": "Vertical 9:16, safe-area centered, large readable headline.",
+        "animation_requirements": "pitch_pan",
+        "required_assets": [
+          "pitch_graphic",
+          "team_logos"
+        ],
+        "recommended_format": "json/png",
+        "recommended_dimensions": "1080x1920",
+        "fallback_design": "Use minimal text card with internal icons and pitch texture."
+      }
+    ],
+    "caption_graphics": [
+      {
+        "graphic_id": "caption-scene-01",
+        "graphic_name": "Caption overlay scene-01",
+        "graphic_type": "caption_overlay",
+        "scenes_used": [
+          "scene-01"
+        ],
+        "purpose": "Readable caption overlay.",
+        "text_content": [
+          "Before the first whistle... here's the insight"
+        ],
+        "data_content": {},
+        "layout_requirements": "Two-line maximum lower-third caption inside safe area.",
+        "animation_requirements": "fade_in_fast",
+        "required_assets": [],
+        "recommended_format": "json/png",
+        "recommended_dimensions": "1080x1920",
+        "fallback_design": "Plain white text with dark translucent backing."
+      },
+      {
+        "graphic_id": "caption-scene-02",
+        "graphic_name": "Caption overlay scene-02",
+        "graphic_type": "caption_overlay",
+        "scenes_used": [
+          "scene-02"
+        ],
+        "purpose": "Readable caption overlay.",
+        "text_content": [
+          "Sample data: Liverpool have started quickly in recent home matches, while Arsenal..."
+        ],
+        "data_content": {},
+        "layout_requirements": "Two-line maximum lower-third caption inside safe area.",
+        "animation_requirements": "fade_in_fast",
+        "required_assets": [],
+        "recommended_format": "json/png",
+        "recommended_dimensions": "1080x1920",
+        "fallback_design": "Plain white text with dark translucent backing."
+      },
+      {
+        "graphic_id": "caption-scene-03",
+        "graphic_name": "Caption overlay scene-03",
+        "graphic_type": "caption_overlay",
+        "scenes_used": [
+          "scene-03"
+        ],
+        "purpose": "Readable caption overlay.",
+        "text_content": [
+          "So the real question is: Can Arsenal survive Liverpool's fast start?"
+        ],
+        "data_content": {},
+        "layout_requirements": "Two-line maximum lower-third caption inside safe area.",
+        "animation_requirements": "fade_in_fast",
+        "required_assets": [],
+        "recommended_format": "json/png",
+        "recommended_dimensions": "1080x1920",
+        "fallback_design": "Plain white text with dark translucent backing."
+      },
+      {
+        "graphic_id": "caption-scene-04",
+        "graphic_name": "Caption overlay scene-04",
+        "graphic_type": "caption_overlay",
+        "scenes_used": [
+          "scene-04"
+        ],
+        "purpose": "Readable caption overlay.",
+        "text_content": [
+          "Liverpool usually start aggressively, pressing high and forcing rushed decisions"
+        ],
+        "data_content": {},
+        "layout_requirements": "Two-line maximum lower-third caption inside safe area.",
+        "animation_requirements": "fade_in_fast",
+        "required_assets": [],
+        "recommended_format": "json/png",
+        "recommended_dimensions": "1080x1920",
+        "fallback_design": "Plain white text with dark translucent backing."
+      },
+      {
+        "graphic_id": "caption-scene-05",
+        "graphic_name": "Caption overlay scene-05",
+        "graphic_type": "caption_overlay",
+        "scenes_used": [
+          "scene-05"
+        ],
+        "purpose": "Readable caption overlay.",
+        "text_content": [
+          "Arsenal have enough quality to play through it, but a messy opening..."
+        ],
+        "data_content": {},
+        "layout_requirements": "Two-line maximum lower-third caption inside safe area.",
+        "animation_requirements": "fade_in_fast",
+        "required_assets": [],
+        "recommended_format": "json/png",
+        "recommended_dimensions": "1080x1920",
+        "fallback_design": "Plain white text with dark translucent backing."
+      },
+      {
+        "graphic_id": "caption-scene-06",
+        "graphic_name": "Caption overlay scene-06",
+        "graphic_type": "caption_overlay",
+        "scenes_used": [
+          "scene-06"
+        ],
+        "purpose": "Readable caption overlay.",
+        "text_content": [
+          "The evidence is simple: Liverpool usually make opponents uncomfortable early at home"
+        ],
+        "data_content": {},
+        "layout_requirements": "Two-line maximum lower-third caption inside safe area.",
+        "animation_requirements": "fade_in_fast",
+        "required_assets": [],
+        "recommended_format": "json/png",
+        "recommended_dimensions": "1080x1920",
+        "fallback_design": "Plain white text with dark translucent backing."
+      },
+      {
+        "graphic_id": "caption-scene-07",
+        "graphic_name": "Caption overlay scene-07",
+        "graphic_type": "caption_overlay",
+        "scenes_used": [
+          "scene-07"
+        ],
+        "purpose": "Readable caption overlay.",
+        "text_content": [
+          "The balance matters too: Arsenal may be better prepared for pressure than..."
+        ],
+        "data_content": {},
+        "layout_requirements": "Two-line maximum lower-third caption inside safe area.",
+        "animation_requirements": "fade_in_fast",
+        "required_assets": [],
+        "recommended_format": "json/png",
+        "recommended_dimensions": "1080x1920",
+        "fallback_design": "Plain white text with dark translucent backing."
+      },
+      {
+        "graphic_id": "caption-scene-08",
+        "graphic_name": "Caption overlay scene-08",
+        "graphic_type": "caption_overlay",
+        "scenes_used": [
+          "scene-08"
+        ],
+        "purpose": "Readable caption overlay.",
+        "text_content": [
+          "That makes it a slight home edge, not a prediction"
+        ],
+        "data_content": {},
+        "layout_requirements": "Two-line maximum lower-third caption inside safe area.",
+        "animation_requirements": "fade_in_fast",
+        "required_assets": [],
+        "recommended_format": "json/png",
+        "recommended_dimensions": "1080x1920",
+        "fallback_design": "Plain white text with dark translucent backing."
+      },
+      {
+        "graphic_id": "caption-scene-09",
+        "graphic_name": "Caption overlay scene-09",
+        "graphic_type": "caption_overlay",
+        "scenes_used": [
+          "scene-09"
+        ],
+        "purpose": "Readable caption overlay.",
+        "text_content": [
+          "Watch the opening phase closely; it may tell you how the rest..."
+        ],
+        "data_content": {},
+        "layout_requirements": "Two-line maximum lower-third caption inside safe area.",
+        "animation_requirements": "fade_in_fast",
+        "required_assets": [],
+        "recommended_format": "json/png",
+        "recommended_dimensions": "1080x1920",
+        "fallback_design": "Plain white text with dark translucent backing."
+      },
+      {
+        "graphic_id": "caption-scene-10",
+        "graphic_name": "Caption overlay scene-10",
+        "graphic_type": "caption_overlay",
+        "scenes_used": [
+          "scene-10"
+        ],
+        "purpose": "Readable caption overlay.",
+        "text_content": [
+          "The x-factor is arsenal's ability to escape liverpool's first press"
+        ],
+        "data_content": {},
+        "layout_requirements": "Two-line maximum lower-third caption inside safe area.",
+        "animation_requirements": "fade_in_fast",
+        "required_assets": [],
+        "recommended_format": "json/png",
+        "recommended_dimensions": "1080x1920",
+        "fallback_design": "Plain white text with dark translucent backing."
+      },
+      {
+        "graphic_id": "caption-scene-11",
+        "graphic_name": "Caption overlay scene-11",
+        "graphic_type": "caption_overlay",
+        "scenes_used": [
+          "scene-11"
+        ],
+        "purpose": "Readable caption overlay.",
+        "text_content": [
+          "Can Arsenal survive the first 20 minutes, or will Liverpool take control..."
+        ],
+        "data_content": {},
+        "layout_requirements": "Two-line maximum lower-third caption inside safe area.",
+        "animation_requirements": "fade_in_fast",
+        "required_assets": [],
+        "recommended_format": "json/png",
+        "recommended_dimensions": "1080x1920",
+        "fallback_design": "Plain white text with dark translucent backing."
+      }
+    ],
+    "reusable_template_graphics": [
+      {
+        "graphic_id": "graphic-match_title_card",
+        "graphic_name": "Match title card",
+        "graphic_type": "match_title_card",
+        "scenes_used": [
+          "scene-01"
+        ],
+        "purpose": "Support Brand Opening with a clean production graphic.",
+        "text_content": [
+          "Before the first whistle"
+        ],
+        "data_content": {
+          "voiceover": "Before the first whistle... here's the insight.",
+          "caption": "Before the first whistle... here's the insight"
+        },
+        "layout_requirements": "Vertical 9:16, safe-area centered, large readable headline.",
+        "animation_requirements": "logo_pulse",
+        "required_assets": [
+          "brand_logo",
+          "background_graphic"
+        ],
+        "recommended_format": "json/png",
+        "recommended_dimensions": "1080x1920",
+        "fallback_design": "Use minimal text card with internal icons and pitch texture."
+      },
+      {
+        "graphic_id": "graphic-team_comparison_card",
+        "graphic_name": "Team comparison card",
+        "graphic_type": "team_comparison_card",
+        "scenes_used": [
+          "scene-05",
+          "scene-07"
+        ],
+        "purpose": "Support Team Comparison with a clean production graphic.",
+        "text_content": [
+          "Arsenal have enough quality to play through it, but...",
+          "The balance matters too: Arsenal may be better prepared..."
+        ],
+        "data_content": {
+          "voiceover": "Arsenal have enough quality to play through it, but a messy opening can drag them from their plan.",
+          "caption": "Arsenal have enough quality to play through it, but a messy opening..."
+        },
+        "layout_requirements": "Vertical 9:16, safe-area centered, large readable headline.",
+        "animation_requirements": "side_by_side",
+        "required_assets": [
+          "team_logos"
+        ],
+        "recommended_format": "json/png",
+        "recommended_dimensions": "1080x1920",
+        "fallback_design": "Use minimal text card with internal icons and pitch texture."
+      },
+      {
+        "graphic_id": "graphic-insight_dashboard",
+        "graphic_name": "Insight dashboard",
+        "graphic_type": "insight_dashboard",
+        "scenes_used": [
+          "scene-08",
+          "scene-09"
+        ],
+        "purpose": "Support Insight Dashboard with a clean production graphic.",
+        "text_content": [
+          "Slight Home Edge",
+          "Slight Home Edge"
+        ],
+        "data_content": {
+          "voiceover": "That makes it a slight home edge, not a prediction.",
+          "caption": "That makes it a slight home edge, not a prediction"
+        },
+        "layout_requirements": "Vertical 9:16, safe-area centered, large readable headline.",
+        "animation_requirements": "dashboard_build",
+        "required_assets": [
+          "dashboard_panel",
+          "team_logos"
+        ],
+        "recommended_format": "json/png",
+        "recommended_dimensions": "1080x1920",
+        "fallback_design": "Use minimal text card with internal icons and pitch texture."
+      },
+      {
+        "graphic_id": "graphic-cta_card",
+        "graphic_name": "CTA card",
+        "graphic_type": "cta_card",
+        "scenes_used": [
+          "scene-11"
+        ],
+        "purpose": "Support Final Question / CTA with a clean production graphic.",
+        "text_content": [
+          "Tell us below"
+        ],
+        "data_content": {
+          "voiceover": "Can Arsenal survive the first 20 minutes, or will Liverpool take control early? Tell us below.",
+          "caption": "Can Arsenal survive the first 20 minutes, or will Liverpool take control..."
+        },
+        "layout_requirements": "Vertical 9:16, safe-area centered, large readable headline.",
+        "animation_requirements": "final_push",
+        "required_assets": [
+          "team_logos",
+          "comment_icon"
+        ],
+        "recommended_format": "json/png",
+        "recommended_dimensions": "1080x1920",
+        "fallback_design": "Use minimal text card with internal icons and pitch texture."
+      }
+    ],
+    "scene_graphic_map": [
+      {
+        "scene_id": "scene-01",
+        "graphic_id": "graphic-match_title_card",
+        "graphic_type": "match_title_card"
+      },
+      {
+        "scene_id": "scene-02",
+        "graphic_id": "graphic-surprising_fact_card",
+        "graphic_type": "surprising_fact_card"
+      },
+      {
+        "scene_id": "scene-03",
+        "graphic_id": "graphic-central_question_card",
+        "graphic_type": "central_question_card"
+      },
+      {
+        "scene_id": "scene-04",
+        "graphic_id": "graphic-tactical_pitch_diagram",
+        "graphic_type": "tactical_pitch_diagram"
+      },
+      {
+        "scene_id": "scene-05",
+        "graphic_id": "graphic-team_comparison_card",
+        "graphic_type": "team_comparison_card"
+      },
+      {
+        "scene_id": "scene-06",
+        "graphic_id": "graphic-evidence_card",
+        "graphic_type": "evidence_card"
+      },
+      {
+        "scene_id": "scene-07",
+        "graphic_id": "graphic-team_comparison_card",
+        "graphic_type": "team_comparison_card"
+      },
+      {
+        "scene_id": "scene-08",
+        "graphic_id": "graphic-insight_dashboard",
+        "graphic_type": "insight_dashboard"
+      },
+      {
+        "scene_id": "scene-09",
+        "graphic_id": "graphic-insight_dashboard",
+        "graphic_type": "insight_dashboard"
+      },
+      {
+        "scene_id": "scene-10",
+        "graphic_id": "graphic-x_factor_card",
+        "graphic_type": "x_factor_card"
+      },
+      {
+        "scene_id": "scene-11",
+        "graphic_id": "graphic-cta_card",
+        "graphic_type": "cta_card"
+      }
+    ],
+    "approval_status": "approved",
+    "next_component": "Visual Director"
+  },
+  "missing_assets": [
+    "competition_logo",
+    "player_image",
+    "team_logo_away",
+    "team_logo_home",
+    "team_logos"
+  ],
+  "legal_warnings": [
+    "Do not use copyrighted broadcast footage.",
+    "Do not use unlicensed player photos unless manually approved.",
+    "Use approved sources for club badges and competition marks.",
+    "Avoid unsafe scraped images and unclear source ownership."
+  ],
+  "required_manual_actions": [
+    "Confirm or prepare Player cutout",
+    "Confirm rights for Premier League logo",
+    "Confirm rights for Arsenal badge",
+    "Confirm rights for Liverpool badge",
+    "Confirm rights for Liverpool and Arsenal badges",
+    "Confirm rights for Player cutout",
+    "Confirm or prepare Stadium-style background"
+  ],
+  "render_readiness_status": "blocked_pending_manual_assets",
+  "locked_fields": {
+    "selected_match": {
+      "home_team": "Liverpool",
+      "away_team": "Arsenal",
+      "competition": "Premier League",
+      "kickoff_time": "20:00",
+      "country": "England"
+    },
+    "story_angle": "Liverpool may have the edge if they turn the first 20 minutes into pressure, but Arsenal have enough quality to punish one mistake.",
+    "central_question": "Can Arsenal survive Liverpool's fast start?",
+    "surprising_fact": "Sample data: Liverpool have started quickly in recent home matches, while Arsenal have sometimes needed longer to settle away."
+  },
+  "warnings": [
+    "Avoid unsafe scraped images and unclear source ownership.",
+    "Do not use copyrighted broadcast footage.",
+    "Do not use unlicensed player photos unless manually approved.",
+    "Legal status: needs_review. Replace with generated illustration or pitch graphic.",
+    "Legal status: needs_review. Use text initials in approved template until badge is confirmed.",
+    "Use approved sources for club badges and competition marks."
+  ],
+  "human_review_flags": [
+    "LEGAL_REVIEW_REQUIRED"
+  ],
+  "approval_status": "approved",
+  "next_component": "Visual Director"
+}

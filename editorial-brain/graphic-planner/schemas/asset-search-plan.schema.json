@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "GraphicPlannerSearchInput",
+  "type": "object",
+  "required": ["production_id", "search_tasks", "manual_tasks", "generation_tasks", "fallback_tasks", "legal_review_tasks"],
+  "properties": {
+    "production_id": { "type": "string" },
+    "search_tasks": { "type": "array" },
+    "manual_tasks": { "type": "array" },
+    "generation_tasks": { "type": "array" },
+    "fallback_tasks": { "type": "array" },
+    "legal_review_tasks": { "type": "array" }
+  }
+}
+

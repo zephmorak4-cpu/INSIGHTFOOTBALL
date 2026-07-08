@@ -1,0 +1,1 @@
+{"component_id":"IF-TL07","max_duration_seconds":60,"required_validation_checks":["duration","scene_order","assets","voice","visuals","captions","layers","safe_area","fonts","legal"],"render_readiness_rules":["ready","ready_with_warnings","needs_manual_review","failed_validation"]}

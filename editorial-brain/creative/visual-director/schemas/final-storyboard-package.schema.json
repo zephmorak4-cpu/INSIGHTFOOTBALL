@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "VisualDirectorStoryboardInput",
+  "type": "object",
+  "required": ["production_id", "match", "competition", "scenes", "approval_status"],
+  "properties": {
+    "production_id": { "type": "string" },
+    "match": { "type": "object" },
+    "competition": { "type": "string" },
+    "scenes": { "type": "array" },
+    "approval_status": { "type": "string" }
+  }
+}
+

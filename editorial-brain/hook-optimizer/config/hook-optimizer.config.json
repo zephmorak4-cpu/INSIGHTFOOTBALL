@@ -1,0 +1,21 @@
+{
+  "component_id": "S3-C02",
+  "component_name": "Hook Optimizer",
+  "prompt_path": "editorial-brain/hook-optimizer/prompts/hook-optimizer.prompt.md",
+  "script_schema": "editorial-brain/hook-optimizer/schemas/script-output.schema.json",
+  "brief_schema": "editorial-brain/hook-optimizer/schemas/production-brief.schema.json",
+  "optimization_schema": "editorial-brain/hook-optimizer/schemas/hook-optimization.schema.json",
+  "optimized_script_schema": "editorial-brain/hook-optimizer/schemas/optimized-script-output.schema.json",
+  "output": {
+    "output_directory": "editorial-brain/output",
+    "log_directory": "editorial-brain/logs"
+  },
+  "max_hook_options": 3,
+  "generation": {
+    "temperature": 0.3,
+    "max_tokens": 900,
+    "max_retries": 1
+  },
+  "next_component": "CTA Generator"
+}
+

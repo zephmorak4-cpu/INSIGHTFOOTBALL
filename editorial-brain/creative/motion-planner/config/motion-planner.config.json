@@ -1,0 +1,10 @@
+{
+  "component_id": "S6-C03",
+  "component_name": "Motion Planner",
+  "output": {
+    "output_directory": "editorial-brain/output",
+    "log_directory": "editorial-brain/logs"
+  },
+  "allowed_motion_presets": ["Fade", "Slide", "Pop", "Scale", "Progress Bar", "Counter", "Arrow Animation", "Dashboard Reveal", "Highlight Pulse", "Text Reveal"],
+  "next_component": "Caption Designer"
+}

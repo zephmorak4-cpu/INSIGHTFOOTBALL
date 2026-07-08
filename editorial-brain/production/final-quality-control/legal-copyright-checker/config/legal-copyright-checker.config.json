@@ -1,0 +1,1 @@
+{"blocked_asset_types":["broadcast_screenshot","copyrighted_match_footage","unsafe_scrape"],"legal_status_required":true,"allowed_legal_statuses":["approved","approved_placeholder","fallback_or_manual_review"],"high_risk_rules":["blocked_assets_used","betting_guarantee_language"]}

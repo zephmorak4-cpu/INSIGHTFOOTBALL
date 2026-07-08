@@ -1,0 +1,11 @@
+{
+  "component_id": "S6-C02",
+  "component_name": "Camera Planner",
+  "output": {
+    "output_directory": "editorial-brain/output",
+    "log_directory": "editorial-brain/logs"
+  },
+  "allowed_camera_moves": ["Slow Zoom", "Punch In", "Slide Left", "Slide Right", "Pan", "Static", "Reveal", "Pull Back"],
+  "next_component": "Motion Planner"
+}
+

@@ -1,0 +1,19 @@
+{
+  "component_id": "IF-AN04",
+  "component_name": "Hook Analyzer",
+  "timestamp": "2026-07-08T11:38:31.685601+00:00",
+  "hook_leaderboard": [
+    {
+      "key": "question",
+      "average": 921.32,
+      "sample_size": 76
+    },
+    {
+      "key": "data",
+      "average": 720.0,
+      "sample_size": 75
+    }
+  ],
+  "best_hook_type": "question",
+  "approval_status": "approved"
+}

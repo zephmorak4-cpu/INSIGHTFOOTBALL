@@ -1,0 +1,21 @@
+{
+  "production_id": "if-2026-07-06-liverpool-arsenal",
+  "job_id": "render-if-2026-07-06-liverpool-arsenal",
+  "artifact_root": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\renders\\if-2026-07-06-liverpool-arsenal",
+  "final_video_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\renders\\if-2026-07-06-liverpool-arsenal\\final_video.placeholder.json",
+  "thumbnail_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\renders\\if-2026-07-06-liverpool-arsenal\\thumbnail_frame.placeholder.json",
+  "payload_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\renders\\if-2026-07-06-liverpool-arsenal\\render_payload.json",
+  "logs_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\renders\\if-2026-07-06-liverpool-arsenal\\logs",
+  "file_sizes": {
+    "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\renders\\if-2026-07-06-liverpool-arsenal\\final_video.placeholder.json": 261,
+    "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\renders\\if-2026-07-06-liverpool-arsenal\\thumbnail_frame.placeholder.json": 269,
+    "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\renders\\if-2026-07-06-liverpool-arsenal\\render_payload.json": 263
+  },
+  "checksums": {
+    "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\renders\\if-2026-07-06-liverpool-arsenal\\final_video.placeholder.json": "b295918737dbb3d4049139b7270669c0d370c348cd81f7f2429cd0c87cc3f36e",
+    "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\renders\\if-2026-07-06-liverpool-arsenal\\thumbnail_frame.placeholder.json": "4cd42c8fe6a60756a6bf215ebb3ece62727c443490bf11daafd8483fad77db08",
+    "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\renders\\if-2026-07-06-liverpool-arsenal\\render_payload.json": "e99616dce27dc543570d9d0db1f032071d80b1fa9f368978e974862cd128327c"
+  },
+  "missing_artifacts": [],
+  "approval_status": "approved"
+}

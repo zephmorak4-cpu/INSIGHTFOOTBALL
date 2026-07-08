@@ -1,0 +1,18 @@
+{
+  "production_id": "if-2026-07-06-liverpool-arsenal",
+  "component_id": "S3-C03",
+  "component_name": "CTA Generator",
+  "timestamp": "2026-07-07T08:10:24.415826+00:00",
+  "original_cta": "Can Arsenal survive the first 20 minutes, or will Liverpool take control early? Tell us below.",
+  "cta_options": [
+    "Can Arsenal survive the first 20 minutes, or will Liverpool take control early? Tell us below.",
+    "Do you agree, or are we missing something?",
+    "Who has the edge before kickoff? Drop your call below."
+  ],
+  "selected_cta": "Can Arsenal survive the first 20 minutes, or will Liverpool take control early? Tell us below.",
+  "selection_reason": "The selected CTA invites football debate without sounding desperate or generic.",
+  "final_voiceover": "Before the first whistle... here's the insight. Sample data: Liverpool have started quickly in recent home matches, while Arsenal have sometimes needed longer to settle away. So the real question is: Can Arsenal survive Liverpool's fast start? Liverpool usually start aggressively, pressing high and forcing rushed decisions. Arsenal have enough quality to play through it, but a messy opening can drag them from their plan. The evidence is simple: Liverpool usually make opponents uncomfortable early at home. The balance matters too: Arsenal may be better prepared for pressure than older form suggests. That makes it a slight home edge, not a prediction. Watch the opening phase closely; it may tell you how the rest of the game will unfold. The x-factor is arsenal's ability to escape liverpool's first press. Can Arsenal survive the first 20 minutes, or will Liverpool take control early? Tell us below.",
+  "final_word_count": 145,
+  "final_estimated_duration_seconds": 56,
+  "approval_status": "approved"
+}

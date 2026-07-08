@@ -1,0 +1,25 @@
+{
+  "component_id": "IF-AN08",
+  "component_name": "Recommendation Engine",
+  "timestamp": "2026-07-08T11:38:31.701559+00:00",
+  "recommendations": [
+    {
+      "area": "retention",
+      "recommendation": "Bring the dashboard insight earlier than 42 seconds.",
+      "priority": "high"
+    },
+    {
+      "area": "hook",
+      "recommendation": "Keep testing short question hooks; they currently lead the hook leaderboard.",
+      "priority": "medium"
+    },
+    {
+      "area": "governance",
+      "recommendation": "Do not automatically rewrite prompts; route these findings to human editorial review.",
+      "priority": "required"
+    }
+  ],
+  "prompt_rewrite_performed": false,
+  "human_editorial_control": true,
+  "approval_status": "approved"
+}

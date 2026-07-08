@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "GraphicRequirements",
+  "type": "object",
+  "required": ["production_id", "component_id", "component_name", "timestamp", "source_storyboard_package", "required_graphics", "dashboard_graphics", "tactical_graphics", "caption_graphics", "reusable_template_graphics", "scene_graphic_map", "approval_status", "next_component"],
+  "properties": {
+    "production_id": { "type": "string" },
+    "required_graphics": { "type": "array" },
+    "dashboard_graphics": { "type": "array" },
+    "tactical_graphics": { "type": "array" },
+    "caption_graphics": { "type": "array" },
+    "reusable_template_graphics": { "type": "array" },
+    "scene_graphic_map": { "type": "array" },
+    "approval_status": { "type": "string" },
+    "next_component": { "type": "string" }
+  }
+}
+

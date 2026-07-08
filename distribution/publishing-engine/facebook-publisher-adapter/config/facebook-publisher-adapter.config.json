@@ -1,0 +1,1 @@
+{"dry_run_default":true,"required_env_vars":["FACEBOOK_PAGE_ID","FACEBOOK_PAGE_ACCESS_TOKEN"],"page_id_env":"FACEBOOK_PAGE_ID","access_token_env":"FACEBOOK_PAGE_ACCESS_TOKEN"}

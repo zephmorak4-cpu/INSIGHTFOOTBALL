@@ -1,0 +1,45 @@
+{
+  "production_id": "if-2026-07-06-liverpool-arsenal",
+  "component_id": "IF-PUB01",
+  "component_name": "Publishing Metadata Generator",
+  "timestamp": "2026-07-08T11:37:48.098334+00:00",
+  "match": {
+    "home_team": "Liverpool",
+    "away_team": "Arsenal",
+    "competition": "Premier League",
+    "kickoff_time": "20:00",
+    "country": "England"
+  },
+  "competition": "Premier League",
+  "video_type": "short_form_match_preview",
+  "title_options": [
+    "Can Arsenal survive Liverpool's fast start?",
+    "The First 20 Minutes Could Decide This Match",
+    "Liverpool vs Arsenal: The Insight Before Kickoff"
+  ],
+  "selected_title": "Can Arsenal survive Liverpool's fast start?",
+  "youtube_description": "Sample data: Liverpool have started quickly in recent home matches, while Arsenal have sometimes needed longer to settle away.\n\nCan Arsenal survive the first 20 minutes, or will Liverpool take control early? Tell us below.\n\n#InsightFootball #FootballAnalysis #PremierLeague #Liverpool #Arsenal #MatchPreview #FootballShorts",
+  "facebook_caption": "Can Arsenal survive Liverpool's fast start?\n\nCan Arsenal survive the first 20 minutes, or will Liverpool take control early? Tell us below.\n\n#InsightFootball #FootballAnalysis #PremierLeague #Liverpool #Arsenal #MatchPreview",
+  "telegram_post": "Can Arsenal survive Liverpool's fast start?\n\nCan Arsenal survive Liverpool's fast start?\n\nCan Arsenal survive the first 20 minutes, or will Liverpool take control early? Tell us below.",
+  "hashtags": [
+    "#InsightFootball",
+    "#FootballAnalysis",
+    "#PremierLeague",
+    "#Liverpool",
+    "#Arsenal",
+    "#MatchPreview",
+    "#FootballShorts"
+  ],
+  "thumbnail_text": "Can Arsenal survive Liverpool's fast start?",
+  "pinned_comment_suggestion": "Can Arsenal survive the first 20 minutes, or will Liverpool take control early? Tell us below.",
+  "cta_text": "Can Arsenal survive the first 20 minutes, or will Liverpool take control early? Tell us below.",
+  "forbidden_language_check": {
+    "passed": true,
+    "matches": []
+  },
+  "warnings": [
+    "Publish-ready package requires human review."
+  ],
+  "approval_status": "approved",
+  "next_component": "YouTube Publisher Adapter"
+}

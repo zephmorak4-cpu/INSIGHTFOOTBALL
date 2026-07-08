@@ -1,0 +1,43 @@
+{
+  "module": "Insight Engine",
+  "agent_id": "IF-A04",
+  "prompt_version": "v1.0",
+  "prompt_library_path": "blueprints/INSIGHT_FOOTBALL_Prompt_Library_v1.0.md",
+  "daily_input_schema_path": "editorial-brain/insight-engine/schemas/daily-input.schema.json",
+  "match_selection_schema_path": "editorial-brain/insight-engine/schemas/match-selection.schema.json",
+  "story_hunter_schema_path": "editorial-brain/insight-engine/schemas/story-hunter.schema.json",
+  "evidence_filter_schema_path": "editorial-brain/insight-engine/schemas/evidence-filter.schema.json",
+  "output_schema_path": "editorial-brain/insight-engine/schemas/insight-engine.schema.json",
+  "model_selection": {
+    "default_provider": "openai",
+    "default_model": "gpt-4.1",
+    "fallback_model": "claude-sonnet"
+  },
+  "llm_provider": {
+    "provider": "deterministic",
+    "endpoint": "https://api.openai.com/v1/chat/completions",
+    "api_key_env": "OPENAI_API_KEY",
+    "timeout_seconds": 60
+  },
+  "generation": {
+    "temperature": 0.2,
+    "max_tokens": 2500
+  },
+  "retry_policy": {
+    "max_retries": 1,
+    "retry_on_invalid_json": true,
+    "retry_on_missing_required_fields": true,
+    "retry_on_low_confidence": false
+  },
+  "validation_policy": {
+    "minimum_confidence": 70,
+    "stop_on_human_review_required": false,
+    "stop_on_locked_field_change": true,
+    "require_valid_json": true
+  },
+  "next_agent": "IF-A05",
+  "output": {
+    "log_directory": "editorial-brain/logs",
+    "package_directory": "editorial-brain/output"
+  }
+}

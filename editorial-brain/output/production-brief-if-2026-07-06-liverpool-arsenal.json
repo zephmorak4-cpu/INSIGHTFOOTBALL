@@ -1,0 +1,86 @@
+{
+  "production_id": "if-2026-07-06-liverpool-arsenal",
+  "brief_id": "brief-if-2026-07-06-liverpool-arsenal",
+  "timestamp": "2026-07-06T17:08:11.357157+00:00",
+  "match": {
+    "home_team": "Liverpool",
+    "away_team": "Arsenal",
+    "competition": "Premier League",
+    "kickoff_time": "20:00",
+    "country": "England"
+  },
+  "competition": "Premier League",
+  "video_type": "60-second match preview",
+  "target_duration_seconds": 60,
+  "target_platforms": [
+    "YouTube Shorts",
+    "Facebook Reels",
+    "Telegram"
+  ],
+  "language": "English",
+  "brand_opening": "Before the first whistle... here's the insight.",
+  "central_question": "Can Arsenal survive Liverpool's fast start?",
+  "hook_direction": "Open with Liverpool's early scoring pattern.",
+  "surprising_fact": "Sample data: Liverpool have started quickly in recent home matches, while Arsenal have sometimes needed longer to settle away.",
+  "story_angle": "Liverpool may have the edge if they turn the first 20 minutes into pressure, but Arsenal have enough quality to punish one mistake.",
+  "main_insight": "Liverpool's strongest advantage is how aggressively they begin matches, but Arsenal have shown they can recover after difficult starts.",
+  "evidence_to_use": [
+    "Liverpool usually make opponents uncomfortable early at home.",
+    "Arsenal have had a few away games where they needed to recover."
+  ],
+  "evidence_to_avoid": [
+    "Do not mention rejected statistics unless they directly explain the story.",
+    "Do not turn the match edge into a prediction.",
+    "Do not read confidence scores in the voiceover."
+  ],
+  "contradiction_to_handle": [
+    "Arsenal may be better prepared for pressure than older form suggests."
+  ],
+  "match_edge": "Slight Home Edge",
+  "key_advantage": "Early pressure.",
+  "x_factor": "Arsenal's ability to escape Liverpool's first press.",
+  "viewer_takeaway": "Watch the opening phase closely; it may tell you how the rest of the game will unfold.",
+  "desired_emotion": "Curious, informed, ready to debate.",
+  "tone_rules": [
+    "Sound conversational.",
+    "Sound like a knowledgeable football friend.",
+    "Avoid heavy jargon.",
+    "Avoid betting certainty.",
+    "Avoid robotic language.",
+    "Explain one idea clearly.",
+    "End with a debate question."
+  ],
+  "forbidden_phrases": [
+    "guaranteed",
+    "sure win",
+    "banker",
+    "lock",
+    "bet of the day",
+    "risk-free",
+    "100 percent",
+    "this will definitely happen"
+  ],
+  "required_phrases": [
+    "Before the first whistle... here's the insight.",
+    "Do you agree, or are we missing something?"
+  ],
+  "cta_direction": "Ask viewers whether Arsenal can survive the first 20 minutes.",
+  "scriptwriter_notes": [
+    "Do not write a prediction.",
+    "Use the contradiction to keep the story balanced.",
+    "Keep the dashboard language natural and simple."
+  ],
+  "locked_fields": {
+    "selected_match": {
+      "home_team": "Liverpool",
+      "away_team": "Arsenal",
+      "competition": "Premier League",
+      "kickoff_time": "20:00",
+      "country": "England"
+    },
+    "story_angle": "Liverpool may have the edge if they turn the first 20 minutes into pressure, but Arsenal have enough quality to punish one mistake.",
+    "central_question": "Can Arsenal survive Liverpool's fast start?",
+    "surprising_fact": "Sample data: Liverpool have started quickly in recent home matches, while Arsenal have sometimes needed longer to settle away."
+  },
+  "next_agent": "IF-A05"
+}

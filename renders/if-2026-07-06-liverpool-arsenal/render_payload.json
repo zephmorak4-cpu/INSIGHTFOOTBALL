@@ -1,0 +1,8 @@
+{
+  "renderer": "placeholder",
+  "mode": "structured_placeholder",
+  "production_id": "if-2026-07-06-liverpool-arsenal",
+  "scene_count": 11,
+  "duration": 60.0,
+  "reason": "Placeholder renderer documents render intent without producing video frames."
+}

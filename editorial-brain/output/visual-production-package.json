@@ -1,0 +1,795 @@
+{
+  "production_id": "if-2026-07-06-liverpool-arsenal",
+  "match": {
+    "home_team": "Liverpool",
+    "away_team": "Arsenal",
+    "competition": "Premier League",
+    "kickoff_time": "20:00",
+    "country": "England"
+  },
+  "competition": "Premier League",
+  "visual_plan": {
+    "production_id": "if-2026-07-06-liverpool-arsenal",
+    "component_id": "S6-C01",
+    "component_name": "Visual Director",
+    "timestamp": "2026-07-07T10:55:39.254658+00:00",
+    "source_storyboard_package": "if-2026-07-06-liverpool-arsenal",
+    "source_asset_package": "if-2026-07-06-liverpool-arsenal",
+    "match": {
+      "home_team": "Liverpool",
+      "away_team": "Arsenal",
+      "competition": "Premier League",
+      "kickoff_time": "20:00",
+      "country": "England"
+    },
+    "competition": "Premier League",
+    "scenes": [
+      {
+        "scene_id": "scene-01",
+        "scene_type": "Brand Opening",
+        "template_id": "brand_opening",
+        "layout_type": "center_brand",
+        "background_asset": "background_graphic",
+        "foreground_assets": [
+          "brand_logo",
+          "background_graphic"
+        ],
+        "primary_text": "Before the first whistle",
+        "secondary_text": "Make the brand opening easy to understand in one glance.",
+        "team_badges": [
+          "brand_logo"
+        ],
+        "player_assets": [],
+        "graphic_assets": [
+          "graphic-match_title_card"
+        ],
+        "camera_style": "Reveal",
+        "motion_style": "logo_pulse",
+        "transition_style": "quick_cut",
+        "caption_style": "lower_safe_two_line",
+        "dashboard_usage": "hidden",
+        "safe_area_notes": "Keep primary text within center 80% vertical safe area."
+      },
+      {
+        "scene_id": "scene-02",
+        "scene_type": "Surprising Fact",
+        "template_id": "stat_card",
+        "layout_type": "stat_focus",
+        "background_asset": "background_graphic",
+        "foreground_assets": [
+          "team_logos",
+          "data_card"
+        ],
+        "primary_text": "Sample data: Liverpool have started quickly in recent home...",
+        "secondary_text": "Make the surprising fact easy to understand in one glance.",
+        "team_badges": [
+          "team_logos"
+        ],
+        "player_assets": [],
+        "graphic_assets": [
+          "graphic-surprising_fact_card"
+        ],
+        "camera_style": "Punch In",
+        "motion_style": "fact_reveal",
+        "transition_style": "quick_cut",
+        "caption_style": "lower_safe_two_line",
+        "dashboard_usage": "hidden",
+        "safe_area_notes": "Keep primary text within center 80% vertical safe area."
+      },
+      {
+        "scene_id": "scene-03",
+        "scene_type": "Central Question",
+        "template_id": "question_card",
+        "layout_type": "question_focus",
+        "background_asset": "background_graphic",
+        "foreground_assets": [
+          "team_logos"
+        ],
+        "primary_text": "Can Arsenal survive Liverpool's fast start?",
+        "secondary_text": "Make the central question easy to understand in one glance.",
+        "team_badges": [
+          "team_logos"
+        ],
+        "player_assets": [],
+        "graphic_assets": [
+          "graphic-central_question_card"
+        ],
+        "camera_style": "Slow Zoom",
+        "motion_style": "question_push",
+        "transition_style": "quick_cut",
+        "caption_style": "lower_safe_two_line",
+        "dashboard_usage": "hidden",
+        "safe_area_notes": "Keep primary text within center 80% vertical safe area."
+      },
+      {
+        "scene_id": "scene-04",
+        "scene_type": "Tactical Moment",
+        "template_id": "pitch_tactics",
+        "layout_type": "pitch_board",
+        "background_asset": "pitch_graphic",
+        "foreground_assets": [
+          "pitch_graphic",
+          "team_logos"
+        ],
+        "primary_text": "Liverpool usually start aggressively, pressing high and forcing rushed...",
+        "secondary_text": "Make the tactical moment easy to understand in one glance.",
+        "team_badges": [
+          "team_logos"
+        ],
+        "player_assets": [],
+        "graphic_assets": [
+          "graphic-tactical_pitch_diagram"
+        ],
+        "camera_style": "Pan",
+        "motion_style": "pitch_pan",
+        "transition_style": "quick_cut",
+        "caption_style": "lower_safe_two_line",
+        "dashboard_usage": "hidden",
+        "safe_area_notes": "Keep primary text within center 80% vertical safe area."
+      },
+      {
+        "scene_id": "scene-05",
+        "scene_type": "Team Comparison",
+        "template_id": "comparison_split",
+        "layout_type": "split_comparison",
+        "background_asset": "background_graphic",
+        "foreground_assets": [
+          "team_logos"
+        ],
+        "primary_text": "Arsenal have enough quality to play through it, but...",
+        "secondary_text": "Make the team comparison easy to understand in one glance.",
+        "team_badges": [
+          "team_logos"
+        ],
+        "player_assets": [],
+        "graphic_assets": [
+          "graphic-team_comparison_card"
+        ],
+        "camera_style": "Slide Left",
+        "motion_style": "side_by_side",
+        "transition_style": "quick_cut",
+        "caption_style": "lower_safe_two_line",
+        "dashboard_usage": "hidden",
+        "safe_area_notes": "Keep primary text within center 80% vertical safe area."
+      },
+      {
+        "scene_id": "scene-06",
+        "scene_type": "Evidence Card",
+        "template_id": "evidence_card",
+        "layout_type": "evidence_card",
+        "background_asset": "background_graphic",
+        "foreground_assets": [
+          "data_card",
+          "team_logo_home"
+        ],
+        "primary_text": "The evidence is simple: Liverpool usually make opponents uncomfortable...",
+        "secondary_text": "Make the evidence card easy to understand in one glance.",
+        "team_badges": [
+          "team_logo_home"
+        ],
+        "player_assets": [],
+        "graphic_assets": [
+          "graphic-evidence_card"
+        ],
+        "camera_style": "Static",
+        "motion_style": "stat_slide",
+        "transition_style": "quick_cut",
+        "caption_style": "lower_safe_two_line",
+        "dashboard_usage": "hidden",
+        "safe_area_notes": "Keep primary text within center 80% vertical safe area."
+      },
+      {
+        "scene_id": "scene-07",
+        "scene_type": "Team Comparison",
+        "template_id": "comparison_split",
+        "layout_type": "split_comparison",
+        "background_asset": "background_graphic",
+        "foreground_assets": [
+          "team_logos"
+        ],
+        "primary_text": "The balance matters too: Arsenal may be better prepared...",
+        "secondary_text": "Make the team comparison easy to understand in one glance.",
+        "team_badges": [
+          "team_logos"
+        ],
+        "player_assets": [],
+        "graphic_assets": [
+          "graphic-team_comparison_card"
+        ],
+        "camera_style": "Slide Left",
+        "motion_style": "balance_shift",
+        "transition_style": "quick_cut",
+        "caption_style": "lower_safe_two_line",
+        "dashboard_usage": "hidden",
+        "safe_area_notes": "Keep primary text within center 80% vertical safe area."
+      },
+      {
+        "scene_id": "scene-08",
+        "scene_type": "Insight Dashboard",
+        "template_id": "insight_dashboard",
+        "layout_type": "dashboard",
+        "background_asset": "dashboard_panel",
+        "foreground_assets": [
+          "dashboard_panel",
+          "team_logos"
+        ],
+        "primary_text": "Slight Home Edge",
+        "secondary_text": "Edge, uncertainty, x-factor",
+        "team_badges": [
+          "team_logos"
+        ],
+        "player_assets": [],
+        "graphic_assets": [
+          "graphic-insight_dashboard"
+        ],
+        "camera_style": "Static",
+        "motion_style": "dashboard_build",
+        "transition_style": "quick_cut",
+        "caption_style": "lower_safe_two_line",
+        "dashboard_usage": "visible",
+        "safe_area_notes": "Keep primary text within center 80% vertical safe area."
+      },
+      {
+        "scene_id": "scene-09",
+        "scene_type": "Insight Dashboard",
+        "template_id": "insight_dashboard",
+        "layout_type": "dashboard",
+        "background_asset": "dashboard_panel",
+        "foreground_assets": [
+          "dashboard_panel",
+          "team_logos"
+        ],
+        "primary_text": "Slight Home Edge",
+        "secondary_text": "Edge, uncertainty, x-factor",
+        "team_badges": [
+          "team_logos"
+        ],
+        "player_assets": [],
+        "graphic_assets": [
+          "graphic-insight_dashboard"
+        ],
+        "camera_style": "Static",
+        "motion_style": "dashboard_hold",
+        "transition_style": "quick_cut",
+        "caption_style": "lower_safe_two_line",
+        "dashboard_usage": "visible",
+        "safe_area_notes": "Keep primary text within center 80% vertical safe area."
+      },
+      {
+        "scene_id": "scene-10",
+        "scene_type": "X-Factor Player",
+        "template_id": "player_focus",
+        "layout_type": "player_focus",
+        "background_asset": "background_graphic",
+        "foreground_assets": [
+          "player_image",
+          "pitch_graphic"
+        ],
+        "primary_text": "The x-factor is arsenal's ability to escape liverpool's first...",
+        "secondary_text": "Make the x-factor player easy to understand in one glance.",
+        "team_badges": [],
+        "player_assets": [
+          "player_image"
+        ],
+        "graphic_assets": [
+          "graphic-x_factor_card"
+        ],
+        "camera_style": "Static",
+        "motion_style": "spotlight",
+        "transition_style": "quick_cut",
+        "caption_style": "lower_safe_two_line",
+        "dashboard_usage": "hidden",
+        "safe_area_notes": "Keep primary text within center 80% vertical safe area."
+      },
+      {
+        "scene_id": "scene-11",
+        "scene_type": "Final Question / CTA",
+        "template_id": "cta_card",
+        "layout_type": "cta_focus",
+        "background_asset": "background_graphic",
+        "foreground_assets": [
+          "team_logos",
+          "comment_icon"
+        ],
+        "primary_text": "Tell us below",
+        "secondary_text": "Comments open",
+        "team_badges": [
+          "team_logos"
+        ],
+        "player_assets": [],
+        "graphic_assets": [
+          "graphic-cta_card"
+        ],
+        "camera_style": "Pull Back",
+        "motion_style": "final_push",
+        "transition_style": "hold_then_out",
+        "caption_style": "lower_safe_two_line",
+        "dashboard_usage": "hidden",
+        "safe_area_notes": "Keep primary text within center 80% vertical safe area."
+      }
+    ],
+    "visual_consistency": {
+      "aspect_ratio": "9:16",
+      "style": "clean football newsroom",
+      "safe_area": "center 80%"
+    },
+    "warnings": [
+      "Avoid unsafe scraped images and unclear source ownership.",
+      "Do not use copyrighted broadcast footage.",
+      "Do not use unlicensed player photos unless manually approved.",
+      "Legal status: needs_review. Replace with generated illustration or pitch graphic.",
+      "Legal status: needs_review. Use text initials in approved template until badge is confirmed.",
+      "Use approved sources for club badges and competition marks."
+    ],
+    "approval_status": "approved",
+    "next_component": "Camera Planner"
+  },
+  "camera_plan": {
+    "production_id": "if-2026-07-06-liverpool-arsenal",
+    "component_id": "S6-C02",
+    "component_name": "Camera Planner",
+    "timestamp": "2026-07-07T10:56:16.751762+00:00",
+    "source_visual_plan": "if-2026-07-06-liverpool-arsenal",
+    "scenes": [
+      {
+        "scene_id": "scene-01",
+        "camera_preset": "Reveal",
+        "camera_duration": 4.0,
+        "zoom_level": 1.0,
+        "pan_direction": "center",
+        "focus_target": "brand logo",
+        "camera_reason": "Reveal supports the brand opening without random movement."
+      },
+      {
+        "scene_id": "scene-02",
+        "camera_preset": "Punch In",
+        "camera_duration": 4.0,
+        "zoom_level": 1.08,
+        "pan_direction": "center",
+        "focus_target": "fact card",
+        "camera_reason": "Punch In supports the surprising fact without random movement."
+      },
+      {
+        "scene_id": "scene-03",
+        "camera_preset": "Slow Zoom",
+        "camera_duration": 4.0,
+        "zoom_level": 1.06,
+        "pan_direction": "center",
+        "focus_target": "question text",
+        "camera_reason": "Slow Zoom supports the central question without random movement."
+      },
+      {
+        "scene_id": "scene-04",
+        "camera_preset": "Pan",
+        "camera_duration": 4.0,
+        "zoom_level": 1.0,
+        "pan_direction": "right",
+        "focus_target": "pitch board",
+        "camera_reason": "Pan supports the tactical moment without random movement."
+      },
+      {
+        "scene_id": "scene-05",
+        "camera_preset": "Slide Left",
+        "camera_duration": 4.0,
+        "zoom_level": 1.0,
+        "pan_direction": "left",
+        "focus_target": "team comparison",
+        "camera_reason": "Slide Left supports the team comparison without random movement."
+      },
+      {
+        "scene_id": "scene-06",
+        "camera_preset": "Punch In",
+        "camera_duration": 4.0,
+        "zoom_level": 1.05,
+        "pan_direction": "center",
+        "focus_target": "evidence card",
+        "camera_reason": "Punch In supports the evidence card without random movement."
+      },
+      {
+        "scene_id": "scene-07",
+        "camera_preset": "Slide Left",
+        "camera_duration": 4.0,
+        "zoom_level": 1.0,
+        "pan_direction": "left",
+        "focus_target": "team comparison",
+        "camera_reason": "Slide Left supports the team comparison without random movement."
+      },
+      {
+        "scene_id": "scene-08",
+        "camera_preset": "Static",
+        "camera_duration": 4.0,
+        "zoom_level": 1.0,
+        "pan_direction": "center",
+        "focus_target": "dashboard",
+        "camera_reason": "Static supports the insight dashboard without random movement."
+      },
+      {
+        "scene_id": "scene-09",
+        "camera_preset": "Static",
+        "camera_duration": 4.0,
+        "zoom_level": 1.0,
+        "pan_direction": "center",
+        "focus_target": "dashboard",
+        "camera_reason": "Static supports the insight dashboard without random movement."
+      },
+      {
+        "scene_id": "scene-10",
+        "camera_preset": "Slow Zoom",
+        "camera_duration": 4.0,
+        "zoom_level": 1.07,
+        "pan_direction": "center",
+        "focus_target": "x-factor card",
+        "camera_reason": "Slow Zoom supports the x-factor player without random movement."
+      },
+      {
+        "scene_id": "scene-11",
+        "camera_preset": "Pull Back",
+        "camera_duration": 4.0,
+        "zoom_level": 0.96,
+        "pan_direction": "center",
+        "focus_target": "CTA text",
+        "camera_reason": "Pull Back supports the final question / cta without random movement."
+      }
+    ],
+    "warnings": [],
+    "approval_status": "approved",
+    "next_component": "Motion Planner"
+  },
+  "motion_plan": {
+    "production_id": "if-2026-07-06-liverpool-arsenal",
+    "component_id": "S6-C03",
+    "component_name": "Motion Planner",
+    "timestamp": "2026-07-07T10:56:15.221509+00:00",
+    "source_visual_plan": "if-2026-07-06-liverpool-arsenal",
+    "scenes": [
+      {
+        "scene_id": "scene-01",
+        "motion_preset": "Fade",
+        "duration": 0.8,
+        "delay": 0.0,
+        "easing": "easeOutCubic",
+        "animation_reason": "Fade clarifies the brand opening without flashy effects."
+      },
+      {
+        "scene_id": "scene-02",
+        "motion_preset": "Counter",
+        "duration": 0.8,
+        "delay": 0.1,
+        "easing": "easeOutCubic",
+        "animation_reason": "Counter clarifies the surprising fact without flashy effects."
+      },
+      {
+        "scene_id": "scene-03",
+        "motion_preset": "Text Reveal",
+        "duration": 0.8,
+        "delay": 0.1,
+        "easing": "easeOutCubic",
+        "animation_reason": "Text Reveal clarifies the central question without flashy effects."
+      },
+      {
+        "scene_id": "scene-04",
+        "motion_preset": "Arrow Animation",
+        "duration": 1.2,
+        "delay": 0.1,
+        "easing": "easeOutCubic",
+        "animation_reason": "Arrow Animation clarifies the tactical moment without flashy effects."
+      },
+      {
+        "scene_id": "scene-05",
+        "motion_preset": "Slide",
+        "duration": 0.8,
+        "delay": 0.1,
+        "easing": "easeOutCubic",
+        "animation_reason": "Slide clarifies the team comparison without flashy effects."
+      },
+      {
+        "scene_id": "scene-06",
+        "motion_preset": "Pop",
+        "duration": 0.8,
+        "delay": 0.1,
+        "easing": "easeOutCubic",
+        "animation_reason": "Pop clarifies the evidence card without flashy effects."
+      },
+      {
+        "scene_id": "scene-07",
+        "motion_preset": "Slide",
+        "duration": 0.8,
+        "delay": 0.1,
+        "easing": "easeOutCubic",
+        "animation_reason": "Slide clarifies the team comparison without flashy effects."
+      },
+      {
+        "scene_id": "scene-08",
+        "motion_preset": "Dashboard Reveal",
+        "duration": 1.2,
+        "delay": 0.1,
+        "easing": "easeOutCubic",
+        "animation_reason": "Dashboard Reveal clarifies the insight dashboard without flashy effects."
+      },
+      {
+        "scene_id": "scene-09",
+        "motion_preset": "Dashboard Reveal",
+        "duration": 1.2,
+        "delay": 0.1,
+        "easing": "easeOutCubic",
+        "animation_reason": "Dashboard Reveal clarifies the insight dashboard without flashy effects."
+      },
+      {
+        "scene_id": "scene-10",
+        "motion_preset": "Highlight Pulse",
+        "duration": 0.8,
+        "delay": 0.1,
+        "easing": "easeOutCubic",
+        "animation_reason": "Highlight Pulse clarifies the x-factor player without flashy effects."
+      },
+      {
+        "scene_id": "scene-11",
+        "motion_preset": "Scale",
+        "duration": 0.8,
+        "delay": 0.1,
+        "easing": "easeOutCubic",
+        "animation_reason": "Scale clarifies the final question / cta without flashy effects."
+      }
+    ],
+    "warnings": [],
+    "approval_status": "approved",
+    "next_component": "Caption Designer"
+  },
+  "caption_plan": {
+    "production_id": "if-2026-07-06-liverpool-arsenal",
+    "component_id": "S6-C04",
+    "component_name": "Caption Designer",
+    "timestamp": "2026-07-07T10:56:16.429751+00:00",
+    "source_visual_plan": "if-2026-07-06-liverpool-arsenal",
+    "scenes": [
+      {
+        "scene_id": "scene-01",
+        "caption": "Before the first whistle",
+        "caption_position": "lower_third_safe",
+        "font_size": 46,
+        "font_weight": "semibold",
+        "highlight_words": [
+          "first"
+        ],
+        "background_style": "dark_translucent_strip",
+        "timing": {
+          "start_offset": 0.2,
+          "end_offset": -0.2
+        },
+        "safe_area_notes": "Lower third, inside center 80%, never over team badge or dashboard values."
+      },
+      {
+        "scene_id": "scene-02",
+        "caption": "Sample data: Liverpool have started quickly in\nrecent home",
+        "caption_position": "lower_third_safe",
+        "font_size": 46,
+        "font_weight": "semibold",
+        "highlight_words": [
+          "Liverpool"
+        ],
+        "background_style": "dark_translucent_strip",
+        "timing": {
+          "start_offset": 0.2,
+          "end_offset": -0.2
+        },
+        "safe_area_notes": "Lower third, inside center 80%, never over team badge or dashboard values."
+      },
+      {
+        "scene_id": "scene-03",
+        "caption": "Can Arsenal survive Liverpool's fast start?",
+        "caption_position": "lower_third_safe",
+        "font_size": 54,
+        "font_weight": "bold",
+        "highlight_words": [
+          "Liverpool",
+          "Arsenal",
+          "survive"
+        ],
+        "background_style": "dark_translucent_strip",
+        "timing": {
+          "start_offset": 0.2,
+          "end_offset": -0.2
+        },
+        "safe_area_notes": "Lower third, inside center 80%, never over team badge or dashboard values."
+      },
+      {
+        "scene_id": "scene-04",
+        "caption": "Liverpool usually start aggressively, pressing high and\nforcing rushed",
+        "caption_position": "lower_third_safe",
+        "font_size": 46,
+        "font_weight": "semibold",
+        "highlight_words": [
+          "Liverpool"
+        ],
+        "background_style": "dark_translucent_strip",
+        "timing": {
+          "start_offset": 0.2,
+          "end_offset": -0.2
+        },
+        "safe_area_notes": "Lower third, inside center 80%, never over team badge or dashboard values."
+      },
+      {
+        "scene_id": "scene-05",
+        "caption": "Arsenal have enough quality to play through\nit, but",
+        "caption_position": "lower_third_safe",
+        "font_size": 46,
+        "font_weight": "semibold",
+        "highlight_words": [
+          "Arsenal"
+        ],
+        "background_style": "dark_translucent_strip",
+        "timing": {
+          "start_offset": 0.2,
+          "end_offset": -0.2
+        },
+        "safe_area_notes": "Lower third, inside center 80%, never over team badge or dashboard values."
+      },
+      {
+        "scene_id": "scene-06",
+        "caption": "The evidence is simple: Liverpool usually make\nopponents uncomfortable",
+        "caption_position": "lower_third_safe",
+        "font_size": 46,
+        "font_weight": "semibold",
+        "highlight_words": [
+          "Liverpool"
+        ],
+        "background_style": "dark_translucent_strip",
+        "timing": {
+          "start_offset": 0.2,
+          "end_offset": -0.2
+        },
+        "safe_area_notes": "Lower third, inside center 80%, never over team badge or dashboard values."
+      },
+      {
+        "scene_id": "scene-07",
+        "caption": "The balance matters too: Arsenal may be\nbetter prepared",
+        "caption_position": "lower_third_safe",
+        "font_size": 46,
+        "font_weight": "semibold",
+        "highlight_words": [
+          "Arsenal"
+        ],
+        "background_style": "dark_translucent_strip",
+        "timing": {
+          "start_offset": 0.2,
+          "end_offset": -0.2
+        },
+        "safe_area_notes": "Lower third, inside center 80%, never over team badge or dashboard values."
+      },
+      {
+        "scene_id": "scene-08",
+        "caption": "Slight Home Edge",
+        "caption_position": "lower_third_safe",
+        "font_size": 46,
+        "font_weight": "bold",
+        "highlight_words": [
+          "edge"
+        ],
+        "background_style": "dark_translucent_strip",
+        "timing": {
+          "start_offset": 0.2,
+          "end_offset": -0.2
+        },
+        "safe_area_notes": "Lower third, inside center 80%, never over team badge or dashboard values."
+      },
+      {
+        "scene_id": "scene-09",
+        "caption": "Slight Home Edge",
+        "caption_position": "lower_third_safe",
+        "font_size": 46,
+        "font_weight": "bold",
+        "highlight_words": [
+          "edge"
+        ],
+        "background_style": "dark_translucent_strip",
+        "timing": {
+          "start_offset": 0.2,
+          "end_offset": -0.2
+        },
+        "safe_area_notes": "Lower third, inside center 80%, never over team badge or dashboard values."
+      },
+      {
+        "scene_id": "scene-10",
+        "caption": "The x-factor is arsenal's ability to escape\nliverpool's first",
+        "caption_position": "lower_third_safe",
+        "font_size": 46,
+        "font_weight": "semibold",
+        "highlight_words": [
+          "Liverpool",
+          "Arsenal",
+          "x-factor",
+          "first"
+        ],
+        "background_style": "dark_translucent_strip",
+        "timing": {
+          "start_offset": 0.2,
+          "end_offset": -0.2
+        },
+        "safe_area_notes": "Lower third, inside center 80%, never over team badge or dashboard values."
+      },
+      {
+        "scene_id": "scene-11",
+        "caption": "Tell us below",
+        "caption_position": "lower_third_safe",
+        "font_size": 54,
+        "font_weight": "semibold",
+        "highlight_words": [],
+        "background_style": "dark_translucent_strip",
+        "timing": {
+          "start_offset": 0.2,
+          "end_offset": -0.2
+        },
+        "safe_area_notes": "Lower third, inside center 80%, never over team badge or dashboard values."
+      }
+    ],
+    "warnings": [],
+    "approval_status": "approved",
+    "next_component": "Dashboard Composer"
+  },
+  "dashboard_plan": {
+    "production_id": "if-2026-07-06-liverpool-arsenal",
+    "component_id": "S6-C05",
+    "component_name": "Dashboard Composer",
+    "timestamp": "2026-07-07T10:56:45.231065+00:00",
+    "source_storyboard_package": "if-2026-07-06-liverpool-arsenal",
+    "dashboard_cards": [
+      {
+        "card_type": "Match Edge",
+        "title": "Match Edge",
+        "content": "Slight Home Edge",
+        "icon": "edge_bar",
+        "animation": "Dashboard Reveal",
+        "display_time": 3.0
+      },
+      {
+        "card_type": "Key Advantage",
+        "title": "Key Advantage",
+        "content": "Liverpool's early pressure",
+        "icon": "pressing_icon",
+        "animation": "Highlight Pulse",
+        "display_time": 2.5
+      },
+      {
+        "card_type": "X-Factor",
+        "title": "X-Factor",
+        "content": "The x-factor is arsenal's ability to escape liverpool's first...",
+        "icon": "player_marker",
+        "animation": "Pop",
+        "display_time": 2.5
+      },
+      {
+        "card_type": "Uncertainty",
+        "title": "Uncertainty",
+        "content": "The balance matters too: Arsenal may be better prepared...",
+        "icon": "warning_icon",
+        "animation": "Fade",
+        "display_time": 2.5
+      },
+      {
+        "card_type": "Surprising Detail",
+        "title": "Surprising Detail",
+        "content": "Sample data: Liverpool have started quickly in recent home...",
+        "icon": "form_icon",
+        "animation": "Counter",
+        "display_time": 3.0
+      }
+    ],
+    "dashboard_scene_ids": [
+      "scene-08",
+      "scene-09"
+    ],
+    "warnings": [],
+    "approval_status": "approved",
+    "next_component": "Rendering Engine"
+  },
+  "validation_report": {
+    "visual_templates": 11,
+    "camera_movements": 11,
+    "motion_presets": 11,
+    "captions": 11,
+    "dashboard_cards": 5,
+    "all_scenes_covered": true
+  },
+  "approval_status": "approved",
+  "next_component": "Rendering Engine"
+}

@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","type":"object","required":["production_id","platform","video_path","message_text","caption","dry_run","credential_status","send_status","approval_status"],"properties":{"platform":{"const":"telegram"}}}

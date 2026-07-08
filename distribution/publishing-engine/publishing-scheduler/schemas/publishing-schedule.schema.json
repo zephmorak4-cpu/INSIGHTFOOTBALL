@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","type":"object","required":["production_id","component_id","timezone","schedule_mode","platforms","publish_times","approval_status"],"properties":{"component_id":{"const":"IF-PUB05"}}}

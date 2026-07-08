@@ -1,0 +1,65 @@
+{
+  "production_id": "if-2026-07-06-liverpool-arsenal",
+  "status": "success",
+  "created_at": "2026-07-06T16:31:03.792467+00:00",
+  "duration_ms": 1533,
+  "stage_count": 4,
+  "stages": [
+    {
+      "stage": "match_selector",
+      "agent_id": "IF-A01",
+      "start_time": "2026-07-06T16:31:02.258776+00:00",
+      "end_time": "2026-07-06T16:31:03.291806+00:00",
+      "duration_ms": 1032,
+      "confidence": 91,
+      "warnings": [],
+      "errors": [],
+      "approval_status": "approved",
+      "next_agent": "IF-A02"
+    },
+    {
+      "stage": "story_hunter",
+      "agent_id": "IF-A02",
+      "start_time": "2026-07-06T16:31:03.325722+00:00",
+      "end_time": "2026-07-06T16:31:03.434424+00:00",
+      "duration_ms": 108,
+      "confidence": 86,
+      "warnings": [
+        "FACT_CHECK_REQUIRED: sample claims must be verified before publishing."
+      ],
+      "errors": [],
+      "approval_status": "approved",
+      "next_agent": "IF-A03"
+    },
+    {
+      "stage": "evidence_filter",
+      "agent_id": "IF-A03",
+      "start_time": "2026-07-06T16:31:03.481299+00:00",
+      "end_time": "2026-07-06T16:31:03.546127+00:00",
+      "duration_ms": 65,
+      "confidence": 78,
+      "warnings": [
+        "FACT_CHECK_REQUIRED: sample evidence must be verified before publishing."
+      ],
+      "errors": [],
+      "approval_status": "approved",
+      "next_agent": "IF-A04"
+    },
+    {
+      "stage": "insight_engine",
+      "agent_id": "IF-A04",
+      "start_time": "2026-07-06T16:31:03.547122+00:00",
+      "end_time": "2026-07-06T16:31:03.791472+00:00",
+      "duration_ms": 244,
+      "confidence": 79,
+      "warnings": [
+        "FACT_CHECK_REQUIRED: sample evidence must be verified before publishing."
+      ],
+      "errors": [],
+      "approval_status": "approved",
+      "next_agent": "IF-A05"
+    }
+  ],
+  "package_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\output\\editorial-package-if-2026-07-06-liverpool-arsenal.json",
+  "issues": []
+}

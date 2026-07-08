@@ -1,0 +1,18 @@
+{
+  "component_id": "S5-C03",
+  "component_name": "Graphic Planner",
+  "storyboard_schema": "editorial-brain/graphic-planner/schemas/final-storyboard-package.schema.json",
+  "manifest_schema": "editorial-brain/graphic-planner/schemas/asset-manifest.schema.json",
+  "search_plan_schema": "editorial-brain/graphic-planner/schemas/asset-search-plan.schema.json",
+  "output_schema": "editorial-brain/graphic-planner/schemas/graphic-requirements.schema.json",
+  "final_package_schema": "editorial-brain/graphic-planner/schemas/final-asset-package.schema.json",
+  "output": {
+    "output_directory": "editorial-brain/output",
+    "log_directory": "editorial-brain/logs"
+  },
+  "allowed_graphic_types": ["match_title_card", "surprising_fact_card", "central_question_card", "evidence_card", "team_comparison_card", "tactical_pitch_diagram", "x_factor_card", "insight_dashboard", "cta_card", "caption_overlay", "template_card"],
+  "default_format": "json/png",
+  "default_dimensions": "1080x1920",
+  "next_component": "Visual Director"
+}
+

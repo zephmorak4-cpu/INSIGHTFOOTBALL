@@ -1,0 +1,77 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "InsightFootballCanonicalEditorialPackage",
+  "title": "InsightFootballCanonicalEditorialPackage",
+  "type": "object",
+  "required": [
+    "metadata",
+    "match",
+    "competition",
+    "story_angle",
+    "central_question",
+    "surprising_fact",
+    "primary_evidence",
+    "secondary_evidence",
+    "contradictory_evidence",
+    "insight_summary",
+    "match_edge",
+    "key_advantage",
+    "tactical_explanation",
+    "uncertainty_summary",
+    "x_factor",
+    "viewer_takeaway",
+    "confidence_scores",
+    "locked_fields",
+    "warnings",
+    "editorial_notes",
+    "execution_metadata",
+    "agent_outputs",
+    "status"
+  ],
+  "properties": {
+    "metadata": {
+      "type": "object",
+      "required": ["production_id", "date", "created_at", "package_version", "source"]
+    },
+    "match": {
+      "type": "object",
+      "required": ["home_team", "away_team", "competition", "kickoff_time", "country"]
+    },
+    "competition": { "type": "string", "minLength": 1 },
+    "story_angle": { "type": "string", "minLength": 1 },
+    "central_question": { "type": "string", "minLength": 1 },
+    "surprising_fact": { "type": "string", "minLength": 1 },
+    "primary_evidence": { "type": "array", "minItems": 1 },
+    "secondary_evidence": { "type": "array" },
+    "contradictory_evidence": { "type": "array" },
+    "insight_summary": { "type": "string", "minLength": 1 },
+    "match_edge": {
+      "type": "string",
+      "enum": ["Home Edge", "Away Edge", "Balanced", "Slight Home Edge", "Slight Away Edge"]
+    },
+    "key_advantage": { "type": "string", "minLength": 1 },
+    "tactical_explanation": { "type": "string", "minLength": 1 },
+    "uncertainty_summary": { "type": "string", "minLength": 1 },
+    "x_factor": { "type": "string", "minLength": 1 },
+    "viewer_takeaway": { "type": "string", "minLength": 1 },
+    "confidence_scores": {
+      "type": "object",
+      "required": ["match_selector", "story_hunter", "evidence_filter", "insight_engine", "overall"]
+    },
+    "locked_fields": {
+      "type": "object",
+      "required": ["selected_match", "story_angle", "central_question", "surprising_fact"]
+    },
+    "warnings": { "type": "array" },
+    "editorial_notes": { "type": "array" },
+    "execution_metadata": {
+      "type": "object",
+      "required": ["started_at", "completed_at", "duration_ms", "stages"]
+    },
+    "agent_outputs": {
+      "type": "object",
+      "required": ["match_selector", "story_hunter", "evidence_filter", "insight_engine"]
+    },
+    "status": { "type": "string", "enum": ["approved"] }
+  }
+}

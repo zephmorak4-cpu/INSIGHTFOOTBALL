@@ -1,0 +1,16 @@
+{
+  "component_id": "IF-V03",
+  "component_name": "SSML Generator",
+  "output": {
+    "output_directory": "editorial-brain/output",
+    "log_directory": "editorial-brain/logs"
+  },
+  "provider": "provider-neutral",
+  "supported_tags": ["speak", "p", "s", "break", "emphasis", "prosody", "sub"],
+  "pause_rules": {
+    "section": 250,
+    "sentence": 280,
+    "question": 380
+  },
+  "next_component": "Timestamp Generator"
+}

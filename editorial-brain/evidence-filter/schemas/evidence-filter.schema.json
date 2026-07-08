@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "InsightFootballEvidenceFilterOutput",
+  "title": "InsightFootballEvidenceFilterOutput",
+  "type": "object",
+  "required": [
+    "production_id",
+    "agent_id",
+    "agent_name",
+    "prompt_id",
+    "prompt_version",
+    "timestamp",
+    "story_angle",
+    "central_question",
+    "approved_story",
+    "evidence_summary",
+    "primary_evidence",
+    "secondary_evidence",
+    "supporting_statistics",
+    "supporting_context",
+    "contradictory_evidence",
+    "missing_information",
+    "evidence_quality",
+    "evidence_confidence",
+    "warnings",
+    "human_review_flags",
+    "locked_fields",
+    "approval_status",
+    "next_agent"
+  ],
+  "properties": {
+    "production_id": { "type": "string", "minLength": 1 },
+    "agent_id": { "type": "string", "enum": ["IF-A03"] },
+    "agent_name": { "type": "string", "minLength": 1 },
+    "prompt_id": { "type": "string", "enum": ["IF-PROMPT-03-EVIDENCE-FILTER"] },
+    "prompt_version": { "type": "string", "enum": ["v1.0"] },
+    "timestamp": { "type": "string", "minLength": 1 },
+    "story_angle": { "type": "string", "minLength": 1 },
+    "central_question": { "type": "string", "minLength": 1 },
+    "approved_story": {
+      "type": "object",
+      "required": ["story_angle", "central_question", "surprising_fact"]
+    },
+    "evidence_summary": { "type": "string", "minLength": 1 },
+    "primary_evidence": { "type": "array", "minItems": 2, "maxItems": 5 },
+    "secondary_evidence": { "type": "array" },
+    "supporting_statistics": { "type": "array" },
+    "supporting_context": { "type": "array" },
+    "contradictory_evidence": { "type": "array" },
+    "missing_information": { "type": "array" },
+    "evidence_quality": {
+      "type": "object",
+      "required": ["story_support", "clarity", "relevance", "data_reliability"]
+    },
+    "evidence_confidence": { "type": "integer", "minimum": 0, "maximum": 100 },
+    "warnings": { "type": "array" },
+    "human_review_flags": { "type": "array" },
+    "locked_fields": {
+      "type": "object",
+      "required": ["story_angle", "central_question", "surprising_fact"]
+    },
+    "approval_status": { "type": "string", "enum": ["approved", "needs_revision", "rejected", "blocked", "human_review_required"] },
+    "next_agent": { "type": "string", "enum": ["IF-A04"] }
+  }
+}

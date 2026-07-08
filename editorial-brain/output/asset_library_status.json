@@ -1,0 +1,288 @@
+{
+  "production_id": "if-2026-07-06-liverpool-arsenal",
+  "component_id": "IF-MAE01",
+  "component_name": "Asset Library Manager",
+  "timestamp": "2026-07-08T11:37:14.189024+00:00",
+  "source_asset_package": "if-2026-07-06-liverpool-arsenal",
+  "found_assets": [],
+  "missing_assets": [
+    {
+      "asset_id": "background_graphic",
+      "asset_name": "Clean match background",
+      "asset_type": "background",
+      "category": "brand",
+      "required": true,
+      "scenes_used": [
+        "scene-01"
+      ],
+      "legal_status": "approved",
+      "fallback_strategy": "Use custom vector/template graphic from internal library.",
+      "priority": "high"
+    },
+    {
+      "asset_id": "brand_logo",
+      "asset_name": "INSIGHT FOOTBALL logo",
+      "asset_type": "logo",
+      "category": "brand",
+      "required": true,
+      "scenes_used": [
+        "scene-01"
+      ],
+      "legal_status": "approved",
+      "fallback_strategy": "Use custom vector/template graphic from internal library.",
+      "priority": "high"
+    },
+    {
+      "asset_id": "comment_icon",
+      "asset_name": "Comment icon",
+      "asset_type": "icon",
+      "category": "football",
+      "required": true,
+      "scenes_used": [
+        "scene-11"
+      ],
+      "legal_status": "approved",
+      "fallback_strategy": "Use custom vector/template graphic from internal library.",
+      "priority": "high"
+    },
+    {
+      "asset_id": "competition_logo",
+      "asset_name": "Premier League logo",
+      "asset_type": "logo",
+      "category": "match",
+      "required": true,
+      "scenes_used": [],
+      "legal_status": "needs_review",
+      "fallback_strategy": "Use text initials in approved template until badge is confirmed.",
+      "priority": "high"
+    },
+    {
+      "asset_id": "dashboard_panel",
+      "asset_name": "Insight dashboard panel",
+      "asset_type": "card",
+      "category": "dashboard",
+      "required": true,
+      "scenes_used": [
+        "scene-08",
+        "scene-09"
+      ],
+      "legal_status": "approved",
+      "fallback_strategy": "Use custom vector/template graphic from internal library.",
+      "priority": "high"
+    },
+    {
+      "asset_id": "data_card",
+      "asset_name": "Surprising detail card",
+      "asset_type": "card",
+      "category": "dashboard",
+      "required": true,
+      "scenes_used": [
+        "scene-02",
+        "scene-06"
+      ],
+      "legal_status": "approved",
+      "fallback_strategy": "Use custom vector/template graphic from internal library.",
+      "priority": "high"
+    },
+    {
+      "asset_id": "goal_icon",
+      "asset_name": "Goal icon",
+      "asset_type": "icon",
+      "category": "football",
+      "required": true,
+      "scenes_used": [],
+      "legal_status": "approved",
+      "fallback_strategy": "Use custom vector/template graphic from internal library.",
+      "priority": "high"
+    },
+    {
+      "asset_id": "intro_frame",
+      "asset_name": "Intro frame",
+      "asset_type": "template",
+      "category": "brand",
+      "required": true,
+      "scenes_used": [],
+      "legal_status": "approved",
+      "fallback_strategy": "Use custom vector/template graphic from internal library.",
+      "priority": "high"
+    },
+    {
+      "asset_id": "outro_frame",
+      "asset_name": "Outro frame",
+      "asset_type": "template",
+      "category": "brand",
+      "required": true,
+      "scenes_used": [],
+      "legal_status": "approved",
+      "fallback_strategy": "Use custom vector/template graphic from internal library.",
+      "priority": "high"
+    },
+    {
+      "asset_id": "pitch_graphic",
+      "asset_name": "Pitch background",
+      "asset_type": "pitch",
+      "category": "football",
+      "required": true,
+      "scenes_used": [
+        "scene-04",
+        "scene-10"
+      ],
+      "legal_status": "approved",
+      "fallback_strategy": "Use custom vector/template graphic from internal library.",
+      "priority": "high"
+    },
+    {
+      "asset_id": "pressing_icon",
+      "asset_name": "Pressing icon",
+      "asset_type": "icon",
+      "category": "football",
+      "required": true,
+      "scenes_used": [],
+      "legal_status": "approved",
+      "fallback_strategy": "Use custom vector/template graphic from internal library.",
+      "priority": "high"
+    },
+    {
+      "asset_id": "tactical_arrows",
+      "asset_name": "Tactical arrows",
+      "asset_type": "icon",
+      "category": "football",
+      "required": true,
+      "scenes_used": [],
+      "legal_status": "approved",
+      "fallback_strategy": "Use custom vector/template graphic from internal library.",
+      "priority": "high"
+    },
+    {
+      "asset_id": "team_logo_away",
+      "asset_name": "Arsenal badge",
+      "asset_type": "logo",
+      "category": "match",
+      "required": true,
+      "scenes_used": [],
+      "legal_status": "needs_review",
+      "fallback_strategy": "Use text initials in approved template until badge is confirmed.",
+      "priority": "high"
+    },
+    {
+      "asset_id": "team_logo_home",
+      "asset_name": "Liverpool badge",
+      "asset_type": "logo",
+      "category": "match",
+      "required": true,
+      "scenes_used": [
+        "scene-06"
+      ],
+      "legal_status": "needs_review",
+      "fallback_strategy": "Use text initials in approved template until badge is confirmed.",
+      "priority": "high"
+    },
+    {
+      "asset_id": "team_logos",
+      "asset_name": "Liverpool and Arsenal badges",
+      "asset_type": "logo",
+      "category": "match",
+      "required": true,
+      "scenes_used": [
+        "scene-02",
+        "scene-03",
+        "scene-04",
+        "scene-05",
+        "scene-07",
+        "scene-08",
+        "scene-09",
+        "scene-11"
+      ],
+      "legal_status": "needs_review",
+      "fallback_strategy": "Use text initials in approved template until badge is confirmed.",
+      "priority": "high"
+    },
+    {
+      "asset_id": "watermark",
+      "asset_name": "INSIGHT FOOTBALL watermark",
+      "asset_type": "logo",
+      "category": "brand",
+      "required": true,
+      "scenes_used": [],
+      "legal_status": "approved",
+      "fallback_strategy": "Use custom vector/template graphic from internal library.",
+      "priority": "high"
+    },
+    {
+      "asset_id": "wordmark",
+      "asset_name": "INSIGHT FOOTBALL wordmark",
+      "asset_type": "logo",
+      "category": "brand",
+      "required": true,
+      "scenes_used": [],
+      "legal_status": "approved",
+      "fallback_strategy": "Use custom vector/template graphic from internal library.",
+      "priority": "high"
+    }
+  ],
+  "reusable_assets": [],
+  "legal_review_assets": [
+    {
+      "asset_id": "competition_logo",
+      "asset_name": "Premier League logo",
+      "asset_type": "logo",
+      "category": "match",
+      "required": true,
+      "scenes_used": [],
+      "legal_status": "needs_review",
+      "fallback_strategy": "Use text initials in approved template until badge is confirmed.",
+      "priority": "high"
+    },
+    {
+      "asset_id": "team_logo_away",
+      "asset_name": "Arsenal badge",
+      "asset_type": "logo",
+      "category": "match",
+      "required": true,
+      "scenes_used": [],
+      "legal_status": "needs_review",
+      "fallback_strategy": "Use text initials in approved template until badge is confirmed.",
+      "priority": "high"
+    },
+    {
+      "asset_id": "team_logo_home",
+      "asset_name": "Liverpool badge",
+      "asset_type": "logo",
+      "category": "match",
+      "required": true,
+      "scenes_used": [
+        "scene-06"
+      ],
+      "legal_status": "needs_review",
+      "fallback_strategy": "Use text initials in approved template until badge is confirmed.",
+      "priority": "high"
+    },
+    {
+      "asset_id": "team_logos",
+      "asset_name": "Liverpool and Arsenal badges",
+      "asset_type": "logo",
+      "category": "match",
+      "required": true,
+      "scenes_used": [
+        "scene-02",
+        "scene-03",
+        "scene-04",
+        "scene-05",
+        "scene-07",
+        "scene-08",
+        "scene-09",
+        "scene-11"
+      ],
+      "legal_status": "needs_review",
+      "fallback_strategy": "Use text initials in approved template until badge is confirmed.",
+      "priority": "high"
+    }
+  ],
+  "blocked_assets": [],
+  "library_health_score": 0,
+  "warnings": [
+    "17 required assets missing from local library."
+  ],
+  "approval_status": "approved",
+  "next_component": "Team Badge Manager"
+}

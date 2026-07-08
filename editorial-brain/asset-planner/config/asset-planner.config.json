@@ -1,0 +1,23 @@
+{
+  "component_id": "S5-C01",
+  "component_name": "Asset Planner",
+  "input_schema": "editorial-brain/asset-planner/schemas/final-storyboard-package.schema.json",
+  "output_schema": "editorial-brain/asset-planner/schemas/asset-manifest.schema.json",
+  "output": {
+    "output_directory": "editorial-brain/output",
+    "log_directory": "editorial-brain/logs"
+  },
+  "allowed_asset_types": ["logo", "template", "background", "card", "pitch", "icon", "photo", "illustration", "graphic"],
+  "allowed_asset_categories": ["brand", "match", "football", "optional", "dashboard"],
+  "default_dimensions": {
+    "default": "1080x1920",
+    "logo": "512x512",
+    "icon": "256x256",
+    "card": "900x520",
+    "pitch": "1080x1080",
+    "background": "1080x1920"
+  },
+  "legal_risk_rules": ["copyrighted broadcast footage", "unlicensed player photos", "unlicensed club photography", "unsafe scraped images", "unclear source ownership"],
+  "next_component": "Search Planner"
+}
+

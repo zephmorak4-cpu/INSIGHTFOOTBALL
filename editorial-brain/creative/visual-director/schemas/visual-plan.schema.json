@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "VisualPlan",
+  "type": "object",
+  "required": ["production_id", "component_id", "component_name", "timestamp", "source_storyboard_package", "source_asset_package", "match", "competition", "scenes", "visual_consistency", "warnings", "approval_status", "next_component"],
+  "properties": {
+    "production_id": { "type": "string" },
+    "scenes": { "type": "array" },
+    "visual_consistency": { "type": "object" },
+    "warnings": { "type": "array" },
+    "approval_status": { "type": "string" },
+    "next_component": { "type": "string" }
+  }
+}
+

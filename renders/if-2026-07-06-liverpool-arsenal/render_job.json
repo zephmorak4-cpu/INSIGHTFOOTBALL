@@ -1,0 +1,59 @@
+{
+  "production_id": "if-2026-07-06-liverpool-arsenal",
+  "job_id": "render-if-2026-07-06-liverpool-arsenal",
+  "timestamp": "2026-07-08T11:37:19.591411+00:00",
+  "renderer_profile": "placeholder",
+  "input_package": "renderer-ready-package.json",
+  "render_payload": {
+    "renderer": "placeholder",
+    "mode": "structured_placeholder",
+    "production_id": "if-2026-07-06-liverpool-arsenal",
+    "scene_count": 11,
+    "duration": 60.0,
+    "reason": "Placeholder renderer documents render intent without producing video frames."
+  },
+  "output_settings": {
+    "filename": "if-2026-07-06-liverpool-arsenal.mp4",
+    "container": "mp4"
+  },
+  "required_assets": [
+    "background_graphic",
+    "brand_logo",
+    "comment_icon",
+    "dashboard_panel",
+    "data_card",
+    "graphic-central_question_card",
+    "graphic-cta_card",
+    "graphic-evidence_card",
+    "graphic-insight_dashboard",
+    "graphic-match_title_card",
+    "graphic-surprising_fact_card",
+    "graphic-tactical_pitch_diagram",
+    "graphic-team_comparison_card",
+    "graphic-x_factor_card",
+    "pitch_graphic",
+    "player_image",
+    "team_logo_home",
+    "team_logos"
+  ],
+  "required_audio": [
+    "voice.ssml",
+    "voice-production-package.json"
+  ],
+  "required_fonts": [
+    "Inter",
+    "Arial"
+  ],
+  "estimated_duration_seconds": 60.0,
+  "estimated_cost": 0.0,
+  "dry_run": true,
+  "status": "queued",
+  "warnings": [
+    "Arsenal badge requires rights confirmation.",
+    "Liverpool badge requires rights confirmation.",
+    "Liverpool and Arsenal badges requires rights confirmation.",
+    "Premier League logo requires rights confirmation.",
+    "Media asset bundle status: needs_manual_assets"
+  ],
+  "approval_status": "approved"
+}

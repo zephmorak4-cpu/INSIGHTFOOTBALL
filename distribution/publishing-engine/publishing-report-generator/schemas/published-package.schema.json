@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","type":"object","required":["production_id","match","competition","source_publish_ready_package","publishing_metadata","publishing_schedule","publishing_status","publishing_report","dry_run","approval_status","next_component"],"properties":{"next_component":{"const":"Analytics Engine"}}}

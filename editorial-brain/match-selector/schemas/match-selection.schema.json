@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "InsightFootballMatchSelection",
+  "title": "InsightFootballMatchSelection",
+  "type": "object",
+  "required": [
+    "agent_id",
+    "agent_name",
+    "prompt_id",
+    "prompt_version",
+    "production_id",
+    "selected_match",
+    "selected_reason",
+    "selection_score",
+    "audience_interest_score",
+    "importance_score",
+    "rivalry_score",
+    "data_availability_score",
+    "story_potential_score",
+    "runner_up_matches",
+    "rejected_matches",
+    "data_gaps",
+    "confidence",
+    "human_review_flags",
+    "approval_status",
+    "next_agent"
+  ],
+  "properties": {
+    "agent_id": { "type": "string", "enum": ["IF-A01"] },
+    "agent_name": { "type": "string", "minLength": 1 },
+    "prompt_id": { "type": "string", "enum": ["IF-PROMPT-01-MATCH-SELECTOR"] },
+    "prompt_version": { "type": "string", "enum": ["v1.0"] },
+    "production_id": { "type": "string", "minLength": 1 },
+    "selected_match": {
+      "type": "object",
+      "required": ["home_team", "away_team", "competition", "kickoff_time", "country"],
+      "properties": {
+        "home_team": { "type": "string", "minLength": 1 },
+        "away_team": { "type": "string", "minLength": 1 },
+        "competition": { "type": "string", "minLength": 1 },
+        "kickoff_time": { "type": "string", "minLength": 1 },
+        "country": { "type": "string", "minLength": 1 }
+      }
+    },
+    "selected_reason": { "type": "string", "minLength": 1 },
+    "selection_score": { "type": "integer", "minimum": 0, "maximum": 100 },
+    "audience_interest_score": { "type": "integer", "minimum": 0, "maximum": 10 },
+    "importance_score": { "type": "integer", "minimum": 0, "maximum": 10 },
+    "rivalry_score": { "type": "integer", "minimum": 0, "maximum": 10 },
+    "data_availability_score": { "type": "integer", "minimum": 0, "maximum": 10 },
+    "story_potential_score": { "type": "integer", "minimum": 0, "maximum": 10 },
+    "runner_up_matches": { "type": "array" },
+    "rejected_matches": { "type": "array" },
+    "data_gaps": { "type": "array" },
+    "confidence": {
+      "type": "object",
+      "required": ["score", "reason"],
+      "properties": {
+        "score": { "type": "integer", "minimum": 0, "maximum": 100 },
+        "reason": { "type": "string", "minLength": 1 }
+      }
+    },
+    "human_review_flags": { "type": "array" },
+    "approval_status": {
+      "type": "string",
+      "enum": ["approved", "needs_revision", "rejected", "blocked", "human_review_required"]
+    },
+    "next_agent": { "type": "string", "enum": ["IF-A02"] }
+  }
+}

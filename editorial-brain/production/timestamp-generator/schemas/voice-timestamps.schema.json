@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "INSIGHT FOOTBALL Voice Timestamps",
+  "type": "object",
+  "required": ["production_id", "component_id", "entries", "total_estimated_duration", "approval_status"],
+  "properties": {
+    "production_id": {"type": "string"},
+    "component_id": {"const": "IF-V04"},
+    "entries": {"type": "array", "minItems": 1},
+    "total_estimated_duration": {"type": "number", "maximum": 60},
+    "approval_status": {"enum": ["approved", "blocked"]}
+  }
+}

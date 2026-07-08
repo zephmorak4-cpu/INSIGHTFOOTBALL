@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "SceneList",
+  "type": "object",
+  "required": ["production_id", "component_id", "component_name", "timestamp", "source_storyboard_id", "total_duration_seconds", "scene_count", "scenes", "scene_quality_score", "issues_found", "fixes_applied", "locked_fields_preserved", "approval_status", "next_component"],
+  "properties": {
+    "production_id": { "type": "string" },
+    "total_duration_seconds": { "type": "number" },
+    "scene_count": { "type": "integer" },
+    "scenes": { "type": "array" },
+    "scene_quality_score": { "type": "integer" },
+    "issues_found": { "type": "array" },
+    "fixes_applied": { "type": "array" },
+    "locked_fields_preserved": { "type": "boolean" },
+    "approval_status": { "type": "string" },
+    "next_component": { "type": "string" }
+  }
+}
+

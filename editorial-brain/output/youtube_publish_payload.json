@@ -1,0 +1,40 @@
+{
+  "production_id": "if-2026-07-06-liverpool-arsenal",
+  "platform": "youtube",
+  "video_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\renders\\if-2026-07-06-liverpool-arsenal\\final_video.placeholder.json",
+  "title": "Can Arsenal survive Liverpool's fast start?",
+  "description": "Sample data: Liverpool have started quickly in recent home matches, while Arsenal have sometimes needed longer to settle away.\n\nCan Arsenal survive the first 20 minutes, or will Liverpool take control early? Tell us below.\n\n#InsightFootball #FootballAnalysis #PremierLeague #Liverpool #Arsenal #MatchPreview #FootballShorts",
+  "tags": [
+    "InsightFootball",
+    "FootballAnalysis",
+    "PremierLeague",
+    "Liverpool",
+    "Arsenal",
+    "MatchPreview",
+    "FootballShorts"
+  ],
+  "category": "Sports",
+  "privacy_status": "private",
+  "made_for_kids": false,
+  "scheduled_publish_time": null,
+  "thumbnail_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\renders\\if-2026-07-06-liverpool-arsenal\\thumbnail_frame.placeholder.json",
+  "dry_run": true,
+  "credential_status": {
+    "valid": false,
+    "missing": [
+      "YOUTUBE_CLIENT_ID",
+      "YOUTUBE_CLIENT_SECRET",
+      "YOUTUBE_REFRESH_TOKEN",
+      "YOUTUBE_CHANNEL_ID"
+    ],
+    "mode": "dry_run",
+    "warnings": [
+      "Missing credentials for dry-run: YOUTUBE_CLIENT_ID, YOUTUBE_CLIENT_SECRET, YOUTUBE_REFRESH_TOKEN, YOUTUBE_CHANNEL_ID"
+    ]
+  },
+  "upload_status": "dry_run_ready",
+  "warnings": [
+    "Missing credentials for dry-run: YOUTUBE_CLIENT_ID, YOUTUBE_CLIENT_SECRET, YOUTUBE_REFRESH_TOKEN, YOUTUBE_CHANNEL_ID"
+  ],
+  "approval_status": "approved"
+}

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "INSIGHT FOOTBALL Voice Production Package",
+  "type": "object",
+  "required": ["production_id", "voice_plan", "pronunciation_dictionary", "voice_ssml", "voice_timestamps", "audio_qc_report", "provider_compatibility", "approval_status"],
+  "properties": {
+    "production_id": {"type": "string"},
+    "voice_ssml": {"type": "string"},
+    "approval_status": {"enum": ["approved", "blocked"]}
+  }
+}

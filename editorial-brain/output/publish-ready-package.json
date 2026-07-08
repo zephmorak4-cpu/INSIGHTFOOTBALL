@@ -1,0 +1,410 @@
+{
+  "production_id": "if-2026-07-06-liverpool-arsenal",
+  "match": {
+    "home_team": "Liverpool",
+    "away_team": "Arsenal",
+    "competition": "Premier League",
+    "kickoff_time": "20:00",
+    "country": "England"
+  },
+  "competition": "Premier League",
+  "final_video_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\renders\\if-2026-07-06-liverpool-arsenal\\final_video.placeholder.json",
+  "thumbnail_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\renders\\if-2026-07-06-liverpool-arsenal\\thumbnail_frame.placeholder.json",
+  "render_complete_package": {
+    "production_id": "if-2026-07-06-liverpool-arsenal",
+    "match": {
+      "home_team": "Liverpool",
+      "away_team": "Arsenal",
+      "competition": "Premier League",
+      "kickoff_time": "20:00",
+      "country": "England"
+    },
+    "competition": "Premier League",
+    "source_renderer_ready_package": "if-2026-07-06-liverpool-arsenal",
+    "renderer_profile": "placeholder",
+    "render_job": {
+      "production_id": "if-2026-07-06-liverpool-arsenal",
+      "job_id": "render-if-2026-07-06-liverpool-arsenal",
+      "timestamp": "2026-07-08T11:29:36.820690+00:00",
+      "renderer_profile": "placeholder",
+      "input_package": "renderer-ready-package.json",
+      "render_payload": {
+        "renderer": "placeholder",
+        "mode": "structured_placeholder",
+        "production_id": "if-2026-07-06-liverpool-arsenal",
+        "scene_count": 11,
+        "duration": 60.0,
+        "reason": "Placeholder renderer documents render intent without producing video frames."
+      },
+      "output_settings": {
+        "filename": "if-2026-07-06-liverpool-arsenal.mp4",
+        "container": "mp4"
+      },
+      "required_assets": [
+        "background_graphic",
+        "brand_logo",
+        "comment_icon",
+        "dashboard_panel",
+        "data_card",
+        "graphic-central_question_card",
+        "graphic-cta_card",
+        "graphic-evidence_card",
+        "graphic-insight_dashboard",
+        "graphic-match_title_card",
+        "graphic-surprising_fact_card",
+        "graphic-tactical_pitch_diagram",
+        "graphic-team_comparison_card",
+        "graphic-x_factor_card",
+        "pitch_graphic",
+        "player_image",
+        "team_logo_home",
+        "team_logos"
+      ],
+      "required_audio": [
+        "voice.ssml",
+        "voice-production-package.json"
+      ],
+      "required_fonts": [
+        "Inter",
+        "Arial"
+      ],
+      "estimated_duration_seconds": 60.0,
+      "estimated_cost": 0.0,
+      "dry_run": true,
+      "status": "queued",
+      "warnings": [
+        "Arsenal badge requires rights confirmation.",
+        "Liverpool badge requires rights confirmation.",
+        "Liverpool and Arsenal badges requires rights confirmation.",
+        "Premier League logo requires rights confirmation.",
+        "Media asset bundle status: needs_manual_assets"
+      ],
+      "approval_status": "approved"
+    },
+    "render_status": {
+      "job_id": "render-if-2026-07-06-liverpool-arsenal",
+      "production_id": "if-2026-07-06-liverpool-arsenal",
+      "renderer_profile": "placeholder",
+      "status": "completed",
+      "progress": 100,
+      "started_at": "2026-07-08T11:29:36.820690+00:00",
+      "completed_at": "2026-07-08T11:29:37.095952+00:00",
+      "duration_seconds": 60.0,
+      "errors": [],
+      "warnings": [
+        "Arsenal badge requires rights confirmation.",
+        "Liverpool badge requires rights confirmation.",
+        "Liverpool and Arsenal badges requires rights confirmation.",
+        "Premier League logo requires rights confirmation.",
+        "Media asset bundle status: needs_manual_assets"
+      ],
+      "artifact_refs": {
+        "production_id": "if-2026-07-06-liverpool-arsenal",
+        "job_id": "render-if-2026-07-06-liverpool-arsenal",
+        "artifact_root": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\renders\\if-2026-07-06-liverpool-arsenal",
+        "final_video_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\renders\\if-2026-07-06-liverpool-arsenal\\final_video.placeholder.json",
+        "thumbnail_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\renders\\if-2026-07-06-liverpool-arsenal\\thumbnail_frame.placeholder.json",
+        "payload_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\renders\\if-2026-07-06-liverpool-arsenal\\render_payload.json",
+        "logs_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\renders\\if-2026-07-06-liverpool-arsenal\\logs",
+        "file_sizes": {
+          "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\renders\\if-2026-07-06-liverpool-arsenal\\final_video.placeholder.json": 261,
+          "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\renders\\if-2026-07-06-liverpool-arsenal\\thumbnail_frame.placeholder.json": 269,
+          "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\renders\\if-2026-07-06-liverpool-arsenal\\render_payload.json": 263
+        },
+        "checksums": {
+          "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\renders\\if-2026-07-06-liverpool-arsenal\\final_video.placeholder.json": "c69905f6d6a2088e1414583b717bef4c315cc8a2fb740d22e71ba5d00ac064e8",
+          "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\renders\\if-2026-07-06-liverpool-arsenal\\thumbnail_frame.placeholder.json": "88fef6035dc6da1e46455d6a63f4cd451d70b541a18ce79de1675e5b09e65e96",
+          "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\renders\\if-2026-07-06-liverpool-arsenal\\render_payload.json": "e99616dce27dc543570d9d0db1f032071d80b1fa9f368978e974862cd128327c"
+        },
+        "missing_artifacts": [],
+        "approval_status": "approved"
+      }
+    },
+    "render_artifacts": {
+      "production_id": "if-2026-07-06-liverpool-arsenal",
+      "job_id": "render-if-2026-07-06-liverpool-arsenal",
+      "artifact_root": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\renders\\if-2026-07-06-liverpool-arsenal",
+      "final_video_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\renders\\if-2026-07-06-liverpool-arsenal\\final_video.placeholder.json",
+      "thumbnail_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\renders\\if-2026-07-06-liverpool-arsenal\\thumbnail_frame.placeholder.json",
+      "payload_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\renders\\if-2026-07-06-liverpool-arsenal\\render_payload.json",
+      "logs_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\renders\\if-2026-07-06-liverpool-arsenal\\logs",
+      "file_sizes": {
+        "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\renders\\if-2026-07-06-liverpool-arsenal\\final_video.placeholder.json": 261,
+        "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\renders\\if-2026-07-06-liverpool-arsenal\\thumbnail_frame.placeholder.json": 269,
+        "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\renders\\if-2026-07-06-liverpool-arsenal\\render_payload.json": 263
+      },
+      "checksums": {
+        "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\renders\\if-2026-07-06-liverpool-arsenal\\final_video.placeholder.json": "c69905f6d6a2088e1414583b717bef4c315cc8a2fb740d22e71ba5d00ac064e8",
+        "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\renders\\if-2026-07-06-liverpool-arsenal\\thumbnail_frame.placeholder.json": "88fef6035dc6da1e46455d6a63f4cd451d70b541a18ce79de1675e5b09e65e96",
+        "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\renders\\if-2026-07-06-liverpool-arsenal\\render_payload.json": "e99616dce27dc543570d9d0db1f032071d80b1fa9f368978e974862cd128327c"
+      },
+      "missing_artifacts": [],
+      "approval_status": "approved"
+    },
+    "render_validation_report": {
+      "production_id": "if-2026-07-06-liverpool-arsenal",
+      "component_id": "IF-RE08",
+      "component_name": "Render Validator",
+      "timestamp": "2026-07-08T11:29:37.097946+00:00",
+      "checks": {
+        "video_exists_or_placeholder": true,
+        "duration": true,
+        "aspect_ratio": true,
+        "resolution": true,
+        "fps": true,
+        "audio_documented": true,
+        "captions_documented": true,
+        "thumbnail_exists": true,
+        "job_terminal": true,
+        "legal": true
+      },
+      "issues": [],
+      "warnings": [
+        "Arsenal badge requires rights confirmation.",
+        "Liverpool badge requires rights confirmation.",
+        "Liverpool and Arsenal badges requires rights confirmation.",
+        "Premier League logo requires rights confirmation.",
+        "Media asset bundle status: needs_manual_assets",
+        "Structured placeholder video artifact used; no MP4 generated."
+      ],
+      "placeholder_mode": true,
+      "approval_status": "approved"
+    },
+    "final_video_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\renders\\if-2026-07-06-liverpool-arsenal\\final_video.placeholder.json",
+    "thumbnail_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\renders\\if-2026-07-06-liverpool-arsenal\\thumbnail_frame.placeholder.json",
+    "duration_seconds": 60.0,
+    "file_size": 261,
+    "checksums": {
+      "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\renders\\if-2026-07-06-liverpool-arsenal\\final_video.placeholder.json": "c69905f6d6a2088e1414583b717bef4c315cc8a2fb740d22e71ba5d00ac064e8",
+      "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\renders\\if-2026-07-06-liverpool-arsenal\\thumbnail_frame.placeholder.json": "88fef6035dc6da1e46455d6a63f4cd451d70b541a18ce79de1675e5b09e65e96",
+      "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\renders\\if-2026-07-06-liverpool-arsenal\\render_payload.json": "e99616dce27dc543570d9d0db1f032071d80b1fa9f368978e974862cd128327c"
+    },
+    "warnings": [
+      "Arsenal badge requires rights confirmation.",
+      "Liverpool badge requires rights confirmation.",
+      "Liverpool and Arsenal badges requires rights confirmation.",
+      "Premier League logo requires rights confirmation.",
+      "Media asset bundle status: needs_manual_assets",
+      "Structured placeholder video artifact used; no MP4 generated.",
+      "Missing API key; dry_run payload only."
+    ],
+    "human_review_flags": [
+      "Review placeholder render before publishing."
+    ],
+    "approval_status": "approved",
+    "next_component": "Final Quality Control"
+  },
+  "qc_reports": {
+    "video_qc_report": {
+      "production_id": "if-2026-07-06-liverpool-arsenal",
+      "component_id": "IF-FQC01",
+      "component_name": "Video QC",
+      "timestamp": "2026-07-08T11:37:05.084865+00:00",
+      "video_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\renders\\if-2026-07-06-liverpool-arsenal\\final_video.placeholder.json",
+      "file_exists": true,
+      "file_size": 261,
+      "duration_seconds": 60.0,
+      "resolution": "1080x1920",
+      "aspect_ratio": "9:16",
+      "fps": 30,
+      "codec": "placeholder",
+      "thumbnail_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\renders\\if-2026-07-06-liverpool-arsenal\\thumbnail_frame.placeholder.json",
+      "issues_found": [],
+      "warnings": [
+        "Placeholder render documented; no real video integrity checks available."
+      ],
+      "score": 78,
+      "approval_status": "approved"
+    },
+    "audio_qc_report_final": {
+      "production_id": "if-2026-07-06-liverpool-arsenal",
+      "component_id": "IF-FQC02",
+      "component_name": "Audio QC",
+      "timestamp": "2026-07-08T11:37:05.084865+00:00",
+      "audio_exists": false,
+      "duration_seconds": 60.0,
+      "loudness_status": "not_inspectable_placeholder",
+      "silence_warnings": [],
+      "clipping_status": "not_inspectable_placeholder",
+      "voice_sync_status": "aligned",
+      "music_balance_status": "no_music_bed",
+      "issues_found": [],
+      "warnings": [
+        "Audio track not inspectable in placeholder mode."
+      ],
+      "score": 84,
+      "approval_status": "approved"
+    },
+    "caption_qc_report": {
+      "production_id": "if-2026-07-06-liverpool-arsenal",
+      "component_id": "IF-FQC03",
+      "component_name": "Caption QC",
+      "timestamp": "2026-07-08T11:37:05.098344+00:00",
+      "captions_exist": true,
+      "caption_count": 11,
+      "timing_status": "aligned",
+      "readability_score": 96,
+      "safe_area_status": "compliant",
+      "line_length_violations": [],
+      "spelling_warnings": [],
+      "issues_found": [],
+      "warnings": [],
+      "score": 96,
+      "approval_status": "approved"
+    },
+    "brand_compliance_report": {
+      "production_id": "if-2026-07-06-liverpool-arsenal",
+      "component_id": "IF-FQC04",
+      "component_name": "Brand Compliance Checker",
+      "timestamp": "2026-07-08T11:37:05.098344+00:00",
+      "brand_opening_present": true,
+      "tone_status": "conversational",
+      "central_question_present": true,
+      "story_clarity_score": 92,
+      "dashboard_clarity_score": 90,
+      "cta_status": "present",
+      "forbidden_language_found": [],
+      "issues_found": [],
+      "warnings": [],
+      "score": 94,
+      "approval_status": "approved"
+    },
+    "script_alignment_report": {
+      "production_id": "if-2026-07-06-liverpool-arsenal",
+      "component_id": "IF-FQC05",
+      "component_name": "Script Alignment Checker",
+      "timestamp": "2026-07-08T11:37:05.148377+00:00",
+      "script_match_status": "aligned",
+      "hook_present": true,
+      "central_question_present": true,
+      "surprising_fact_present": true,
+      "cta_present": true,
+      "unauthorized_claims": [],
+      "locked_fields_status": "preserved",
+      "scene_order_status": "aligned",
+      "issues_found": [],
+      "warnings": [],
+      "score": 95,
+      "approval_status": "approved"
+    },
+    "legal_safety_report": {
+      "production_id": "if-2026-07-06-liverpool-arsenal",
+      "component_id": "IF-FQC06",
+      "component_name": "Legal & Copyright Checker",
+      "timestamp": "2026-07-08T11:37:05.148377+00:00",
+      "blocked_assets_used": [],
+      "manual_review_assets": [
+        {
+          "asset_id": "competition_logo",
+          "asset_name": "Premier League logo",
+          "asset_type": "logo",
+          "category": "match",
+          "required": true,
+          "scenes_used": [],
+          "legal_status": "needs_review",
+          "fallback_strategy": "Use text initials in approved template until badge is confirmed.",
+          "priority": "high"
+        },
+        {
+          "asset_id": "team_logo_away",
+          "asset_name": "Arsenal badge",
+          "asset_type": "logo",
+          "category": "match",
+          "required": true,
+          "scenes_used": [],
+          "legal_status": "needs_review",
+          "fallback_strategy": "Use text initials in approved template until badge is confirmed.",
+          "priority": "high"
+        },
+        {
+          "asset_id": "team_logo_home",
+          "asset_name": "Liverpool badge",
+          "asset_type": "logo",
+          "category": "match",
+          "required": true,
+          "scenes_used": [
+            "scene-06"
+          ],
+          "legal_status": "needs_review",
+          "fallback_strategy": "Use text initials in approved template until badge is confirmed.",
+          "priority": "high"
+        },
+        {
+          "asset_id": "team_logos",
+          "asset_name": "Liverpool and Arsenal badges",
+          "asset_type": "logo",
+          "category": "match",
+          "required": true,
+          "scenes_used": [
+            "scene-02",
+            "scene-03",
+            "scene-04",
+            "scene-05",
+            "scene-07",
+            "scene-08",
+            "scene-09",
+            "scene-11"
+          ],
+          "legal_status": "needs_review",
+          "fallback_strategy": "Use text initials in approved template until badge is confirmed.",
+          "priority": "high"
+        }
+      ],
+      "music_license_status": "no_music_bed",
+      "image_license_status": "fallback_or_manual_review",
+      "badge_license_status": "manual_review_required",
+      "copyright_risk_level": "medium",
+      "betting_safety_status": "safe",
+      "issues_found": [],
+      "warnings": [
+        "manual review assets present"
+      ],
+      "score": 72,
+      "approval_status": "needs_human_review"
+    }
+  },
+  "publish_readiness_report": {
+    "production_id": "if-2026-07-06-liverpool-arsenal",
+    "component_id": "IF-FQC07",
+    "component_name": "Publish Readiness Gate",
+    "timestamp": "2026-07-08T11:37:05.169209+00:00",
+    "video_qc_score": 78,
+    "audio_qc_score": 84,
+    "caption_qc_score": 96,
+    "brand_score": 94,
+    "script_alignment_score": 95,
+    "legal_safety_score": 72,
+    "overall_score": 86,
+    "final_status": "needs_human_review",
+    "blocking_issues": [],
+    "warnings": [
+      "Placeholder render documented; no real video integrity checks available.",
+      "Audio track not inspectable in placeholder mode.",
+      "manual review assets present",
+      "Arsenal badge requires rights confirmation.",
+      "Liverpool badge requires rights confirmation.",
+      "Liverpool and Arsenal badges requires rights confirmation.",
+      "Premier League logo requires rights confirmation.",
+      "Media asset bundle status: needs_manual_assets",
+      "Structured placeholder video artifact used; no MP4 generated.",
+      "Missing API key; dry_run payload only."
+    ],
+    "human_review_required": true,
+    "required_fixes": [],
+    "approval_status": "needs_human_review",
+    "next_component": "Publishing Engine"
+  },
+  "title_seed": "Liverpool vs Arsenal: Can Arsenal survive Liverpool's fast start?",
+  "description_seed": "Sample data: Liverpool have started quickly in recent home matches, while Arsenal have sometimes needed longer to settle away.",
+  "caption_seed": "Can Arsenal survive the first 20 minutes, or will Liverpool take control early? Tell us below.",
+  "telegram_seed": "Can Arsenal survive Liverpool's fast start?",
+  "legal_warnings": [
+    "manual review assets present"
+  ],
+  "human_review_flags": [
+    "Review placeholder render before publishing.",
+    "Placeholder render requires review."
+  ],
+  "approval_status": "needs_human_review",
+  "next_component": "Publishing Engine"
+}

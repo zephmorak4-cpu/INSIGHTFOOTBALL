@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "StoryboardDraft",
+  "type": "object",
+  "required": ["production_id", "agent_id", "agent_name", "prompt_id", "prompt_version", "timestamp", "source_script_package_id", "match", "competition", "total_estimated_duration_seconds", "scene_count", "scenes", "locked_fields", "warnings", "human_review_flags", "approval_status", "next_component"],
+  "properties": {
+    "production_id": { "type": "string" },
+    "agent_id": { "type": "string" },
+    "total_estimated_duration_seconds": { "type": "number" },
+    "scene_count": { "type": "integer" },
+    "scenes": { "type": "array" },
+    "locked_fields": { "type": "object" },
+    "warnings": { "type": "array" },
+    "human_review_flags": { "type": "array" },
+    "approval_status": { "type": "string", "enum": ["approved", "blocked"] },
+    "next_component": { "type": "string" }
+  }
+}
+

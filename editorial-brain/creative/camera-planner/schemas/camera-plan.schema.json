@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "CameraPlan",
+  "type": "object",
+  "required": ["production_id", "component_id", "component_name", "timestamp", "source_visual_plan", "scenes", "warnings", "approval_status", "next_component"],
+  "properties": {
+    "production_id": { "type": "string" },
+    "scenes": { "type": "array" },
+    "approval_status": { "type": "string" }
+  }
+}
+

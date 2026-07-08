@@ -1,0 +1,128 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "InsightFootballEditorialProductionPackage",
+  "title": "InsightFootballEditorialProductionPackage",
+  "type": "object",
+  "required": [
+    "metadata",
+    "version",
+    "match",
+    "competition",
+    "story_angle",
+    "central_question",
+    "surprising_fact",
+    "evidence",
+    "insight_dashboard",
+    "confidence_scores",
+    "quality_metrics",
+    "editorial_notes",
+    "quality_notes",
+    "locked_fields",
+    "agent_outputs",
+    "status"
+  ],
+  "properties": {
+    "metadata": {
+      "type": "object",
+      "required": ["production_id", "date", "input_version", "output_version"],
+      "properties": {
+        "production_id": { "type": "string" },
+        "date": { "type": "string" },
+        "created_at": { "type": "string" },
+        "input_version": { "type": "string" },
+        "output_version": { "type": "string" }
+      }
+    },
+    "version": {
+      "type": "object",
+      "required": ["current_version", "history", "rollback_available"],
+      "properties": {
+        "current_version": { "type": "string" },
+        "history": { "type": "array" },
+        "rollback_available": { "type": "boolean" }
+      }
+    },
+    "match": {
+      "type": "object",
+      "required": ["home_team", "away_team", "kickoff_time", "country"],
+      "properties": {
+        "home_team": { "type": "string" },
+        "away_team": { "type": "string" },
+        "kickoff_time": { "type": "string" },
+        "country": { "type": "string" }
+      }
+    },
+    "competition": { "type": "string" },
+    "story_angle": { "type": "string" },
+    "central_question": { "type": "string" },
+    "surprising_fact": { "type": "string" },
+    "evidence": {
+      "type": "object",
+      "required": ["evidence_points", "evidence_strength_rating", "weak_data_warnings"],
+      "properties": {
+        "evidence_points": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 5
+        },
+        "evidence_strength_rating": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 10
+        },
+        "weak_data_warnings": { "type": "array" }
+      }
+    },
+    "insight_dashboard": {
+      "type": "object",
+      "required": [
+        "match_edge",
+        "form_summary",
+        "tactical_explanation",
+        "uncertainty_explanation",
+        "uncertainty_level",
+        "x_factor",
+        "surprising_detail",
+        "plain_english_summary"
+      ],
+      "properties": {
+        "match_edge": { "type": "object" },
+        "form_summary": { "type": "string" },
+        "tactical_explanation": { "type": "string" },
+        "uncertainty_explanation": { "type": "string" },
+        "uncertainty_level": { "type": "string" },
+        "x_factor": { "type": "string" },
+        "surprising_detail": { "type": "string" },
+        "plain_english_summary": { "type": "string" }
+      }
+    },
+    "confidence_scores": {
+      "type": "object",
+      "required": [
+        "match_selector",
+        "story_hunter",
+        "evidence_filter",
+        "insight_engine",
+        "overall_confidence"
+      ]
+    },
+    "quality_metrics": {
+      "type": "object",
+      "required": [
+        "story_score",
+        "clarity_score",
+        "evidence_score",
+        "editorial_score",
+        "overall_pass_fail"
+      ]
+    },
+    "editorial_notes": { "type": "array" },
+    "quality_notes": { "type": "array" },
+    "locked_fields": { "type": "object" },
+    "agent_outputs": { "type": "object" },
+    "status": {
+      "type": "string",
+      "enum": ["draft", "approved", "needs_review", "failed", "blocked"]
+    }
+  }
+}

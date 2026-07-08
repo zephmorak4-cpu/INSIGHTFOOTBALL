@@ -1,0 +1,17 @@
+{
+  "component_id": "S4-C03",
+  "component_name": "Timing Engine",
+  "input_schema": "editorial-brain/timing-engine/schemas/scene-list.schema.json",
+  "timeline_schema": "editorial-brain/timing-engine/schemas/timeline.schema.json",
+  "final_package_schema": "editorial-brain/timing-engine/schemas/final-storyboard-package.schema.json",
+  "output": {
+    "output_directory": "editorial-brain/output",
+    "log_directory": "editorial-brain/logs"
+  },
+  "fps": 30,
+  "aspect_ratio": "9:16",
+  "resolution": "1080x1920",
+  "max_duration_seconds": 60,
+  "next_component": "Asset Planner"
+}
+

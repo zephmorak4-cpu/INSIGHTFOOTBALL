@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "AssetPlannerStoryboardInput",
+  "type": "object",
+  "required": ["production_id", "match", "competition", "scenes", "required_assets", "locked_fields", "approval_status"],
+  "properties": {
+    "production_id": { "type": "string" },
+    "match": { "type": "object" },
+    "competition": { "type": "string" },
+    "scenes": { "type": "array" },
+    "required_assets": { "type": "array" },
+    "locked_fields": { "type": "object" }
+  }
+}
+

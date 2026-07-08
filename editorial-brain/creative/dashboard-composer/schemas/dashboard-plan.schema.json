@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "DashboardPlan",
+  "type": "object",
+  "required": ["production_id", "component_id", "component_name", "timestamp", "source_storyboard_package", "dashboard_cards", "dashboard_scene_ids", "warnings", "approval_status", "next_component"],
+  "properties": {
+    "production_id": { "type": "string" },
+    "dashboard_cards": { "type": "array" },
+    "approval_status": { "type": "string" }
+  }
+}
+

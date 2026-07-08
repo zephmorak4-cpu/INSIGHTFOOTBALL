@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","type":"object","required":["component_id","recommendations","prompt_rewrite_performed","human_editorial_control","approval_status"],"properties":{"component_id":{"const":"IF-AN08"},"prompt_rewrite_performed":{"const":false}}}

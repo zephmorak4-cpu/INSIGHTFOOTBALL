@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ScriptOutput",
+  "type": "object",
+  "required": ["production_id", "agent_id", "agent_name", "prompt_id", "prompt_version", "timestamp", "input_brief_id", "match", "competition", "script_version", "word_count", "estimated_duration_seconds", "brand_opening", "hook", "central_question", "main_body", "conclusion", "cta", "full_voiceover", "claims_used", "claims_rejected", "locked_fields", "warnings", "human_review_flags", "approval_status", "next_agent"],
+  "properties": {
+    "production_id": { "type": "string" },
+    "agent_id": { "type": "string" },
+    "agent_name": { "type": "string" },
+    "word_count": { "type": "integer" },
+    "estimated_duration_seconds": { "type": "integer" },
+    "claims_used": { "type": "array" },
+    "claims_rejected": { "type": "array" },
+    "locked_fields": { "type": "object" },
+    "warnings": { "type": "array" },
+    "human_review_flags": { "type": "array" },
+    "approval_status": { "type": "string", "enum": ["approved", "blocked"] },
+    "next_agent": { "type": "string" }
+  }
+}
+

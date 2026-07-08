@@ -1,0 +1,111 @@
+{
+  "production_id": "if-2026-07-06-liverpool-arsenal",
+  "component_id": "S6-C02",
+  "component_name": "Camera Planner",
+  "timestamp": "2026-07-07T10:56:16.751762+00:00",
+  "source_visual_plan": "if-2026-07-06-liverpool-arsenal",
+  "scenes": [
+    {
+      "scene_id": "scene-01",
+      "camera_preset": "Reveal",
+      "camera_duration": 4.0,
+      "zoom_level": 1.0,
+      "pan_direction": "center",
+      "focus_target": "brand logo",
+      "camera_reason": "Reveal supports the brand opening without random movement."
+    },
+    {
+      "scene_id": "scene-02",
+      "camera_preset": "Punch In",
+      "camera_duration": 4.0,
+      "zoom_level": 1.08,
+      "pan_direction": "center",
+      "focus_target": "fact card",
+      "camera_reason": "Punch In supports the surprising fact without random movement."
+    },
+    {
+      "scene_id": "scene-03",
+      "camera_preset": "Slow Zoom",
+      "camera_duration": 4.0,
+      "zoom_level": 1.06,
+      "pan_direction": "center",
+      "focus_target": "question text",
+      "camera_reason": "Slow Zoom supports the central question without random movement."
+    },
+    {
+      "scene_id": "scene-04",
+      "camera_preset": "Pan",
+      "camera_duration": 4.0,
+      "zoom_level": 1.0,
+      "pan_direction": "right",
+      "focus_target": "pitch board",
+      "camera_reason": "Pan supports the tactical moment without random movement."
+    },
+    {
+      "scene_id": "scene-05",
+      "camera_preset": "Slide Left",
+      "camera_duration": 4.0,
+      "zoom_level": 1.0,
+      "pan_direction": "left",
+      "focus_target": "team comparison",
+      "camera_reason": "Slide Left supports the team comparison without random movement."
+    },
+    {
+      "scene_id": "scene-06",
+      "camera_preset": "Punch In",
+      "camera_duration": 4.0,
+      "zoom_level": 1.05,
+      "pan_direction": "center",
+      "focus_target": "evidence card",
+      "camera_reason": "Punch In supports the evidence card without random movement."
+    },
+    {
+      "scene_id": "scene-07",
+      "camera_preset": "Slide Left",
+      "camera_duration": 4.0,
+      "zoom_level": 1.0,
+      "pan_direction": "left",
+      "focus_target": "team comparison",
+      "camera_reason": "Slide Left supports the team comparison without random movement."
+    },
+    {
+      "scene_id": "scene-08",
+      "camera_preset": "Static",
+      "camera_duration": 4.0,
+      "zoom_level": 1.0,
+      "pan_direction": "center",
+      "focus_target": "dashboard",
+      "camera_reason": "Static supports the insight dashboard without random movement."
+    },
+    {
+      "scene_id": "scene-09",
+      "camera_preset": "Static",
+      "camera_duration": 4.0,
+      "zoom_level": 1.0,
+      "pan_direction": "center",
+      "focus_target": "dashboard",
+      "camera_reason": "Static supports the insight dashboard without random movement."
+    },
+    {
+      "scene_id": "scene-10",
+      "camera_preset": "Slow Zoom",
+      "camera_duration": 4.0,
+      "zoom_level": 1.07,
+      "pan_direction": "center",
+      "focus_target": "x-factor card",
+      "camera_reason": "Slow Zoom supports the x-factor player without random movement."
+    },
+    {
+      "scene_id": "scene-11",
+      "camera_preset": "Pull Back",
+      "camera_duration": 4.0,
+      "zoom_level": 0.96,
+      "pan_direction": "center",
+      "focus_target": "CTA text",
+      "camera_reason": "Pull Back supports the final question / cta without random movement."
+    }
+  ],
+  "warnings": [],
+  "approval_status": "approved",
+  "next_component": "Motion Planner"
+}

@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "CtaOutput",
+  "type": "object",
+  "required": ["production_id", "component_id", "component_name", "timestamp", "original_cta", "cta_options", "selected_cta", "selection_reason", "final_voiceover", "final_word_count", "final_estimated_duration_seconds", "approval_status"],
+  "properties": {
+    "production_id": { "type": "string" },
+    "cta_options": { "type": "array" },
+    "selected_cta": { "type": "string" },
+    "final_voiceover": { "type": "string" },
+    "final_word_count": { "type": "integer" },
+    "final_estimated_duration_seconds": { "type": "integer" },
+    "approval_status": { "type": "string", "enum": ["approved", "blocked"] }
+  }
+}
+

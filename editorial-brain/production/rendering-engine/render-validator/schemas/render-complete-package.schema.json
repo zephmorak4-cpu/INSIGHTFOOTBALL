@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","type":"object","required":["production_id","match","competition","renderer_profile","render_job","render_status","render_artifacts","render_validation_report","final_video_path","thumbnail_path","approval_status","next_component"],"properties":{"next_component":{"const":"Final Quality Control"}}}

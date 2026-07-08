@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "INSIGHT FOOTBALL Voice Plan",
+  "type": "object",
+  "required": ["production_id", "component_id", "voice_profile", "target_speed_wpm", "sections", "approval_status"],
+  "properties": {
+    "production_id": {"type": "string"},
+    "component_id": {"const": "IF-V01"},
+    "voice_profile": {"type": "string"},
+    "target_speed_wpm": {"type": "integer", "minimum": 120, "maximum": 145},
+    "sections": {"type": "array", "minItems": 1},
+    "approval_status": {"enum": ["approved", "blocked"]}
+  }
+}

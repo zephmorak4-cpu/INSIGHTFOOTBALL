@@ -1,0 +1,11 @@
+{
+  "component_id": "S6-C04",
+  "component_name": "Caption Designer",
+  "output": {
+    "output_directory": "editorial-brain/output",
+    "log_directory": "editorial-brain/logs"
+  },
+  "max_words_per_line": 7,
+  "max_lines": 2,
+  "next_component": "Dashboard Composer"
+}

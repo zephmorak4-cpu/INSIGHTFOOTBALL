@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","type":"object","required":["production_id","match","competition","timeline","scene_compositions","layer_map","caption_sync","audio_sync","render_plan","validation_report","render_readiness_status","approval_status","next_component"],"properties":{"next_component":{"const":"Rendering Engine"}}}

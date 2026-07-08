@@ -1,0 +1,56 @@
+{
+  "production_id": "if-2026-07-06-liverpool-arsenal",
+  "queue_id": "queue-if-2026-07-06-liverpool-arsenal",
+  "timestamp": "2026-07-08T11:37:47.830204+00:00",
+  "jobs": [
+    {
+      "job_id": "publish-if-2026-07-06-liverpool-arsenal-youtube",
+      "platform": "youtube",
+      "status": "dry_run_complete",
+      "dry_run": true,
+      "scheduled_time": "2026-07-08T11:37:47.793303+00:00",
+      "started_at": "2026-07-08T11:37:47.830204+00:00",
+      "completed_at": "2026-07-08T11:37:47.830204+00:00",
+      "platform_response": {
+        "dry_run": true,
+        "message": "No live upload performed."
+      },
+      "error": null
+    },
+    {
+      "job_id": "publish-if-2026-07-06-liverpool-arsenal-facebook",
+      "platform": "facebook",
+      "status": "dry_run_complete",
+      "dry_run": true,
+      "scheduled_time": "2026-07-08T11:37:47.793303+00:00",
+      "started_at": "2026-07-08T11:37:47.830204+00:00",
+      "completed_at": "2026-07-08T11:37:47.830204+00:00",
+      "platform_response": {
+        "dry_run": true,
+        "message": "No live upload performed."
+      },
+      "error": null
+    },
+    {
+      "job_id": "publish-if-2026-07-06-liverpool-arsenal-telegram",
+      "platform": "telegram",
+      "status": "dry_run_complete",
+      "dry_run": true,
+      "scheduled_time": "2026-07-08T11:37:47.793303+00:00",
+      "started_at": "2026-07-08T11:37:47.830204+00:00",
+      "completed_at": "2026-07-08T11:37:47.830204+00:00",
+      "platform_response": {
+        "dry_run": true,
+        "message": "No live upload performed."
+      },
+      "error": null
+    }
+  ],
+  "overall_status": "dry_run_complete",
+  "errors": [],
+  "warnings": [
+    "package requires human review before live publishing",
+    "manual review assets present"
+  ],
+  "approval_status": "approved"
+}

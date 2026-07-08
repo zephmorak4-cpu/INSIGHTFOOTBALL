@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ScenePlannerScriptPackageInput",
+  "type": "object",
+  "required": ["production_id", "final_voiceover", "locked_fields"],
+  "properties": {
+    "production_id": { "type": "string" },
+    "final_voiceover": { "type": "string" },
+    "locked_fields": { "type": "object" }
+  }
+}
+

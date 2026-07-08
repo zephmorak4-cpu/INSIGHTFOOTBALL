@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "OptimizedScriptOutput",
+  "type": "object",
+  "required": ["production_id", "hook", "central_question", "full_voiceover", "locked_fields", "approval_status"],
+  "properties": {
+    "production_id": { "type": "string" },
+    "hook": { "type": "string" },
+    "central_question": { "type": "string" },
+    "full_voiceover": { "type": "string" },
+    "locked_fields": { "type": "object" },
+    "approval_status": { "type": "string" }
+  }
+}
+

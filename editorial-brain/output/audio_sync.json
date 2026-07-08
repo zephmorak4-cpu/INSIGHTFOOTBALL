@@ -1,0 +1,131 @@
+{
+  "production_id": "if-2026-07-06-liverpool-arsenal",
+  "component_id": "IF-TL05",
+  "component_name": "Audio Synchronizer",
+  "timestamp": "2026-07-08T11:37:42.284891+00:00",
+  "total_audio_duration_seconds": 60.0,
+  "timeline_duration_seconds": 60.0,
+  "sync_status": "aligned",
+  "voice_track": {
+    "source": "voice.ssml",
+    "package_ref": "if-2026-07-06-liverpool-arsenal"
+  },
+  "music_bed": {
+    "enabled": false
+  },
+  "sound_effect_cues": [],
+  "scene_audio_map": [
+    {
+      "scene_id": "scene-01",
+      "voice_start": 0.0,
+      "voice_end": 2.91,
+      "scene_start": 0.0,
+      "scene_end": 2.91,
+      "sync_offset": 0.0,
+      "adjustment_required": false,
+      "notes": "Aligned to Sprint 9 normalized scene timing."
+    },
+    {
+      "scene_id": "scene-02",
+      "voice_start": 2.91,
+      "voice_end": 10.48,
+      "scene_start": 2.91,
+      "scene_end": 10.48,
+      "sync_offset": 0.0,
+      "adjustment_required": false,
+      "notes": "Aligned to Sprint 9 normalized scene timing."
+    },
+    {
+      "scene_id": "scene-03",
+      "voice_start": 10.48,
+      "voice_end": 15.06,
+      "scene_start": 10.48,
+      "scene_end": 15.06,
+      "sync_offset": 0.0,
+      "adjustment_required": false,
+      "notes": "Aligned to Sprint 9 normalized scene timing."
+    },
+    {
+      "scene_id": "scene-04",
+      "voice_start": 15.06,
+      "voice_end": 19.22,
+      "scene_start": 15.06,
+      "scene_end": 19.22,
+      "sync_offset": 0.0,
+      "adjustment_required": false,
+      "notes": "Aligned to Sprint 9 normalized scene timing."
+    },
+    {
+      "scene_id": "scene-05",
+      "voice_start": 19.22,
+      "voice_end": 26.71,
+      "scene_start": 19.22,
+      "scene_end": 26.71,
+      "sync_offset": 0.0,
+      "adjustment_required": false,
+      "notes": "Aligned to Sprint 9 normalized scene timing."
+    },
+    {
+      "scene_id": "scene-06",
+      "voice_start": 26.71,
+      "voice_end": 31.7,
+      "scene_start": 26.71,
+      "scene_end": 31.7,
+      "sync_offset": 0.0,
+      "adjustment_required": false,
+      "notes": "Aligned to Sprint 9 normalized scene timing."
+    },
+    {
+      "scene_id": "scene-07",
+      "voice_start": 31.7,
+      "voice_end": 37.94,
+      "scene_start": 31.7,
+      "scene_end": 37.94,
+      "sync_offset": 0.0,
+      "adjustment_required": false,
+      "notes": "Aligned to Sprint 9 normalized scene timing."
+    },
+    {
+      "scene_id": "scene-08",
+      "voice_start": 37.94,
+      "voice_end": 42.11,
+      "scene_start": 37.94,
+      "scene_end": 42.11,
+      "sync_offset": 0.0,
+      "adjustment_required": false,
+      "notes": "Aligned to Sprint 9 normalized scene timing."
+    },
+    {
+      "scene_id": "scene-09",
+      "voice_start": 42.11,
+      "voice_end": 49.18,
+      "scene_start": 42.11,
+      "scene_end": 49.18,
+      "sync_offset": 0.0,
+      "adjustment_required": false,
+      "notes": "Aligned to Sprint 9 normalized scene timing."
+    },
+    {
+      "scene_id": "scene-10",
+      "voice_start": 49.18,
+      "voice_end": 53.35,
+      "scene_start": 49.18,
+      "scene_end": 53.35,
+      "sync_offset": 0.0,
+      "adjustment_required": false,
+      "notes": "Aligned to Sprint 9 normalized scene timing."
+    },
+    {
+      "scene_id": "scene-11",
+      "voice_start": 53.35,
+      "voice_end": 60.0,
+      "scene_start": 53.35,
+      "scene_end": 60.0,
+      "sync_offset": 0.0,
+      "adjustment_required": false,
+      "notes": "Aligned to Sprint 9 normalized scene timing."
+    }
+  ],
+  "warnings": [],
+  "approval_status": "approved"
+}

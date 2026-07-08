@@ -1,0 +1,126 @@
+{
+  "production_id": "if-2026-07-06-liverpool-arsenal",
+  "match": {
+    "home_team": "Liverpool",
+    "away_team": "Arsenal",
+    "competition": "Premier League",
+    "kickoff_time": "20:00",
+    "country": "England"
+  },
+  "competition": "Premier League",
+  "source_publish_ready_package": "if-2026-07-06-liverpool-arsenal",
+  "publishing_metadata": {
+    "production_id": "if-2026-07-06-liverpool-arsenal",
+    "component_id": "IF-PUB01",
+    "component_name": "Publishing Metadata Generator",
+    "timestamp": "2026-07-08T11:37:47.769368+00:00",
+    "match": {
+      "home_team": "Liverpool",
+      "away_team": "Arsenal",
+      "competition": "Premier League",
+      "kickoff_time": "20:00",
+      "country": "England"
+    },
+    "competition": "Premier League",
+    "video_type": "short_form_match_preview",
+    "title_options": [
+      "Can Arsenal survive Liverpool's fast start?",
+      "The First 20 Minutes Could Decide This Match",
+      "Liverpool vs Arsenal: The Insight Before Kickoff"
+    ],
+    "selected_title": "Can Arsenal survive Liverpool's fast start?",
+    "youtube_description": "Sample data: Liverpool have started quickly in recent home matches, while Arsenal have sometimes needed longer to settle away.\n\nCan Arsenal survive the first 20 minutes, or will Liverpool take control early? Tell us below.\n\n#InsightFootball #FootballAnalysis #PremierLeague #Liverpool #Arsenal #MatchPreview #FootballShorts",
+    "facebook_caption": "Can Arsenal survive Liverpool's fast start?\n\nCan Arsenal survive the first 20 minutes, or will Liverpool take control early? Tell us below.\n\n#InsightFootball #FootballAnalysis #PremierLeague #Liverpool #Arsenal #MatchPreview",
+    "telegram_post": "Can Arsenal survive Liverpool's fast start?\n\nCan Arsenal survive Liverpool's fast start?\n\nCan Arsenal survive the first 20 minutes, or will Liverpool take control early? Tell us below.",
+    "hashtags": [
+      "#InsightFootball",
+      "#FootballAnalysis",
+      "#PremierLeague",
+      "#Liverpool",
+      "#Arsenal",
+      "#MatchPreview",
+      "#FootballShorts"
+    ],
+    "thumbnail_text": "Can Arsenal survive Liverpool's fast start?",
+    "pinned_comment_suggestion": "Can Arsenal survive the first 20 minutes, or will Liverpool take control early? Tell us below.",
+    "cta_text": "Can Arsenal survive the first 20 minutes, or will Liverpool take control early? Tell us below.",
+    "forbidden_language_check": {
+      "passed": true,
+      "matches": []
+    },
+    "warnings": [
+      "Publish-ready package requires human review."
+    ],
+    "approval_status": "approved",
+    "next_component": "YouTube Publisher Adapter"
+  },
+  "publishing_schedule": {
+    "production_id": "if-2026-07-06-liverpool-arsenal",
+    "component_id": "IF-PUB05",
+    "component_name": "Publishing Scheduler",
+    "timestamp": "2026-07-08T11:37:47.774353+00:00",
+    "timezone": "Africa/Lagos",
+    "schedule_mode": "publish_now",
+    "platforms": [
+      "youtube",
+      "facebook",
+      "telegram"
+    ],
+    "publish_times": {
+      "youtube": "2026-07-08T11:37:47.774353+00:00",
+      "facebook": "2026-07-08T11:37:47.774353+00:00",
+      "telegram": "2026-07-08T11:37:47.774353+00:00"
+    },
+    "platform_order": [
+      "youtube",
+      "facebook",
+      "telegram"
+    ],
+    "retry_policy": {
+      "max_retries": 1,
+      "retry_delay_seconds": 60
+    },
+    "warnings": [],
+    "approval_status": "approved"
+  },
+  "publishing_status": {
+    "jobs": [
+      {
+        "platform": "youtube",
+        "status": "published",
+        "dry_run": false
+      }
+    ],
+    "errors": [],
+    "warnings": []
+  },
+  "publishing_report": {
+    "production_id": "if-2026-07-06-liverpool-arsenal",
+    "component_id": "IF-PUB08",
+    "component_name": "Publishing Report Generator",
+    "timestamp": "2026-07-08T11:37:47.775351+00:00",
+    "platforms_attempted": [
+      "youtube"
+    ],
+    "platforms_published": [
+      "youtube"
+    ],
+    "platforms_failed": [],
+    "dry_run": false,
+    "platform_results": [
+      {
+        "platform": "youtube",
+        "status": "published",
+        "dry_run": false
+      }
+    ],
+    "errors": [],
+    "warnings": [],
+    "final_status": "published"
+  },
+  "platform_urls": {},
+  "platform_ids": {},
+  "dry_run": false,
+  "approval_status": "published",
+  "next_component": "Analytics Engine"
+}

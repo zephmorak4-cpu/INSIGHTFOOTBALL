@@ -1,0 +1,282 @@
+{
+  "production_id": "if-2026-07-06-liverpool-arsenal",
+  "agent_id": "IF-A06",
+  "agent_name": "Storyboard Generator",
+  "prompt_id": "IF-PROMPT-06-STORYBOARD-GENERATOR",
+  "prompt_version": "v1.0",
+  "timestamp": "2026-07-07T08:43:03.188689+00:00",
+  "source_script_package_id": "if-2026-07-06-liverpool-arsenal",
+  "match": {
+    "home_team": "Liverpool",
+    "away_team": "Arsenal",
+    "competition": "Premier League",
+    "kickoff_time": "20:00",
+    "country": "England"
+  },
+  "competition": "Premier League",
+  "total_estimated_duration_seconds": 55.47,
+  "scene_count": 11,
+  "scenes": [
+    {
+      "scene_id": "scene-01",
+      "scene_number": 1,
+      "scene_type": "Brand Opening",
+      "start_time_seconds": 0.0,
+      "end_time_seconds": 2.69,
+      "duration_seconds": 2.69,
+      "voiceover_text": "Before the first whistle... here's the insight.",
+      "caption_text": "Before the first whistle... here's the insight",
+      "on_screen_text": "Before the first whistle",
+      "visual_goal": "Make the brand opening easy to understand in one glance.",
+      "visual_description": "Vertical 9:16 brand opening using Liverpool and Arsenal context, clean captions, and restrained motion.",
+      "suggested_template": "brand_opening",
+      "required_assets": [
+        "brand_logo",
+        "background_graphic"
+      ],
+      "optional_assets": [],
+      "motion_hint": "logo_pulse",
+      "transition_hint": "quick_cut",
+      "notes": "Preserve script wording; visuals support the line only."
+    },
+    {
+      "scene_id": "scene-02",
+      "scene_number": 2,
+      "scene_type": "Surprising Fact",
+      "start_time_seconds": 2.69,
+      "end_time_seconds": 9.69,
+      "duration_seconds": 7.0,
+      "voiceover_text": "Sample data: Liverpool have started quickly in recent home matches, while Arsenal have sometimes needed longer to settle away.",
+      "caption_text": "Sample data: Liverpool have started quickly in recent home matches, while Arsenal...",
+      "on_screen_text": "Sample data: Liverpool have started quickly in recent home matches, while Arsenal...",
+      "visual_goal": "Make the surprising fact easy to understand in one glance.",
+      "visual_description": "Vertical 9:16 surprising fact using Liverpool and Arsenal context, clean captions, and restrained motion.",
+      "suggested_template": "stat_card",
+      "required_assets": [
+        "team_logos",
+        "data_card"
+      ],
+      "optional_assets": [
+        "stadium_image",
+        "manager_image"
+      ],
+      "motion_hint": "fact_reveal",
+      "transition_hint": "quick_cut",
+      "notes": "Preserve script wording; visuals support the line only."
+    },
+    {
+      "scene_id": "scene-03",
+      "scene_number": 3,
+      "scene_type": "Central Question",
+      "start_time_seconds": 9.69,
+      "end_time_seconds": 13.92,
+      "duration_seconds": 4.23,
+      "voiceover_text": "So the real question is: Can Arsenal survive Liverpool's fast start?",
+      "caption_text": "So the real question is: Can Arsenal survive Liverpool's fast start?",
+      "on_screen_text": "Can Arsenal survive Liverpool's fast start?",
+      "visual_goal": "Make the central question easy to understand in one glance.",
+      "visual_description": "Vertical 9:16 central question using Liverpool and Arsenal context, clean captions, and restrained motion.",
+      "suggested_template": "question_card",
+      "required_assets": [
+        "team_logos"
+      ],
+      "optional_assets": [],
+      "motion_hint": "question_push",
+      "transition_hint": "quick_cut",
+      "notes": "Preserve script wording; visuals support the line only."
+    },
+    {
+      "scene_id": "scene-04",
+      "scene_number": 4,
+      "scene_type": "Tactical Moment",
+      "start_time_seconds": 13.92,
+      "end_time_seconds": 17.77,
+      "duration_seconds": 3.85,
+      "voiceover_text": "Liverpool usually start aggressively, pressing high and forcing rushed decisions.",
+      "caption_text": "Liverpool usually start aggressively, pressing high and forcing rushed decisions",
+      "on_screen_text": "Liverpool usually start aggressively, pressing high and forcing rushed decisions",
+      "visual_goal": "Make the tactical moment easy to understand in one glance.",
+      "visual_description": "Vertical 9:16 tactical moment using Liverpool and Arsenal context, clean captions, and restrained motion.",
+      "suggested_template": "pitch_tactics",
+      "required_assets": [
+        "pitch_graphic",
+        "team_logos"
+      ],
+      "optional_assets": [],
+      "motion_hint": "pitch_pan",
+      "transition_hint": "quick_cut",
+      "notes": "Preserve script wording; visuals support the line only."
+    },
+    {
+      "scene_id": "scene-05",
+      "scene_number": 5,
+      "scene_type": "Team Comparison",
+      "start_time_seconds": 17.77,
+      "end_time_seconds": 24.69,
+      "duration_seconds": 6.92,
+      "voiceover_text": "Arsenal have enough quality to play through it, but a messy opening can drag them from their plan.",
+      "caption_text": "Arsenal have enough quality to play through it, but a messy opening...",
+      "on_screen_text": "Arsenal have enough quality to play through it, but a messy opening...",
+      "visual_goal": "Make the team comparison easy to understand in one glance.",
+      "visual_description": "Vertical 9:16 team comparison using Liverpool and Arsenal context, clean captions, and restrained motion.",
+      "suggested_template": "comparison_split",
+      "required_assets": [
+        "team_logos"
+      ],
+      "optional_assets": [],
+      "motion_hint": "side_by_side",
+      "transition_hint": "quick_cut",
+      "notes": "Preserve script wording; visuals support the line only."
+    },
+    {
+      "scene_id": "scene-06",
+      "scene_number": 6,
+      "scene_type": "Evidence Card",
+      "start_time_seconds": 24.69,
+      "end_time_seconds": 29.31,
+      "duration_seconds": 4.62,
+      "voiceover_text": "The evidence is simple: Liverpool usually make opponents uncomfortable early at home.",
+      "caption_text": "The evidence is simple: Liverpool usually make opponents uncomfortable early at home",
+      "on_screen_text": "The evidence is simple: Liverpool usually make opponents uncomfortable early at home",
+      "visual_goal": "Make the evidence card easy to understand in one glance.",
+      "visual_description": "Vertical 9:16 evidence card using Liverpool and Arsenal context, clean captions, and restrained motion.",
+      "suggested_template": "evidence_card",
+      "required_assets": [
+        "data_card",
+        "team_logo_home"
+      ],
+      "optional_assets": [],
+      "motion_hint": "stat_slide",
+      "transition_hint": "quick_cut",
+      "notes": "Preserve script wording; visuals support the line only."
+    },
+    {
+      "scene_id": "scene-07",
+      "scene_number": 7,
+      "scene_type": "Team Comparison",
+      "start_time_seconds": 29.31,
+      "end_time_seconds": 35.08,
+      "duration_seconds": 5.77,
+      "voiceover_text": "The balance matters too: Arsenal may be better prepared for pressure than older form suggests.",
+      "caption_text": "The balance matters too: Arsenal may be better prepared for pressure than...",
+      "on_screen_text": "The balance matters too: Arsenal may be better prepared for pressure than...",
+      "visual_goal": "Make the team comparison easy to understand in one glance.",
+      "visual_description": "Vertical 9:16 team comparison using Liverpool and Arsenal context, clean captions, and restrained motion.",
+      "suggested_template": "comparison_split",
+      "required_assets": [
+        "team_logos"
+      ],
+      "optional_assets": [],
+      "motion_hint": "balance_shift",
+      "transition_hint": "quick_cut",
+      "notes": "Preserve script wording; visuals support the line only."
+    },
+    {
+      "scene_id": "scene-08",
+      "scene_number": 8,
+      "scene_type": "Insight Dashboard",
+      "start_time_seconds": 35.08,
+      "end_time_seconds": 38.93,
+      "duration_seconds": 3.85,
+      "voiceover_text": "That makes it a slight home edge, not a prediction.",
+      "caption_text": "That makes it a slight home edge, not a prediction",
+      "on_screen_text": "Slight Home Edge",
+      "visual_goal": "Make the insight dashboard easy to understand in one glance.",
+      "visual_description": "Vertical 9:16 insight dashboard using Liverpool and Arsenal context, clean captions, and restrained motion.",
+      "suggested_template": "insight_dashboard",
+      "required_assets": [
+        "dashboard_panel",
+        "team_logos"
+      ],
+      "optional_assets": [
+        "stadium_image",
+        "manager_image"
+      ],
+      "motion_hint": "dashboard_build",
+      "transition_hint": "quick_cut",
+      "notes": "Preserve script wording; visuals support the line only."
+    },
+    {
+      "scene_id": "scene-09",
+      "scene_number": 9,
+      "scene_type": "Insight Dashboard",
+      "start_time_seconds": 38.93,
+      "end_time_seconds": 45.47,
+      "duration_seconds": 6.54,
+      "voiceover_text": "Watch the opening phase closely; it may tell you how the rest of the game will unfold.",
+      "caption_text": "Watch the opening phase closely; it may tell you how the rest...",
+      "on_screen_text": "Slight Home Edge",
+      "visual_goal": "Make the insight dashboard easy to understand in one glance.",
+      "visual_description": "Vertical 9:16 insight dashboard using Liverpool and Arsenal context, clean captions, and restrained motion.",
+      "suggested_template": "insight_dashboard",
+      "required_assets": [
+        "dashboard_panel",
+        "team_logos"
+      ],
+      "optional_assets": [],
+      "motion_hint": "dashboard_hold",
+      "transition_hint": "quick_cut",
+      "notes": "Preserve script wording; visuals support the line only."
+    },
+    {
+      "scene_id": "scene-10",
+      "scene_number": 10,
+      "scene_type": "X-Factor Player",
+      "start_time_seconds": 45.47,
+      "end_time_seconds": 49.32,
+      "duration_seconds": 3.85,
+      "voiceover_text": "The x-factor is arsenal's ability to escape liverpool's first press.",
+      "caption_text": "The x-factor is arsenal's ability to escape liverpool's first press",
+      "on_screen_text": "The x-factor is arsenal's ability to escape liverpool's first press",
+      "visual_goal": "Make the x-factor player easy to understand in one glance.",
+      "visual_description": "Vertical 9:16 x-factor player using Liverpool and Arsenal context, clean captions, and restrained motion.",
+      "suggested_template": "player_focus",
+      "required_assets": [
+        "player_image",
+        "pitch_graphic"
+      ],
+      "optional_assets": [],
+      "motion_hint": "spotlight",
+      "transition_hint": "quick_cut",
+      "notes": "Preserve script wording; visuals support the line only."
+    },
+    {
+      "scene_id": "scene-11",
+      "scene_number": 11,
+      "scene_type": "Final Question / CTA",
+      "start_time_seconds": 49.32,
+      "end_time_seconds": 55.47,
+      "duration_seconds": 6.15,
+      "voiceover_text": "Can Arsenal survive the first 20 minutes, or will Liverpool take control early? Tell us below.",
+      "caption_text": "Can Arsenal survive the first 20 minutes, or will Liverpool take control...",
+      "on_screen_text": "Tell us below",
+      "visual_goal": "Make the final question / cta easy to understand in one glance.",
+      "visual_description": "Vertical 9:16 final question / cta using Liverpool and Arsenal context, clean captions, and restrained motion.",
+      "suggested_template": "cta_card",
+      "required_assets": [
+        "team_logos",
+        "comment_icon"
+      ],
+      "optional_assets": [],
+      "motion_hint": "final_push",
+      "transition_hint": "hold_then_out",
+      "notes": "Preserve script wording; visuals support the line only."
+    }
+  ],
+  "locked_fields": {
+    "selected_match": {
+      "home_team": "Liverpool",
+      "away_team": "Arsenal",
+      "competition": "Premier League",
+      "kickoff_time": "20:00",
+      "country": "England"
+    },
+    "story_angle": "Liverpool may have the edge if they turn the first 20 minutes into pressure, but Arsenal have enough quality to punish one mistake.",
+    "central_question": "Can Arsenal survive Liverpool's fast start?",
+    "surprising_fact": "Sample data: Liverpool have started quickly in recent home matches, while Arsenal have sometimes needed longer to settle away."
+  },
+  "warnings": [],
+  "human_review_flags": [],
+  "approval_status": "approved",
+  "next_component": "Scene Planner"
+}

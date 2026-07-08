@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "VisualDirectorAssetInput",
+  "type": "object",
+  "required": ["production_id", "asset_manifest", "graphic_requirements", "approval_status"],
+  "properties": {
+    "production_id": { "type": "string" },
+    "asset_manifest": { "type": "object" },
+    "graphic_requirements": { "type": "object" },
+    "approval_status": { "type": "string" }
+  }
+}
+

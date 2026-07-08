@@ -1,0 +1,45 @@
+{
+  "production_id": "if-2026-07-06-liverpool-arsenal",
+  "component_id": "IF-AN06",
+  "component_name": "Audience Retention Analyzer",
+  "timestamp": "2026-07-08T11:38:31.694578+00:00",
+  "drop_off_timeline": [
+    {
+      "second": 0,
+      "retention_percent": 100
+    },
+    {
+      "second": 10,
+      "retention_percent": 78
+    },
+    {
+      "second": 20,
+      "retention_percent": 61
+    },
+    {
+      "second": 30,
+      "retention_percent": 48
+    },
+    {
+      "second": 42,
+      "retention_percent": 31
+    },
+    {
+      "second": 60,
+      "retention_percent": 21
+    }
+  ],
+  "most_engaging_moment": {
+    "second": 0,
+    "retention_percent": 100
+  },
+  "least_engaging_moment": {
+    "second": 60,
+    "retention_percent": 21
+  },
+  "primary_drop_off": {
+    "second": 42,
+    "retention_percent": 31
+  },
+  "approval_status": "approved"
+}

@@ -1,0 +1,13 @@
+{
+  "component_id": "S2-C02",
+  "component_name": "Production Brief Generator",
+  "input_schema": "editorial-brain/production-brief-generator/schemas/validated-editorial-package.schema.json",
+  "output_schema": "editorial-brain/production-brief-generator/schemas/production-brief.schema.json",
+  "target_duration_seconds": 60,
+  "target_platforms": ["YouTube Shorts", "Facebook Reels", "Telegram"],
+  "next_agent": "IF-A05",
+  "output": {
+    "directory": "editorial-brain/output",
+    "log_directory": "editorial-brain/logs"
+  }
+}

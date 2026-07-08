@@ -1,0 +1,81 @@
+{
+  "production_id": "if-2026-07-06-liverpool-arsenal",
+  "component_id": "IF-MAE02",
+  "component_name": "Team Badge Manager",
+  "timestamp": "2026-07-08T11:37:14.221660+00:00",
+  "home_team": "Liverpool",
+  "away_team": "Arsenal",
+  "home_badge": {
+    "asset_id": "team_logo_home",
+    "asset_name": "Liverpool badge fallback",
+    "asset_type": "fallback",
+    "category": "fallback",
+    "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\team_logo_home.svg",
+    "file_format": "svg",
+    "dimensions": "512x512",
+    "legal_status": "approved_placeholder",
+    "source": "deterministic_placeholder",
+    "scenes_used": [],
+    "reusable": true,
+    "checksum": "fc94dc5c1295f878cdc71c3857e0c7896386a1083007217574ce3518a00d77e6",
+    "fallback": true
+  },
+  "away_badge": {
+    "asset_id": "team_logo_away",
+    "asset_name": "Arsenal badge fallback",
+    "asset_type": "fallback",
+    "category": "fallback",
+    "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\team_logo_away.svg",
+    "file_format": "svg",
+    "dimensions": "512x512",
+    "legal_status": "approved_placeholder",
+    "source": "deterministic_placeholder",
+    "scenes_used": [],
+    "reusable": true,
+    "checksum": "47717e649df8e2b2abceb5d3141ab109a029247aa07372e6f91d7ea89750e41d",
+    "fallback": true
+  },
+  "missing_badges": [
+    "team_logo_home",
+    "team_logo_away"
+  ],
+  "fallback_badges": [
+    {
+      "asset_id": "team_logo_home",
+      "asset_name": "Liverpool badge fallback",
+      "asset_type": "fallback",
+      "category": "fallback",
+      "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\team_logo_home.svg",
+      "file_format": "svg",
+      "dimensions": "512x512",
+      "legal_status": "approved_placeholder",
+      "source": "deterministic_placeholder",
+      "scenes_used": [],
+      "reusable": true,
+      "checksum": "fc94dc5c1295f878cdc71c3857e0c7896386a1083007217574ce3518a00d77e6",
+      "fallback": true
+    },
+    {
+      "asset_id": "team_logo_away",
+      "asset_name": "Arsenal badge fallback",
+      "asset_type": "fallback",
+      "category": "fallback",
+      "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\team_logo_away.svg",
+      "file_format": "svg",
+      "dimensions": "512x512",
+      "legal_status": "approved_placeholder",
+      "source": "deterministic_placeholder",
+      "scenes_used": [],
+      "reusable": true,
+      "checksum": "47717e649df8e2b2abceb5d3141ab109a029247aa07372e6f91d7ea89750e41d",
+      "fallback": true
+    }
+  ],
+  "legal_warnings": [
+    "Arsenal badge requires rights confirmation.",
+    "Liverpool badge requires rights confirmation.",
+    "Liverpool and Arsenal badges requires rights confirmation."
+  ],
+  "approval_status": "approved",
+  "next_component": "Competition Logo Manager"
+}

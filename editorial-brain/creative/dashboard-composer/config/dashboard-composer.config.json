@@ -1,0 +1,10 @@
+{
+  "component_id": "S6-C05",
+  "component_name": "Dashboard Composer",
+  "output": {
+    "output_directory": "editorial-brain/output",
+    "log_directory": "editorial-brain/logs"
+  },
+  "allowed_card_types": ["Match Edge", "Key Advantage", "X-Factor", "Uncertainty", "Surprising Detail"],
+  "next_component": "Rendering Engine"
+}

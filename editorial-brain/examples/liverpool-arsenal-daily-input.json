@@ -1,0 +1,42 @@
+{
+  "production_metadata": {
+    "date": "2026-07-06",
+    "production_id": "if-2026-07-06-liverpool-arsenal",
+    "language": "English",
+    "status": "draft"
+  },
+  "fixtures": [
+    {
+      "home_team": "Liverpool",
+      "away_team": "Arsenal",
+      "competition": "Premier League",
+      "kickoff_time": "20:00",
+      "country": "England",
+      "audience_interest": 10,
+      "importance": 9,
+      "rivalry": 8,
+      "available_data": 9,
+      "story_potential": 9
+    }
+  ],
+  "match_context": {
+    "recent_form": {
+      "liverpool": "Sample: strong home starts",
+      "arsenal": "Sample: slower away starts"
+    },
+    "squad_availability": {
+      "liverpool": "Sample: verify injuries before publishing",
+      "arsenal": "Sample: verify injuries before publishing"
+    },
+    "tactical_notes": {
+      "battle": "Liverpool early pressure vs Arsenal buildup"
+    },
+    "statistics": {
+      "liverpool": "Sample: strong first-half output",
+      "arsenal": "Sample: stronger after settling"
+    },
+    "news": {
+      "notes": "Sample: no major verified news included"
+    }
+  }
+}

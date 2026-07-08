@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ValidatedEditorialPackage",
+  "type": "object",
+  "required": [
+    "metadata",
+    "match",
+    "competition",
+    "story_angle",
+    "central_question",
+    "surprising_fact",
+    "primary_evidence",
+    "insight_summary",
+    "match_edge",
+    "locked_fields",
+    "validation_metadata",
+    "approval_status",
+    "validator_notes",
+    "publishability_score"
+  ],
+  "properties": {
+    "approval_status": { "type": "string", "enum": ["approved"] },
+    "publishability_score": { "type": "number", "minimum": 0, "maximum": 100 },
+    "validation_metadata": { "type": "object" }
+  }
+}

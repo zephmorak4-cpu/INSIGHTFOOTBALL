@@ -1,0 +1,19 @@
+{
+  "production_id": "if-2026-07-06-liverpool-arsenal",
+  "component_id": "IF-FQC04",
+  "component_name": "Brand Compliance Checker",
+  "timestamp": "2026-07-08T11:37:05.176785+00:00",
+  "brand_opening_present": true,
+  "tone_status": "conversational",
+  "central_question_present": true,
+  "story_clarity_score": 92,
+  "dashboard_clarity_score": 90,
+  "cta_status": "present",
+  "forbidden_language_found": [],
+  "issues_found": [],
+  "warnings": [
+    "robotic phrasing warning"
+  ],
+  "score": 90,
+  "approval_status": "approved"
+}

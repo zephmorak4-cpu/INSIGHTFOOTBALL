@@ -1,0 +1,110 @@
+{
+  "production_id": "if-2026-07-06-liverpool-arsenal",
+  "component_id": "IF-V01",
+  "component_name": "Voice Director",
+  "timestamp": "2026-07-07T13:51:03.310456+00:00",
+  "source_script_package": "if-2026-07-06-liverpool-arsenal",
+  "voice_profile": "knowledgeable football friend",
+  "preferred_provider": "openai_tts",
+  "fallback_provider": "elevenlabs",
+  "target_speed_wpm": 135,
+  "pronunciation_profile": "football_names_en_gb",
+  "sections": [
+    {
+      "section_id": "voice-section-01",
+      "source_section": "hook",
+      "narration_text": "Before the first whistle... here's the insight.",
+      "voice_style": "knowledgeable football friend",
+      "emotion": "curious",
+      "pace": "measured",
+      "pitch": "medium",
+      "energy": "medium-high",
+      "pause_before": 0.0,
+      "pause_after": 0.4,
+      "emphasis_words": [],
+      "breathing_points": []
+    },
+    {
+      "section_id": "voice-section-02",
+      "source_section": "central_question",
+      "narration_text": "Sample data: Liverpool have started quickly in recent home matches, while Arsenal have sometimes needed longer to settle away.",
+      "voice_style": "knowledgeable football friend",
+      "emotion": "focused",
+      "pace": "slightly_slow",
+      "pitch": "medium",
+      "energy": "medium",
+      "pause_before": 0.25,
+      "pause_after": 0.4,
+      "emphasis_words": [
+        "Liverpool",
+        "Arsenal"
+      ],
+      "breathing_points": [
+        ",",
+        ":"
+      ]
+    },
+    {
+      "section_id": "voice-section-03",
+      "source_section": "main_body",
+      "narration_text": "So the real question is: Can Arsenal survive Liverpool's fast start? Liverpool usually start aggressively, pressing high and forcing rushed decisions. Arsenal have enough quality to play through it, but a messy opening can drag them from their plan. The evidence is simple: Liverpool usually make opponents uncomfortable early at home. The balance matters too: Arsenal may be better prepared for pressure than older form suggests. That makes it a slight home edge, not a prediction. Watch the opening phase closely; it may tell you how the rest of the game will unfold.",
+      "voice_style": "knowledgeable football friend",
+      "emotion": "confident",
+      "pace": "natural",
+      "pitch": "medium",
+      "energy": "medium",
+      "pause_before": 0.25,
+      "pause_after": 0.25,
+      "emphasis_words": [
+        "Liverpool",
+        "Arsenal",
+        "fast start",
+        "slight home edge"
+      ],
+      "breathing_points": [
+        ",",
+        ";",
+        ":",
+        "?"
+      ]
+    },
+    {
+      "section_id": "voice-section-04",
+      "source_section": "conclusion",
+      "narration_text": "The x-factor is arsenal's ability to escape liverpool's first press. Can Arsenal survive the first 20 minutes, or will Liverpool take control early?",
+      "voice_style": "knowledgeable football friend",
+      "emotion": "reflective",
+      "pace": "natural",
+      "pitch": "medium",
+      "energy": "medium",
+      "pause_before": 0.25,
+      "pause_after": 0.25,
+      "emphasis_words": [
+        "Liverpool",
+        "Arsenal",
+        "x-factor"
+      ],
+      "breathing_points": [
+        ",",
+        "?"
+      ]
+    },
+    {
+      "section_id": "voice-section-05",
+      "source_section": "cta",
+      "narration_text": "Tell us below.",
+      "voice_style": "knowledgeable football friend",
+      "emotion": "friendly",
+      "pace": "warm_prompt",
+      "pitch": "medium",
+      "energy": "medium-high",
+      "pause_before": 0.25,
+      "pause_after": 0.4,
+      "emphasis_words": [],
+      "breathing_points": []
+    }
+  ],
+  "warnings": [],
+  "approval_status": "approved",
+  "next_component": "Pronunciation Engine"
+}

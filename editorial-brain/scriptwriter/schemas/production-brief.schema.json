@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ProductionBriefInput",
+  "type": "object",
+  "required": ["production_id", "brief_id", "match", "competition", "brand_opening", "central_question", "surprising_fact", "story_angle", "main_insight", "evidence_to_use", "contradiction_to_handle", "match_edge", "key_advantage", "x_factor", "viewer_takeaway", "locked_fields", "next_agent"],
+  "properties": {
+    "production_id": { "type": "string" },
+    "brief_id": { "type": "string" },
+    "match": { "type": "object" },
+    "competition": { "type": "string" },
+    "brand_opening": { "type": "string" },
+    "central_question": { "type": "string" },
+    "surprising_fact": { "type": "string" },
+    "evidence_to_use": { "type": "array" },
+    "contradiction_to_handle": { "type": "array" },
+    "locked_fields": { "type": "object" },
+    "next_agent": { "type": "string" }
+  }
+}
+

@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "FinalAssetPackage",
+  "type": "object",
+  "required": ["production_id", "match", "competition", "source_storyboard_package", "asset_manifest", "asset_search_plan", "graphic_requirements", "missing_assets", "legal_warnings", "required_manual_actions", "render_readiness_status", "locked_fields", "warnings", "human_review_flags", "approval_status", "next_component"],
+  "properties": {
+    "production_id": { "type": "string" },
+    "match": { "type": "object" },
+    "competition": { "type": "string" },
+    "asset_manifest": { "type": "object" },
+    "asset_search_plan": { "type": "object" },
+    "graphic_requirements": { "type": "object" },
+    "missing_assets": { "type": "array" },
+    "legal_warnings": { "type": "array" },
+    "required_manual_actions": { "type": "array" },
+    "render_readiness_status": { "type": "string" },
+    "locked_fields": { "type": "object" },
+    "warnings": { "type": "array" },
+    "human_review_flags": { "type": "array" },
+    "approval_status": { "type": "string" },
+    "next_component": { "type": "string" }
+  }
+}
+

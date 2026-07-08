@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "FinalStoryboardPackage",
+  "type": "object",
+  "required": ["production_id", "match", "competition", "source_script_package", "final_voiceover", "total_duration_seconds", "scene_count", "scenes", "timeline", "captions", "required_assets", "locked_fields", "storyboard_quality_scores", "warnings", "human_review_flags", "approval_status", "next_component"],
+  "properties": {
+    "production_id": { "type": "string" },
+    "match": { "type": "object" },
+    "competition": { "type": "string" },
+    "final_voiceover": { "type": "string" },
+    "total_duration_seconds": { "type": "number" },
+    "scene_count": { "type": "integer" },
+    "scenes": { "type": "array" },
+    "timeline": { "type": "object" },
+    "captions": { "type": "array" },
+    "required_assets": { "type": "array" },
+    "locked_fields": { "type": "object" },
+    "storyboard_quality_scores": { "type": "object" },
+    "warnings": { "type": "array" },
+    "human_review_flags": { "type": "array" },
+    "approval_status": { "type": "string" },
+    "next_component": { "type": "string" }
+  }
+}
+

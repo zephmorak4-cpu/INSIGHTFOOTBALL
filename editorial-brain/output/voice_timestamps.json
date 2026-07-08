@@ -1,0 +1,276 @@
+{
+  "production_id": "if-2026-07-06-liverpool-arsenal",
+  "component_id": "IF-V04",
+  "component_name": "Timestamp Generator",
+  "timestamp": "2026-07-07T13:52:21.345500+00:00",
+  "source_voice_plan": "if-2026-07-06-liverpool-arsenal",
+  "source_ssml_metadata": "if-2026-07-06-liverpool-arsenal",
+  "speech_rate": 145,
+  "entries": [
+    {
+      "scene_id": "voice-scene-01",
+      "section_id": "voice-section-01",
+      "sentence_id": "sentence-01",
+      "sentence": "Before the first whistle...",
+      "start": 0.0,
+      "end": 1.57,
+      "estimated_duration": 1.57
+    },
+    {
+      "scene_id": "voice-scene-01",
+      "section_id": "voice-section-01",
+      "sentence_id": "sentence-02",
+      "sentence": "here's the insight.",
+      "start": 1.6,
+      "end": 2.77,
+      "estimated_duration": 1.17
+    },
+    {
+      "scene_id": "voice-scene-02",
+      "section_id": "voice-section-02",
+      "sentence_id": "sentence-03",
+      "sentence": "Sample data: Liverpool have started quickly in recent home matches, while Arsenal have sometimes needed longer to settle away.",
+      "start": 3.42,
+      "end": 10.9,
+      "estimated_duration": 7.48
+    },
+    {
+      "scene_id": "voice-scene-03",
+      "section_id": "voice-section-03",
+      "sentence_id": "sentence-04",
+      "sentence": "So the real question is: Can Arsenal survive Liverpool's fast start?",
+      "start": 11.54,
+      "end": 15.91,
+      "estimated_duration": 4.37
+    },
+    {
+      "scene_id": "voice-scene-03",
+      "section_id": "voice-section-03",
+      "sentence_id": "sentence-05",
+      "sentence": "Liverpool usually start aggressively, pressing high and forcing rushed decisions.",
+      "start": 15.94,
+      "end": 19.88,
+      "estimated_duration": 3.94
+    },
+    {
+      "scene_id": "voice-scene-03",
+      "section_id": "voice-section-03",
+      "sentence_id": "sentence-06",
+      "sentence": "Arsenal have enough quality to play through it, but a messy opening can drag them from their plan.",
+      "start": 19.91,
+      "end": 26.97,
+      "estimated_duration": 7.07
+    },
+    {
+      "scene_id": "voice-scene-03",
+      "section_id": "voice-section-03",
+      "sentence_id": "sentence-07",
+      "sentence": "The evidence is simple: Liverpool usually make opponents uncomfortable early at home.",
+      "start": 27.0,
+      "end": 31.72,
+      "estimated_duration": 4.73
+    },
+    {
+      "scene_id": "voice-scene-03",
+      "section_id": "voice-section-03",
+      "sentence_id": "sentence-08",
+      "sentence": "The balance matters too: Arsenal may be better prepared for pressure than older form suggests.",
+      "start": 31.75,
+      "end": 37.65,
+      "estimated_duration": 5.9
+    },
+    {
+      "scene_id": "voice-scene-03",
+      "section_id": "voice-section-03",
+      "sentence_id": "sentence-09",
+      "sentence": "That makes it a slight home edge, not a prediction.",
+      "start": 37.68,
+      "end": 41.62,
+      "estimated_duration": 3.94
+    },
+    {
+      "scene_id": "voice-scene-03",
+      "section_id": "voice-section-03",
+      "sentence_id": "sentence-10",
+      "sentence": "Watch the opening phase closely; it may tell you how the rest of the game will unfold.",
+      "start": 41.65,
+      "end": 48.33,
+      "estimated_duration": 6.68
+    },
+    {
+      "scene_id": "voice-scene-04",
+      "section_id": "voice-section-04",
+      "sentence_id": "sentence-11",
+      "sentence": "The x-factor is arsenal's ability to escape liverpool's first press.",
+      "start": 48.83,
+      "end": 52.74,
+      "estimated_duration": 3.92
+    },
+    {
+      "scene_id": "voice-scene-04",
+      "section_id": "voice-section-04",
+      "sentence_id": "sentence-12",
+      "sentence": "Can Arsenal survive the first 20 minutes, or will Liverpool take control early?",
+      "start": 52.77,
+      "end": 57.92,
+      "estimated_duration": 5.15
+    },
+    {
+      "scene_id": "voice-scene-05",
+      "section_id": "voice-section-05",
+      "sentence_id": "sentence-13",
+      "sentence": "Tell us below.",
+      "start": 58.42,
+      "end": 59.59,
+      "estimated_duration": 1.17
+    }
+  ],
+  "emphasis_points": [
+    {
+      "word": "Liverpool",
+      "sentence_id": "sentence-03",
+      "time": 4.93
+    },
+    {
+      "word": "Arsenal",
+      "sentence_id": "sentence-03",
+      "time": 4.93
+    },
+    {
+      "word": "Liverpool",
+      "sentence_id": "sentence-04",
+      "time": 13.06
+    },
+    {
+      "word": "Arsenal",
+      "sentence_id": "sentence-04",
+      "time": 13.06
+    },
+    {
+      "word": "fast start",
+      "sentence_id": "sentence-04",
+      "time": 13.06
+    },
+    {
+      "word": "Liverpool",
+      "sentence_id": "sentence-05",
+      "time": 17.46
+    },
+    {
+      "word": "Arsenal",
+      "sentence_id": "sentence-06",
+      "time": 21.42
+    },
+    {
+      "word": "Liverpool",
+      "sentence_id": "sentence-07",
+      "time": 28.51
+    },
+    {
+      "word": "Arsenal",
+      "sentence_id": "sentence-08",
+      "time": 33.26
+    },
+    {
+      "word": "slight home edge",
+      "sentence_id": "sentence-09",
+      "time": 39.2
+    },
+    {
+      "word": "Liverpool",
+      "sentence_id": "sentence-11",
+      "time": 50.34
+    },
+    {
+      "word": "Arsenal",
+      "sentence_id": "sentence-11",
+      "time": 50.34
+    },
+    {
+      "word": "x-factor",
+      "sentence_id": "sentence-11",
+      "time": 50.34
+    },
+    {
+      "word": "Liverpool",
+      "sentence_id": "sentence-12",
+      "time": 54.29
+    },
+    {
+      "word": "Arsenal",
+      "sentence_id": "sentence-12",
+      "time": 54.29
+    }
+  ],
+  "pauses": [
+    {
+      "section_id": "voice-section-01",
+      "type": "after",
+      "start": 2.8,
+      "end": 3.18,
+      "duration": 0.38
+    },
+    {
+      "section_id": "voice-section-02",
+      "type": "before",
+      "start": 3.18,
+      "end": 3.42,
+      "duration": 0.24
+    },
+    {
+      "section_id": "voice-section-02",
+      "type": "after",
+      "start": 10.93,
+      "end": 11.31,
+      "duration": 0.38
+    },
+    {
+      "section_id": "voice-section-03",
+      "type": "before",
+      "start": 11.31,
+      "end": 11.54,
+      "duration": 0.24
+    },
+    {
+      "section_id": "voice-section-03",
+      "type": "after",
+      "start": 48.35,
+      "end": 48.59,
+      "duration": 0.24
+    },
+    {
+      "section_id": "voice-section-04",
+      "type": "before",
+      "start": 48.59,
+      "end": 48.83,
+      "duration": 0.24
+    },
+    {
+      "section_id": "voice-section-04",
+      "type": "after",
+      "start": 57.95,
+      "end": 58.18,
+      "duration": 0.24
+    },
+    {
+      "section_id": "voice-section-05",
+      "type": "before",
+      "start": 58.18,
+      "end": 58.42,
+      "duration": 0.24
+    },
+    {
+      "section_id": "voice-section-05",
+      "type": "after",
+      "start": 59.62,
+      "end": 60.0,
+      "duration": 0.38
+    }
+  ],
+  "total_estimated_duration": 60.0,
+  "warnings": [
+    "Timing normalized to fit the 60-second production limit without changing script text."
+  ],
+  "approval_status": "approved",
+  "next_component": "Audio Quality Control"
+}

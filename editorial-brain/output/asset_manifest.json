@@ -1,0 +1,672 @@
+{
+  "production_id": "if-2026-07-06-liverpool-arsenal",
+  "component_id": "S5-C01",
+  "component_name": "Asset Planner",
+  "timestamp": "2026-07-07T09:18:15.507750+00:00",
+  "source_storyboard_package": "if-2026-07-06-liverpool-arsenal",
+  "match": {
+    "home_team": "Liverpool",
+    "away_team": "Arsenal",
+    "competition": "Premier League",
+    "kickoff_time": "20:00",
+    "country": "England"
+  },
+  "competition": "Premier League",
+  "required_assets": [
+    {
+      "asset_id": "background_graphic",
+      "asset_name": "Clean match background",
+      "asset_type": "background",
+      "category": "brand",
+      "required": true,
+      "scenes_used": [
+        "scene-01"
+      ],
+      "purpose": "Support scene-01",
+      "recommended_format": "png",
+      "recommended_dimensions": "1080x1920",
+      "source_strategy": "custom graphic",
+      "legal_status": "approved",
+      "fallback_strategy": "Use custom vector/template graphic from internal library.",
+      "priority": "high"
+    },
+    {
+      "asset_id": "brand_logo",
+      "asset_name": "INSIGHT FOOTBALL logo",
+      "asset_type": "logo",
+      "category": "brand",
+      "required": true,
+      "scenes_used": [
+        "scene-01"
+      ],
+      "purpose": "Support scene-01",
+      "recommended_format": "svg/png",
+      "recommended_dimensions": "512x512",
+      "source_strategy": "internal approved brand kit",
+      "legal_status": "approved",
+      "fallback_strategy": "Use custom vector/template graphic from internal library.",
+      "priority": "high"
+    },
+    {
+      "asset_id": "comment_icon",
+      "asset_name": "Comment icon",
+      "asset_type": "icon",
+      "category": "football",
+      "required": true,
+      "scenes_used": [
+        "scene-11"
+      ],
+      "purpose": "Support scene-11",
+      "recommended_format": "svg",
+      "recommended_dimensions": "256x256",
+      "source_strategy": "custom icon",
+      "legal_status": "approved",
+      "fallback_strategy": "Use custom vector/template graphic from internal library.",
+      "priority": "high"
+    },
+    {
+      "asset_id": "competition_logo",
+      "asset_name": "Premier League logo",
+      "asset_type": "logo",
+      "category": "match",
+      "required": true,
+      "scenes_used": [],
+      "purpose": "Support the video package",
+      "recommended_format": "svg/png",
+      "recommended_dimensions": "512x512",
+      "source_strategy": "approved competition source",
+      "legal_status": "needs_review",
+      "fallback_strategy": "Use text initials in approved template until badge is confirmed.",
+      "priority": "high"
+    },
+    {
+      "asset_id": "dashboard_panel",
+      "asset_name": "Insight dashboard panel",
+      "asset_type": "card",
+      "category": "dashboard",
+      "required": true,
+      "scenes_used": [
+        "scene-08",
+        "scene-09"
+      ],
+      "purpose": "Support scene-08, scene-09",
+      "recommended_format": "json/png",
+      "recommended_dimensions": "900x520",
+      "source_strategy": "template graphic",
+      "legal_status": "approved",
+      "fallback_strategy": "Use custom vector/template graphic from internal library.",
+      "priority": "high"
+    },
+    {
+      "asset_id": "data_card",
+      "asset_name": "Surprising detail card",
+      "asset_type": "card",
+      "category": "dashboard",
+      "required": true,
+      "scenes_used": [
+        "scene-02",
+        "scene-06"
+      ],
+      "purpose": "Support scene-02, scene-06",
+      "recommended_format": "json/png",
+      "recommended_dimensions": "900x520",
+      "source_strategy": "template graphic",
+      "legal_status": "approved",
+      "fallback_strategy": "Use custom vector/template graphic from internal library.",
+      "priority": "high"
+    },
+    {
+      "asset_id": "goal_icon",
+      "asset_name": "Goal icon",
+      "asset_type": "icon",
+      "category": "football",
+      "required": true,
+      "scenes_used": [],
+      "purpose": "Support the video package",
+      "recommended_format": "svg",
+      "recommended_dimensions": "256x256",
+      "source_strategy": "custom icon",
+      "legal_status": "approved",
+      "fallback_strategy": "Use custom vector/template graphic from internal library.",
+      "priority": "high"
+    },
+    {
+      "asset_id": "intro_frame",
+      "asset_name": "Intro frame",
+      "asset_type": "template",
+      "category": "brand",
+      "required": true,
+      "scenes_used": [],
+      "purpose": "Support the video package",
+      "recommended_format": "png/json",
+      "recommended_dimensions": "1080x1920",
+      "source_strategy": "template graphic",
+      "legal_status": "approved",
+      "fallback_strategy": "Use custom vector/template graphic from internal library.",
+      "priority": "high"
+    },
+    {
+      "asset_id": "outro_frame",
+      "asset_name": "Outro frame",
+      "asset_type": "template",
+      "category": "brand",
+      "required": true,
+      "scenes_used": [],
+      "purpose": "Support the video package",
+      "recommended_format": "png/json",
+      "recommended_dimensions": "1080x1920",
+      "source_strategy": "template graphic",
+      "legal_status": "approved",
+      "fallback_strategy": "Use custom vector/template graphic from internal library.",
+      "priority": "high"
+    },
+    {
+      "asset_id": "pitch_graphic",
+      "asset_name": "Pitch background",
+      "asset_type": "pitch",
+      "category": "football",
+      "required": true,
+      "scenes_used": [
+        "scene-04",
+        "scene-10"
+      ],
+      "purpose": "Support scene-04, scene-10",
+      "recommended_format": "svg/png",
+      "recommended_dimensions": "1080x1080",
+      "source_strategy": "custom pitch diagram",
+      "legal_status": "approved",
+      "fallback_strategy": "Use custom vector/template graphic from internal library.",
+      "priority": "high"
+    },
+    {
+      "asset_id": "pressing_icon",
+      "asset_name": "Pressing icon",
+      "asset_type": "icon",
+      "category": "football",
+      "required": true,
+      "scenes_used": [],
+      "purpose": "Support the video package",
+      "recommended_format": "svg",
+      "recommended_dimensions": "256x256",
+      "source_strategy": "custom icon",
+      "legal_status": "approved",
+      "fallback_strategy": "Use custom vector/template graphic from internal library.",
+      "priority": "high"
+    },
+    {
+      "asset_id": "tactical_arrows",
+      "asset_name": "Tactical arrows",
+      "asset_type": "icon",
+      "category": "football",
+      "required": true,
+      "scenes_used": [],
+      "purpose": "Support the video package",
+      "recommended_format": "svg",
+      "recommended_dimensions": "256x256",
+      "source_strategy": "custom vector",
+      "legal_status": "approved",
+      "fallback_strategy": "Use custom vector/template graphic from internal library.",
+      "priority": "high"
+    },
+    {
+      "asset_id": "team_logo_away",
+      "asset_name": "Arsenal badge",
+      "asset_type": "logo",
+      "category": "match",
+      "required": true,
+      "scenes_used": [],
+      "purpose": "Support the video package",
+      "recommended_format": "svg/png",
+      "recommended_dimensions": "512x512",
+      "source_strategy": "approved team badge source",
+      "legal_status": "needs_review",
+      "fallback_strategy": "Use text initials in approved template until badge is confirmed.",
+      "priority": "high"
+    },
+    {
+      "asset_id": "team_logo_home",
+      "asset_name": "Liverpool badge",
+      "asset_type": "logo",
+      "category": "match",
+      "required": true,
+      "scenes_used": [
+        "scene-06"
+      ],
+      "purpose": "Support scene-06",
+      "recommended_format": "svg/png",
+      "recommended_dimensions": "512x512",
+      "source_strategy": "approved team badge source",
+      "legal_status": "needs_review",
+      "fallback_strategy": "Use text initials in approved template until badge is confirmed.",
+      "priority": "high"
+    },
+    {
+      "asset_id": "team_logos",
+      "asset_name": "Liverpool and Arsenal badges",
+      "asset_type": "logo",
+      "category": "match",
+      "required": true,
+      "scenes_used": [
+        "scene-02",
+        "scene-03",
+        "scene-04",
+        "scene-05",
+        "scene-07",
+        "scene-08",
+        "scene-09",
+        "scene-11"
+      ],
+      "purpose": "Support scene-02, scene-03, scene-04, scene-05, scene-07, scene-08, scene-09, scene-11",
+      "recommended_format": "svg/png",
+      "recommended_dimensions": "512x512",
+      "source_strategy": "approved team badge source",
+      "legal_status": "needs_review",
+      "fallback_strategy": "Use text initials in approved template until badge is confirmed.",
+      "priority": "high"
+    },
+    {
+      "asset_id": "watermark",
+      "asset_name": "INSIGHT FOOTBALL watermark",
+      "asset_type": "logo",
+      "category": "brand",
+      "required": true,
+      "scenes_used": [],
+      "purpose": "Support the video package",
+      "recommended_format": "png",
+      "recommended_dimensions": "512x512",
+      "source_strategy": "internal approved brand kit",
+      "legal_status": "approved",
+      "fallback_strategy": "Use custom vector/template graphic from internal library.",
+      "priority": "high"
+    },
+    {
+      "asset_id": "wordmark",
+      "asset_name": "INSIGHT FOOTBALL wordmark",
+      "asset_type": "logo",
+      "category": "brand",
+      "required": true,
+      "scenes_used": [],
+      "purpose": "Support the video package",
+      "recommended_format": "svg/png",
+      "recommended_dimensions": "512x512",
+      "source_strategy": "internal approved brand kit",
+      "legal_status": "approved",
+      "fallback_strategy": "Use custom vector/template graphic from internal library.",
+      "priority": "high"
+    }
+  ],
+  "optional_assets": [
+    {
+      "asset_id": "player_image",
+      "asset_name": "Player cutout",
+      "asset_type": "photo",
+      "category": "optional",
+      "required": false,
+      "scenes_used": [
+        "scene-10"
+      ],
+      "purpose": "Support scene-10",
+      "recommended_format": "png",
+      "recommended_dimensions": "1080x1920",
+      "source_strategy": "manual upload only",
+      "legal_status": "needs_review",
+      "fallback_strategy": "Replace with generated illustration or pitch graphic.",
+      "priority": "low"
+    },
+    {
+      "asset_id": "stadium_image",
+      "asset_name": "Stadium-style background",
+      "asset_type": "illustration",
+      "category": "optional",
+      "required": false,
+      "scenes_used": [],
+      "purpose": "Support the video package",
+      "recommended_format": "png",
+      "recommended_dimensions": "1080x1920",
+      "source_strategy": "generated illustration",
+      "legal_status": "approved",
+      "fallback_strategy": "Use custom vector/template graphic from internal library.",
+      "priority": "low"
+    }
+  ],
+  "reusable_assets": [
+    {
+      "asset_id": "background_graphic",
+      "asset_name": "Clean match background",
+      "asset_type": "background",
+      "category": "brand",
+      "required": true,
+      "scenes_used": [
+        "scene-01"
+      ],
+      "purpose": "Support scene-01",
+      "recommended_format": "png",
+      "recommended_dimensions": "1080x1920",
+      "source_strategy": "custom graphic",
+      "legal_status": "approved",
+      "fallback_strategy": "Use custom vector/template graphic from internal library.",
+      "priority": "high"
+    },
+    {
+      "asset_id": "brand_logo",
+      "asset_name": "INSIGHT FOOTBALL logo",
+      "asset_type": "logo",
+      "category": "brand",
+      "required": true,
+      "scenes_used": [
+        "scene-01"
+      ],
+      "purpose": "Support scene-01",
+      "recommended_format": "svg/png",
+      "recommended_dimensions": "512x512",
+      "source_strategy": "internal approved brand kit",
+      "legal_status": "approved",
+      "fallback_strategy": "Use custom vector/template graphic from internal library.",
+      "priority": "high"
+    },
+    {
+      "asset_id": "comment_icon",
+      "asset_name": "Comment icon",
+      "asset_type": "icon",
+      "category": "football",
+      "required": true,
+      "scenes_used": [
+        "scene-11"
+      ],
+      "purpose": "Support scene-11",
+      "recommended_format": "svg",
+      "recommended_dimensions": "256x256",
+      "source_strategy": "custom icon",
+      "legal_status": "approved",
+      "fallback_strategy": "Use custom vector/template graphic from internal library.",
+      "priority": "high"
+    },
+    {
+      "asset_id": "dashboard_panel",
+      "asset_name": "Insight dashboard panel",
+      "asset_type": "card",
+      "category": "dashboard",
+      "required": true,
+      "scenes_used": [
+        "scene-08",
+        "scene-09"
+      ],
+      "purpose": "Support scene-08, scene-09",
+      "recommended_format": "json/png",
+      "recommended_dimensions": "900x520",
+      "source_strategy": "template graphic",
+      "legal_status": "approved",
+      "fallback_strategy": "Use custom vector/template graphic from internal library.",
+      "priority": "high"
+    },
+    {
+      "asset_id": "data_card",
+      "asset_name": "Surprising detail card",
+      "asset_type": "card",
+      "category": "dashboard",
+      "required": true,
+      "scenes_used": [
+        "scene-02",
+        "scene-06"
+      ],
+      "purpose": "Support scene-02, scene-06",
+      "recommended_format": "json/png",
+      "recommended_dimensions": "900x520",
+      "source_strategy": "template graphic",
+      "legal_status": "approved",
+      "fallback_strategy": "Use custom vector/template graphic from internal library.",
+      "priority": "high"
+    },
+    {
+      "asset_id": "goal_icon",
+      "asset_name": "Goal icon",
+      "asset_type": "icon",
+      "category": "football",
+      "required": true,
+      "scenes_used": [],
+      "purpose": "Support the video package",
+      "recommended_format": "svg",
+      "recommended_dimensions": "256x256",
+      "source_strategy": "custom icon",
+      "legal_status": "approved",
+      "fallback_strategy": "Use custom vector/template graphic from internal library.",
+      "priority": "high"
+    },
+    {
+      "asset_id": "intro_frame",
+      "asset_name": "Intro frame",
+      "asset_type": "template",
+      "category": "brand",
+      "required": true,
+      "scenes_used": [],
+      "purpose": "Support the video package",
+      "recommended_format": "png/json",
+      "recommended_dimensions": "1080x1920",
+      "source_strategy": "template graphic",
+      "legal_status": "approved",
+      "fallback_strategy": "Use custom vector/template graphic from internal library.",
+      "priority": "high"
+    },
+    {
+      "asset_id": "outro_frame",
+      "asset_name": "Outro frame",
+      "asset_type": "template",
+      "category": "brand",
+      "required": true,
+      "scenes_used": [],
+      "purpose": "Support the video package",
+      "recommended_format": "png/json",
+      "recommended_dimensions": "1080x1920",
+      "source_strategy": "template graphic",
+      "legal_status": "approved",
+      "fallback_strategy": "Use custom vector/template graphic from internal library.",
+      "priority": "high"
+    },
+    {
+      "asset_id": "pitch_graphic",
+      "asset_name": "Pitch background",
+      "asset_type": "pitch",
+      "category": "football",
+      "required": true,
+      "scenes_used": [
+        "scene-04",
+        "scene-10"
+      ],
+      "purpose": "Support scene-04, scene-10",
+      "recommended_format": "svg/png",
+      "recommended_dimensions": "1080x1080",
+      "source_strategy": "custom pitch diagram",
+      "legal_status": "approved",
+      "fallback_strategy": "Use custom vector/template graphic from internal library.",
+      "priority": "high"
+    },
+    {
+      "asset_id": "pressing_icon",
+      "asset_name": "Pressing icon",
+      "asset_type": "icon",
+      "category": "football",
+      "required": true,
+      "scenes_used": [],
+      "purpose": "Support the video package",
+      "recommended_format": "svg",
+      "recommended_dimensions": "256x256",
+      "source_strategy": "custom icon",
+      "legal_status": "approved",
+      "fallback_strategy": "Use custom vector/template graphic from internal library.",
+      "priority": "high"
+    },
+    {
+      "asset_id": "tactical_arrows",
+      "asset_name": "Tactical arrows",
+      "asset_type": "icon",
+      "category": "football",
+      "required": true,
+      "scenes_used": [],
+      "purpose": "Support the video package",
+      "recommended_format": "svg",
+      "recommended_dimensions": "256x256",
+      "source_strategy": "custom vector",
+      "legal_status": "approved",
+      "fallback_strategy": "Use custom vector/template graphic from internal library.",
+      "priority": "high"
+    },
+    {
+      "asset_id": "watermark",
+      "asset_name": "INSIGHT FOOTBALL watermark",
+      "asset_type": "logo",
+      "category": "brand",
+      "required": true,
+      "scenes_used": [],
+      "purpose": "Support the video package",
+      "recommended_format": "png",
+      "recommended_dimensions": "512x512",
+      "source_strategy": "internal approved brand kit",
+      "legal_status": "approved",
+      "fallback_strategy": "Use custom vector/template graphic from internal library.",
+      "priority": "high"
+    },
+    {
+      "asset_id": "wordmark",
+      "asset_name": "INSIGHT FOOTBALL wordmark",
+      "asset_type": "logo",
+      "category": "brand",
+      "required": true,
+      "scenes_used": [],
+      "purpose": "Support the video package",
+      "recommended_format": "svg/png",
+      "recommended_dimensions": "512x512",
+      "source_strategy": "internal approved brand kit",
+      "legal_status": "approved",
+      "fallback_strategy": "Use custom vector/template graphic from internal library.",
+      "priority": "high"
+    }
+  ],
+  "scene_asset_map": [
+    {
+      "scene_id": "scene-01",
+      "scene_type": "Brand Opening",
+      "asset_ids": [
+        "brand_logo",
+        "background_graphic"
+      ]
+    },
+    {
+      "scene_id": "scene-02",
+      "scene_type": "Surprising Fact",
+      "asset_ids": [
+        "team_logos",
+        "data_card"
+      ]
+    },
+    {
+      "scene_id": "scene-03",
+      "scene_type": "Central Question",
+      "asset_ids": [
+        "team_logos"
+      ]
+    },
+    {
+      "scene_id": "scene-04",
+      "scene_type": "Tactical Moment",
+      "asset_ids": [
+        "pitch_graphic",
+        "team_logos"
+      ]
+    },
+    {
+      "scene_id": "scene-05",
+      "scene_type": "Team Comparison",
+      "asset_ids": [
+        "team_logos"
+      ]
+    },
+    {
+      "scene_id": "scene-06",
+      "scene_type": "Evidence Card",
+      "asset_ids": [
+        "data_card",
+        "team_logo_home"
+      ]
+    },
+    {
+      "scene_id": "scene-07",
+      "scene_type": "Team Comparison",
+      "asset_ids": [
+        "team_logos"
+      ]
+    },
+    {
+      "scene_id": "scene-08",
+      "scene_type": "Insight Dashboard",
+      "asset_ids": [
+        "dashboard_panel",
+        "team_logos"
+      ]
+    },
+    {
+      "scene_id": "scene-09",
+      "scene_type": "Insight Dashboard",
+      "asset_ids": [
+        "dashboard_panel",
+        "team_logos"
+      ]
+    },
+    {
+      "scene_id": "scene-10",
+      "scene_type": "X-Factor Player",
+      "asset_ids": [
+        "player_image",
+        "pitch_graphic"
+      ]
+    },
+    {
+      "scene_id": "scene-11",
+      "scene_type": "Final Question / CTA",
+      "asset_ids": [
+        "team_logos",
+        "comment_icon"
+      ]
+    }
+  ],
+  "missing_assets": [
+    "competition_logo",
+    "player_image",
+    "team_logo_away",
+    "team_logo_home",
+    "team_logos"
+  ],
+  "legal_warnings": [
+    "Do not use copyrighted broadcast footage.",
+    "Do not use unlicensed player photos unless manually approved.",
+    "Use approved sources for club badges and competition marks.",
+    "Avoid unsafe scraped images and unclear source ownership."
+  ],
+  "asset_priority": {
+    "high": [
+      "background_graphic",
+      "brand_logo",
+      "comment_icon",
+      "competition_logo",
+      "dashboard_panel",
+      "data_card",
+      "goal_icon",
+      "intro_frame",
+      "outro_frame",
+      "pitch_graphic",
+      "pressing_icon",
+      "tactical_arrows",
+      "team_logo_away",
+      "team_logo_home",
+      "team_logos",
+      "watermark",
+      "wordmark"
+    ],
+    "medium": [],
+    "low": [
+      "player_image",
+      "stadium_image"
+    ]
+  },
+  "approval_status": "approved",
+  "next_component": "Search Planner"
+}

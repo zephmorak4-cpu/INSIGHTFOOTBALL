@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "VisualProductionPackage",
+  "type": "object",
+  "required": ["production_id", "match", "competition", "visual_plan", "camera_plan", "motion_plan", "caption_plan", "dashboard_plan", "validation_report", "approval_status", "next_component"],
+  "properties": {
+    "production_id": { "type": "string" },
+    "visual_plan": { "type": "object" },
+    "camera_plan": { "type": "object" },
+    "motion_plan": { "type": "object" },
+    "caption_plan": { "type": "object" },
+    "dashboard_plan": { "type": "object" },
+    "validation_report": { "type": "object" },
+    "approval_status": { "type": "string" }
+  }
+}
+

@@ -1,0 +1,98 @@
+{
+  "production_id": "if-2026-07-06-liverpool-arsenal",
+  "component_id": "IF-MAE04",
+  "component_name": "Background Asset Manager",
+  "timestamp": "2026-07-08T11:37:14.235343+00:00",
+  "background_assets": [
+    {
+      "asset_id": "background_graphic",
+      "asset_name": "Clean match background fallback background",
+      "asset_type": "fallback",
+      "category": "fallback",
+      "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\background_graphic.svg",
+      "file_format": "svg",
+      "dimensions": "512x512",
+      "legal_status": "approved_placeholder",
+      "source": "deterministic_placeholder",
+      "scenes_used": [],
+      "reusable": true,
+      "checksum": "f542d3fc2ca1dc73f244e4b07760cfdb2def684ab28fb33cf3f516aa6bde47b3",
+      "fallback": true
+    },
+    {
+      "asset_id": "pitch_graphic",
+      "asset_name": "Pitch background fallback background",
+      "asset_type": "fallback",
+      "category": "fallback",
+      "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\pitch_graphic.svg",
+      "file_format": "svg",
+      "dimensions": "512x512",
+      "legal_status": "approved_placeholder",
+      "source": "deterministic_placeholder",
+      "scenes_used": [],
+      "reusable": true,
+      "checksum": "73df0b7d2c54361c2d77a76a8af480c0f1bc7bee8a4df9c1771ad943cd7d1c5b",
+      "fallback": true
+    }
+  ],
+  "generated_background_tasks": [
+    {
+      "task_id": "task-background_graphic",
+      "asset_id": "background_graphic",
+      "asset_type": "background",
+      "description": "Create a clean football intelligence background; avoid broadcast footage.",
+      "scenes_used": [
+        "scene-01"
+      ],
+      "priority": "high",
+      "legal_notes": "Use internally generated or placeholder background only."
+    },
+    {
+      "task_id": "task-pitch_graphic",
+      "asset_id": "pitch_graphic",
+      "asset_type": "background",
+      "description": "Create a clean football intelligence background; avoid broadcast footage.",
+      "scenes_used": [
+        "scene-04",
+        "scene-10"
+      ],
+      "priority": "high",
+      "legal_notes": "Use internally generated or placeholder background only."
+    }
+  ],
+  "fallback_backgrounds": [
+    {
+      "asset_id": "background_graphic",
+      "asset_name": "Clean match background fallback background",
+      "asset_type": "fallback",
+      "category": "fallback",
+      "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\background_graphic.svg",
+      "file_format": "svg",
+      "dimensions": "512x512",
+      "legal_status": "approved_placeholder",
+      "source": "deterministic_placeholder",
+      "scenes_used": [],
+      "reusable": true,
+      "checksum": "f542d3fc2ca1dc73f244e4b07760cfdb2def684ab28fb33cf3f516aa6bde47b3",
+      "fallback": true
+    },
+    {
+      "asset_id": "pitch_graphic",
+      "asset_name": "Pitch background fallback background",
+      "asset_type": "fallback",
+      "category": "fallback",
+      "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\pitch_graphic.svg",
+      "file_format": "svg",
+      "dimensions": "512x512",
+      "legal_status": "approved_placeholder",
+      "source": "deterministic_placeholder",
+      "scenes_used": [],
+      "reusable": true,
+      "checksum": "73df0b7d2c54361c2d77a76a8af480c0f1bc7bee8a4df9c1771ad943cd7d1c5b",
+      "fallback": true
+    }
+  ],
+  "legal_warnings": [],
+  "approval_status": "approved",
+  "next_component": "Icon Manager"
+}

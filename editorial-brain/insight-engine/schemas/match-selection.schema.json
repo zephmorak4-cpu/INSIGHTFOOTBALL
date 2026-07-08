@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "InsightFootballMatchSelectionForInsightEngine",
+  "type": "object",
+  "required": ["agent_id", "production_id", "selected_match", "approval_status", "next_agent"],
+  "properties": {
+    "agent_id": { "type": "string", "enum": ["IF-A01"] },
+    "production_id": { "type": "string", "minLength": 1 },
+    "selected_match": { "type": "object" },
+    "approval_status": { "type": "string", "enum": ["approved"] },
+    "next_agent": { "type": "string", "enum": ["IF-A02"] }
+  }
+}

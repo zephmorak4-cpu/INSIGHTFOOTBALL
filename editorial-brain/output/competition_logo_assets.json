@@ -1,0 +1,29 @@
+{
+  "production_id": "if-2026-07-06-liverpool-arsenal",
+  "component_id": "IF-MAE03",
+  "component_name": "Competition Logo Manager",
+  "timestamp": "2026-07-08T11:37:14.222030+00:00",
+  "competition": "Premier League",
+  "competition_logo": null,
+  "fallback_logo": {
+    "asset_id": "competition_logo",
+    "asset_name": "Premier League text logo fallback",
+    "asset_type": "fallback",
+    "category": "fallback",
+    "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\competition_logo.svg",
+    "file_format": "svg",
+    "dimensions": "512x512",
+    "legal_status": "approved_placeholder",
+    "source": "deterministic_placeholder",
+    "scenes_used": [],
+    "reusable": true,
+    "checksum": "b4be60057d71cabb008d2672c14c2afe7f24b2e7c875531703a2aa949bb1334f",
+    "fallback": true
+  },
+  "missing_logo": true,
+  "legal_warnings": [
+    "Premier League logo requires rights confirmation."
+  ],
+  "approval_status": "approved",
+  "next_component": "Background Asset Manager"
+}

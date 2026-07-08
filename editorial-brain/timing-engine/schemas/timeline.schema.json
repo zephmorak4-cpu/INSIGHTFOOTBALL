@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "Timeline",
+  "type": "object",
+  "required": ["production_id", "component_id", "component_name", "timestamp", "total_duration_seconds", "fps", "aspect_ratio", "resolution", "scenes", "timing_warnings", "timing_errors", "approval_status"],
+  "properties": {
+    "production_id": { "type": "string" },
+    "total_duration_seconds": { "type": "number" },
+    "fps": { "type": "integer" },
+    "aspect_ratio": { "type": "string" },
+    "resolution": { "type": "string" },
+    "scenes": { "type": "array" },
+    "timing_warnings": { "type": "array" },
+    "timing_errors": { "type": "array" },
+    "approval_status": { "type": "string" }
+  }
+}
+

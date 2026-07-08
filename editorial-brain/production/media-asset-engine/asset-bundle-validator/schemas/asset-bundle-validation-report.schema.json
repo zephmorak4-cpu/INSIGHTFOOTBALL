@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","type":"object","required":["production_id","component_id","checks","render_readiness_status","approval_status"],"properties":{"component_id":{"const":"IF-MAE08"},"render_readiness_status":{"enum":["ready","ready_with_fallbacks","needs_manual_assets","blocked_legal_risk","failed_validation"]}}}

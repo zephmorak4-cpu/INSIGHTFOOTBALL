@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "FinalScriptPackage",
+  "type": "object",
+  "required": ["production_id", "match", "competition", "source_production_brief", "final_voiceover", "word_count", "estimated_duration_seconds", "hook", "central_question", "main_body", "conclusion", "cta", "claims_used", "claims_rejected", "locked_fields", "script_quality_scores", "warnings", "human_review_flags", "approval_status", "next_agent"],
+  "properties": {
+    "production_id": { "type": "string" },
+    "match": { "type": "object" },
+    "competition": { "type": "string" },
+    "final_voiceover": { "type": "string" },
+    "word_count": { "type": "integer" },
+    "estimated_duration_seconds": { "type": "integer" },
+    "claims_used": { "type": "array" },
+    "claims_rejected": { "type": "array" },
+    "locked_fields": { "type": "object" },
+    "script_quality_scores": { "type": "object" },
+    "warnings": { "type": "array" },
+    "human_review_flags": { "type": "array" },
+    "approval_status": { "type": "string", "enum": ["approved", "blocked"] },
+    "next_agent": { "type": "string" }
+  }
+}
+

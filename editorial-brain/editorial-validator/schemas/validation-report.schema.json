@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "EditorialValidationReport",
+  "type": "object",
+  "required": [
+    "production_id",
+    "validator_id",
+    "validator_name",
+    "timestamp",
+    "input_package_version",
+    "validation_status",
+    "overall_score",
+    "story_score",
+    "evidence_score",
+    "clarity_score",
+    "insight_score",
+    "brand_safety_score",
+    "issues_found",
+    "required_fixes",
+    "warnings",
+    "human_review_flags",
+    "approval_status",
+    "next_component"
+  ],
+  "properties": {
+    "production_id": { "type": "string" },
+    "approval_status": { "type": "string", "enum": ["approved", "rejected", "needs_human_review"] },
+    "issues_found": { "type": "array" },
+    "required_fixes": { "type": "array" }
+  }
+}

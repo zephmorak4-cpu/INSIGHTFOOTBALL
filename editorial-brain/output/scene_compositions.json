@@ -1,0 +1,1276 @@
+{
+  "production_id": "if-2026-07-06-liverpool-arsenal",
+  "component_id": "IF-TL02",
+  "component_name": "Scene Composer",
+  "timestamp": "2026-07-08T11:37:41.932834+00:00",
+  "scenes": [
+    {
+      "scene_id": "scene-01",
+      "template_id": "brand_opening",
+      "duration_seconds": 2.91,
+      "background": {
+        "asset_id": "background_graphic",
+        "asset_name": "Clean match background",
+        "asset_type": "background",
+        "category": "brand",
+        "required": true,
+        "scenes_used": [
+          "scene-01"
+        ],
+        "purpose": "Support scene-01",
+        "recommended_format": "png",
+        "recommended_dimensions": "1080x1920",
+        "source_strategy": "custom graphic",
+        "legal_status": "approved",
+        "fallback_strategy": "Use custom vector/template graphic from internal library.",
+        "priority": "high"
+      },
+      "foreground": [
+        {
+          "asset_id": "brand_logo",
+          "asset_name": "INSIGHT FOOTBALL logo",
+          "asset_type": "logo",
+          "category": "brand",
+          "required": true,
+          "scenes_used": [
+            "scene-01"
+          ],
+          "purpose": "Support scene-01",
+          "recommended_format": "svg/png",
+          "recommended_dimensions": "512x512",
+          "source_strategy": "internal approved brand kit",
+          "legal_status": "approved",
+          "fallback_strategy": "Use custom vector/template graphic from internal library.",
+          "priority": "high"
+        },
+        {
+          "asset_id": "background_graphic",
+          "asset_name": "Clean match background",
+          "asset_type": "background",
+          "category": "brand",
+          "required": true,
+          "scenes_used": [
+            "scene-01"
+          ],
+          "purpose": "Support scene-01",
+          "recommended_format": "png",
+          "recommended_dimensions": "1080x1920",
+          "source_strategy": "custom graphic",
+          "legal_status": "approved",
+          "fallback_strategy": "Use custom vector/template graphic from internal library.",
+          "priority": "high"
+        }
+      ],
+      "text_elements": [
+        {
+          "type": "primary",
+          "text": "Before the first whistle"
+        },
+        {
+          "type": "secondary",
+          "text": "Make the brand opening easy to understand in one glance."
+        }
+      ],
+      "graphic_elements": [
+        {
+          "asset_id": "graphic-match_title_card",
+          "missing": true,
+          "fallback_strategy": "Use text/card fallback if renderer needs a concrete layer."
+        }
+      ],
+      "logo_elements": [
+        {
+          "asset_id": "brand_logo",
+          "asset_name": "INSIGHT FOOTBALL logo",
+          "asset_type": "logo",
+          "category": "brand",
+          "required": true,
+          "scenes_used": [
+            "scene-01"
+          ],
+          "purpose": "Support scene-01",
+          "recommended_format": "svg/png",
+          "recommended_dimensions": "512x512",
+          "source_strategy": "internal approved brand kit",
+          "legal_status": "approved",
+          "fallback_strategy": "Use custom vector/template graphic from internal library.",
+          "priority": "high"
+        }
+      ],
+      "dashboard_elements": [],
+      "caption_element": {
+        "text": "Before the first whistle",
+        "style": "lower_safe_two_line",
+        "position": "lower_third_safe"
+      },
+      "motion_elements": [
+        {
+          "preset": "Fade",
+          "duration": 1.2
+        }
+      ],
+      "camera_instruction": "Reveal",
+      "transition_instruction": "quick_cut",
+      "audio_segment_ref": {
+        "start": 0.0,
+        "end": 2.91
+      },
+      "render_priority": "normal",
+      "fallback_notes": "Uses safe placeholders where approved local assets are unavailable."
+    },
+    {
+      "scene_id": "scene-02",
+      "template_id": "stat_card",
+      "duration_seconds": 7.57,
+      "background": {
+        "asset_id": "background_graphic",
+        "asset_name": "Clean match background",
+        "asset_type": "background",
+        "category": "brand",
+        "required": true,
+        "scenes_used": [
+          "scene-01"
+        ],
+        "purpose": "Support scene-01",
+        "recommended_format": "png",
+        "recommended_dimensions": "1080x1920",
+        "source_strategy": "custom graphic",
+        "legal_status": "approved",
+        "fallback_strategy": "Use custom vector/template graphic from internal library.",
+        "priority": "high"
+      },
+      "foreground": [
+        {
+          "asset_id": "team_logos",
+          "asset_name": "Liverpool and Arsenal badges",
+          "asset_type": "logo",
+          "category": "match",
+          "required": true,
+          "scenes_used": [
+            "scene-02",
+            "scene-03",
+            "scene-04",
+            "scene-05",
+            "scene-07",
+            "scene-08",
+            "scene-09",
+            "scene-11"
+          ],
+          "legal_status": "needs_review",
+          "fallback_strategy": "Use text initials in approved template until badge is confirmed.",
+          "priority": "high"
+        },
+        {
+          "asset_id": "data_card",
+          "asset_name": "Surprising detail card",
+          "asset_type": "card",
+          "category": "dashboard",
+          "required": true,
+          "scenes_used": [
+            "scene-02",
+            "scene-06"
+          ],
+          "purpose": "Support scene-02, scene-06",
+          "recommended_format": "json/png",
+          "recommended_dimensions": "900x520",
+          "source_strategy": "template graphic",
+          "legal_status": "approved",
+          "fallback_strategy": "Use custom vector/template graphic from internal library.",
+          "priority": "high"
+        }
+      ],
+      "text_elements": [
+        {
+          "type": "primary",
+          "text": "Sample data: Liverpool have started quickly in recent home..."
+        },
+        {
+          "type": "secondary",
+          "text": "Make the surprising fact easy to understand in one glance."
+        }
+      ],
+      "graphic_elements": [
+        {
+          "asset_id": "graphic-surprising_fact_card",
+          "missing": true,
+          "fallback_strategy": "Use text/card fallback if renderer needs a concrete layer."
+        }
+      ],
+      "logo_elements": [
+        {
+          "asset_id": "team_logos",
+          "asset_name": "Liverpool and Arsenal badges",
+          "asset_type": "logo",
+          "category": "match",
+          "required": true,
+          "scenes_used": [
+            "scene-02",
+            "scene-03",
+            "scene-04",
+            "scene-05",
+            "scene-07",
+            "scene-08",
+            "scene-09",
+            "scene-11"
+          ],
+          "legal_status": "needs_review",
+          "fallback_strategy": "Use text initials in approved template until badge is confirmed.",
+          "priority": "high"
+        }
+      ],
+      "dashboard_elements": [],
+      "caption_element": {
+        "text": "Sample data: Liverpool have started quickly in\nrecent home",
+        "style": "lower_safe_two_line",
+        "position": "lower_third_safe"
+      },
+      "motion_elements": [
+        {
+          "preset": "Counter",
+          "duration": 1.2
+        }
+      ],
+      "camera_instruction": "Punch In",
+      "transition_instruction": "quick_cut",
+      "audio_segment_ref": {
+        "start": 2.91,
+        "end": 10.48
+      },
+      "render_priority": "normal",
+      "fallback_notes": "Uses safe placeholders where approved local assets are unavailable."
+    },
+    {
+      "scene_id": "scene-03",
+      "template_id": "question_card",
+      "duration_seconds": 4.58,
+      "background": {
+        "asset_id": "background_graphic",
+        "asset_name": "Clean match background",
+        "asset_type": "background",
+        "category": "brand",
+        "required": true,
+        "scenes_used": [
+          "scene-01"
+        ],
+        "purpose": "Support scene-01",
+        "recommended_format": "png",
+        "recommended_dimensions": "1080x1920",
+        "source_strategy": "custom graphic",
+        "legal_status": "approved",
+        "fallback_strategy": "Use custom vector/template graphic from internal library.",
+        "priority": "high"
+      },
+      "foreground": [
+        {
+          "asset_id": "team_logos",
+          "asset_name": "Liverpool and Arsenal badges",
+          "asset_type": "logo",
+          "category": "match",
+          "required": true,
+          "scenes_used": [
+            "scene-02",
+            "scene-03",
+            "scene-04",
+            "scene-05",
+            "scene-07",
+            "scene-08",
+            "scene-09",
+            "scene-11"
+          ],
+          "legal_status": "needs_review",
+          "fallback_strategy": "Use text initials in approved template until badge is confirmed.",
+          "priority": "high"
+        }
+      ],
+      "text_elements": [
+        {
+          "type": "primary",
+          "text": "Can Arsenal survive Liverpool's fast start?"
+        },
+        {
+          "type": "secondary",
+          "text": "Make the central question easy to understand in one glance."
+        }
+      ],
+      "graphic_elements": [
+        {
+          "asset_id": "graphic-central_question_card",
+          "missing": true,
+          "fallback_strategy": "Use text/card fallback if renderer needs a concrete layer."
+        }
+      ],
+      "logo_elements": [
+        {
+          "asset_id": "team_logos",
+          "asset_name": "Liverpool and Arsenal badges",
+          "asset_type": "logo",
+          "category": "match",
+          "required": true,
+          "scenes_used": [
+            "scene-02",
+            "scene-03",
+            "scene-04",
+            "scene-05",
+            "scene-07",
+            "scene-08",
+            "scene-09",
+            "scene-11"
+          ],
+          "legal_status": "needs_review",
+          "fallback_strategy": "Use text initials in approved template until badge is confirmed.",
+          "priority": "high"
+        }
+      ],
+      "dashboard_elements": [],
+      "caption_element": {
+        "text": "Can Arsenal survive Liverpool's fast start?",
+        "style": "lower_safe_two_line",
+        "position": "lower_third_safe"
+      },
+      "motion_elements": [
+        {
+          "preset": "Text Reveal",
+          "duration": 1.2
+        }
+      ],
+      "camera_instruction": "Slow Zoom",
+      "transition_instruction": "quick_cut",
+      "audio_segment_ref": {
+        "start": 10.48,
+        "end": 15.06
+      },
+      "render_priority": "high",
+      "fallback_notes": "Uses safe placeholders where approved local assets are unavailable."
+    },
+    {
+      "scene_id": "scene-04",
+      "template_id": "pitch_tactics",
+      "duration_seconds": 4.16,
+      "background": {
+        "asset_id": "pitch_graphic",
+        "asset_name": "Pitch background fallback background",
+        "asset_type": "fallback",
+        "category": "fallback",
+        "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\pitch_graphic.svg",
+        "file_format": "svg",
+        "dimensions": "512x512",
+        "legal_status": "approved_placeholder",
+        "source": "deterministic_placeholder",
+        "scenes_used": [],
+        "reusable": true,
+        "checksum": "73df0b7d2c54361c2d77a76a8af480c0f1bc7bee8a4df9c1771ad943cd7d1c5b",
+        "fallback": true
+      },
+      "foreground": [
+        {
+          "asset_id": "pitch_graphic",
+          "asset_name": "Pitch background fallback background",
+          "asset_type": "fallback",
+          "category": "fallback",
+          "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\pitch_graphic.svg",
+          "file_format": "svg",
+          "dimensions": "512x512",
+          "legal_status": "approved_placeholder",
+          "source": "deterministic_placeholder",
+          "scenes_used": [],
+          "reusable": true,
+          "checksum": "73df0b7d2c54361c2d77a76a8af480c0f1bc7bee8a4df9c1771ad943cd7d1c5b",
+          "fallback": true
+        },
+        {
+          "asset_id": "team_logos",
+          "asset_name": "Liverpool and Arsenal badges",
+          "asset_type": "logo",
+          "category": "match",
+          "required": true,
+          "scenes_used": [
+            "scene-02",
+            "scene-03",
+            "scene-04",
+            "scene-05",
+            "scene-07",
+            "scene-08",
+            "scene-09",
+            "scene-11"
+          ],
+          "legal_status": "needs_review",
+          "fallback_strategy": "Use text initials in approved template until badge is confirmed.",
+          "priority": "high"
+        }
+      ],
+      "text_elements": [
+        {
+          "type": "primary",
+          "text": "Liverpool usually start aggressively, pressing high and forcing rushed..."
+        },
+        {
+          "type": "secondary",
+          "text": "Make the tactical moment easy to understand in one glance."
+        }
+      ],
+      "graphic_elements": [
+        {
+          "asset_id": "graphic-tactical_pitch_diagram",
+          "missing": true,
+          "fallback_strategy": "Use text/card fallback if renderer needs a concrete layer."
+        }
+      ],
+      "logo_elements": [
+        {
+          "asset_id": "team_logos",
+          "asset_name": "Liverpool and Arsenal badges",
+          "asset_type": "logo",
+          "category": "match",
+          "required": true,
+          "scenes_used": [
+            "scene-02",
+            "scene-03",
+            "scene-04",
+            "scene-05",
+            "scene-07",
+            "scene-08",
+            "scene-09",
+            "scene-11"
+          ],
+          "legal_status": "needs_review",
+          "fallback_strategy": "Use text initials in approved template until badge is confirmed.",
+          "priority": "high"
+        }
+      ],
+      "dashboard_elements": [],
+      "caption_element": {
+        "text": "Liverpool usually start aggressively, pressing high and\nforcing rushed",
+        "style": "lower_safe_two_line",
+        "position": "lower_third_safe"
+      },
+      "motion_elements": [
+        {
+          "preset": "Arrow Animation",
+          "duration": 1.2
+        }
+      ],
+      "camera_instruction": "Pan",
+      "transition_instruction": "quick_cut",
+      "audio_segment_ref": {
+        "start": 15.06,
+        "end": 19.22
+      },
+      "render_priority": "normal",
+      "fallback_notes": "Uses safe placeholders where approved local assets are unavailable."
+    },
+    {
+      "scene_id": "scene-05",
+      "template_id": "comparison_split",
+      "duration_seconds": 7.49,
+      "background": {
+        "asset_id": "background_graphic",
+        "asset_name": "Clean match background",
+        "asset_type": "background",
+        "category": "brand",
+        "required": true,
+        "scenes_used": [
+          "scene-01"
+        ],
+        "purpose": "Support scene-01",
+        "recommended_format": "png",
+        "recommended_dimensions": "1080x1920",
+        "source_strategy": "custom graphic",
+        "legal_status": "approved",
+        "fallback_strategy": "Use custom vector/template graphic from internal library.",
+        "priority": "high"
+      },
+      "foreground": [
+        {
+          "asset_id": "team_logos",
+          "asset_name": "Liverpool and Arsenal badges",
+          "asset_type": "logo",
+          "category": "match",
+          "required": true,
+          "scenes_used": [
+            "scene-02",
+            "scene-03",
+            "scene-04",
+            "scene-05",
+            "scene-07",
+            "scene-08",
+            "scene-09",
+            "scene-11"
+          ],
+          "legal_status": "needs_review",
+          "fallback_strategy": "Use text initials in approved template until badge is confirmed.",
+          "priority": "high"
+        }
+      ],
+      "text_elements": [
+        {
+          "type": "primary",
+          "text": "Arsenal have enough quality to play through it, but..."
+        },
+        {
+          "type": "secondary",
+          "text": "Make the team comparison easy to understand in one glance."
+        }
+      ],
+      "graphic_elements": [
+        {
+          "asset_id": "graphic-team_comparison_card",
+          "missing": true,
+          "fallback_strategy": "Use text/card fallback if renderer needs a concrete layer."
+        }
+      ],
+      "logo_elements": [
+        {
+          "asset_id": "team_logos",
+          "asset_name": "Liverpool and Arsenal badges",
+          "asset_type": "logo",
+          "category": "match",
+          "required": true,
+          "scenes_used": [
+            "scene-02",
+            "scene-03",
+            "scene-04",
+            "scene-05",
+            "scene-07",
+            "scene-08",
+            "scene-09",
+            "scene-11"
+          ],
+          "legal_status": "needs_review",
+          "fallback_strategy": "Use text initials in approved template until badge is confirmed.",
+          "priority": "high"
+        }
+      ],
+      "dashboard_elements": [],
+      "caption_element": {
+        "text": "Arsenal have enough quality to play through\nit, but",
+        "style": "lower_safe_two_line",
+        "position": "lower_third_safe"
+      },
+      "motion_elements": [
+        {
+          "preset": "Slide",
+          "duration": 1.2
+        }
+      ],
+      "camera_instruction": "Slide Left",
+      "transition_instruction": "quick_cut",
+      "audio_segment_ref": {
+        "start": 19.22,
+        "end": 26.71
+      },
+      "render_priority": "normal",
+      "fallback_notes": "Uses safe placeholders where approved local assets are unavailable."
+    },
+    {
+      "scene_id": "scene-06",
+      "template_id": "evidence_card",
+      "duration_seconds": 4.99,
+      "background": {
+        "asset_id": "background_graphic",
+        "asset_name": "Clean match background",
+        "asset_type": "background",
+        "category": "brand",
+        "required": true,
+        "scenes_used": [
+          "scene-01"
+        ],
+        "purpose": "Support scene-01",
+        "recommended_format": "png",
+        "recommended_dimensions": "1080x1920",
+        "source_strategy": "custom graphic",
+        "legal_status": "approved",
+        "fallback_strategy": "Use custom vector/template graphic from internal library.",
+        "priority": "high"
+      },
+      "foreground": [
+        {
+          "asset_id": "data_card",
+          "asset_name": "Surprising detail card",
+          "asset_type": "card",
+          "category": "dashboard",
+          "required": true,
+          "scenes_used": [
+            "scene-02",
+            "scene-06"
+          ],
+          "purpose": "Support scene-02, scene-06",
+          "recommended_format": "json/png",
+          "recommended_dimensions": "900x520",
+          "source_strategy": "template graphic",
+          "legal_status": "approved",
+          "fallback_strategy": "Use custom vector/template graphic from internal library.",
+          "priority": "high"
+        },
+        {
+          "asset_id": "team_logo_home",
+          "asset_name": "Liverpool badge fallback",
+          "asset_type": "fallback",
+          "category": "fallback",
+          "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\team_logo_home.svg",
+          "file_format": "svg",
+          "dimensions": "512x512",
+          "legal_status": "approved_placeholder",
+          "source": "deterministic_placeholder",
+          "scenes_used": [],
+          "reusable": true,
+          "checksum": "fc94dc5c1295f878cdc71c3857e0c7896386a1083007217574ce3518a00d77e6",
+          "fallback": true
+        }
+      ],
+      "text_elements": [
+        {
+          "type": "primary",
+          "text": "The evidence is simple: Liverpool usually make opponents uncomfortable..."
+        },
+        {
+          "type": "secondary",
+          "text": "Make the evidence card easy to understand in one glance."
+        }
+      ],
+      "graphic_elements": [
+        {
+          "asset_id": "graphic-evidence_card",
+          "missing": true,
+          "fallback_strategy": "Use text/card fallback if renderer needs a concrete layer."
+        }
+      ],
+      "logo_elements": [
+        {
+          "asset_id": "team_logo_home",
+          "asset_name": "Liverpool badge fallback",
+          "asset_type": "fallback",
+          "category": "fallback",
+          "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\team_logo_home.svg",
+          "file_format": "svg",
+          "dimensions": "512x512",
+          "legal_status": "approved_placeholder",
+          "source": "deterministic_placeholder",
+          "scenes_used": [],
+          "reusable": true,
+          "checksum": "fc94dc5c1295f878cdc71c3857e0c7896386a1083007217574ce3518a00d77e6",
+          "fallback": true
+        }
+      ],
+      "dashboard_elements": [],
+      "caption_element": {
+        "text": "The evidence is simple: Liverpool usually make\nopponents uncomfortable",
+        "style": "lower_safe_two_line",
+        "position": "lower_third_safe"
+      },
+      "motion_elements": [
+        {
+          "preset": "Pop",
+          "duration": 1.2
+        }
+      ],
+      "camera_instruction": "Static",
+      "transition_instruction": "quick_cut",
+      "audio_segment_ref": {
+        "start": 26.71,
+        "end": 31.7
+      },
+      "render_priority": "normal",
+      "fallback_notes": "Uses safe placeholders where approved local assets are unavailable."
+    },
+    {
+      "scene_id": "scene-07",
+      "template_id": "comparison_split",
+      "duration_seconds": 6.24,
+      "background": {
+        "asset_id": "background_graphic",
+        "asset_name": "Clean match background",
+        "asset_type": "background",
+        "category": "brand",
+        "required": true,
+        "scenes_used": [
+          "scene-01"
+        ],
+        "purpose": "Support scene-01",
+        "recommended_format": "png",
+        "recommended_dimensions": "1080x1920",
+        "source_strategy": "custom graphic",
+        "legal_status": "approved",
+        "fallback_strategy": "Use custom vector/template graphic from internal library.",
+        "priority": "high"
+      },
+      "foreground": [
+        {
+          "asset_id": "team_logos",
+          "asset_name": "Liverpool and Arsenal badges",
+          "asset_type": "logo",
+          "category": "match",
+          "required": true,
+          "scenes_used": [
+            "scene-02",
+            "scene-03",
+            "scene-04",
+            "scene-05",
+            "scene-07",
+            "scene-08",
+            "scene-09",
+            "scene-11"
+          ],
+          "legal_status": "needs_review",
+          "fallback_strategy": "Use text initials in approved template until badge is confirmed.",
+          "priority": "high"
+        }
+      ],
+      "text_elements": [
+        {
+          "type": "primary",
+          "text": "The balance matters too: Arsenal may be better prepared..."
+        },
+        {
+          "type": "secondary",
+          "text": "Make the team comparison easy to understand in one glance."
+        }
+      ],
+      "graphic_elements": [
+        {
+          "asset_id": "graphic-team_comparison_card",
+          "missing": true,
+          "fallback_strategy": "Use text/card fallback if renderer needs a concrete layer."
+        }
+      ],
+      "logo_elements": [
+        {
+          "asset_id": "team_logos",
+          "asset_name": "Liverpool and Arsenal badges",
+          "asset_type": "logo",
+          "category": "match",
+          "required": true,
+          "scenes_used": [
+            "scene-02",
+            "scene-03",
+            "scene-04",
+            "scene-05",
+            "scene-07",
+            "scene-08",
+            "scene-09",
+            "scene-11"
+          ],
+          "legal_status": "needs_review",
+          "fallback_strategy": "Use text initials in approved template until badge is confirmed.",
+          "priority": "high"
+        }
+      ],
+      "dashboard_elements": [],
+      "caption_element": {
+        "text": "The balance matters too: Arsenal may be\nbetter prepared",
+        "style": "lower_safe_two_line",
+        "position": "lower_third_safe"
+      },
+      "motion_elements": [
+        {
+          "preset": "Slide",
+          "duration": 1.2
+        }
+      ],
+      "camera_instruction": "Slide Left",
+      "transition_instruction": "quick_cut",
+      "audio_segment_ref": {
+        "start": 31.7,
+        "end": 37.94
+      },
+      "render_priority": "normal",
+      "fallback_notes": "Uses safe placeholders where approved local assets are unavailable."
+    },
+    {
+      "scene_id": "scene-08",
+      "template_id": "insight_dashboard",
+      "duration_seconds": 4.17,
+      "background": {
+        "asset_id": "dashboard_panel",
+        "asset_name": "Insight dashboard panel",
+        "asset_type": "card",
+        "category": "dashboard",
+        "required": true,
+        "scenes_used": [
+          "scene-08",
+          "scene-09"
+        ],
+        "purpose": "Support scene-08, scene-09",
+        "recommended_format": "json/png",
+        "recommended_dimensions": "900x520",
+        "source_strategy": "template graphic",
+        "legal_status": "approved",
+        "fallback_strategy": "Use custom vector/template graphic from internal library.",
+        "priority": "high"
+      },
+      "foreground": [
+        {
+          "asset_id": "dashboard_panel",
+          "asset_name": "Insight dashboard panel",
+          "asset_type": "card",
+          "category": "dashboard",
+          "required": true,
+          "scenes_used": [
+            "scene-08",
+            "scene-09"
+          ],
+          "purpose": "Support scene-08, scene-09",
+          "recommended_format": "json/png",
+          "recommended_dimensions": "900x520",
+          "source_strategy": "template graphic",
+          "legal_status": "approved",
+          "fallback_strategy": "Use custom vector/template graphic from internal library.",
+          "priority": "high"
+        },
+        {
+          "asset_id": "team_logos",
+          "asset_name": "Liverpool and Arsenal badges",
+          "asset_type": "logo",
+          "category": "match",
+          "required": true,
+          "scenes_used": [
+            "scene-02",
+            "scene-03",
+            "scene-04",
+            "scene-05",
+            "scene-07",
+            "scene-08",
+            "scene-09",
+            "scene-11"
+          ],
+          "legal_status": "needs_review",
+          "fallback_strategy": "Use text initials in approved template until badge is confirmed.",
+          "priority": "high"
+        }
+      ],
+      "text_elements": [
+        {
+          "type": "primary",
+          "text": "Slight Home Edge"
+        },
+        {
+          "type": "secondary",
+          "text": "Edge, uncertainty, x-factor"
+        }
+      ],
+      "graphic_elements": [
+        {
+          "asset_id": "graphic-insight_dashboard",
+          "missing": true,
+          "fallback_strategy": "Use text/card fallback if renderer needs a concrete layer."
+        }
+      ],
+      "logo_elements": [
+        {
+          "asset_id": "team_logos",
+          "asset_name": "Liverpool and Arsenal badges",
+          "asset_type": "logo",
+          "category": "match",
+          "required": true,
+          "scenes_used": [
+            "scene-02",
+            "scene-03",
+            "scene-04",
+            "scene-05",
+            "scene-07",
+            "scene-08",
+            "scene-09",
+            "scene-11"
+          ],
+          "legal_status": "needs_review",
+          "fallback_strategy": "Use text initials in approved template until badge is confirmed.",
+          "priority": "high"
+        }
+      ],
+      "dashboard_elements": [
+        {
+          "usage": "visible",
+          "asset": {
+            "asset_id": "dashboard_panel",
+            "asset_name": "Insight dashboard panel",
+            "asset_type": "card",
+            "category": "dashboard",
+            "required": true,
+            "scenes_used": [
+              "scene-08",
+              "scene-09"
+            ],
+            "purpose": "Support scene-08, scene-09",
+            "recommended_format": "json/png",
+            "recommended_dimensions": "900x520",
+            "source_strategy": "template graphic",
+            "legal_status": "approved",
+            "fallback_strategy": "Use custom vector/template graphic from internal library.",
+            "priority": "high"
+          }
+        }
+      ],
+      "caption_element": {
+        "text": "Slight Home Edge",
+        "style": "lower_safe_two_line",
+        "position": "lower_third_safe"
+      },
+      "motion_elements": [
+        {
+          "preset": "Dashboard Reveal",
+          "duration": 1.2
+        }
+      ],
+      "camera_instruction": "Static",
+      "transition_instruction": "quick_cut",
+      "audio_segment_ref": {
+        "start": 37.94,
+        "end": 42.11
+      },
+      "render_priority": "high",
+      "fallback_notes": ""
+    },
+    {
+      "scene_id": "scene-09",
+      "template_id": "insight_dashboard",
+      "duration_seconds": 7.07,
+      "background": {
+        "asset_id": "dashboard_panel",
+        "asset_name": "Insight dashboard panel",
+        "asset_type": "card",
+        "category": "dashboard",
+        "required": true,
+        "scenes_used": [
+          "scene-08",
+          "scene-09"
+        ],
+        "purpose": "Support scene-08, scene-09",
+        "recommended_format": "json/png",
+        "recommended_dimensions": "900x520",
+        "source_strategy": "template graphic",
+        "legal_status": "approved",
+        "fallback_strategy": "Use custom vector/template graphic from internal library.",
+        "priority": "high"
+      },
+      "foreground": [
+        {
+          "asset_id": "dashboard_panel",
+          "asset_name": "Insight dashboard panel",
+          "asset_type": "card",
+          "category": "dashboard",
+          "required": true,
+          "scenes_used": [
+            "scene-08",
+            "scene-09"
+          ],
+          "purpose": "Support scene-08, scene-09",
+          "recommended_format": "json/png",
+          "recommended_dimensions": "900x520",
+          "source_strategy": "template graphic",
+          "legal_status": "approved",
+          "fallback_strategy": "Use custom vector/template graphic from internal library.",
+          "priority": "high"
+        },
+        {
+          "asset_id": "team_logos",
+          "asset_name": "Liverpool and Arsenal badges",
+          "asset_type": "logo",
+          "category": "match",
+          "required": true,
+          "scenes_used": [
+            "scene-02",
+            "scene-03",
+            "scene-04",
+            "scene-05",
+            "scene-07",
+            "scene-08",
+            "scene-09",
+            "scene-11"
+          ],
+          "legal_status": "needs_review",
+          "fallback_strategy": "Use text initials in approved template until badge is confirmed.",
+          "priority": "high"
+        }
+      ],
+      "text_elements": [
+        {
+          "type": "primary",
+          "text": "Slight Home Edge"
+        },
+        {
+          "type": "secondary",
+          "text": "Edge, uncertainty, x-factor"
+        }
+      ],
+      "graphic_elements": [
+        {
+          "asset_id": "graphic-insight_dashboard",
+          "missing": true,
+          "fallback_strategy": "Use text/card fallback if renderer needs a concrete layer."
+        }
+      ],
+      "logo_elements": [
+        {
+          "asset_id": "team_logos",
+          "asset_name": "Liverpool and Arsenal badges",
+          "asset_type": "logo",
+          "category": "match",
+          "required": true,
+          "scenes_used": [
+            "scene-02",
+            "scene-03",
+            "scene-04",
+            "scene-05",
+            "scene-07",
+            "scene-08",
+            "scene-09",
+            "scene-11"
+          ],
+          "legal_status": "needs_review",
+          "fallback_strategy": "Use text initials in approved template until badge is confirmed.",
+          "priority": "high"
+        }
+      ],
+      "dashboard_elements": [
+        {
+          "usage": "visible",
+          "asset": {
+            "asset_id": "dashboard_panel",
+            "asset_name": "Insight dashboard panel",
+            "asset_type": "card",
+            "category": "dashboard",
+            "required": true,
+            "scenes_used": [
+              "scene-08",
+              "scene-09"
+            ],
+            "purpose": "Support scene-08, scene-09",
+            "recommended_format": "json/png",
+            "recommended_dimensions": "900x520",
+            "source_strategy": "template graphic",
+            "legal_status": "approved",
+            "fallback_strategy": "Use custom vector/template graphic from internal library.",
+            "priority": "high"
+          }
+        }
+      ],
+      "caption_element": {
+        "text": "Slight Home Edge",
+        "style": "lower_safe_two_line",
+        "position": "lower_third_safe"
+      },
+      "motion_elements": [
+        {
+          "preset": "Dashboard Reveal",
+          "duration": 1.2
+        }
+      ],
+      "camera_instruction": "Static",
+      "transition_instruction": "quick_cut",
+      "audio_segment_ref": {
+        "start": 42.11,
+        "end": 49.18
+      },
+      "render_priority": "high",
+      "fallback_notes": ""
+    },
+    {
+      "scene_id": "scene-10",
+      "template_id": "player_focus",
+      "duration_seconds": 4.17,
+      "background": {
+        "asset_id": "background_graphic",
+        "asset_name": "Clean match background",
+        "asset_type": "background",
+        "category": "brand",
+        "required": true,
+        "scenes_used": [
+          "scene-01"
+        ],
+        "purpose": "Support scene-01",
+        "recommended_format": "png",
+        "recommended_dimensions": "1080x1920",
+        "source_strategy": "custom graphic",
+        "legal_status": "approved",
+        "fallback_strategy": "Use custom vector/template graphic from internal library.",
+        "priority": "high"
+      },
+      "foreground": [
+        {
+          "asset_id": "player_image",
+          "missing": true,
+          "fallback_strategy": "Use text/card fallback if renderer needs a concrete layer."
+        },
+        {
+          "asset_id": "pitch_graphic",
+          "asset_name": "Pitch background fallback background",
+          "asset_type": "fallback",
+          "category": "fallback",
+          "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\pitch_graphic.svg",
+          "file_format": "svg",
+          "dimensions": "512x512",
+          "legal_status": "approved_placeholder",
+          "source": "deterministic_placeholder",
+          "scenes_used": [],
+          "reusable": true,
+          "checksum": "73df0b7d2c54361c2d77a76a8af480c0f1bc7bee8a4df9c1771ad943cd7d1c5b",
+          "fallback": true
+        }
+      ],
+      "text_elements": [
+        {
+          "type": "primary",
+          "text": "The x-factor is arsenal's ability to escape liverpool's first..."
+        },
+        {
+          "type": "secondary",
+          "text": "Make the x-factor player easy to understand in one glance."
+        }
+      ],
+      "graphic_elements": [
+        {
+          "asset_id": "graphic-x_factor_card",
+          "missing": true,
+          "fallback_strategy": "Use text/card fallback if renderer needs a concrete layer."
+        }
+      ],
+      "logo_elements": [],
+      "dashboard_elements": [],
+      "caption_element": {
+        "text": "The x-factor is arsenal's ability to escape\nliverpool's first",
+        "style": "lower_safe_two_line",
+        "position": "lower_third_safe"
+      },
+      "motion_elements": [
+        {
+          "preset": "Highlight Pulse",
+          "duration": 1.2
+        }
+      ],
+      "camera_instruction": "Static",
+      "transition_instruction": "quick_cut",
+      "audio_segment_ref": {
+        "start": 49.18,
+        "end": 53.35
+      },
+      "render_priority": "normal",
+      "fallback_notes": "Uses safe placeholders where approved local assets are unavailable."
+    },
+    {
+      "scene_id": "scene-11",
+      "template_id": "cta_card",
+      "duration_seconds": 6.65,
+      "background": {
+        "asset_id": "background_graphic",
+        "asset_name": "Clean match background",
+        "asset_type": "background",
+        "category": "brand",
+        "required": true,
+        "scenes_used": [
+          "scene-01"
+        ],
+        "purpose": "Support scene-01",
+        "recommended_format": "png",
+        "recommended_dimensions": "1080x1920",
+        "source_strategy": "custom graphic",
+        "legal_status": "approved",
+        "fallback_strategy": "Use custom vector/template graphic from internal library.",
+        "priority": "high"
+      },
+      "foreground": [
+        {
+          "asset_id": "team_logos",
+          "asset_name": "Liverpool and Arsenal badges",
+          "asset_type": "logo",
+          "category": "match",
+          "required": true,
+          "scenes_used": [
+            "scene-02",
+            "scene-03",
+            "scene-04",
+            "scene-05",
+            "scene-07",
+            "scene-08",
+            "scene-09",
+            "scene-11"
+          ],
+          "legal_status": "needs_review",
+          "fallback_strategy": "Use text initials in approved template until badge is confirmed.",
+          "priority": "high"
+        },
+        {
+          "asset_id": "comment_icon",
+          "asset_name": "Comment icon fallback icon",
+          "asset_type": "fallback",
+          "category": "fallback",
+          "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\comment_icon.svg",
+          "file_format": "svg",
+          "dimensions": "512x512",
+          "legal_status": "approved_placeholder",
+          "source": "deterministic_placeholder",
+          "scenes_used": [],
+          "reusable": true,
+          "checksum": "0a6378a09c1c9d3e6867936ae11c63c7ff6ddeb6315cb24c54e1bc3653540b47",
+          "fallback": true
+        }
+      ],
+      "text_elements": [
+        {
+          "type": "primary",
+          "text": "Tell us below"
+        },
+        {
+          "type": "secondary",
+          "text": "Comments open"
+        }
+      ],
+      "graphic_elements": [
+        {
+          "asset_id": "graphic-cta_card",
+          "missing": true,
+          "fallback_strategy": "Use text/card fallback if renderer needs a concrete layer."
+        }
+      ],
+      "logo_elements": [
+        {
+          "asset_id": "team_logos",
+          "asset_name": "Liverpool and Arsenal badges",
+          "asset_type": "logo",
+          "category": "match",
+          "required": true,
+          "scenes_used": [
+            "scene-02",
+            "scene-03",
+            "scene-04",
+            "scene-05",
+            "scene-07",
+            "scene-08",
+            "scene-09",
+            "scene-11"
+          ],
+          "legal_status": "needs_review",
+          "fallback_strategy": "Use text initials in approved template until badge is confirmed.",
+          "priority": "high"
+        }
+      ],
+      "dashboard_elements": [],
+      "caption_element": {
+        "text": "Tell us below",
+        "style": "lower_safe_two_line",
+        "position": "lower_third_safe"
+      },
+      "motion_elements": [
+        {
+          "preset": "Scale",
+          "duration": 1.2
+        }
+      ],
+      "camera_instruction": "Pull Back",
+      "transition_instruction": "hold_then_out",
+      "audio_segment_ref": {
+        "start": 53.35,
+        "end": 60.0
+      },
+      "render_priority": "normal",
+      "fallback_notes": "Uses safe placeholders where approved local assets are unavailable."
+    }
+  ],
+  "warnings": [
+    "Arsenal badge requires rights confirmation.",
+    "Liverpool badge requires rights confirmation.",
+    "Liverpool and Arsenal badges requires rights confirmation.",
+    "Premier League logo requires rights confirmation.",
+    "Media asset bundle status: needs_manual_assets"
+  ],
+  "approval_status": "approved",
+  "next_component": "Layer Composer"
+}

@@ -1,0 +1,1 @@
+{"component_id":"IF-TL06","supported_renderers":["Creatomate","Remotion","Shotstack","After Effects","FFmpeg custom renderer"],"default_renderer_profile":"provider_agnostic","output_format":"mp4","codec_settings":{"audio_codec":"aac","video_codec":"h264"},"next_component":"Timeline Validator"}

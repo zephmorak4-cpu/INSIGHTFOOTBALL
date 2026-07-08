@@ -1,0 +1,20 @@
+{
+  "component_id": "IF-V01",
+  "component_name": "Voice Director",
+  "output": {
+    "output_directory": "editorial-brain/output",
+    "log_directory": "editorial-brain/logs"
+  },
+  "voice_profile": "knowledgeable football friend",
+  "preferred_provider": "openai_tts",
+  "fallback_provider": "elevenlabs",
+  "target_speed_wpm": 135,
+  "emotion_rules": {
+    "hook": "curious",
+    "central_question": "focused",
+    "main_body": "confident",
+    "conclusion": "reflective",
+    "cta": "friendly"
+  },
+  "next_component": "Pronunciation Engine"
+}

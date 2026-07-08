@@ -1,0 +1,17 @@
+{
+  "production_id": "if-2026-07-06-liverpool-arsenal",
+  "component_id": "IF-V05",
+  "component_name": "Audio Quality Control",
+  "timestamp": "2026-07-07T13:52:37.297218+00:00",
+  "overall_score": 95,
+  "clarity": 95,
+  "naturalness": 92,
+  "pace": 95,
+  "pronunciation": 95,
+  "brand_voice": 96,
+  "word_count": 145,
+  "estimated_duration_seconds": 60.0,
+  "estimated_wpm": 145.0,
+  "warnings": [],
+  "approval_status": "approved"
+}

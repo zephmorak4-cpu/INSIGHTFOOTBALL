@@ -1,0 +1,642 @@
+{
+  "production_id": "if-2026-07-06-liverpool-arsenal",
+  "component_id": "IF-MAE07",
+  "component_name": "Asset Cache Manager",
+  "timestamp": "2026-07-08T11:37:14.572143+00:00",
+  "cache_entries": [
+    {
+      "asset_id": "team_logo_home",
+      "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\team_logo_home.svg",
+      "checksum": "fc94dc5c1295f878cdc71c3857e0c7896386a1083007217574ce3518a00d77e6",
+      "legal_status": "approved_placeholder",
+      "source": "deterministic_placeholder",
+      "reusable": true
+    },
+    {
+      "asset_id": "team_logo_away",
+      "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\team_logo_away.svg",
+      "checksum": "47717e649df8e2b2abceb5d3141ab109a029247aa07372e6f91d7ea89750e41d",
+      "legal_status": "approved_placeholder",
+      "source": "deterministic_placeholder",
+      "reusable": true
+    },
+    {
+      "asset_id": "team_logo_home",
+      "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\team_logo_home.svg",
+      "checksum": "fc94dc5c1295f878cdc71c3857e0c7896386a1083007217574ce3518a00d77e6",
+      "legal_status": "approved_placeholder",
+      "source": "deterministic_placeholder",
+      "reusable": true
+    },
+    {
+      "asset_id": "team_logo_away",
+      "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\team_logo_away.svg",
+      "checksum": "47717e649df8e2b2abceb5d3141ab109a029247aa07372e6f91d7ea89750e41d",
+      "legal_status": "approved_placeholder",
+      "source": "deterministic_placeholder",
+      "reusable": true
+    },
+    {
+      "asset_id": "competition_logo",
+      "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\competition_logo.svg",
+      "checksum": "b4be60057d71cabb008d2672c14c2afe7f24b2e7c875531703a2aa949bb1334f",
+      "legal_status": "approved_placeholder",
+      "source": "deterministic_placeholder",
+      "reusable": true
+    },
+    {
+      "asset_id": "background_graphic",
+      "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\background_graphic.svg",
+      "checksum": "4a50b8cc41d193ee539510d2f1b304abff444e3c0d48836e0a4a3d586a78cb9e",
+      "legal_status": "approved_placeholder",
+      "source": "deterministic_placeholder",
+      "reusable": true
+    },
+    {
+      "asset_id": "pitch_graphic",
+      "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\pitch_graphic.svg",
+      "checksum": "07096082c38c24d106372044b461ef8f4574e2e4a658dec4a6bc8040994a0da1",
+      "legal_status": "approved_placeholder",
+      "source": "deterministic_placeholder",
+      "reusable": true
+    },
+    {
+      "asset_id": "background_graphic",
+      "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\background_graphic.svg",
+      "checksum": "4a50b8cc41d193ee539510d2f1b304abff444e3c0d48836e0a4a3d586a78cb9e",
+      "legal_status": "approved_placeholder",
+      "source": "deterministic_placeholder",
+      "reusable": true
+    },
+    {
+      "asset_id": "pitch_graphic",
+      "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\pitch_graphic.svg",
+      "checksum": "07096082c38c24d106372044b461ef8f4574e2e4a658dec4a6bc8040994a0da1",
+      "legal_status": "approved_placeholder",
+      "source": "deterministic_placeholder",
+      "reusable": true
+    },
+    {
+      "asset_id": "comment_icon",
+      "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\comment_icon.svg",
+      "checksum": "0a6378a09c1c9d3e6867936ae11c63c7ff6ddeb6315cb24c54e1bc3653540b47",
+      "legal_status": "approved_placeholder",
+      "source": "deterministic_placeholder",
+      "reusable": true
+    },
+    {
+      "asset_id": "dashboard_icon",
+      "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\dashboard_icon.svg",
+      "checksum": "947944bff66c117c4e428a305d513949f4fb4bca9a1314ec2aaf04e1a74d7005",
+      "legal_status": "approved_placeholder",
+      "source": "deterministic_placeholder",
+      "reusable": true
+    },
+    {
+      "asset_id": "goal_icon",
+      "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\goal_icon.svg",
+      "checksum": "cf9c8b1278c5102f5148f7cbee115fe358d5934ef9e630a2fb148360920ccea4",
+      "legal_status": "approved_placeholder",
+      "source": "deterministic_placeholder",
+      "reusable": true
+    },
+    {
+      "asset_id": "press_icon",
+      "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\press_icon.svg",
+      "checksum": "ad3ffac4f9805f8eb5dc52ba87fe73260da37b30fab3ad0511000a8f1bf73b19",
+      "legal_status": "approved_placeholder",
+      "source": "deterministic_placeholder",
+      "reusable": true
+    },
+    {
+      "asset_id": "pressing_icon",
+      "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\pressing_icon.svg",
+      "checksum": "8fdddc95a318572a7967f782b76fa8f8ce09447364114c9f43f37c7656ea9dcc",
+      "legal_status": "approved_placeholder",
+      "source": "deterministic_placeholder",
+      "reusable": true
+    },
+    {
+      "asset_id": "tactical_arrow",
+      "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\tactical_arrow.svg",
+      "checksum": "2d64f6cdba21c7cb75b3cb2d60abb92286e0bd8db15eb7278bea12d0e7397ad8",
+      "legal_status": "approved_placeholder",
+      "source": "deterministic_placeholder",
+      "reusable": true
+    },
+    {
+      "asset_id": "tactical_arrows",
+      "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\tactical_arrows.svg",
+      "checksum": "71f70871d18008278336b277f4e2bd326dab878472a1104b06dcde79dc3fde3d",
+      "legal_status": "approved_placeholder",
+      "source": "deterministic_placeholder",
+      "reusable": true
+    },
+    {
+      "asset_id": "uncertainty_icon",
+      "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\uncertainty_icon.svg",
+      "checksum": "253decb4d9e3ccb467e53d44a1ff680a14ca68df46fd3fe6a7c1d7a7f11e2a9d",
+      "legal_status": "approved_placeholder",
+      "source": "deterministic_placeholder",
+      "reusable": true
+    },
+    {
+      "asset_id": "warning_icon",
+      "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\warning_icon.svg",
+      "checksum": "9e37401d14cde983a81c0d3be9a4e78bdd9975c502cb70dc0750a741f9eabaf3",
+      "legal_status": "approved_placeholder",
+      "source": "deterministic_placeholder",
+      "reusable": true
+    },
+    {
+      "asset_id": "x_factor_icon",
+      "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\x_factor_icon.svg",
+      "checksum": "ee3613f5d8c3cc1dbfda2cba43ddce96cc8c4eddf39e8724c5fff1275afbfd88",
+      "legal_status": "approved_placeholder",
+      "source": "deterministic_placeholder",
+      "reusable": true
+    },
+    {
+      "asset_id": "comment_icon",
+      "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\comment_icon.svg",
+      "checksum": "0a6378a09c1c9d3e6867936ae11c63c7ff6ddeb6315cb24c54e1bc3653540b47",
+      "legal_status": "approved_placeholder",
+      "source": "deterministic_placeholder",
+      "reusable": true
+    },
+    {
+      "asset_id": "dashboard_icon",
+      "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\dashboard_icon.svg",
+      "checksum": "947944bff66c117c4e428a305d513949f4fb4bca9a1314ec2aaf04e1a74d7005",
+      "legal_status": "approved_placeholder",
+      "source": "deterministic_placeholder",
+      "reusable": true
+    },
+    {
+      "asset_id": "goal_icon",
+      "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\goal_icon.svg",
+      "checksum": "cf9c8b1278c5102f5148f7cbee115fe358d5934ef9e630a2fb148360920ccea4",
+      "legal_status": "approved_placeholder",
+      "source": "deterministic_placeholder",
+      "reusable": true
+    },
+    {
+      "asset_id": "press_icon",
+      "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\press_icon.svg",
+      "checksum": "ad3ffac4f9805f8eb5dc52ba87fe73260da37b30fab3ad0511000a8f1bf73b19",
+      "legal_status": "approved_placeholder",
+      "source": "deterministic_placeholder",
+      "reusable": true
+    },
+    {
+      "asset_id": "pressing_icon",
+      "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\pressing_icon.svg",
+      "checksum": "8fdddc95a318572a7967f782b76fa8f8ce09447364114c9f43f37c7656ea9dcc",
+      "legal_status": "approved_placeholder",
+      "source": "deterministic_placeholder",
+      "reusable": true
+    },
+    {
+      "asset_id": "tactical_arrow",
+      "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\tactical_arrow.svg",
+      "checksum": "2d64f6cdba21c7cb75b3cb2d60abb92286e0bd8db15eb7278bea12d0e7397ad8",
+      "legal_status": "approved_placeholder",
+      "source": "deterministic_placeholder",
+      "reusable": true
+    },
+    {
+      "asset_id": "tactical_arrows",
+      "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\tactical_arrows.svg",
+      "checksum": "71f70871d18008278336b277f4e2bd326dab878472a1104b06dcde79dc3fde3d",
+      "legal_status": "approved_placeholder",
+      "source": "deterministic_placeholder",
+      "reusable": true
+    },
+    {
+      "asset_id": "uncertainty_icon",
+      "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\uncertainty_icon.svg",
+      "checksum": "253decb4d9e3ccb467e53d44a1ff680a14ca68df46fd3fe6a7c1d7a7f11e2a9d",
+      "legal_status": "approved_placeholder",
+      "source": "deterministic_placeholder",
+      "reusable": true
+    },
+    {
+      "asset_id": "warning_icon",
+      "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\warning_icon.svg",
+      "checksum": "9e37401d14cde983a81c0d3be9a4e78bdd9975c502cb70dc0750a741f9eabaf3",
+      "legal_status": "approved_placeholder",
+      "source": "deterministic_placeholder",
+      "reusable": true
+    },
+    {
+      "asset_id": "x_factor_icon",
+      "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\x_factor_icon.svg",
+      "checksum": "ee3613f5d8c3cc1dbfda2cba43ddce96cc8c4eddf39e8724c5fff1275afbfd88",
+      "legal_status": "approved_placeholder",
+      "source": "deterministic_placeholder",
+      "reusable": true
+    },
+    {
+      "asset_id": "stadium_image",
+      "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\stadium_image.svg",
+      "checksum": "289ea3670f5f4746a54263bdf68d8f35f69668000a08afdd48024f702a9ce2fa",
+      "legal_status": "approved_placeholder",
+      "source": "sprint8",
+      "reusable": true
+    },
+    {
+      "asset_id": "background_graphic",
+      "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\background_graphic.svg",
+      "checksum": "4a50b8cc41d193ee539510d2f1b304abff444e3c0d48836e0a4a3d586a78cb9e",
+      "legal_status": "approved_placeholder",
+      "source": "sprint8",
+      "reusable": true
+    },
+    {
+      "asset_id": "pitch_graphic",
+      "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\pitch_graphic.svg",
+      "checksum": "07096082c38c24d106372044b461ef8f4574e2e4a658dec4a6bc8040994a0da1",
+      "legal_status": "approved_placeholder",
+      "source": "sprint8",
+      "reusable": true
+    }
+  ],
+  "duplicate_assets": [
+    {
+      "checksum": "fc94dc5c1295f878cdc71c3857e0c7896386a1083007217574ce3518a00d77e6",
+      "asset_ids": [
+        "team_logo_home",
+        "team_logo_home"
+      ]
+    },
+    {
+      "checksum": "47717e649df8e2b2abceb5d3141ab109a029247aa07372e6f91d7ea89750e41d",
+      "asset_ids": [
+        "team_logo_away",
+        "team_logo_away"
+      ]
+    },
+    {
+      "checksum": "4a50b8cc41d193ee539510d2f1b304abff444e3c0d48836e0a4a3d586a78cb9e",
+      "asset_ids": [
+        "background_graphic",
+        "background_graphic"
+      ]
+    },
+    {
+      "checksum": "07096082c38c24d106372044b461ef8f4574e2e4a658dec4a6bc8040994a0da1",
+      "asset_ids": [
+        "pitch_graphic",
+        "pitch_graphic"
+      ]
+    },
+    {
+      "checksum": "0a6378a09c1c9d3e6867936ae11c63c7ff6ddeb6315cb24c54e1bc3653540b47",
+      "asset_ids": [
+        "comment_icon",
+        "comment_icon"
+      ]
+    },
+    {
+      "checksum": "947944bff66c117c4e428a305d513949f4fb4bca9a1314ec2aaf04e1a74d7005",
+      "asset_ids": [
+        "dashboard_icon",
+        "dashboard_icon"
+      ]
+    },
+    {
+      "checksum": "cf9c8b1278c5102f5148f7cbee115fe358d5934ef9e630a2fb148360920ccea4",
+      "asset_ids": [
+        "goal_icon",
+        "goal_icon"
+      ]
+    },
+    {
+      "checksum": "ad3ffac4f9805f8eb5dc52ba87fe73260da37b30fab3ad0511000a8f1bf73b19",
+      "asset_ids": [
+        "press_icon",
+        "press_icon"
+      ]
+    },
+    {
+      "checksum": "8fdddc95a318572a7967f782b76fa8f8ce09447364114c9f43f37c7656ea9dcc",
+      "asset_ids": [
+        "pressing_icon",
+        "pressing_icon"
+      ]
+    },
+    {
+      "checksum": "2d64f6cdba21c7cb75b3cb2d60abb92286e0bd8db15eb7278bea12d0e7397ad8",
+      "asset_ids": [
+        "tactical_arrow",
+        "tactical_arrow"
+      ]
+    },
+    {
+      "checksum": "71f70871d18008278336b277f4e2bd326dab878472a1104b06dcde79dc3fde3d",
+      "asset_ids": [
+        "tactical_arrows",
+        "tactical_arrows"
+      ]
+    },
+    {
+      "checksum": "253decb4d9e3ccb467e53d44a1ff680a14ca68df46fd3fe6a7c1d7a7f11e2a9d",
+      "asset_ids": [
+        "uncertainty_icon",
+        "uncertainty_icon"
+      ]
+    },
+    {
+      "checksum": "9e37401d14cde983a81c0d3be9a4e78bdd9975c502cb70dc0750a741f9eabaf3",
+      "asset_ids": [
+        "warning_icon",
+        "warning_icon"
+      ]
+    },
+    {
+      "checksum": "ee3613f5d8c3cc1dbfda2cba43ddce96cc8c4eddf39e8724c5fff1275afbfd88",
+      "asset_ids": [
+        "x_factor_icon",
+        "x_factor_icon"
+      ]
+    },
+    {
+      "checksum": "4a50b8cc41d193ee539510d2f1b304abff444e3c0d48836e0a4a3d586a78cb9e",
+      "asset_ids": [
+        "background_graphic",
+        "background_graphic"
+      ]
+    },
+    {
+      "checksum": "07096082c38c24d106372044b461ef8f4574e2e4a658dec4a6bc8040994a0da1",
+      "asset_ids": [
+        "pitch_graphic",
+        "pitch_graphic"
+      ]
+    }
+  ],
+  "reused_assets": [
+    {
+      "asset_id": "team_logo_home",
+      "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\team_logo_home.svg",
+      "checksum": "fc94dc5c1295f878cdc71c3857e0c7896386a1083007217574ce3518a00d77e6",
+      "legal_status": "approved_placeholder",
+      "source": "deterministic_placeholder",
+      "reusable": true
+    },
+    {
+      "asset_id": "team_logo_away",
+      "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\team_logo_away.svg",
+      "checksum": "47717e649df8e2b2abceb5d3141ab109a029247aa07372e6f91d7ea89750e41d",
+      "legal_status": "approved_placeholder",
+      "source": "deterministic_placeholder",
+      "reusable": true
+    },
+    {
+      "asset_id": "background_graphic",
+      "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\background_graphic.svg",
+      "checksum": "4a50b8cc41d193ee539510d2f1b304abff444e3c0d48836e0a4a3d586a78cb9e",
+      "legal_status": "approved_placeholder",
+      "source": "deterministic_placeholder",
+      "reusable": true
+    },
+    {
+      "asset_id": "pitch_graphic",
+      "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\pitch_graphic.svg",
+      "checksum": "07096082c38c24d106372044b461ef8f4574e2e4a658dec4a6bc8040994a0da1",
+      "legal_status": "approved_placeholder",
+      "source": "deterministic_placeholder",
+      "reusable": true
+    },
+    {
+      "asset_id": "comment_icon",
+      "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\comment_icon.svg",
+      "checksum": "0a6378a09c1c9d3e6867936ae11c63c7ff6ddeb6315cb24c54e1bc3653540b47",
+      "legal_status": "approved_placeholder",
+      "source": "deterministic_placeholder",
+      "reusable": true
+    },
+    {
+      "asset_id": "dashboard_icon",
+      "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\dashboard_icon.svg",
+      "checksum": "947944bff66c117c4e428a305d513949f4fb4bca9a1314ec2aaf04e1a74d7005",
+      "legal_status": "approved_placeholder",
+      "source": "deterministic_placeholder",
+      "reusable": true
+    },
+    {
+      "asset_id": "goal_icon",
+      "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\goal_icon.svg",
+      "checksum": "cf9c8b1278c5102f5148f7cbee115fe358d5934ef9e630a2fb148360920ccea4",
+      "legal_status": "approved_placeholder",
+      "source": "deterministic_placeholder",
+      "reusable": true
+    },
+    {
+      "asset_id": "press_icon",
+      "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\press_icon.svg",
+      "checksum": "ad3ffac4f9805f8eb5dc52ba87fe73260da37b30fab3ad0511000a8f1bf73b19",
+      "legal_status": "approved_placeholder",
+      "source": "deterministic_placeholder",
+      "reusable": true
+    },
+    {
+      "asset_id": "pressing_icon",
+      "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\pressing_icon.svg",
+      "checksum": "8fdddc95a318572a7967f782b76fa8f8ce09447364114c9f43f37c7656ea9dcc",
+      "legal_status": "approved_placeholder",
+      "source": "deterministic_placeholder",
+      "reusable": true
+    },
+    {
+      "asset_id": "tactical_arrow",
+      "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\tactical_arrow.svg",
+      "checksum": "2d64f6cdba21c7cb75b3cb2d60abb92286e0bd8db15eb7278bea12d0e7397ad8",
+      "legal_status": "approved_placeholder",
+      "source": "deterministic_placeholder",
+      "reusable": true
+    },
+    {
+      "asset_id": "tactical_arrows",
+      "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\tactical_arrows.svg",
+      "checksum": "71f70871d18008278336b277f4e2bd326dab878472a1104b06dcde79dc3fde3d",
+      "legal_status": "approved_placeholder",
+      "source": "deterministic_placeholder",
+      "reusable": true
+    },
+    {
+      "asset_id": "uncertainty_icon",
+      "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\uncertainty_icon.svg",
+      "checksum": "253decb4d9e3ccb467e53d44a1ff680a14ca68df46fd3fe6a7c1d7a7f11e2a9d",
+      "legal_status": "approved_placeholder",
+      "source": "deterministic_placeholder",
+      "reusable": true
+    },
+    {
+      "asset_id": "warning_icon",
+      "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\warning_icon.svg",
+      "checksum": "9e37401d14cde983a81c0d3be9a4e78bdd9975c502cb70dc0750a741f9eabaf3",
+      "legal_status": "approved_placeholder",
+      "source": "deterministic_placeholder",
+      "reusable": true
+    },
+    {
+      "asset_id": "x_factor_icon",
+      "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\x_factor_icon.svg",
+      "checksum": "ee3613f5d8c3cc1dbfda2cba43ddce96cc8c4eddf39e8724c5fff1275afbfd88",
+      "legal_status": "approved_placeholder",
+      "source": "deterministic_placeholder",
+      "reusable": true
+    },
+    {
+      "asset_id": "background_graphic",
+      "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\background_graphic.svg",
+      "checksum": "4a50b8cc41d193ee539510d2f1b304abff444e3c0d48836e0a4a3d586a78cb9e",
+      "legal_status": "approved_placeholder",
+      "source": "sprint8",
+      "reusable": true
+    },
+    {
+      "asset_id": "pitch_graphic",
+      "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\pitch_graphic.svg",
+      "checksum": "07096082c38c24d106372044b461ef8f4574e2e4a658dec4a6bc8040994a0da1",
+      "legal_status": "approved_placeholder",
+      "source": "sprint8",
+      "reusable": true
+    }
+  ],
+  "new_assets": [
+    {
+      "asset_id": "team_logo_home",
+      "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\team_logo_home.svg",
+      "checksum": "fc94dc5c1295f878cdc71c3857e0c7896386a1083007217574ce3518a00d77e6",
+      "legal_status": "approved_placeholder",
+      "source": "deterministic_placeholder",
+      "reusable": true
+    },
+    {
+      "asset_id": "team_logo_away",
+      "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\team_logo_away.svg",
+      "checksum": "47717e649df8e2b2abceb5d3141ab109a029247aa07372e6f91d7ea89750e41d",
+      "legal_status": "approved_placeholder",
+      "source": "deterministic_placeholder",
+      "reusable": true
+    },
+    {
+      "asset_id": "competition_logo",
+      "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\competition_logo.svg",
+      "checksum": "b4be60057d71cabb008d2672c14c2afe7f24b2e7c875531703a2aa949bb1334f",
+      "legal_status": "approved_placeholder",
+      "source": "deterministic_placeholder",
+      "reusable": true
+    },
+    {
+      "asset_id": "background_graphic",
+      "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\background_graphic.svg",
+      "checksum": "4a50b8cc41d193ee539510d2f1b304abff444e3c0d48836e0a4a3d586a78cb9e",
+      "legal_status": "approved_placeholder",
+      "source": "deterministic_placeholder",
+      "reusable": true
+    },
+    {
+      "asset_id": "pitch_graphic",
+      "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\pitch_graphic.svg",
+      "checksum": "07096082c38c24d106372044b461ef8f4574e2e4a658dec4a6bc8040994a0da1",
+      "legal_status": "approved_placeholder",
+      "source": "deterministic_placeholder",
+      "reusable": true
+    },
+    {
+      "asset_id": "comment_icon",
+      "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\comment_icon.svg",
+      "checksum": "0a6378a09c1c9d3e6867936ae11c63c7ff6ddeb6315cb24c54e1bc3653540b47",
+      "legal_status": "approved_placeholder",
+      "source": "deterministic_placeholder",
+      "reusable": true
+    },
+    {
+      "asset_id": "dashboard_icon",
+      "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\dashboard_icon.svg",
+      "checksum": "947944bff66c117c4e428a305d513949f4fb4bca9a1314ec2aaf04e1a74d7005",
+      "legal_status": "approved_placeholder",
+      "source": "deterministic_placeholder",
+      "reusable": true
+    },
+    {
+      "asset_id": "goal_icon",
+      "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\goal_icon.svg",
+      "checksum": "cf9c8b1278c5102f5148f7cbee115fe358d5934ef9e630a2fb148360920ccea4",
+      "legal_status": "approved_placeholder",
+      "source": "deterministic_placeholder",
+      "reusable": true
+    },
+    {
+      "asset_id": "press_icon",
+      "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\press_icon.svg",
+      "checksum": "ad3ffac4f9805f8eb5dc52ba87fe73260da37b30fab3ad0511000a8f1bf73b19",
+      "legal_status": "approved_placeholder",
+      "source": "deterministic_placeholder",
+      "reusable": true
+    },
+    {
+      "asset_id": "pressing_icon",
+      "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\pressing_icon.svg",
+      "checksum": "8fdddc95a318572a7967f782b76fa8f8ce09447364114c9f43f37c7656ea9dcc",
+      "legal_status": "approved_placeholder",
+      "source": "deterministic_placeholder",
+      "reusable": true
+    },
+    {
+      "asset_id": "tactical_arrow",
+      "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\tactical_arrow.svg",
+      "checksum": "2d64f6cdba21c7cb75b3cb2d60abb92286e0bd8db15eb7278bea12d0e7397ad8",
+      "legal_status": "approved_placeholder",
+      "source": "deterministic_placeholder",
+      "reusable": true
+    },
+    {
+      "asset_id": "tactical_arrows",
+      "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\tactical_arrows.svg",
+      "checksum": "71f70871d18008278336b277f4e2bd326dab878472a1104b06dcde79dc3fde3d",
+      "legal_status": "approved_placeholder",
+      "source": "deterministic_placeholder",
+      "reusable": true
+    },
+    {
+      "asset_id": "uncertainty_icon",
+      "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\uncertainty_icon.svg",
+      "checksum": "253decb4d9e3ccb467e53d44a1ff680a14ca68df46fd3fe6a7c1d7a7f11e2a9d",
+      "legal_status": "approved_placeholder",
+      "source": "deterministic_placeholder",
+      "reusable": true
+    },
+    {
+      "asset_id": "warning_icon",
+      "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\warning_icon.svg",
+      "checksum": "9e37401d14cde983a81c0d3be9a4e78bdd9975c502cb70dc0750a741f9eabaf3",
+      "legal_status": "approved_placeholder",
+      "source": "deterministic_placeholder",
+      "reusable": true
+    },
+    {
+      "asset_id": "x_factor_icon",
+      "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\x_factor_icon.svg",
+      "checksum": "ee3613f5d8c3cc1dbfda2cba43ddce96cc8c4eddf39e8724c5fff1275afbfd88",
+      "legal_status": "approved_placeholder",
+      "source": "deterministic_placeholder",
+      "reusable": true
+    },
+    {
+      "asset_id": "stadium_image",
+      "local_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\stadium_image.svg",
+      "checksum": "289ea3670f5f4746a54263bdf68d8f35f69668000a08afdd48024f702a9ce2fa",
+      "legal_status": "approved_placeholder",
+      "source": "sprint8",
+      "reusable": true
+    }
+  ],
+  "cache_health_score": 100,
+  "warnings": [],
+  "approval_status": "approved",
+  "next_component": "Asset Bundle Validator"
+}

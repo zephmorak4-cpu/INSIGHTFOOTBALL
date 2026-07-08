@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "GraphicPlannerStoryboardInput",
+  "type": "object",
+  "required": ["production_id", "match", "competition", "scenes", "locked_fields"],
+  "properties": {
+    "production_id": { "type": "string" },
+    "match": { "type": "object" },
+    "competition": { "type": "string" },
+    "scenes": { "type": "array" },
+    "locked_fields": { "type": "object" }
+  }
+}
+

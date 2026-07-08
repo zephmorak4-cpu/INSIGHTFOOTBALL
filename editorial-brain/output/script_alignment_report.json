@@ -1,0 +1,18 @@
+{
+  "production_id": "if-2026-07-06-liverpool-arsenal",
+  "component_id": "IF-FQC05",
+  "component_name": "Script Alignment Checker",
+  "timestamp": "2026-07-08T11:37:05.148377+00:00",
+  "script_match_status": "aligned",
+  "hook_present": true,
+  "central_question_present": true,
+  "surprising_fact_present": true,
+  "cta_present": true,
+  "unauthorized_claims": [],
+  "locked_fields_status": "preserved",
+  "scene_order_status": "aligned",
+  "issues_found": [],
+  "warnings": [],
+  "score": 95,
+  "approval_status": "approved"
+}

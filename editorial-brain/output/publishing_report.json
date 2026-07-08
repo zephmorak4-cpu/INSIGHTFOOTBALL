@@ -1,0 +1,24 @@
+{
+  "production_id": "if-2026-07-06-liverpool-arsenal",
+  "component_id": "IF-PUB08",
+  "component_name": "Publishing Report Generator",
+  "timestamp": "2026-07-08T11:37:47.775351+00:00",
+  "platforms_attempted": [
+    "youtube"
+  ],
+  "platforms_published": [
+    "youtube"
+  ],
+  "platforms_failed": [],
+  "dry_run": false,
+  "platform_results": [
+    {
+      "platform": "youtube",
+      "status": "published",
+      "dry_run": false
+    }
+  ],
+  "errors": [],
+  "warnings": [],
+  "final_status": "published"
+}

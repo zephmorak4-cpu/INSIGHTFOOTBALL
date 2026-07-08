@@ -1,0 +1,373 @@
+﻿{
+    "metadata":  {
+                     "production_id":  "if-2026-07-06-liverpool-arsenal",
+                     "date":  "2026-07-06",
+                     "created_at":  "2026-07-06T16:31:03.792467+00:00",
+                     "package_version":  "v1",
+                     "source":  "editorial-orchestrator"
+                 },
+    "match":  {
+                  "home_team":  "Liverpool",
+                  "away_team":  "Arsenal",
+                  "competition":  "Premier League",
+                  "kickoff_time":  "20:00",
+                  "country":  "England"
+              },
+    "competition":  "Premier League",
+    "story_angle":  "Liverpool may have the edge if they turn the first 20 minutes into pressure, but Arsenal have enough quality to punish one mistake.",
+    "central_question":  "Can Arsenal survive Liverpool\u0027s fast start?",
+    "surprising_fact":  "Sample data: Liverpool have started quickly in recent home matches, while Arsenal have sometimes needed longer to settle away.",
+    "primary_evidence":  [
+                             {
+                                 "claim":  "Sample data: Liverpool have scored early in four of their last five home games.",
+                                 "simple_translation":  "Liverpool usually make opponents uncomfortable early at home.",
+                                 "why_it_supports_story":  "It directly supports the question about surviving the fast start.",
+                                 "source_type":  "recent home form",
+                                 "confidence":  "medium"
+                             },
+                             {
+                                 "claim":  "Sample data: Arsenal conceded first in three of their last six away matches.",
+                                 "simple_translation":  "Arsenal have had a few away games where they needed to recover.",
+                                 "why_it_supports_story":  "It supports the idea that the opening spell could be a real test.",
+                                 "source_type":  "away form",
+                                 "confidence":  "medium"
+                             }
+                         ],
+    "secondary_evidence":  [
+                               {
+                                   "claim":  "Sample data: Arsenal have recovered points after conceding first multiple times this season.",
+                                   "simple_translation":  "Arsenal can survive difficult starts and still find a way back.",
+                                   "why_it_supports_story":  "It keeps the evidence balanced and avoids making the story sound certain.",
+                                   "source_type":  "match recovery pattern",
+                                   "confidence":  "medium"
+                               }
+                           ],
+    "contradictory_evidence":  [
+                                   {
+                                       "claim":  "Sample data: Arsenal have recently improved defensively away from home.",
+                                       "simple_translation":  "Arsenal may be better prepared for pressure than older form suggests.",
+                                       "why_it_matters":  "It weakens any simple claim that the fast start automatically decides the match.",
+                                       "confidence":  "medium"
+                                   }
+                               ],
+    "insight_summary":  "Liverpool\u0027s strongest advantage is how aggressively they begin matches, but Arsenal have shown they can recover after difficult starts.",
+    "match_edge":  "Slight Home Edge",
+    "key_advantage":  "Early pressure.",
+    "tactical_explanation":  "Liverpool are likely to press high from kickoff. If Arsenal break that press consistently, the match becomes much more balanced.",
+    "uncertainty_summary":  "An unexpected Arsenal lineup or an early Liverpool mistake could completely change the pattern.",
+    "x_factor":  "Arsenal\u0027s ability to escape Liverpool\u0027s first press.",
+    "viewer_takeaway":  "Watch the opening phase closely; it may tell you how the rest of the game will unfold.",
+    "confidence_scores":  {
+                              "match_selector":  91,
+                              "story_hunter":  86,
+                              "evidence_filter":  78,
+                              "insight_engine":  79,
+                              "overall":  83.5
+                          },
+    "locked_fields":  {
+                          "selected_match":  {
+                                                 "home_team":  "Liverpool",
+                                                 "away_team":  "Arsenal",
+                                                 "competition":  "Premier League",
+                                                 "kickoff_time":  "20:00",
+                                                 "country":  "England"
+                                             },
+                          "story_angle":  "Liverpool may have the edge if they turn the first 20 minutes into pressure, but Arsenal have enough quality to punish one mistake.",
+                          "central_question":  "Can Arsenal survive Liverpool\u0027s fast start?",
+                          "surprising_fact":  "Sample data: Liverpool have started quickly in recent home matches, while Arsenal have sometimes needed longer to settle away."
+                      },
+    "warnings":  [
+
+                 ],
+    "editorial_notes":  [
+                            "Insight is based on approved evidence from the Evidence Filter.",
+                            "Keep the conclusion framed as an edge, not a prediction."
+                        ],
+    "execution_metadata":  {
+                               "started_at":  "2026-07-06T16:31:02.258776+00:00",
+                               "completed_at":  "2026-07-06T16:31:03.792467+00:00",
+                               "duration_ms":  1533,
+                               "stages":  [
+                                              {
+                                                  "stage":  "match_selector",
+                                                  "agent_id":  "IF-A01",
+                                                  "start_time":  "2026-07-06T16:31:02.258776+00:00",
+                                                  "end_time":  "2026-07-06T16:31:03.291806+00:00",
+                                                  "duration_ms":  1032,
+                                                  "confidence":  91,
+                                                  "warnings":  [
+
+                                                               ],
+                                                  "errors":  [
+
+                                                             ],
+                                                  "approval_status":  "approved",
+                                                  "next_agent":  "IF-A02"
+                                              },
+                                              {
+                                                  "stage":  "story_hunter",
+                                                  "agent_id":  "IF-A02",
+                                                  "start_time":  "2026-07-06T16:31:03.325722+00:00",
+                                                  "end_time":  "2026-07-06T16:31:03.434424+00:00",
+                                                  "duration_ms":  108,
+                                                  "confidence":  86,
+                                                  "warnings":  [
+                                                                   "FACT_CHECK_REQUIRED: sample claims must be verified before publishing."
+                                                               ],
+                                                  "errors":  [
+
+                                                             ],
+                                                  "approval_status":  "approved",
+                                                  "next_agent":  "IF-A03"
+                                              },
+                                              {
+                                                  "stage":  "evidence_filter",
+                                                  "agent_id":  "IF-A03",
+                                                  "start_time":  "2026-07-06T16:31:03.481299+00:00",
+                                                  "end_time":  "2026-07-06T16:31:03.546127+00:00",
+                                                  "duration_ms":  65,
+                                                  "confidence":  78,
+                                                  "warnings":  [
+                                                                   "FACT_CHECK_REQUIRED: sample evidence must be verified before publishing."
+                                                               ],
+                                                  "errors":  [
+
+                                                             ],
+                                                  "approval_status":  "approved",
+                                                  "next_agent":  "IF-A04"
+                                              },
+                                              {
+                                                  "stage":  "insight_engine",
+                                                  "agent_id":  "IF-A04",
+                                                  "start_time":  "2026-07-06T16:31:03.547122+00:00",
+                                                  "end_time":  "2026-07-06T16:31:03.791472+00:00",
+                                                  "duration_ms":  244,
+                                                  "confidence":  79,
+                                                  "warnings":  [
+                                                                   "FACT_CHECK_REQUIRED: sample evidence must be verified before publishing."
+                                                               ],
+                                                  "errors":  [
+
+                                                             ],
+                                                  "approval_status":  "approved",
+                                                  "next_agent":  "IF-A05"
+                                              }
+                                          ]
+                           },
+    "agent_outputs":  {
+                          "match_selector":  {
+                                                 "agent_id":  "IF-A01",
+                                                 "agent_name":  "Match Selector",
+                                                 "prompt_id":  "IF-PROMPT-01-MATCH-SELECTOR",
+                                                 "prompt_version":  "v1.0",
+                                                 "production_id":  "if-2026-07-06-liverpool-arsenal",
+                                                 "selected_match":  {
+                                                                        "home_team":  "Liverpool",
+                                                                        "away_team":  "Arsenal",
+                                                                        "competition":  "Premier League",
+                                                                        "kickoff_time":  "20:00",
+                                                                        "country":  "England"
+                                                                    },
+                                                 "selected_reason":  "Liverpool vs Arsenal has the strongest mix of audience interest, match importance, available data, and story potential.",
+                                                 "selection_score":  91,
+                                                 "audience_interest_score":  10,
+                                                 "importance_score":  9,
+                                                 "rivalry_score":  8,
+                                                 "data_availability_score":  9,
+                                                 "story_potential_score":  9,
+                                                 "runner_up_matches":  [
+
+                                                                       ],
+                                                 "rejected_matches":  [
+
+                                                                      ],
+                                                 "data_gaps":  [
+
+                                                               ],
+                                                 "confidence":  {
+                                                                    "score":  91,
+                                                                    "reason":  "Selection is based on audience interest, importance, rivalry, data availability, and story potential."
+                                                                },
+                                                 "human_review_flags":  [
+
+                                                                        ],
+                                                 "approval_status":  "approved",
+                                                 "next_agent":  "IF-A02"
+                                             },
+                          "story_hunter":  {
+                                               "production_id":  "if-2026-07-06-liverpool-arsenal",
+                                               "agent_id":  "IF-A02",
+                                               "agent_name":  "Story Hunter",
+                                               "prompt_id":  "IF-PROMPT-02-STORY-HUNTER",
+                                               "prompt_version":  "v1.0",
+                                               "input_version":  "v1",
+                                               "output_version":  "v1",
+                                               "timestamp":  "2026-07-06T16:31:03.432429+00:00",
+                                               "selected_match":  {
+                                                                      "home_team":  "Liverpool",
+                                                                      "away_team":  "Arsenal",
+                                                                      "competition":  "Premier League",
+                                                                      "kickoff_time":  "20:00",
+                                                                      "country":  "England"
+                                                                  },
+                                               "story_angle":  "Liverpool may have the edge if they turn the first 20 minutes into pressure, but Arsenal have enough quality to punish one mistake.",
+                                               "central_question":  "Can Arsenal survive Liverpool\u0027s fast start?",
+                                               "surprising_fact":  "Sample data: Liverpool have started quickly in recent home matches, while Arsenal have sometimes needed longer to settle away.",
+                                               "why_this_matters":  "The opening spell could decide whether the away team plays calmly or spends the match reacting.",
+                                               "why_fans_should_care":  "Both fanbases will have strong opinions about whether the away team can handle that early pressure.",
+                                               "supporting_context":  [
+                                                                          "Liverpool recent form note: Sample: strong home starts",
+                                                                          "Arsenal recent form note: Sample: slower away starts",
+                                                                          "Tactical note: Liverpool early pressure vs Arsenal buildup"
+                                                                      ],
+                                               "rejected_angles":  [
+                                                                       "Generic match preview",
+                                                                       "Basic head-to-head angle"
+                                                                   ],
+                                               "story_confidence":  86,
+                                               "warnings":  [
+                                                                "FACT_CHECK_REQUIRED: sample claims must be verified before publishing."
+                                                            ],
+                                               "human_review_flags":  [
+                                                                          "FACT_CHECK_REQUIRED"
+                                                                      ],
+                                               "locked_fields":  {
+                                                                     "story_angle":  "Liverpool may have the edge if they turn the first 20 minutes into pressure, but Arsenal have enough quality to punish one mistake.",
+                                                                     "central_question":  "Can Arsenal survive Liverpool\u0027s fast start?",
+                                                                     "surprising_fact":  "Sample data: Liverpool have started quickly in recent home matches, while Arsenal have sometimes needed longer to settle away."
+                                                                 },
+                                               "approval_status":  "approved",
+                                               "next_agent":  "IF-A03"
+                                           },
+                          "evidence_filter":  {
+                                                  "production_id":  "if-2026-07-06-liverpool-arsenal",
+                                                  "agent_id":  "IF-A03",
+                                                  "agent_name":  "Evidence Filter",
+                                                  "prompt_id":  "IF-PROMPT-03-EVIDENCE-FILTER",
+                                                  "prompt_version":  "v1.0",
+                                                  "timestamp":  "2026-07-06T16:31:03.545130+00:00",
+                                                  "story_angle":  "Liverpool may have the edge if they turn the first 20 minutes into pressure, but Arsenal have enough quality to punish one mistake.",
+                                                  "central_question":  "Can Arsenal survive Liverpool\u0027s fast start?",
+                                                  "approved_story":  {
+                                                                         "story_angle":  "Liverpool may have the edge if they turn the first 20 minutes into pressure, but Arsenal have enough quality to punish one mistake.",
+                                                                         "central_question":  "Can Arsenal survive Liverpool\u0027s fast start?",
+                                                                         "surprising_fact":  "Sample data: Liverpool have started quickly in recent home matches, while Arsenal have sometimes needed longer to settle away."
+                                                                     },
+                                                  "evidence_summary":  "Liverpool\u0027s early pressure is real, but Arsenal have shown they can survive difficult starts.",
+                                                  "primary_evidence":  [
+                                                                           {
+                                                                               "claim":  "Sample data: Liverpool have scored early in four of their last five home games.",
+                                                                               "simple_translation":  "Liverpool usually make opponents uncomfortable early at home.",
+                                                                               "why_it_supports_story":  "It directly supports the question about surviving the fast start.",
+                                                                               "source_type":  "recent home form",
+                                                                               "confidence":  "medium"
+                                                                           },
+                                                                           {
+                                                                               "claim":  "Sample data: Arsenal conceded first in three of their last six away matches.",
+                                                                               "simple_translation":  "Arsenal have had a few away games where they needed to recover.",
+                                                                               "why_it_supports_story":  "It supports the idea that the opening spell could be a real test.",
+                                                                               "source_type":  "away form",
+                                                                               "confidence":  "medium"
+                                                                           }
+                                                                       ],
+                                                  "secondary_evidence":  [
+                                                                             {
+                                                                                 "claim":  "Sample data: Arsenal have recovered points after conceding first multiple times this season.",
+                                                                                 "simple_translation":  "Arsenal can survive difficult starts and still find a way back.",
+                                                                                 "why_it_supports_story":  "It keeps the evidence balanced and avoids making the story sound certain.",
+                                                                                 "source_type":  "match recovery pattern",
+                                                                                 "confidence":  "medium"
+                                                                             }
+                                                                         ],
+                                                  "supporting_statistics":  [
+                                                                                {
+                                                                                    "raw_stat":  "Sample: Liverpool early goals in 4 of last 5 home games",
+                                                                                    "simple_translation":  "Liverpool have been dangerous early at home.",
+                                                                                    "used":  true
+                                                                                },
+                                                                                {
+                                                                                    "raw_stat":  "Sample: corners average 6.2",
+                                                                                    "simple_translation":  "Rejected because corners do not directly answer the central question.",
+                                                                                    "used":  false
+                                                                                }
+                                                                            ],
+                                                  "supporting_context":  [
+                                                                             "Tactical context: Liverpool early pressure vs Arsenal buildup",
+                                                                             "Recent form context for liverpool: Sample: strong home starts",
+                                                                             "Recent form context for arsenal: Sample: slower away starts"
+                                                                         ],
+                                                  "contradictory_evidence":  [
+                                                                                 {
+                                                                                     "claim":  "Sample data: Arsenal have recently improved defensively away from home.",
+                                                                                     "simple_translation":  "Arsenal may be better prepared for pressure than older form suggests.",
+                                                                                     "why_it_matters":  "It weakens any simple claim that the fast start automatically decides the match.",
+                                                                                     "confidence":  "medium"
+                                                                                 }
+                                                                             ],
+                                                  "missing_information":  [
+                                                                              "Verify first-half scoring data before publishing.",
+                                                                              "Verify Arsenal away defensive trend before publishing."
+                                                                          ],
+                                                  "evidence_quality":  {
+                                                                           "story_support":  8,
+                                                                           "clarity":  9,
+                                                                           "relevance":  8,
+                                                                           "data_reliability":  7
+                                                                       },
+                                                  "evidence_confidence":  78,
+                                                  "warnings":  [
+                                                                   "FACT_CHECK_REQUIRED: sample evidence must be verified before publishing."
+                                                               ],
+                                                  "human_review_flags":  [
+                                                                             "FACT_CHECK_REQUIRED"
+                                                                         ],
+                                                  "locked_fields":  {
+                                                                        "story_angle":  "Liverpool may have the edge if they turn the first 20 minutes into pressure, but Arsenal have enough quality to punish one mistake.",
+                                                                        "central_question":  "Can Arsenal survive Liverpool\u0027s fast start?",
+                                                                        "surprising_fact":  "Sample data: Liverpool have started quickly in recent home matches, while Arsenal have sometimes needed longer to settle away."
+                                                                    },
+                                                  "approval_status":  "approved",
+                                                  "next_agent":  "IF-A04"
+                                              },
+                          "insight_engine":  {
+                                                 "production_id":  "if-2026-07-06-liverpool-arsenal",
+                                                 "agent_id":  "IF-A04",
+                                                 "agent_name":  "Insight Engine",
+                                                 "prompt_id":  "IF-PROMPT-04-INSIGHT-ENGINE",
+                                                 "prompt_version":  "v1.0",
+                                                 "timestamp":  "2026-07-06T16:31:03.784492+00:00",
+                                                 "story_angle":  "Liverpool may have the edge if they turn the first 20 minutes into pressure, but Arsenal have enough quality to punish one mistake.",
+                                                 "central_question":  "Can Arsenal survive Liverpool\u0027s fast start?",
+                                                 "insight_summary":  "Liverpool\u0027s strongest advantage is how aggressively they begin matches, but Arsenal have shown they can recover after difficult starts.",
+                                                 "match_edge":  "Slight Home Edge",
+                                                 "key_advantage":  "Early pressure.",
+                                                 "tactical_explanation":  "Liverpool are likely to press high from kickoff. If Arsenal break that press consistently, the match becomes much more balanced.",
+                                                 "uncertainty_summary":  "An unexpected Arsenal lineup or an early Liverpool mistake could completely change the pattern.",
+                                                 "x_factor":  "Arsenal\u0027s ability to escape Liverpool\u0027s first press.",
+                                                 "surprising_takeaway":  "The first twenty minutes may decide more than the final score.",
+                                                 "viewer_takeaway":  "Watch the opening phase closely; it may tell you how the rest of the game will unfold.",
+                                                 "editorial_notes":  [
+                                                                         "Insight is based on approved evidence from the Evidence Filter.",
+                                                                         "Keep the conclusion framed as an edge, not a prediction."
+                                                                     ],
+                                                 "confidence":  {
+                                                                    "score":  79,
+                                                                    "reason":  "Confidence is based on evidence confidence and evidence quality scores."
+                                                                },
+                                                 "warnings":  [
+                                                                  "FACT_CHECK_REQUIRED: sample evidence must be verified before publishing."
+                                                              ],
+                                                 "human_review_flags":  [
+                                                                            "FACT_CHECK_REQUIRED"
+                                                                        ],
+                                                 "locked_fields":  {
+                                                                       "story_angle":  "Liverpool may have the edge if they turn the first 20 minutes into pressure, but Arsenal have enough quality to punish one mistake.",
+                                                                       "central_question":  "Can Arsenal survive Liverpool\u0027s fast start?",
+                                                                       "surprising_fact":  "Sample data: Liverpool have started quickly in recent home matches, while Arsenal have sometimes needed longer to settle away."
+                                                                   },
+                                                 "approval_status":  "approved",
+                                                 "next_agent":  "IF-A05"
+                                             }
+                      },
+    "status":  "approved"
+}

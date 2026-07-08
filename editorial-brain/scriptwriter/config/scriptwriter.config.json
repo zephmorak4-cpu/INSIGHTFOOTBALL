@@ -1,0 +1,26 @@
+{
+  "agent_id": "IF-A05",
+  "agent_name": "Scriptwriter",
+  "prompt_id": "IF-PROMPT-05-SCRIPTWRITER",
+  "prompt_version": "v1.0",
+  "prompt_path": "editorial-brain/scriptwriter/prompts/scriptwriter.prompt.md",
+  "input_schema": "editorial-brain/scriptwriter/schemas/production-brief.schema.json",
+  "output_schema": "editorial-brain/scriptwriter/schemas/script-output.schema.json",
+  "output": {
+    "output_directory": "editorial-brain/output",
+    "log_directory": "editorial-brain/logs"
+  },
+  "generation": {
+    "model": "deterministic-local",
+    "temperature": 0.4,
+    "max_tokens": 1200,
+    "max_retries": 1
+  },
+  "validation": {
+    "target_duration_seconds": 60,
+    "min_words": 120,
+    "max_words": 145
+  },
+  "next_agent": "IF-A06"
+}
+

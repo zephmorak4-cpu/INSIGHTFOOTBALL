@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ScenePlannerStoryboardInput",
+  "type": "object",
+  "required": ["production_id", "total_estimated_duration_seconds", "scene_count", "scenes", "locked_fields", "approval_status"],
+  "properties": {
+    "production_id": { "type": "string" },
+    "scenes": { "type": "array" },
+    "locked_fields": { "type": "object" }
+  }
+}
+

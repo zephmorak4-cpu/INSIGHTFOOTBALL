@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "InsightFootballEvidenceFilterDailyInput",
+  "title": "InsightFootballEvidenceFilterDailyInput",
+  "type": "object",
+  "required": ["production_metadata", "fixtures", "match_context"],
+  "properties": {
+    "production_metadata": {
+      "type": "object",
+      "required": ["date", "production_id"],
+      "properties": {
+        "date": { "type": "string", "minLength": 1 },
+        "production_id": { "type": "string", "minLength": 1 }
+      }
+    },
+    "fixtures": { "type": "array", "minItems": 1 },
+    "match_context": {
+      "type": "object",
+      "required": ["recent_form", "tactical_notes", "statistics"],
+      "properties": {
+        "recent_form": { "type": "object" },
+        "squad_availability": { "type": "object" },
+        "tactical_notes": { "type": "object" },
+        "head_to_head": { "type": "object" },
+        "statistics": { "type": "object" },
+        "news": { "type": "object" },
+        "betting_market_optional": { "type": "object" }
+      }
+    }
+  }
+}

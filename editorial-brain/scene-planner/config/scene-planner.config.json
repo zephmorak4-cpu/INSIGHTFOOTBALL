@@ -1,0 +1,16 @@
+{
+  "component_id": "S4-C02",
+  "component_name": "Scene Planner",
+  "input_schema": "editorial-brain/scene-planner/schemas/storyboard-draft.schema.json",
+  "script_package_schema": "editorial-brain/scene-planner/schemas/final-script-package.schema.json",
+  "output_schema": "editorial-brain/scene-planner/schemas/scene-list.schema.json",
+  "output": {
+    "output_directory": "editorial-brain/output",
+    "log_directory": "editorial-brain/logs"
+  },
+  "allowed_scene_types": ["Brand Opening", "Surprising Fact", "Match Card", "Central Question", "Evidence Card", "Team Comparison", "Tactical Moment", "X-Factor Player", "Insight Dashboard", "Final Question / CTA"],
+  "allowed_template_ids": ["brand_opening", "logo_pulse", "stat_card", "question_card", "pitch_tactics", "comparison_split", "evidence_card", "insight_dashboard", "player_focus", "cta_card"],
+  "max_text_per_scene": 22,
+  "target_visual_change_seconds": 4,
+  "next_component": "Timing Engine"
+}

@@ -1,0 +1,100 @@
+{
+  "production_id": "if-2026-07-06-liverpool-arsenal",
+  "component_id": "S6-C03",
+  "component_name": "Motion Planner",
+  "timestamp": "2026-07-07T10:56:15.221509+00:00",
+  "source_visual_plan": "if-2026-07-06-liverpool-arsenal",
+  "scenes": [
+    {
+      "scene_id": "scene-01",
+      "motion_preset": "Fade",
+      "duration": 0.8,
+      "delay": 0.0,
+      "easing": "easeOutCubic",
+      "animation_reason": "Fade clarifies the brand opening without flashy effects."
+    },
+    {
+      "scene_id": "scene-02",
+      "motion_preset": "Counter",
+      "duration": 0.8,
+      "delay": 0.1,
+      "easing": "easeOutCubic",
+      "animation_reason": "Counter clarifies the surprising fact without flashy effects."
+    },
+    {
+      "scene_id": "scene-03",
+      "motion_preset": "Text Reveal",
+      "duration": 0.8,
+      "delay": 0.1,
+      "easing": "easeOutCubic",
+      "animation_reason": "Text Reveal clarifies the central question without flashy effects."
+    },
+    {
+      "scene_id": "scene-04",
+      "motion_preset": "Arrow Animation",
+      "duration": 1.2,
+      "delay": 0.1,
+      "easing": "easeOutCubic",
+      "animation_reason": "Arrow Animation clarifies the tactical moment without flashy effects."
+    },
+    {
+      "scene_id": "scene-05",
+      "motion_preset": "Slide",
+      "duration": 0.8,
+      "delay": 0.1,
+      "easing": "easeOutCubic",
+      "animation_reason": "Slide clarifies the team comparison without flashy effects."
+    },
+    {
+      "scene_id": "scene-06",
+      "motion_preset": "Pop",
+      "duration": 0.8,
+      "delay": 0.1,
+      "easing": "easeOutCubic",
+      "animation_reason": "Pop clarifies the evidence card without flashy effects."
+    },
+    {
+      "scene_id": "scene-07",
+      "motion_preset": "Slide",
+      "duration": 0.8,
+      "delay": 0.1,
+      "easing": "easeOutCubic",
+      "animation_reason": "Slide clarifies the team comparison without flashy effects."
+    },
+    {
+      "scene_id": "scene-08",
+      "motion_preset": "Dashboard Reveal",
+      "duration": 1.2,
+      "delay": 0.1,
+      "easing": "easeOutCubic",
+      "animation_reason": "Dashboard Reveal clarifies the insight dashboard without flashy effects."
+    },
+    {
+      "scene_id": "scene-09",
+      "motion_preset": "Dashboard Reveal",
+      "duration": 1.2,
+      "delay": 0.1,
+      "easing": "easeOutCubic",
+      "animation_reason": "Dashboard Reveal clarifies the insight dashboard without flashy effects."
+    },
+    {
+      "scene_id": "scene-10",
+      "motion_preset": "Highlight Pulse",
+      "duration": 0.8,
+      "delay": 0.1,
+      "easing": "easeOutCubic",
+      "animation_reason": "Highlight Pulse clarifies the x-factor player without flashy effects."
+    },
+    {
+      "scene_id": "scene-11",
+      "motion_preset": "Scale",
+      "duration": 0.8,
+      "delay": 0.1,
+      "easing": "easeOutCubic",
+      "animation_reason": "Scale clarifies the final question / cta without flashy effects."
+    }
+  ],
+  "warnings": [],
+  "approval_status": "approved",
+  "next_component": "Caption Designer"
+}

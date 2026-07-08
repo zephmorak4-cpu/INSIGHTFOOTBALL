@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","type":"object","required":["production_id","component_id","background_assets","generated_background_tasks","fallback_backgrounds","approval_status"],"properties":{"component_id":{"const":"IF-MAE04"}}}

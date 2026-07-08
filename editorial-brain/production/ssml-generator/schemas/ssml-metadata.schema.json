@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "INSIGHT FOOTBALL SSML Metadata",
+  "type": "object",
+  "required": ["production_id", "component_id", "provider", "sentence_count", "supported_tags_used", "approval_status"],
+  "properties": {
+    "production_id": {"type": "string"},
+    "component_id": {"const": "IF-V03"},
+    "provider": {"type": "string"},
+    "sentence_count": {"type": "integer", "minimum": 1},
+    "supported_tags_used": {"type": "array"},
+    "approval_status": {"enum": ["approved", "blocked"]}
+  }
+}

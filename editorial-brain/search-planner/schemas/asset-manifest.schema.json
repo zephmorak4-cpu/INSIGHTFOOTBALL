@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "SearchPlannerManifestInput",
+  "type": "object",
+  "required": ["production_id", "required_assets", "optional_assets", "missing_assets", "legal_warnings", "approval_status"],
+  "properties": {
+    "production_id": { "type": "string" },
+    "required_assets": { "type": "array" },
+    "optional_assets": { "type": "array" },
+    "missing_assets": { "type": "array" },
+    "legal_warnings": { "type": "array" },
+    "approval_status": { "type": "string" }
+  }
+}
+

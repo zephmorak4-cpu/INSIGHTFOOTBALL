@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "INSIGHT FOOTBALL Audio QC Report",
+  "type": "object",
+  "required": ["production_id", "component_id", "overall_score", "clarity", "naturalness", "pace", "pronunciation", "brand_voice", "approval_status"],
+  "properties": {
+    "production_id": {"type": "string"},
+    "component_id": {"const": "IF-V05"},
+    "overall_score": {"type": "integer", "minimum": 0, "maximum": 100},
+    "approval_status": {"enum": ["approved", "blocked"]}
+  }
+}

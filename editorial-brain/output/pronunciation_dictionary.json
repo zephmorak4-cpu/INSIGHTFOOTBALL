@@ -1,0 +1,47 @@
+{
+  "production_id": "if-2026-07-06-liverpool-arsenal",
+  "component_id": "IF-V02",
+  "component_name": "Pronunciation Engine",
+  "timestamp": "2026-07-07T13:51:39.221232+00:00",
+  "source_voice_plan": "if-2026-07-06-liverpool-arsenal",
+  "phonetic_standard": "plain-English broadcast phonetics",
+  "supported_languages": [
+    "en-GB",
+    "en-US"
+  ],
+  "items": [
+    {
+      "term": "Arsenal",
+      "phonetic": "AR-suh-nuhl",
+      "language": "en-GB",
+      "notes": "club"
+    },
+    {
+      "term": "England",
+      "phonetic": "ING-glund",
+      "language": "en-GB",
+      "notes": "country"
+    },
+    {
+      "term": "Liverpool",
+      "phonetic": "LIV-er-pool",
+      "language": "en-GB",
+      "notes": "club"
+    },
+    {
+      "term": "Premier League",
+      "phonetic": "PREM-ee-er leeg",
+      "language": "en-GB",
+      "notes": "competition"
+    },
+    {
+      "term": "x-factor",
+      "phonetic": "EKS fak-ter",
+      "language": "en-GB",
+      "notes": "football phrase"
+    }
+  ],
+  "warnings": [],
+  "approval_status": "approved",
+  "next_component": "SSML Generator"
+}

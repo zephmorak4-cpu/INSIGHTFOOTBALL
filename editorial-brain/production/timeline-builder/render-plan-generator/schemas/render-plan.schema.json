@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","type":"object","required":["production_id","component_id","renderer_profile","render_settings","required_fonts","approval_status"],"properties":{"component_id":{"const":"IF-TL06"}}}

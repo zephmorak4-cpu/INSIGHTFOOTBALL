@@ -1,0 +1,213 @@
+{
+  "package_id": "if-2026-07-06-liverpool-arsenal",
+  "date": "2026-07-06",
+  "match": {
+    "home_team": "Liverpool",
+    "away_team": "Arsenal",
+    "kickoff_time": "20:00",
+    "venue": "Anfield"
+  },
+  "competition": "Premier League",
+  "selected_reason": "Sample data: high audience interest, strong rivalry feel, clear data availability, and a strong pre-kickoff story around Liverpool's fast starts.",
+  "story_angle": "Liverpool may have the edge if they turn the first 20 minutes into chaos, but Arsenal have enough quality to punish one mistake.",
+  "surprising_fact": "Sample data: Liverpool have scored first in most of their recent home matches, while Arsenal have often grown into away games slowly.",
+  "central_question": "Can Arsenal survive Liverpool's fast start?",
+  "evidence_points": [
+    {
+      "point": "Sample data: Liverpool have started recent home games quickly.",
+      "why_it_matters": "It supports the idea that Arsenal's first job is surviving the opening pressure.",
+      "source_type": "team form",
+      "confidence": "medium"
+    },
+    {
+      "point": "Sample data: Arsenal have conceded more early chances away from home than at home.",
+      "why_it_matters": "It makes the opening phase feel important.",
+      "source_type": "home away data",
+      "confidence": "medium"
+    },
+    {
+      "point": "Sample data: Arsenal's attack still creates enough chances to change the game late.",
+      "why_it_matters": "It stops the story from becoming a one-sided prediction.",
+      "source_type": "chance creation",
+      "confidence": "medium"
+    }
+  ],
+  "insight_dashboard": {
+    "home_win_probability": 43,
+    "draw_probability": 27,
+    "away_win_probability": 30,
+    "form_summary": "Liverpool edge the recent home form, Arsenal remain dangerous away.",
+    "tactical_advantage": "Liverpool's early pressure against Arsenal's slower away starts.",
+    "uncertainty_level": "medium",
+    "x_factor": "Arsenal's first pass through midfield under pressure.",
+    "surprising_detail": "The first 20 minutes may matter more than the final scoreline suggests.",
+    "plain_english_summary": "Everything points to Liverpool having the early edge, but Arsenal have enough quality to turn one loose moment into a goal."
+  },
+  "final_script": {
+    "voiceover": "Before the first whistle... here's the insight. Liverpool's biggest weapon in this one might not be a player. It might be the first 20 minutes. Sample data shows they have been starting fast at home, while Arsenal have sometimes needed time to settle away. So the question is simple: can Arsenal survive Liverpool's fast start? If they do, this game could open up for them. But if Liverpool win the early pressure, the edge goes to the home side. The dashboard gives Liverpool a small edge, not a guarantee, because football can still surprise us. Do you agree, or are we missing something? Tell us below.",
+    "word_count": 107,
+    "estimated_duration_seconds": 52,
+    "hook": "Liverpool's biggest weapon in this one might not be a player.",
+    "closing_engagement_question": "Do you agree, or are we missing something?"
+  },
+  "storyboard": [
+    {
+      "scene_number": 1,
+      "timestamp_start": 0,
+      "timestamp_end": 3,
+      "voiceover_line": "Before the first whistle... here's the insight.",
+      "visual_description": "Brand lockup over dark pitch texture with both club crests.",
+      "on_screen_text": "Before the first whistle",
+      "animation_instruction": "Slow zoom in.",
+      "asset_needed": ["brand logo", "pitch background", "club crests"],
+      "caption_text": "Here's the insight."
+    },
+    {
+      "scene_number": 2,
+      "timestamp_start": 3,
+      "timestamp_end": 8,
+      "voiceover_line": "Liverpool's biggest weapon in this one might not be a player.",
+      "visual_description": "Liverpool crest expands with first 20 minutes timer graphic.",
+      "on_screen_text": "The first 20 minutes",
+      "animation_instruction": "Quick punch-in.",
+      "asset_needed": ["Liverpool crest", "timer icon"],
+      "caption_text": "It might be time."
+    },
+    {
+      "scene_number": 3,
+      "timestamp_start": 8,
+      "timestamp_end": 14,
+      "voiceover_line": "It might be the first 20 minutes.",
+      "visual_description": "Animated match clock and pressure arrows toward Arsenal half.",
+      "on_screen_text": "Fast start?",
+      "animation_instruction": "Pressure arrows slide forward.",
+      "asset_needed": ["pitch diagram", "arrow icons"],
+      "caption_text": "Fast start?"
+    },
+    {
+      "scene_number": 4,
+      "timestamp_start": 14,
+      "timestamp_end": 20,
+      "voiceover_line": "So the question is simple: can Arsenal survive Liverpool's fast start?",
+      "visual_description": "Split screen: Liverpool pressure bar vs Arsenal survival bar.",
+      "on_screen_text": "Can Arsenal survive it?",
+      "animation_instruction": "Horizontal comparison movement.",
+      "asset_needed": ["club crests", "bar graphics"],
+      "caption_text": "Can Arsenal survive?"
+    },
+    {
+      "scene_number": 5,
+      "timestamp_start": 20,
+      "timestamp_end": 32,
+      "voiceover_line": "If they do, this game could open up for them.",
+      "visual_description": "Arsenal transition path appears through midfield.",
+      "on_screen_text": "One clean escape changes it",
+      "animation_instruction": "Ball path draws across pitch.",
+      "asset_needed": ["pitch diagram", "ball icon"],
+      "caption_text": "One escape changes it."
+    },
+    {
+      "scene_number": 6,
+      "timestamp_start": 32,
+      "timestamp_end": 45,
+      "voiceover_line": "But if Liverpool win the early pressure, the edge goes to the home side.",
+      "visual_description": "Dashboard cards show form, tactical advantage, and X-factor.",
+      "on_screen_text": "Small edge: Liverpool",
+      "animation_instruction": "Cards slide in one by one.",
+      "asset_needed": ["dashboard template"],
+      "caption_text": "Small edge: Liverpool."
+    },
+    {
+      "scene_number": 7,
+      "timestamp_start": 45,
+      "timestamp_end": 55,
+      "voiceover_line": "The dashboard gives Liverpool a small edge, not a guarantee, because football can still surprise us.",
+      "visual_description": "Animated probability bars: 43, 27, 30.",
+      "on_screen_text": "Edge, not guarantee",
+      "animation_instruction": "Probability bars fill from zero.",
+      "asset_needed": ["probability bars"],
+      "caption_text": "Edge, not guarantee."
+    },
+    {
+      "scene_number": 8,
+      "timestamp_start": 55,
+      "timestamp_end": 60,
+      "voiceover_line": "Do you agree, or are we missing something? Tell us below.",
+      "visual_description": "Both crests return with comment prompt.",
+      "on_screen_text": "Do you agree?",
+      "animation_instruction": "Subtle pulse on comment icon.",
+      "asset_needed": ["club crests", "comment icon"],
+      "caption_text": "Tell us below."
+    }
+  ],
+  "visual_direction": {
+    "layout_instructions": [
+      "Use 1080x1920 vertical canvas.",
+      "Keep club crests large and readable.",
+      "Keep captions in the lower safe zone."
+    ],
+    "camera_movement": [
+      "Slow zoom for opening.",
+      "Quick punch-in on the surprising fact.",
+      "Horizontal slide for team comparison.",
+      "Animated bars for dashboard."
+    ],
+    "typography_rules": [
+      "Bold condensed headline font.",
+      "Maximum 7 caption words per line.",
+      "Use high contrast text."
+    ],
+    "caption_placement": "Lower third, above platform UI safe area.",
+    "dashboard_design": [
+      "Show probabilities as simple bars.",
+      "Show tactical advantage as one sentence.",
+      "Show X-factor as one short label."
+    ],
+    "animation_rules": [
+      "No excessive effects.",
+      "Every movement must support attention or meaning."
+    ],
+    "asset_list": ["brand logo", "club crests", "pitch diagram", "dashboard cards", "icons"],
+    "render_instructions": [
+      "Export MP4 H.264.",
+      "1080x1920.",
+      "30 fps.",
+      "Keep duration at 60 seconds or less."
+    ]
+  },
+  "captions": [
+    {
+      "start": 0,
+      "end": 3,
+      "text": "Here's the insight."
+    },
+    {
+      "start": 3,
+      "end": 8,
+      "text": "It might be time."
+    },
+    {
+      "start": 14,
+      "end": 20,
+      "text": "Can Arsenal survive?"
+    }
+  ],
+  "publishing_metadata": {
+    "youtube_title": "Liverpool vs Arsenal: Before the first whistle",
+    "facebook_caption": "Can Arsenal survive Liverpool's fast start?",
+    "telegram_caption": "Before the first whistle: Liverpool vs Arsenal insight.",
+    "hashtags": ["#InsightFootball", "#Liverpool", "#Arsenal", "#FootballShorts"]
+  },
+  "quality_control": {
+    "pass_or_fail": "pass",
+    "reason": "Clear story, strong central question, simple language, non-guaranteed conclusion.",
+    "issues_found": [],
+    "required_fixes": [],
+    "retention_score": 8.5,
+    "clarity_score": 9,
+    "story_score": 8.5,
+    "evidence_score": 7.5,
+    "final_recommendation": "Approved for render after replacing sample data with verified live data."
+  },
+  "status": "approved"
+}

@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","type":"object","required":["production_id","component_id","total_duration_seconds","fps","aspect_ratio","resolution","scenes","approval_status"],"properties":{"component_id":{"const":"IF-TL01"},"total_duration_seconds":{"type":"number","maximum":60}}}

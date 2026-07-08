@@ -1,0 +1,50 @@
+{
+  "production_id": "if-2026-07-06-liverpool-arsenal",
+  "generated_assets": [
+    {
+      "success": true,
+      "provider": "static_placeholder",
+      "file_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\stadium_image.svg",
+      "metadata": {
+        "legal_status": "approved_placeholder",
+        "format": "svg",
+        "dimensions": "1080x1920"
+      }
+    },
+    {
+      "success": true,
+      "provider": "static_placeholder",
+      "file_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\background_graphic.svg",
+      "metadata": {
+        "legal_status": "approved_placeholder",
+        "format": "svg",
+        "dimensions": "1080x1920"
+      }
+    },
+    {
+      "success": true,
+      "provider": "static_placeholder",
+      "file_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\pitch_graphic.svg",
+      "metadata": {
+        "legal_status": "approved_placeholder",
+        "format": "svg",
+        "dimensions": "1080x1920"
+      }
+    }
+  ],
+  "placeholder_assets": [
+    "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\stadium_image.svg",
+    "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\background_graphic.svg",
+    "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\pitch_graphic.svg"
+  ],
+  "file_paths": [
+    "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\stadium_image.svg",
+    "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\background_graphic.svg",
+    "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\editorial-brain\\assets\\generated\\sprint8\\pitch_graphic.svg"
+  ],
+  "metadata": {
+    "provider": "static_placeholder",
+    "style_profile": "INSIGHT FOOTBALL clean dashboard placeholders"
+  },
+  "approval_status": "approved"
+}

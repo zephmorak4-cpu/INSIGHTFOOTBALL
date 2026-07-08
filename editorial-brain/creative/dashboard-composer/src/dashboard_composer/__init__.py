@@ -1,0 +1,2 @@
+"""INSIGHT FOOTBALL Dashboard Composer."""
+

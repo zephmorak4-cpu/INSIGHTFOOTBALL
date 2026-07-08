@@ -1,0 +1,19 @@
+{
+  "component_id": "IF-AN05",
+  "component_name": "Thumbnail Analyzer",
+  "timestamp": "2026-07-08T11:38:31.690588+00:00",
+  "thumbnail_leaderboard": [
+    {
+      "key": "question_text_card",
+      "average": 921.32,
+      "sample_size": 76
+    },
+    {
+      "key": "stat_card",
+      "average": 720.0,
+      "sample_size": 75
+    }
+  ],
+  "best_thumbnail_style": "question_text_card",
+  "approval_status": "approved"
+}

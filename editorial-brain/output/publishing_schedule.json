@@ -1,0 +1,29 @@
+{
+  "production_id": "if-2026-07-06-liverpool-arsenal",
+  "component_id": "IF-PUB05",
+  "component_name": "Publishing Scheduler",
+  "timestamp": "2026-07-08T11:37:47.889047+00:00",
+  "timezone": "Africa/Lagos",
+  "schedule_mode": "publish_now",
+  "platforms": [
+    "youtube",
+    "facebook",
+    "telegram"
+  ],
+  "publish_times": {
+    "youtube": "2026-07-08T11:37:47.889047+00:00",
+    "facebook": "2026-07-08T11:37:47.889047+00:00",
+    "telegram": "2026-07-08T11:37:47.889047+00:00"
+  },
+  "platform_order": [
+    "youtube",
+    "facebook",
+    "telegram"
+  ],
+  "retry_policy": {
+    "max_retries": 1,
+    "retry_delay_seconds": 60
+  },
+  "warnings": [],
+  "approval_status": "approved"
+}

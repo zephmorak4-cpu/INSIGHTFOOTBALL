@@ -1,0 +1,10 @@
+{
+  "renderer": "remotion",
+  "status": "not_implemented",
+  "composition_id": "InsightFootballVertical",
+  "props": {
+    "production_id": "if-2026-07-06-liverpool-arsenal",
+    "scene_count": 11
+  },
+  "reason": "Remotion adapter contract exists; rendering implementation is reserved for a future sprint."
+}

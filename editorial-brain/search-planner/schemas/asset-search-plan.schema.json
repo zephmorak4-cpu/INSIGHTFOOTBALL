@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "AssetSearchPlan",
+  "type": "object",
+  "required": ["production_id", "component_id", "component_name", "timestamp", "source_asset_manifest", "search_tasks", "manual_tasks", "generation_tasks", "blocked_assets", "fallback_tasks", "legal_review_tasks", "approval_status", "next_component"],
+  "properties": {
+    "production_id": { "type": "string" },
+    "search_tasks": { "type": "array" },
+    "manual_tasks": { "type": "array" },
+    "generation_tasks": { "type": "array" },
+    "blocked_assets": { "type": "array" },
+    "fallback_tasks": { "type": "array" },
+    "legal_review_tasks": { "type": "array" },
+    "approval_status": { "type": "string" },
+    "next_component": { "type": "string" }
+  }
+}
+

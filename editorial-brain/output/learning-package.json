@@ -1,0 +1,3864 @@
+{
+  "production_id": "if-2026-07-06-liverpool-arsenal",
+  "platform_metrics": {
+    "production_id": "if-2026-07-06-liverpool-arsenal",
+    "component_id": "IF-AN01",
+    "component_name": "Metrics Collector",
+    "timestamp": "2026-07-08T11:38:31.427292+00:00",
+    "platforms": [
+      {
+        "platform": "youtube",
+        "views": 1240,
+        "watch_time_seconds": 18200,
+        "average_view_duration_seconds": 14.68,
+        "audience_retention": [
+          {
+            "second": 0,
+            "retention_percent": 100
+          },
+          {
+            "second": 10,
+            "retention_percent": 78
+          },
+          {
+            "second": 20,
+            "retention_percent": 61
+          },
+          {
+            "second": 30,
+            "retention_percent": 48
+          },
+          {
+            "second": 42,
+            "retention_percent": 31
+          },
+          {
+            "second": 60,
+            "retention_percent": 21
+          }
+        ],
+        "ctr_percent": 5.8,
+        "likes": 53,
+        "comments": 34,
+        "shares": 18,
+        "subscribers_gained": 7,
+        "revenue": 0.0,
+        "rpm": 0.0,
+        "source": "provider_adapter"
+      },
+      {
+        "platform": "facebook",
+        "views": 860,
+        "watch_time_seconds": 11900,
+        "average_view_duration_seconds": 13.84,
+        "audience_retention": [
+          {
+            "second": 0,
+            "retention_percent": 100
+          },
+          {
+            "second": 10,
+            "retention_percent": 78
+          },
+          {
+            "second": 20,
+            "retention_percent": 61
+          },
+          {
+            "second": 30,
+            "retention_percent": 48
+          },
+          {
+            "second": 42,
+            "retention_percent": 31
+          },
+          {
+            "second": 60,
+            "retention_percent": 21
+          }
+        ],
+        "ctr_percent": 4.2,
+        "likes": 37,
+        "comments": 19,
+        "shares": 26,
+        "subscribers_gained": 5,
+        "revenue": 0.0,
+        "rpm": 0.0,
+        "source": "provider_adapter"
+      },
+      {
+        "platform": "telegram",
+        "views": 420,
+        "watch_time_seconds": 5200,
+        "average_view_duration_seconds": 12.38,
+        "audience_retention": [
+          {
+            "second": 0,
+            "retention_percent": 100
+          },
+          {
+            "second": 10,
+            "retention_percent": 78
+          },
+          {
+            "second": 20,
+            "retention_percent": 61
+          },
+          {
+            "second": 30,
+            "retention_percent": 48
+          },
+          {
+            "second": 42,
+            "retention_percent": 31
+          },
+          {
+            "second": 60,
+            "retention_percent": 21
+          }
+        ],
+        "ctr_percent": 3.6,
+        "likes": 18,
+        "comments": 11,
+        "shares": 14,
+        "subscribers_gained": 3,
+        "revenue": 0.0,
+        "rpm": 0.0,
+        "source": "provider_adapter"
+      }
+    ],
+    "totals": {
+      "views": 2520,
+      "watch_time_seconds": 35300,
+      "likes": 108,
+      "comments": 64,
+      "shares": 58,
+      "subscribers_gained": 15,
+      "average_view_duration_seconds": 14.01
+    },
+    "warnings": [],
+    "approval_status": "approved"
+  },
+  "historical_metrics": {
+    "component_id": "IF-AN02",
+    "component_name": "Performance Database",
+    "videos": [
+      {
+        "production_id": "baseline-question",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "Can the press decide it?",
+        "hook_type": "question",
+        "thumbnail": "Question card",
+        "thumbnail_style": "question_text_card",
+        "publishing_time": "2026-07-01T18:00:00+00:00",
+        "story_angle": "question",
+        "cta": "Tell us below.",
+        "metrics": {
+          "views": 900,
+          "watch_time_seconds": 12000,
+          "average_view_duration_seconds": 13.3,
+          "likes": 41,
+          "comments": 18,
+          "shares": 11,
+          "subscribers_gained": 4
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-data",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "One stat explains the match",
+        "hook_type": "data",
+        "thumbnail": "Data card",
+        "thumbnail_style": "stat_card",
+        "publishing_time": "2026-07-02T18:00:00+00:00",
+        "story_angle": "data",
+        "cta": "What did you see?",
+        "metrics": {
+          "views": 720,
+          "watch_time_seconds": 8700,
+          "average_view_duration_seconds": 12.1,
+          "likes": 28,
+          "comments": 9,
+          "shares": 8,
+          "subscribers_gained": 3
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-question",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "Can the press decide it?",
+        "hook_type": "question",
+        "thumbnail": "Question card",
+        "thumbnail_style": "question_text_card",
+        "publishing_time": "2026-07-01T18:00:00+00:00",
+        "story_angle": "question",
+        "cta": "Tell us below.",
+        "metrics": {
+          "views": 900,
+          "watch_time_seconds": 12000,
+          "average_view_duration_seconds": 13.3,
+          "likes": 41,
+          "comments": 18,
+          "shares": 11,
+          "subscribers_gained": 4
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-data",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "One stat explains the match",
+        "hook_type": "data",
+        "thumbnail": "Data card",
+        "thumbnail_style": "stat_card",
+        "publishing_time": "2026-07-02T18:00:00+00:00",
+        "story_angle": "data",
+        "cta": "What did you see?",
+        "metrics": {
+          "views": 720,
+          "watch_time_seconds": 8700,
+          "average_view_duration_seconds": 12.1,
+          "likes": 28,
+          "comments": 9,
+          "shares": 8,
+          "subscribers_gained": 3
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-question",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "Can the press decide it?",
+        "hook_type": "question",
+        "thumbnail": "Question card",
+        "thumbnail_style": "question_text_card",
+        "publishing_time": "2026-07-01T18:00:00+00:00",
+        "story_angle": "question",
+        "cta": "Tell us below.",
+        "metrics": {
+          "views": 900,
+          "watch_time_seconds": 12000,
+          "average_view_duration_seconds": 13.3,
+          "likes": 41,
+          "comments": 18,
+          "shares": 11,
+          "subscribers_gained": 4
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-data",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "One stat explains the match",
+        "hook_type": "data",
+        "thumbnail": "Data card",
+        "thumbnail_style": "stat_card",
+        "publishing_time": "2026-07-02T18:00:00+00:00",
+        "story_angle": "data",
+        "cta": "What did you see?",
+        "metrics": {
+          "views": 720,
+          "watch_time_seconds": 8700,
+          "average_view_duration_seconds": 12.1,
+          "likes": 28,
+          "comments": 9,
+          "shares": 8,
+          "subscribers_gained": 3
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-question",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "Can the press decide it?",
+        "hook_type": "question",
+        "thumbnail": "Question card",
+        "thumbnail_style": "question_text_card",
+        "publishing_time": "2026-07-01T18:00:00+00:00",
+        "story_angle": "question",
+        "cta": "Tell us below.",
+        "metrics": {
+          "views": 900,
+          "watch_time_seconds": 12000,
+          "average_view_duration_seconds": 13.3,
+          "likes": 41,
+          "comments": 18,
+          "shares": 11,
+          "subscribers_gained": 4
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-data",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "One stat explains the match",
+        "hook_type": "data",
+        "thumbnail": "Data card",
+        "thumbnail_style": "stat_card",
+        "publishing_time": "2026-07-02T18:00:00+00:00",
+        "story_angle": "data",
+        "cta": "What did you see?",
+        "metrics": {
+          "views": 720,
+          "watch_time_seconds": 8700,
+          "average_view_duration_seconds": 12.1,
+          "likes": 28,
+          "comments": 9,
+          "shares": 8,
+          "subscribers_gained": 3
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-question",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "Can the press decide it?",
+        "hook_type": "question",
+        "thumbnail": "Question card",
+        "thumbnail_style": "question_text_card",
+        "publishing_time": "2026-07-01T18:00:00+00:00",
+        "story_angle": "question",
+        "cta": "Tell us below.",
+        "metrics": {
+          "views": 900,
+          "watch_time_seconds": 12000,
+          "average_view_duration_seconds": 13.3,
+          "likes": 41,
+          "comments": 18,
+          "shares": 11,
+          "subscribers_gained": 4
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-data",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "One stat explains the match",
+        "hook_type": "data",
+        "thumbnail": "Data card",
+        "thumbnail_style": "stat_card",
+        "publishing_time": "2026-07-02T18:00:00+00:00",
+        "story_angle": "data",
+        "cta": "What did you see?",
+        "metrics": {
+          "views": 720,
+          "watch_time_seconds": 8700,
+          "average_view_duration_seconds": 12.1,
+          "likes": 28,
+          "comments": 9,
+          "shares": 8,
+          "subscribers_gained": 3
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-question",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "Can the press decide it?",
+        "hook_type": "question",
+        "thumbnail": "Question card",
+        "thumbnail_style": "question_text_card",
+        "publishing_time": "2026-07-01T18:00:00+00:00",
+        "story_angle": "question",
+        "cta": "Tell us below.",
+        "metrics": {
+          "views": 900,
+          "watch_time_seconds": 12000,
+          "average_view_duration_seconds": 13.3,
+          "likes": 41,
+          "comments": 18,
+          "shares": 11,
+          "subscribers_gained": 4
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-data",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "One stat explains the match",
+        "hook_type": "data",
+        "thumbnail": "Data card",
+        "thumbnail_style": "stat_card",
+        "publishing_time": "2026-07-02T18:00:00+00:00",
+        "story_angle": "data",
+        "cta": "What did you see?",
+        "metrics": {
+          "views": 720,
+          "watch_time_seconds": 8700,
+          "average_view_duration_seconds": 12.1,
+          "likes": 28,
+          "comments": 9,
+          "shares": 8,
+          "subscribers_gained": 3
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-question",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "Can the press decide it?",
+        "hook_type": "question",
+        "thumbnail": "Question card",
+        "thumbnail_style": "question_text_card",
+        "publishing_time": "2026-07-01T18:00:00+00:00",
+        "story_angle": "question",
+        "cta": "Tell us below.",
+        "metrics": {
+          "views": 900,
+          "watch_time_seconds": 12000,
+          "average_view_duration_seconds": 13.3,
+          "likes": 41,
+          "comments": 18,
+          "shares": 11,
+          "subscribers_gained": 4
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-data",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "One stat explains the match",
+        "hook_type": "data",
+        "thumbnail": "Data card",
+        "thumbnail_style": "stat_card",
+        "publishing_time": "2026-07-02T18:00:00+00:00",
+        "story_angle": "data",
+        "cta": "What did you see?",
+        "metrics": {
+          "views": 720,
+          "watch_time_seconds": 8700,
+          "average_view_duration_seconds": 12.1,
+          "likes": 28,
+          "comments": 9,
+          "shares": 8,
+          "subscribers_gained": 3
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-question",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "Can the press decide it?",
+        "hook_type": "question",
+        "thumbnail": "Question card",
+        "thumbnail_style": "question_text_card",
+        "publishing_time": "2026-07-01T18:00:00+00:00",
+        "story_angle": "question",
+        "cta": "Tell us below.",
+        "metrics": {
+          "views": 900,
+          "watch_time_seconds": 12000,
+          "average_view_duration_seconds": 13.3,
+          "likes": 41,
+          "comments": 18,
+          "shares": 11,
+          "subscribers_gained": 4
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-data",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "One stat explains the match",
+        "hook_type": "data",
+        "thumbnail": "Data card",
+        "thumbnail_style": "stat_card",
+        "publishing_time": "2026-07-02T18:00:00+00:00",
+        "story_angle": "data",
+        "cta": "What did you see?",
+        "metrics": {
+          "views": 720,
+          "watch_time_seconds": 8700,
+          "average_view_duration_seconds": 12.1,
+          "likes": 28,
+          "comments": 9,
+          "shares": 8,
+          "subscribers_gained": 3
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-question",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "Can the press decide it?",
+        "hook_type": "question",
+        "thumbnail": "Question card",
+        "thumbnail_style": "question_text_card",
+        "publishing_time": "2026-07-01T18:00:00+00:00",
+        "story_angle": "question",
+        "cta": "Tell us below.",
+        "metrics": {
+          "views": 900,
+          "watch_time_seconds": 12000,
+          "average_view_duration_seconds": 13.3,
+          "likes": 41,
+          "comments": 18,
+          "shares": 11,
+          "subscribers_gained": 4
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-data",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "One stat explains the match",
+        "hook_type": "data",
+        "thumbnail": "Data card",
+        "thumbnail_style": "stat_card",
+        "publishing_time": "2026-07-02T18:00:00+00:00",
+        "story_angle": "data",
+        "cta": "What did you see?",
+        "metrics": {
+          "views": 720,
+          "watch_time_seconds": 8700,
+          "average_view_duration_seconds": 12.1,
+          "likes": 28,
+          "comments": 9,
+          "shares": 8,
+          "subscribers_gained": 3
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-question",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "Can the press decide it?",
+        "hook_type": "question",
+        "thumbnail": "Question card",
+        "thumbnail_style": "question_text_card",
+        "publishing_time": "2026-07-01T18:00:00+00:00",
+        "story_angle": "question",
+        "cta": "Tell us below.",
+        "metrics": {
+          "views": 900,
+          "watch_time_seconds": 12000,
+          "average_view_duration_seconds": 13.3,
+          "likes": 41,
+          "comments": 18,
+          "shares": 11,
+          "subscribers_gained": 4
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-data",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "One stat explains the match",
+        "hook_type": "data",
+        "thumbnail": "Data card",
+        "thumbnail_style": "stat_card",
+        "publishing_time": "2026-07-02T18:00:00+00:00",
+        "story_angle": "data",
+        "cta": "What did you see?",
+        "metrics": {
+          "views": 720,
+          "watch_time_seconds": 8700,
+          "average_view_duration_seconds": 12.1,
+          "likes": 28,
+          "comments": 9,
+          "shares": 8,
+          "subscribers_gained": 3
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-question",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "Can the press decide it?",
+        "hook_type": "question",
+        "thumbnail": "Question card",
+        "thumbnail_style": "question_text_card",
+        "publishing_time": "2026-07-01T18:00:00+00:00",
+        "story_angle": "question",
+        "cta": "Tell us below.",
+        "metrics": {
+          "views": 900,
+          "watch_time_seconds": 12000,
+          "average_view_duration_seconds": 13.3,
+          "likes": 41,
+          "comments": 18,
+          "shares": 11,
+          "subscribers_gained": 4
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-data",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "One stat explains the match",
+        "hook_type": "data",
+        "thumbnail": "Data card",
+        "thumbnail_style": "stat_card",
+        "publishing_time": "2026-07-02T18:00:00+00:00",
+        "story_angle": "data",
+        "cta": "What did you see?",
+        "metrics": {
+          "views": 720,
+          "watch_time_seconds": 8700,
+          "average_view_duration_seconds": 12.1,
+          "likes": 28,
+          "comments": 9,
+          "shares": 8,
+          "subscribers_gained": 3
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-question",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "Can the press decide it?",
+        "hook_type": "question",
+        "thumbnail": "Question card",
+        "thumbnail_style": "question_text_card",
+        "publishing_time": "2026-07-01T18:00:00+00:00",
+        "story_angle": "question",
+        "cta": "Tell us below.",
+        "metrics": {
+          "views": 900,
+          "watch_time_seconds": 12000,
+          "average_view_duration_seconds": 13.3,
+          "likes": 41,
+          "comments": 18,
+          "shares": 11,
+          "subscribers_gained": 4
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-data",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "One stat explains the match",
+        "hook_type": "data",
+        "thumbnail": "Data card",
+        "thumbnail_style": "stat_card",
+        "publishing_time": "2026-07-02T18:00:00+00:00",
+        "story_angle": "data",
+        "cta": "What did you see?",
+        "metrics": {
+          "views": 720,
+          "watch_time_seconds": 8700,
+          "average_view_duration_seconds": 12.1,
+          "likes": 28,
+          "comments": 9,
+          "shares": 8,
+          "subscribers_gained": 3
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-question",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "Can the press decide it?",
+        "hook_type": "question",
+        "thumbnail": "Question card",
+        "thumbnail_style": "question_text_card",
+        "publishing_time": "2026-07-01T18:00:00+00:00",
+        "story_angle": "question",
+        "cta": "Tell us below.",
+        "metrics": {
+          "views": 900,
+          "watch_time_seconds": 12000,
+          "average_view_duration_seconds": 13.3,
+          "likes": 41,
+          "comments": 18,
+          "shares": 11,
+          "subscribers_gained": 4
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-data",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "One stat explains the match",
+        "hook_type": "data",
+        "thumbnail": "Data card",
+        "thumbnail_style": "stat_card",
+        "publishing_time": "2026-07-02T18:00:00+00:00",
+        "story_angle": "data",
+        "cta": "What did you see?",
+        "metrics": {
+          "views": 720,
+          "watch_time_seconds": 8700,
+          "average_view_duration_seconds": 12.1,
+          "likes": 28,
+          "comments": 9,
+          "shares": 8,
+          "subscribers_gained": 3
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-question",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "Can the press decide it?",
+        "hook_type": "question",
+        "thumbnail": "Question card",
+        "thumbnail_style": "question_text_card",
+        "publishing_time": "2026-07-01T18:00:00+00:00",
+        "story_angle": "question",
+        "cta": "Tell us below.",
+        "metrics": {
+          "views": 900,
+          "watch_time_seconds": 12000,
+          "average_view_duration_seconds": 13.3,
+          "likes": 41,
+          "comments": 18,
+          "shares": 11,
+          "subscribers_gained": 4
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-data",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "One stat explains the match",
+        "hook_type": "data",
+        "thumbnail": "Data card",
+        "thumbnail_style": "stat_card",
+        "publishing_time": "2026-07-02T18:00:00+00:00",
+        "story_angle": "data",
+        "cta": "What did you see?",
+        "metrics": {
+          "views": 720,
+          "watch_time_seconds": 8700,
+          "average_view_duration_seconds": 12.1,
+          "likes": 28,
+          "comments": 9,
+          "shares": 8,
+          "subscribers_gained": 3
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-question",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "Can the press decide it?",
+        "hook_type": "question",
+        "thumbnail": "Question card",
+        "thumbnail_style": "question_text_card",
+        "publishing_time": "2026-07-01T18:00:00+00:00",
+        "story_angle": "question",
+        "cta": "Tell us below.",
+        "metrics": {
+          "views": 900,
+          "watch_time_seconds": 12000,
+          "average_view_duration_seconds": 13.3,
+          "likes": 41,
+          "comments": 18,
+          "shares": 11,
+          "subscribers_gained": 4
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-data",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "One stat explains the match",
+        "hook_type": "data",
+        "thumbnail": "Data card",
+        "thumbnail_style": "stat_card",
+        "publishing_time": "2026-07-02T18:00:00+00:00",
+        "story_angle": "data",
+        "cta": "What did you see?",
+        "metrics": {
+          "views": 720,
+          "watch_time_seconds": 8700,
+          "average_view_duration_seconds": 12.1,
+          "likes": 28,
+          "comments": 9,
+          "shares": 8,
+          "subscribers_gained": 3
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-question",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "Can the press decide it?",
+        "hook_type": "question",
+        "thumbnail": "Question card",
+        "thumbnail_style": "question_text_card",
+        "publishing_time": "2026-07-01T18:00:00+00:00",
+        "story_angle": "question",
+        "cta": "Tell us below.",
+        "metrics": {
+          "views": 900,
+          "watch_time_seconds": 12000,
+          "average_view_duration_seconds": 13.3,
+          "likes": 41,
+          "comments": 18,
+          "shares": 11,
+          "subscribers_gained": 4
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-data",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "One stat explains the match",
+        "hook_type": "data",
+        "thumbnail": "Data card",
+        "thumbnail_style": "stat_card",
+        "publishing_time": "2026-07-02T18:00:00+00:00",
+        "story_angle": "data",
+        "cta": "What did you see?",
+        "metrics": {
+          "views": 720,
+          "watch_time_seconds": 8700,
+          "average_view_duration_seconds": 12.1,
+          "likes": 28,
+          "comments": 9,
+          "shares": 8,
+          "subscribers_gained": 3
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-question",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "Can the press decide it?",
+        "hook_type": "question",
+        "thumbnail": "Question card",
+        "thumbnail_style": "question_text_card",
+        "publishing_time": "2026-07-01T18:00:00+00:00",
+        "story_angle": "question",
+        "cta": "Tell us below.",
+        "metrics": {
+          "views": 900,
+          "watch_time_seconds": 12000,
+          "average_view_duration_seconds": 13.3,
+          "likes": 41,
+          "comments": 18,
+          "shares": 11,
+          "subscribers_gained": 4
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-data",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "One stat explains the match",
+        "hook_type": "data",
+        "thumbnail": "Data card",
+        "thumbnail_style": "stat_card",
+        "publishing_time": "2026-07-02T18:00:00+00:00",
+        "story_angle": "data",
+        "cta": "What did you see?",
+        "metrics": {
+          "views": 720,
+          "watch_time_seconds": 8700,
+          "average_view_duration_seconds": 12.1,
+          "likes": 28,
+          "comments": 9,
+          "shares": 8,
+          "subscribers_gained": 3
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-question",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "Can the press decide it?",
+        "hook_type": "question",
+        "thumbnail": "Question card",
+        "thumbnail_style": "question_text_card",
+        "publishing_time": "2026-07-01T18:00:00+00:00",
+        "story_angle": "question",
+        "cta": "Tell us below.",
+        "metrics": {
+          "views": 900,
+          "watch_time_seconds": 12000,
+          "average_view_duration_seconds": 13.3,
+          "likes": 41,
+          "comments": 18,
+          "shares": 11,
+          "subscribers_gained": 4
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-data",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "One stat explains the match",
+        "hook_type": "data",
+        "thumbnail": "Data card",
+        "thumbnail_style": "stat_card",
+        "publishing_time": "2026-07-02T18:00:00+00:00",
+        "story_angle": "data",
+        "cta": "What did you see?",
+        "metrics": {
+          "views": 720,
+          "watch_time_seconds": 8700,
+          "average_view_duration_seconds": 12.1,
+          "likes": 28,
+          "comments": 9,
+          "shares": 8,
+          "subscribers_gained": 3
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-question",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "Can the press decide it?",
+        "hook_type": "question",
+        "thumbnail": "Question card",
+        "thumbnail_style": "question_text_card",
+        "publishing_time": "2026-07-01T18:00:00+00:00",
+        "story_angle": "question",
+        "cta": "Tell us below.",
+        "metrics": {
+          "views": 900,
+          "watch_time_seconds": 12000,
+          "average_view_duration_seconds": 13.3,
+          "likes": 41,
+          "comments": 18,
+          "shares": 11,
+          "subscribers_gained": 4
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-data",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "One stat explains the match",
+        "hook_type": "data",
+        "thumbnail": "Data card",
+        "thumbnail_style": "stat_card",
+        "publishing_time": "2026-07-02T18:00:00+00:00",
+        "story_angle": "data",
+        "cta": "What did you see?",
+        "metrics": {
+          "views": 720,
+          "watch_time_seconds": 8700,
+          "average_view_duration_seconds": 12.1,
+          "likes": 28,
+          "comments": 9,
+          "shares": 8,
+          "subscribers_gained": 3
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-question",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "Can the press decide it?",
+        "hook_type": "question",
+        "thumbnail": "Question card",
+        "thumbnail_style": "question_text_card",
+        "publishing_time": "2026-07-01T18:00:00+00:00",
+        "story_angle": "question",
+        "cta": "Tell us below.",
+        "metrics": {
+          "views": 900,
+          "watch_time_seconds": 12000,
+          "average_view_duration_seconds": 13.3,
+          "likes": 41,
+          "comments": 18,
+          "shares": 11,
+          "subscribers_gained": 4
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-data",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "One stat explains the match",
+        "hook_type": "data",
+        "thumbnail": "Data card",
+        "thumbnail_style": "stat_card",
+        "publishing_time": "2026-07-02T18:00:00+00:00",
+        "story_angle": "data",
+        "cta": "What did you see?",
+        "metrics": {
+          "views": 720,
+          "watch_time_seconds": 8700,
+          "average_view_duration_seconds": 12.1,
+          "likes": 28,
+          "comments": 9,
+          "shares": 8,
+          "subscribers_gained": 3
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-question",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "Can the press decide it?",
+        "hook_type": "question",
+        "thumbnail": "Question card",
+        "thumbnail_style": "question_text_card",
+        "publishing_time": "2026-07-01T18:00:00+00:00",
+        "story_angle": "question",
+        "cta": "Tell us below.",
+        "metrics": {
+          "views": 900,
+          "watch_time_seconds": 12000,
+          "average_view_duration_seconds": 13.3,
+          "likes": 41,
+          "comments": 18,
+          "shares": 11,
+          "subscribers_gained": 4
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-data",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "One stat explains the match",
+        "hook_type": "data",
+        "thumbnail": "Data card",
+        "thumbnail_style": "stat_card",
+        "publishing_time": "2026-07-02T18:00:00+00:00",
+        "story_angle": "data",
+        "cta": "What did you see?",
+        "metrics": {
+          "views": 720,
+          "watch_time_seconds": 8700,
+          "average_view_duration_seconds": 12.1,
+          "likes": 28,
+          "comments": 9,
+          "shares": 8,
+          "subscribers_gained": 3
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-question",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "Can the press decide it?",
+        "hook_type": "question",
+        "thumbnail": "Question card",
+        "thumbnail_style": "question_text_card",
+        "publishing_time": "2026-07-01T18:00:00+00:00",
+        "story_angle": "question",
+        "cta": "Tell us below.",
+        "metrics": {
+          "views": 900,
+          "watch_time_seconds": 12000,
+          "average_view_duration_seconds": 13.3,
+          "likes": 41,
+          "comments": 18,
+          "shares": 11,
+          "subscribers_gained": 4
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-data",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "One stat explains the match",
+        "hook_type": "data",
+        "thumbnail": "Data card",
+        "thumbnail_style": "stat_card",
+        "publishing_time": "2026-07-02T18:00:00+00:00",
+        "story_angle": "data",
+        "cta": "What did you see?",
+        "metrics": {
+          "views": 720,
+          "watch_time_seconds": 8700,
+          "average_view_duration_seconds": 12.1,
+          "likes": 28,
+          "comments": 9,
+          "shares": 8,
+          "subscribers_gained": 3
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-question",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "Can the press decide it?",
+        "hook_type": "question",
+        "thumbnail": "Question card",
+        "thumbnail_style": "question_text_card",
+        "publishing_time": "2026-07-01T18:00:00+00:00",
+        "story_angle": "question",
+        "cta": "Tell us below.",
+        "metrics": {
+          "views": 900,
+          "watch_time_seconds": 12000,
+          "average_view_duration_seconds": 13.3,
+          "likes": 41,
+          "comments": 18,
+          "shares": 11,
+          "subscribers_gained": 4
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-data",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "One stat explains the match",
+        "hook_type": "data",
+        "thumbnail": "Data card",
+        "thumbnail_style": "stat_card",
+        "publishing_time": "2026-07-02T18:00:00+00:00",
+        "story_angle": "data",
+        "cta": "What did you see?",
+        "metrics": {
+          "views": 720,
+          "watch_time_seconds": 8700,
+          "average_view_duration_seconds": 12.1,
+          "likes": 28,
+          "comments": 9,
+          "shares": 8,
+          "subscribers_gained": 3
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-question",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "Can the press decide it?",
+        "hook_type": "question",
+        "thumbnail": "Question card",
+        "thumbnail_style": "question_text_card",
+        "publishing_time": "2026-07-01T18:00:00+00:00",
+        "story_angle": "question",
+        "cta": "Tell us below.",
+        "metrics": {
+          "views": 900,
+          "watch_time_seconds": 12000,
+          "average_view_duration_seconds": 13.3,
+          "likes": 41,
+          "comments": 18,
+          "shares": 11,
+          "subscribers_gained": 4
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-data",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "One stat explains the match",
+        "hook_type": "data",
+        "thumbnail": "Data card",
+        "thumbnail_style": "stat_card",
+        "publishing_time": "2026-07-02T18:00:00+00:00",
+        "story_angle": "data",
+        "cta": "What did you see?",
+        "metrics": {
+          "views": 720,
+          "watch_time_seconds": 8700,
+          "average_view_duration_seconds": 12.1,
+          "likes": 28,
+          "comments": 9,
+          "shares": 8,
+          "subscribers_gained": 3
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-question",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "Can the press decide it?",
+        "hook_type": "question",
+        "thumbnail": "Question card",
+        "thumbnail_style": "question_text_card",
+        "publishing_time": "2026-07-01T18:00:00+00:00",
+        "story_angle": "question",
+        "cta": "Tell us below.",
+        "metrics": {
+          "views": 900,
+          "watch_time_seconds": 12000,
+          "average_view_duration_seconds": 13.3,
+          "likes": 41,
+          "comments": 18,
+          "shares": 11,
+          "subscribers_gained": 4
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-data",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "One stat explains the match",
+        "hook_type": "data",
+        "thumbnail": "Data card",
+        "thumbnail_style": "stat_card",
+        "publishing_time": "2026-07-02T18:00:00+00:00",
+        "story_angle": "data",
+        "cta": "What did you see?",
+        "metrics": {
+          "views": 720,
+          "watch_time_seconds": 8700,
+          "average_view_duration_seconds": 12.1,
+          "likes": 28,
+          "comments": 9,
+          "shares": 8,
+          "subscribers_gained": 3
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-question",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "Can the press decide it?",
+        "hook_type": "question",
+        "thumbnail": "Question card",
+        "thumbnail_style": "question_text_card",
+        "publishing_time": "2026-07-01T18:00:00+00:00",
+        "story_angle": "question",
+        "cta": "Tell us below.",
+        "metrics": {
+          "views": 900,
+          "watch_time_seconds": 12000,
+          "average_view_duration_seconds": 13.3,
+          "likes": 41,
+          "comments": 18,
+          "shares": 11,
+          "subscribers_gained": 4
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-data",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "One stat explains the match",
+        "hook_type": "data",
+        "thumbnail": "Data card",
+        "thumbnail_style": "stat_card",
+        "publishing_time": "2026-07-02T18:00:00+00:00",
+        "story_angle": "data",
+        "cta": "What did you see?",
+        "metrics": {
+          "views": 720,
+          "watch_time_seconds": 8700,
+          "average_view_duration_seconds": 12.1,
+          "likes": 28,
+          "comments": 9,
+          "shares": 8,
+          "subscribers_gained": 3
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-question",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "Can the press decide it?",
+        "hook_type": "question",
+        "thumbnail": "Question card",
+        "thumbnail_style": "question_text_card",
+        "publishing_time": "2026-07-01T18:00:00+00:00",
+        "story_angle": "question",
+        "cta": "Tell us below.",
+        "metrics": {
+          "views": 900,
+          "watch_time_seconds": 12000,
+          "average_view_duration_seconds": 13.3,
+          "likes": 41,
+          "comments": 18,
+          "shares": 11,
+          "subscribers_gained": 4
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-data",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "One stat explains the match",
+        "hook_type": "data",
+        "thumbnail": "Data card",
+        "thumbnail_style": "stat_card",
+        "publishing_time": "2026-07-02T18:00:00+00:00",
+        "story_angle": "data",
+        "cta": "What did you see?",
+        "metrics": {
+          "views": 720,
+          "watch_time_seconds": 8700,
+          "average_view_duration_seconds": 12.1,
+          "likes": 28,
+          "comments": 9,
+          "shares": 8,
+          "subscribers_gained": 3
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-question",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "Can the press decide it?",
+        "hook_type": "question",
+        "thumbnail": "Question card",
+        "thumbnail_style": "question_text_card",
+        "publishing_time": "2026-07-01T18:00:00+00:00",
+        "story_angle": "question",
+        "cta": "Tell us below.",
+        "metrics": {
+          "views": 900,
+          "watch_time_seconds": 12000,
+          "average_view_duration_seconds": 13.3,
+          "likes": 41,
+          "comments": 18,
+          "shares": 11,
+          "subscribers_gained": 4
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-data",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "One stat explains the match",
+        "hook_type": "data",
+        "thumbnail": "Data card",
+        "thumbnail_style": "stat_card",
+        "publishing_time": "2026-07-02T18:00:00+00:00",
+        "story_angle": "data",
+        "cta": "What did you see?",
+        "metrics": {
+          "views": 720,
+          "watch_time_seconds": 8700,
+          "average_view_duration_seconds": 12.1,
+          "likes": 28,
+          "comments": 9,
+          "shares": 8,
+          "subscribers_gained": 3
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-question",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "Can the press decide it?",
+        "hook_type": "question",
+        "thumbnail": "Question card",
+        "thumbnail_style": "question_text_card",
+        "publishing_time": "2026-07-01T18:00:00+00:00",
+        "story_angle": "question",
+        "cta": "Tell us below.",
+        "metrics": {
+          "views": 900,
+          "watch_time_seconds": 12000,
+          "average_view_duration_seconds": 13.3,
+          "likes": 41,
+          "comments": 18,
+          "shares": 11,
+          "subscribers_gained": 4
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-data",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "One stat explains the match",
+        "hook_type": "data",
+        "thumbnail": "Data card",
+        "thumbnail_style": "stat_card",
+        "publishing_time": "2026-07-02T18:00:00+00:00",
+        "story_angle": "data",
+        "cta": "What did you see?",
+        "metrics": {
+          "views": 720,
+          "watch_time_seconds": 8700,
+          "average_view_duration_seconds": 12.1,
+          "likes": 28,
+          "comments": 9,
+          "shares": 8,
+          "subscribers_gained": 3
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-question",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "Can the press decide it?",
+        "hook_type": "question",
+        "thumbnail": "Question card",
+        "thumbnail_style": "question_text_card",
+        "publishing_time": "2026-07-01T18:00:00+00:00",
+        "story_angle": "question",
+        "cta": "Tell us below.",
+        "metrics": {
+          "views": 900,
+          "watch_time_seconds": 12000,
+          "average_view_duration_seconds": 13.3,
+          "likes": 41,
+          "comments": 18,
+          "shares": 11,
+          "subscribers_gained": 4
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-data",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "One stat explains the match",
+        "hook_type": "data",
+        "thumbnail": "Data card",
+        "thumbnail_style": "stat_card",
+        "publishing_time": "2026-07-02T18:00:00+00:00",
+        "story_angle": "data",
+        "cta": "What did you see?",
+        "metrics": {
+          "views": 720,
+          "watch_time_seconds": 8700,
+          "average_view_duration_seconds": 12.1,
+          "likes": 28,
+          "comments": 9,
+          "shares": 8,
+          "subscribers_gained": 3
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-question",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "Can the press decide it?",
+        "hook_type": "question",
+        "thumbnail": "Question card",
+        "thumbnail_style": "question_text_card",
+        "publishing_time": "2026-07-01T18:00:00+00:00",
+        "story_angle": "question",
+        "cta": "Tell us below.",
+        "metrics": {
+          "views": 900,
+          "watch_time_seconds": 12000,
+          "average_view_duration_seconds": 13.3,
+          "likes": 41,
+          "comments": 18,
+          "shares": 11,
+          "subscribers_gained": 4
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-data",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "One stat explains the match",
+        "hook_type": "data",
+        "thumbnail": "Data card",
+        "thumbnail_style": "stat_card",
+        "publishing_time": "2026-07-02T18:00:00+00:00",
+        "story_angle": "data",
+        "cta": "What did you see?",
+        "metrics": {
+          "views": 720,
+          "watch_time_seconds": 8700,
+          "average_view_duration_seconds": 12.1,
+          "likes": 28,
+          "comments": 9,
+          "shares": 8,
+          "subscribers_gained": 3
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-question",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "Can the press decide it?",
+        "hook_type": "question",
+        "thumbnail": "Question card",
+        "thumbnail_style": "question_text_card",
+        "publishing_time": "2026-07-01T18:00:00+00:00",
+        "story_angle": "question",
+        "cta": "Tell us below.",
+        "metrics": {
+          "views": 900,
+          "watch_time_seconds": 12000,
+          "average_view_duration_seconds": 13.3,
+          "likes": 41,
+          "comments": 18,
+          "shares": 11,
+          "subscribers_gained": 4
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-data",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "One stat explains the match",
+        "hook_type": "data",
+        "thumbnail": "Data card",
+        "thumbnail_style": "stat_card",
+        "publishing_time": "2026-07-02T18:00:00+00:00",
+        "story_angle": "data",
+        "cta": "What did you see?",
+        "metrics": {
+          "views": 720,
+          "watch_time_seconds": 8700,
+          "average_view_duration_seconds": 12.1,
+          "likes": 28,
+          "comments": 9,
+          "shares": 8,
+          "subscribers_gained": 3
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-question",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "Can the press decide it?",
+        "hook_type": "question",
+        "thumbnail": "Question card",
+        "thumbnail_style": "question_text_card",
+        "publishing_time": "2026-07-01T18:00:00+00:00",
+        "story_angle": "question",
+        "cta": "Tell us below.",
+        "metrics": {
+          "views": 900,
+          "watch_time_seconds": 12000,
+          "average_view_duration_seconds": 13.3,
+          "likes": 41,
+          "comments": 18,
+          "shares": 11,
+          "subscribers_gained": 4
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-data",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "One stat explains the match",
+        "hook_type": "data",
+        "thumbnail": "Data card",
+        "thumbnail_style": "stat_card",
+        "publishing_time": "2026-07-02T18:00:00+00:00",
+        "story_angle": "data",
+        "cta": "What did you see?",
+        "metrics": {
+          "views": 720,
+          "watch_time_seconds": 8700,
+          "average_view_duration_seconds": 12.1,
+          "likes": 28,
+          "comments": 9,
+          "shares": 8,
+          "subscribers_gained": 3
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-question",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "Can the press decide it?",
+        "hook_type": "question",
+        "thumbnail": "Question card",
+        "thumbnail_style": "question_text_card",
+        "publishing_time": "2026-07-01T18:00:00+00:00",
+        "story_angle": "question",
+        "cta": "Tell us below.",
+        "metrics": {
+          "views": 900,
+          "watch_time_seconds": 12000,
+          "average_view_duration_seconds": 13.3,
+          "likes": 41,
+          "comments": 18,
+          "shares": 11,
+          "subscribers_gained": 4
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-data",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "One stat explains the match",
+        "hook_type": "data",
+        "thumbnail": "Data card",
+        "thumbnail_style": "stat_card",
+        "publishing_time": "2026-07-02T18:00:00+00:00",
+        "story_angle": "data",
+        "cta": "What did you see?",
+        "metrics": {
+          "views": 720,
+          "watch_time_seconds": 8700,
+          "average_view_duration_seconds": 12.1,
+          "likes": 28,
+          "comments": 9,
+          "shares": 8,
+          "subscribers_gained": 3
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-question",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "Can the press decide it?",
+        "hook_type": "question",
+        "thumbnail": "Question card",
+        "thumbnail_style": "question_text_card",
+        "publishing_time": "2026-07-01T18:00:00+00:00",
+        "story_angle": "question",
+        "cta": "Tell us below.",
+        "metrics": {
+          "views": 900,
+          "watch_time_seconds": 12000,
+          "average_view_duration_seconds": 13.3,
+          "likes": 41,
+          "comments": 18,
+          "shares": 11,
+          "subscribers_gained": 4
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-data",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "One stat explains the match",
+        "hook_type": "data",
+        "thumbnail": "Data card",
+        "thumbnail_style": "stat_card",
+        "publishing_time": "2026-07-02T18:00:00+00:00",
+        "story_angle": "data",
+        "cta": "What did you see?",
+        "metrics": {
+          "views": 720,
+          "watch_time_seconds": 8700,
+          "average_view_duration_seconds": 12.1,
+          "likes": 28,
+          "comments": 9,
+          "shares": 8,
+          "subscribers_gained": 3
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-question",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "Can the press decide it?",
+        "hook_type": "question",
+        "thumbnail": "Question card",
+        "thumbnail_style": "question_text_card",
+        "publishing_time": "2026-07-01T18:00:00+00:00",
+        "story_angle": "question",
+        "cta": "Tell us below.",
+        "metrics": {
+          "views": 900,
+          "watch_time_seconds": 12000,
+          "average_view_duration_seconds": 13.3,
+          "likes": 41,
+          "comments": 18,
+          "shares": 11,
+          "subscribers_gained": 4
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-data",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "One stat explains the match",
+        "hook_type": "data",
+        "thumbnail": "Data card",
+        "thumbnail_style": "stat_card",
+        "publishing_time": "2026-07-02T18:00:00+00:00",
+        "story_angle": "data",
+        "cta": "What did you see?",
+        "metrics": {
+          "views": 720,
+          "watch_time_seconds": 8700,
+          "average_view_duration_seconds": 12.1,
+          "likes": 28,
+          "comments": 9,
+          "shares": 8,
+          "subscribers_gained": 3
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-question",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "Can the press decide it?",
+        "hook_type": "question",
+        "thumbnail": "Question card",
+        "thumbnail_style": "question_text_card",
+        "publishing_time": "2026-07-01T18:00:00+00:00",
+        "story_angle": "question",
+        "cta": "Tell us below.",
+        "metrics": {
+          "views": 900,
+          "watch_time_seconds": 12000,
+          "average_view_duration_seconds": 13.3,
+          "likes": 41,
+          "comments": 18,
+          "shares": 11,
+          "subscribers_gained": 4
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-data",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "One stat explains the match",
+        "hook_type": "data",
+        "thumbnail": "Data card",
+        "thumbnail_style": "stat_card",
+        "publishing_time": "2026-07-02T18:00:00+00:00",
+        "story_angle": "data",
+        "cta": "What did you see?",
+        "metrics": {
+          "views": 720,
+          "watch_time_seconds": 8700,
+          "average_view_duration_seconds": 12.1,
+          "likes": 28,
+          "comments": 9,
+          "shares": 8,
+          "subscribers_gained": 3
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-question",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "Can the press decide it?",
+        "hook_type": "question",
+        "thumbnail": "Question card",
+        "thumbnail_style": "question_text_card",
+        "publishing_time": "2026-07-01T18:00:00+00:00",
+        "story_angle": "question",
+        "cta": "Tell us below.",
+        "metrics": {
+          "views": 900,
+          "watch_time_seconds": 12000,
+          "average_view_duration_seconds": 13.3,
+          "likes": 41,
+          "comments": 18,
+          "shares": 11,
+          "subscribers_gained": 4
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-data",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "One stat explains the match",
+        "hook_type": "data",
+        "thumbnail": "Data card",
+        "thumbnail_style": "stat_card",
+        "publishing_time": "2026-07-02T18:00:00+00:00",
+        "story_angle": "data",
+        "cta": "What did you see?",
+        "metrics": {
+          "views": 720,
+          "watch_time_seconds": 8700,
+          "average_view_duration_seconds": 12.1,
+          "likes": 28,
+          "comments": 9,
+          "shares": 8,
+          "subscribers_gained": 3
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-question",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "Can the press decide it?",
+        "hook_type": "question",
+        "thumbnail": "Question card",
+        "thumbnail_style": "question_text_card",
+        "publishing_time": "2026-07-01T18:00:00+00:00",
+        "story_angle": "question",
+        "cta": "Tell us below.",
+        "metrics": {
+          "views": 900,
+          "watch_time_seconds": 12000,
+          "average_view_duration_seconds": 13.3,
+          "likes": 41,
+          "comments": 18,
+          "shares": 11,
+          "subscribers_gained": 4
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-data",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "One stat explains the match",
+        "hook_type": "data",
+        "thumbnail": "Data card",
+        "thumbnail_style": "stat_card",
+        "publishing_time": "2026-07-02T18:00:00+00:00",
+        "story_angle": "data",
+        "cta": "What did you see?",
+        "metrics": {
+          "views": 720,
+          "watch_time_seconds": 8700,
+          "average_view_duration_seconds": 12.1,
+          "likes": 28,
+          "comments": 9,
+          "shares": 8,
+          "subscribers_gained": 3
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-question",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "Can the press decide it?",
+        "hook_type": "question",
+        "thumbnail": "Question card",
+        "thumbnail_style": "question_text_card",
+        "publishing_time": "2026-07-01T18:00:00+00:00",
+        "story_angle": "question",
+        "cta": "Tell us below.",
+        "metrics": {
+          "views": 900,
+          "watch_time_seconds": 12000,
+          "average_view_duration_seconds": 13.3,
+          "likes": 41,
+          "comments": 18,
+          "shares": 11,
+          "subscribers_gained": 4
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-data",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "One stat explains the match",
+        "hook_type": "data",
+        "thumbnail": "Data card",
+        "thumbnail_style": "stat_card",
+        "publishing_time": "2026-07-02T18:00:00+00:00",
+        "story_angle": "data",
+        "cta": "What did you see?",
+        "metrics": {
+          "views": 720,
+          "watch_time_seconds": 8700,
+          "average_view_duration_seconds": 12.1,
+          "likes": 28,
+          "comments": 9,
+          "shares": 8,
+          "subscribers_gained": 3
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-question",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "Can the press decide it?",
+        "hook_type": "question",
+        "thumbnail": "Question card",
+        "thumbnail_style": "question_text_card",
+        "publishing_time": "2026-07-01T18:00:00+00:00",
+        "story_angle": "question",
+        "cta": "Tell us below.",
+        "metrics": {
+          "views": 900,
+          "watch_time_seconds": 12000,
+          "average_view_duration_seconds": 13.3,
+          "likes": 41,
+          "comments": 18,
+          "shares": 11,
+          "subscribers_gained": 4
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-data",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "One stat explains the match",
+        "hook_type": "data",
+        "thumbnail": "Data card",
+        "thumbnail_style": "stat_card",
+        "publishing_time": "2026-07-02T18:00:00+00:00",
+        "story_angle": "data",
+        "cta": "What did you see?",
+        "metrics": {
+          "views": 720,
+          "watch_time_seconds": 8700,
+          "average_view_duration_seconds": 12.1,
+          "likes": 28,
+          "comments": 9,
+          "shares": 8,
+          "subscribers_gained": 3
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-question",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "Can the press decide it?",
+        "hook_type": "question",
+        "thumbnail": "Question card",
+        "thumbnail_style": "question_text_card",
+        "publishing_time": "2026-07-01T18:00:00+00:00",
+        "story_angle": "question",
+        "cta": "Tell us below.",
+        "metrics": {
+          "views": 900,
+          "watch_time_seconds": 12000,
+          "average_view_duration_seconds": 13.3,
+          "likes": 41,
+          "comments": 18,
+          "shares": 11,
+          "subscribers_gained": 4
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-data",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "One stat explains the match",
+        "hook_type": "data",
+        "thumbnail": "Data card",
+        "thumbnail_style": "stat_card",
+        "publishing_time": "2026-07-02T18:00:00+00:00",
+        "story_angle": "data",
+        "cta": "What did you see?",
+        "metrics": {
+          "views": 720,
+          "watch_time_seconds": 8700,
+          "average_view_duration_seconds": 12.1,
+          "likes": 28,
+          "comments": 9,
+          "shares": 8,
+          "subscribers_gained": 3
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-question",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "Can the press decide it?",
+        "hook_type": "question",
+        "thumbnail": "Question card",
+        "thumbnail_style": "question_text_card",
+        "publishing_time": "2026-07-01T18:00:00+00:00",
+        "story_angle": "question",
+        "cta": "Tell us below.",
+        "metrics": {
+          "views": 900,
+          "watch_time_seconds": 12000,
+          "average_view_duration_seconds": 13.3,
+          "likes": 41,
+          "comments": 18,
+          "shares": 11,
+          "subscribers_gained": 4
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-data",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "One stat explains the match",
+        "hook_type": "data",
+        "thumbnail": "Data card",
+        "thumbnail_style": "stat_card",
+        "publishing_time": "2026-07-02T18:00:00+00:00",
+        "story_angle": "data",
+        "cta": "What did you see?",
+        "metrics": {
+          "views": 720,
+          "watch_time_seconds": 8700,
+          "average_view_duration_seconds": 12.1,
+          "likes": 28,
+          "comments": 9,
+          "shares": 8,
+          "subscribers_gained": 3
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-question",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "Can the press decide it?",
+        "hook_type": "question",
+        "thumbnail": "Question card",
+        "thumbnail_style": "question_text_card",
+        "publishing_time": "2026-07-01T18:00:00+00:00",
+        "story_angle": "question",
+        "cta": "Tell us below.",
+        "metrics": {
+          "views": 900,
+          "watch_time_seconds": 12000,
+          "average_view_duration_seconds": 13.3,
+          "likes": 41,
+          "comments": 18,
+          "shares": 11,
+          "subscribers_gained": 4
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-data",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "One stat explains the match",
+        "hook_type": "data",
+        "thumbnail": "Data card",
+        "thumbnail_style": "stat_card",
+        "publishing_time": "2026-07-02T18:00:00+00:00",
+        "story_angle": "data",
+        "cta": "What did you see?",
+        "metrics": {
+          "views": 720,
+          "watch_time_seconds": 8700,
+          "average_view_duration_seconds": 12.1,
+          "likes": 28,
+          "comments": 9,
+          "shares": 8,
+          "subscribers_gained": 3
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-question",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "Can the press decide it?",
+        "hook_type": "question",
+        "thumbnail": "Question card",
+        "thumbnail_style": "question_text_card",
+        "publishing_time": "2026-07-01T18:00:00+00:00",
+        "story_angle": "question",
+        "cta": "Tell us below.",
+        "metrics": {
+          "views": 900,
+          "watch_time_seconds": 12000,
+          "average_view_duration_seconds": 13.3,
+          "likes": 41,
+          "comments": 18,
+          "shares": 11,
+          "subscribers_gained": 4
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-data",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "One stat explains the match",
+        "hook_type": "data",
+        "thumbnail": "Data card",
+        "thumbnail_style": "stat_card",
+        "publishing_time": "2026-07-02T18:00:00+00:00",
+        "story_angle": "data",
+        "cta": "What did you see?",
+        "metrics": {
+          "views": 720,
+          "watch_time_seconds": 8700,
+          "average_view_duration_seconds": 12.1,
+          "likes": 28,
+          "comments": 9,
+          "shares": 8,
+          "subscribers_gained": 3
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-question",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "Can the press decide it?",
+        "hook_type": "question",
+        "thumbnail": "Question card",
+        "thumbnail_style": "question_text_card",
+        "publishing_time": "2026-07-01T18:00:00+00:00",
+        "story_angle": "question",
+        "cta": "Tell us below.",
+        "metrics": {
+          "views": 900,
+          "watch_time_seconds": 12000,
+          "average_view_duration_seconds": 13.3,
+          "likes": 41,
+          "comments": 18,
+          "shares": 11,
+          "subscribers_gained": 4
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-data",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "One stat explains the match",
+        "hook_type": "data",
+        "thumbnail": "Data card",
+        "thumbnail_style": "stat_card",
+        "publishing_time": "2026-07-02T18:00:00+00:00",
+        "story_angle": "data",
+        "cta": "What did you see?",
+        "metrics": {
+          "views": 720,
+          "watch_time_seconds": 8700,
+          "average_view_duration_seconds": 12.1,
+          "likes": 28,
+          "comments": 9,
+          "shares": 8,
+          "subscribers_gained": 3
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-question",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "Can the press decide it?",
+        "hook_type": "question",
+        "thumbnail": "Question card",
+        "thumbnail_style": "question_text_card",
+        "publishing_time": "2026-07-01T18:00:00+00:00",
+        "story_angle": "question",
+        "cta": "Tell us below.",
+        "metrics": {
+          "views": 900,
+          "watch_time_seconds": 12000,
+          "average_view_duration_seconds": 13.3,
+          "likes": 41,
+          "comments": 18,
+          "shares": 11,
+          "subscribers_gained": 4
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-data",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "One stat explains the match",
+        "hook_type": "data",
+        "thumbnail": "Data card",
+        "thumbnail_style": "stat_card",
+        "publishing_time": "2026-07-02T18:00:00+00:00",
+        "story_angle": "data",
+        "cta": "What did you see?",
+        "metrics": {
+          "views": 720,
+          "watch_time_seconds": 8700,
+          "average_view_duration_seconds": 12.1,
+          "likes": 28,
+          "comments": 9,
+          "shares": 8,
+          "subscribers_gained": 3
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-question",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "Can the press decide it?",
+        "hook_type": "question",
+        "thumbnail": "Question card",
+        "thumbnail_style": "question_text_card",
+        "publishing_time": "2026-07-01T18:00:00+00:00",
+        "story_angle": "question",
+        "cta": "Tell us below.",
+        "metrics": {
+          "views": 900,
+          "watch_time_seconds": 12000,
+          "average_view_duration_seconds": 13.3,
+          "likes": 41,
+          "comments": 18,
+          "shares": 11,
+          "subscribers_gained": 4
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-data",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "One stat explains the match",
+        "hook_type": "data",
+        "thumbnail": "Data card",
+        "thumbnail_style": "stat_card",
+        "publishing_time": "2026-07-02T18:00:00+00:00",
+        "story_angle": "data",
+        "cta": "What did you see?",
+        "metrics": {
+          "views": 720,
+          "watch_time_seconds": 8700,
+          "average_view_duration_seconds": 12.1,
+          "likes": 28,
+          "comments": 9,
+          "shares": 8,
+          "subscribers_gained": 3
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-question",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "Can the press decide it?",
+        "hook_type": "question",
+        "thumbnail": "Question card",
+        "thumbnail_style": "question_text_card",
+        "publishing_time": "2026-07-01T18:00:00+00:00",
+        "story_angle": "question",
+        "cta": "Tell us below.",
+        "metrics": {
+          "views": 900,
+          "watch_time_seconds": 12000,
+          "average_view_duration_seconds": 13.3,
+          "likes": 41,
+          "comments": 18,
+          "shares": 11,
+          "subscribers_gained": 4
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-data",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "One stat explains the match",
+        "hook_type": "data",
+        "thumbnail": "Data card",
+        "thumbnail_style": "stat_card",
+        "publishing_time": "2026-07-02T18:00:00+00:00",
+        "story_angle": "data",
+        "cta": "What did you see?",
+        "metrics": {
+          "views": 720,
+          "watch_time_seconds": 8700,
+          "average_view_duration_seconds": 12.1,
+          "likes": 28,
+          "comments": 9,
+          "shares": 8,
+          "subscribers_gained": 3
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-question",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "Can the press decide it?",
+        "hook_type": "question",
+        "thumbnail": "Question card",
+        "thumbnail_style": "question_text_card",
+        "publishing_time": "2026-07-01T18:00:00+00:00",
+        "story_angle": "question",
+        "cta": "Tell us below.",
+        "metrics": {
+          "views": 900,
+          "watch_time_seconds": 12000,
+          "average_view_duration_seconds": 13.3,
+          "likes": 41,
+          "comments": 18,
+          "shares": 11,
+          "subscribers_gained": 4
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-data",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "One stat explains the match",
+        "hook_type": "data",
+        "thumbnail": "Data card",
+        "thumbnail_style": "stat_card",
+        "publishing_time": "2026-07-02T18:00:00+00:00",
+        "story_angle": "data",
+        "cta": "What did you see?",
+        "metrics": {
+          "views": 720,
+          "watch_time_seconds": 8700,
+          "average_view_duration_seconds": 12.1,
+          "likes": 28,
+          "comments": 9,
+          "shares": 8,
+          "subscribers_gained": 3
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-question",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "Can the press decide it?",
+        "hook_type": "question",
+        "thumbnail": "Question card",
+        "thumbnail_style": "question_text_card",
+        "publishing_time": "2026-07-01T18:00:00+00:00",
+        "story_angle": "question",
+        "cta": "Tell us below.",
+        "metrics": {
+          "views": 900,
+          "watch_time_seconds": 12000,
+          "average_view_duration_seconds": 13.3,
+          "likes": 41,
+          "comments": 18,
+          "shares": 11,
+          "subscribers_gained": 4
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-data",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "One stat explains the match",
+        "hook_type": "data",
+        "thumbnail": "Data card",
+        "thumbnail_style": "stat_card",
+        "publishing_time": "2026-07-02T18:00:00+00:00",
+        "story_angle": "data",
+        "cta": "What did you see?",
+        "metrics": {
+          "views": 720,
+          "watch_time_seconds": 8700,
+          "average_view_duration_seconds": 12.1,
+          "likes": 28,
+          "comments": 9,
+          "shares": 8,
+          "subscribers_gained": 3
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-question",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "Can the press decide it?",
+        "hook_type": "question",
+        "thumbnail": "Question card",
+        "thumbnail_style": "question_text_card",
+        "publishing_time": "2026-07-01T18:00:00+00:00",
+        "story_angle": "question",
+        "cta": "Tell us below.",
+        "metrics": {
+          "views": 900,
+          "watch_time_seconds": 12000,
+          "average_view_duration_seconds": 13.3,
+          "likes": 41,
+          "comments": 18,
+          "shares": 11,
+          "subscribers_gained": 4
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-data",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "One stat explains the match",
+        "hook_type": "data",
+        "thumbnail": "Data card",
+        "thumbnail_style": "stat_card",
+        "publishing_time": "2026-07-02T18:00:00+00:00",
+        "story_angle": "data",
+        "cta": "What did you see?",
+        "metrics": {
+          "views": 720,
+          "watch_time_seconds": 8700,
+          "average_view_duration_seconds": 12.1,
+          "likes": 28,
+          "comments": 9,
+          "shares": 8,
+          "subscribers_gained": 3
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-question",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "Can the press decide it?",
+        "hook_type": "question",
+        "thumbnail": "Question card",
+        "thumbnail_style": "question_text_card",
+        "publishing_time": "2026-07-01T18:00:00+00:00",
+        "story_angle": "question",
+        "cta": "Tell us below.",
+        "metrics": {
+          "views": 900,
+          "watch_time_seconds": 12000,
+          "average_view_duration_seconds": 13.3,
+          "likes": 41,
+          "comments": 18,
+          "shares": 11,
+          "subscribers_gained": 4
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-data",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "One stat explains the match",
+        "hook_type": "data",
+        "thumbnail": "Data card",
+        "thumbnail_style": "stat_card",
+        "publishing_time": "2026-07-02T18:00:00+00:00",
+        "story_angle": "data",
+        "cta": "What did you see?",
+        "metrics": {
+          "views": 720,
+          "watch_time_seconds": 8700,
+          "average_view_duration_seconds": 12.1,
+          "likes": 28,
+          "comments": 9,
+          "shares": 8,
+          "subscribers_gained": 3
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-question",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "Can the press decide it?",
+        "hook_type": "question",
+        "thumbnail": "Question card",
+        "thumbnail_style": "question_text_card",
+        "publishing_time": "2026-07-01T18:00:00+00:00",
+        "story_angle": "question",
+        "cta": "Tell us below.",
+        "metrics": {
+          "views": 900,
+          "watch_time_seconds": 12000,
+          "average_view_duration_seconds": 13.3,
+          "likes": 41,
+          "comments": 18,
+          "shares": 11,
+          "subscribers_gained": 4
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-data",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "One stat explains the match",
+        "hook_type": "data",
+        "thumbnail": "Data card",
+        "thumbnail_style": "stat_card",
+        "publishing_time": "2026-07-02T18:00:00+00:00",
+        "story_angle": "data",
+        "cta": "What did you see?",
+        "metrics": {
+          "views": 720,
+          "watch_time_seconds": 8700,
+          "average_view_duration_seconds": 12.1,
+          "likes": 28,
+          "comments": 9,
+          "shares": 8,
+          "subscribers_gained": 3
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-question",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "Can the press decide it?",
+        "hook_type": "question",
+        "thumbnail": "Question card",
+        "thumbnail_style": "question_text_card",
+        "publishing_time": "2026-07-01T18:00:00+00:00",
+        "story_angle": "question",
+        "cta": "Tell us below.",
+        "metrics": {
+          "views": 900,
+          "watch_time_seconds": 12000,
+          "average_view_duration_seconds": 13.3,
+          "likes": 41,
+          "comments": 18,
+          "shares": 11,
+          "subscribers_gained": 4
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-data",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "One stat explains the match",
+        "hook_type": "data",
+        "thumbnail": "Data card",
+        "thumbnail_style": "stat_card",
+        "publishing_time": "2026-07-02T18:00:00+00:00",
+        "story_angle": "data",
+        "cta": "What did you see?",
+        "metrics": {
+          "views": 720,
+          "watch_time_seconds": 8700,
+          "average_view_duration_seconds": 12.1,
+          "likes": 28,
+          "comments": 9,
+          "shares": 8,
+          "subscribers_gained": 3
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-question",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "Can the press decide it?",
+        "hook_type": "question",
+        "thumbnail": "Question card",
+        "thumbnail_style": "question_text_card",
+        "publishing_time": "2026-07-01T18:00:00+00:00",
+        "story_angle": "question",
+        "cta": "Tell us below.",
+        "metrics": {
+          "views": 900,
+          "watch_time_seconds": 12000,
+          "average_view_duration_seconds": 13.3,
+          "likes": 41,
+          "comments": 18,
+          "shares": 11,
+          "subscribers_gained": 4
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-data",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "One stat explains the match",
+        "hook_type": "data",
+        "thumbnail": "Data card",
+        "thumbnail_style": "stat_card",
+        "publishing_time": "2026-07-02T18:00:00+00:00",
+        "story_angle": "data",
+        "cta": "What did you see?",
+        "metrics": {
+          "views": 720,
+          "watch_time_seconds": 8700,
+          "average_view_duration_seconds": 12.1,
+          "likes": 28,
+          "comments": 9,
+          "shares": 8,
+          "subscribers_gained": 3
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-question",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "Can the press decide it?",
+        "hook_type": "question",
+        "thumbnail": "Question card",
+        "thumbnail_style": "question_text_card",
+        "publishing_time": "2026-07-01T18:00:00+00:00",
+        "story_angle": "question",
+        "cta": "Tell us below.",
+        "metrics": {
+          "views": 900,
+          "watch_time_seconds": 12000,
+          "average_view_duration_seconds": 13.3,
+          "likes": 41,
+          "comments": 18,
+          "shares": 11,
+          "subscribers_gained": 4
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-data",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "One stat explains the match",
+        "hook_type": "data",
+        "thumbnail": "Data card",
+        "thumbnail_style": "stat_card",
+        "publishing_time": "2026-07-02T18:00:00+00:00",
+        "story_angle": "data",
+        "cta": "What did you see?",
+        "metrics": {
+          "views": 720,
+          "watch_time_seconds": 8700,
+          "average_view_duration_seconds": 12.1,
+          "likes": 28,
+          "comments": 9,
+          "shares": 8,
+          "subscribers_gained": 3
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-question",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "Can the press decide it?",
+        "hook_type": "question",
+        "thumbnail": "Question card",
+        "thumbnail_style": "question_text_card",
+        "publishing_time": "2026-07-01T18:00:00+00:00",
+        "story_angle": "question",
+        "cta": "Tell us below.",
+        "metrics": {
+          "views": 900,
+          "watch_time_seconds": 12000,
+          "average_view_duration_seconds": 13.3,
+          "likes": 41,
+          "comments": 18,
+          "shares": 11,
+          "subscribers_gained": 4
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-data",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "One stat explains the match",
+        "hook_type": "data",
+        "thumbnail": "Data card",
+        "thumbnail_style": "stat_card",
+        "publishing_time": "2026-07-02T18:00:00+00:00",
+        "story_angle": "data",
+        "cta": "What did you see?",
+        "metrics": {
+          "views": 720,
+          "watch_time_seconds": 8700,
+          "average_view_duration_seconds": 12.1,
+          "likes": 28,
+          "comments": 9,
+          "shares": 8,
+          "subscribers_gained": 3
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-question",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "Can the press decide it?",
+        "hook_type": "question",
+        "thumbnail": "Question card",
+        "thumbnail_style": "question_text_card",
+        "publishing_time": "2026-07-01T18:00:00+00:00",
+        "story_angle": "question",
+        "cta": "Tell us below.",
+        "metrics": {
+          "views": 900,
+          "watch_time_seconds": 12000,
+          "average_view_duration_seconds": 13.3,
+          "likes": 41,
+          "comments": 18,
+          "shares": 11,
+          "subscribers_gained": 4
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-data",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "One stat explains the match",
+        "hook_type": "data",
+        "thumbnail": "Data card",
+        "thumbnail_style": "stat_card",
+        "publishing_time": "2026-07-02T18:00:00+00:00",
+        "story_angle": "data",
+        "cta": "What did you see?",
+        "metrics": {
+          "views": 720,
+          "watch_time_seconds": 8700,
+          "average_view_duration_seconds": 12.1,
+          "likes": 28,
+          "comments": 9,
+          "shares": 8,
+          "subscribers_gained": 3
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-question",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "Can the press decide it?",
+        "hook_type": "question",
+        "thumbnail": "Question card",
+        "thumbnail_style": "question_text_card",
+        "publishing_time": "2026-07-01T18:00:00+00:00",
+        "story_angle": "question",
+        "cta": "Tell us below.",
+        "metrics": {
+          "views": 900,
+          "watch_time_seconds": 12000,
+          "average_view_duration_seconds": 13.3,
+          "likes": 41,
+          "comments": 18,
+          "shares": 11,
+          "subscribers_gained": 4
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-data",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "One stat explains the match",
+        "hook_type": "data",
+        "thumbnail": "Data card",
+        "thumbnail_style": "stat_card",
+        "publishing_time": "2026-07-02T18:00:00+00:00",
+        "story_angle": "data",
+        "cta": "What did you see?",
+        "metrics": {
+          "views": 720,
+          "watch_time_seconds": 8700,
+          "average_view_duration_seconds": 12.1,
+          "likes": 28,
+          "comments": 9,
+          "shares": 8,
+          "subscribers_gained": 3
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-question",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "Can the press decide it?",
+        "hook_type": "question",
+        "thumbnail": "Question card",
+        "thumbnail_style": "question_text_card",
+        "publishing_time": "2026-07-01T18:00:00+00:00",
+        "story_angle": "question",
+        "cta": "Tell us below.",
+        "metrics": {
+          "views": 900,
+          "watch_time_seconds": 12000,
+          "average_view_duration_seconds": 13.3,
+          "likes": 41,
+          "comments": 18,
+          "shares": 11,
+          "subscribers_gained": 4
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-data",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "One stat explains the match",
+        "hook_type": "data",
+        "thumbnail": "Data card",
+        "thumbnail_style": "stat_card",
+        "publishing_time": "2026-07-02T18:00:00+00:00",
+        "story_angle": "data",
+        "cta": "What did you see?",
+        "metrics": {
+          "views": 720,
+          "watch_time_seconds": 8700,
+          "average_view_duration_seconds": 12.1,
+          "likes": 28,
+          "comments": 9,
+          "shares": 8,
+          "subscribers_gained": 3
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-question",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "Can the press decide it?",
+        "hook_type": "question",
+        "thumbnail": "Question card",
+        "thumbnail_style": "question_text_card",
+        "publishing_time": "2026-07-01T18:00:00+00:00",
+        "story_angle": "question",
+        "cta": "Tell us below.",
+        "metrics": {
+          "views": 900,
+          "watch_time_seconds": 12000,
+          "average_view_duration_seconds": 13.3,
+          "likes": 41,
+          "comments": 18,
+          "shares": 11,
+          "subscribers_gained": 4
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-data",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "One stat explains the match",
+        "hook_type": "data",
+        "thumbnail": "Data card",
+        "thumbnail_style": "stat_card",
+        "publishing_time": "2026-07-02T18:00:00+00:00",
+        "story_angle": "data",
+        "cta": "What did you see?",
+        "metrics": {
+          "views": 720,
+          "watch_time_seconds": 8700,
+          "average_view_duration_seconds": 12.1,
+          "likes": 28,
+          "comments": 9,
+          "shares": 8,
+          "subscribers_gained": 3
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-question",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "Can the press decide it?",
+        "hook_type": "question",
+        "thumbnail": "Question card",
+        "thumbnail_style": "question_text_card",
+        "publishing_time": "2026-07-01T18:00:00+00:00",
+        "story_angle": "question",
+        "cta": "Tell us below.",
+        "metrics": {
+          "views": 900,
+          "watch_time_seconds": 12000,
+          "average_view_duration_seconds": 13.3,
+          "likes": 41,
+          "comments": 18,
+          "shares": 11,
+          "subscribers_gained": 4
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-data",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "One stat explains the match",
+        "hook_type": "data",
+        "thumbnail": "Data card",
+        "thumbnail_style": "stat_card",
+        "publishing_time": "2026-07-02T18:00:00+00:00",
+        "story_angle": "data",
+        "cta": "What did you see?",
+        "metrics": {
+          "views": 720,
+          "watch_time_seconds": 8700,
+          "average_view_duration_seconds": 12.1,
+          "likes": 28,
+          "comments": 9,
+          "shares": 8,
+          "subscribers_gained": 3
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-question",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "Can the press decide it?",
+        "hook_type": "question",
+        "thumbnail": "Question card",
+        "thumbnail_style": "question_text_card",
+        "publishing_time": "2026-07-01T18:00:00+00:00",
+        "story_angle": "question",
+        "cta": "Tell us below.",
+        "metrics": {
+          "views": 900,
+          "watch_time_seconds": 12000,
+          "average_view_duration_seconds": 13.3,
+          "likes": 41,
+          "comments": 18,
+          "shares": 11,
+          "subscribers_gained": 4
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-data",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "One stat explains the match",
+        "hook_type": "data",
+        "thumbnail": "Data card",
+        "thumbnail_style": "stat_card",
+        "publishing_time": "2026-07-02T18:00:00+00:00",
+        "story_angle": "data",
+        "cta": "What did you see?",
+        "metrics": {
+          "views": 720,
+          "watch_time_seconds": 8700,
+          "average_view_duration_seconds": 12.1,
+          "likes": 28,
+          "comments": 9,
+          "shares": 8,
+          "subscribers_gained": 3
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-question",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "Can the press decide it?",
+        "hook_type": "question",
+        "thumbnail": "Question card",
+        "thumbnail_style": "question_text_card",
+        "publishing_time": "2026-07-01T18:00:00+00:00",
+        "story_angle": "question",
+        "cta": "Tell us below.",
+        "metrics": {
+          "views": 900,
+          "watch_time_seconds": 12000,
+          "average_view_duration_seconds": 13.3,
+          "likes": 41,
+          "comments": 18,
+          "shares": 11,
+          "subscribers_gained": 4
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-data",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "One stat explains the match",
+        "hook_type": "data",
+        "thumbnail": "Data card",
+        "thumbnail_style": "stat_card",
+        "publishing_time": "2026-07-02T18:00:00+00:00",
+        "story_angle": "data",
+        "cta": "What did you see?",
+        "metrics": {
+          "views": 720,
+          "watch_time_seconds": 8700,
+          "average_view_duration_seconds": 12.1,
+          "likes": 28,
+          "comments": 9,
+          "shares": 8,
+          "subscribers_gained": 3
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-question",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "Can the press decide it?",
+        "hook_type": "question",
+        "thumbnail": "Question card",
+        "thumbnail_style": "question_text_card",
+        "publishing_time": "2026-07-01T18:00:00+00:00",
+        "story_angle": "question",
+        "cta": "Tell us below.",
+        "metrics": {
+          "views": 900,
+          "watch_time_seconds": 12000,
+          "average_view_duration_seconds": 13.3,
+          "likes": 41,
+          "comments": 18,
+          "shares": 11,
+          "subscribers_gained": 4
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-data",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "One stat explains the match",
+        "hook_type": "data",
+        "thumbnail": "Data card",
+        "thumbnail_style": "stat_card",
+        "publishing_time": "2026-07-02T18:00:00+00:00",
+        "story_angle": "data",
+        "cta": "What did you see?",
+        "metrics": {
+          "views": 720,
+          "watch_time_seconds": 8700,
+          "average_view_duration_seconds": 12.1,
+          "likes": 28,
+          "comments": 9,
+          "shares": 8,
+          "subscribers_gained": 3
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-question",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "Can the press decide it?",
+        "hook_type": "question",
+        "thumbnail": "Question card",
+        "thumbnail_style": "question_text_card",
+        "publishing_time": "2026-07-01T18:00:00+00:00",
+        "story_angle": "question",
+        "cta": "Tell us below.",
+        "metrics": {
+          "views": 900,
+          "watch_time_seconds": 12000,
+          "average_view_duration_seconds": 13.3,
+          "likes": 41,
+          "comments": 18,
+          "shares": 11,
+          "subscribers_gained": 4
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-data",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "One stat explains the match",
+        "hook_type": "data",
+        "thumbnail": "Data card",
+        "thumbnail_style": "stat_card",
+        "publishing_time": "2026-07-02T18:00:00+00:00",
+        "story_angle": "data",
+        "cta": "What did you see?",
+        "metrics": {
+          "views": 720,
+          "watch_time_seconds": 8700,
+          "average_view_duration_seconds": 12.1,
+          "likes": 28,
+          "comments": 9,
+          "shares": 8,
+          "subscribers_gained": 3
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-question",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "Can the press decide it?",
+        "hook_type": "question",
+        "thumbnail": "Question card",
+        "thumbnail_style": "question_text_card",
+        "publishing_time": "2026-07-01T18:00:00+00:00",
+        "story_angle": "question",
+        "cta": "Tell us below.",
+        "metrics": {
+          "views": 900,
+          "watch_time_seconds": 12000,
+          "average_view_duration_seconds": 13.3,
+          "likes": 41,
+          "comments": 18,
+          "shares": 11,
+          "subscribers_gained": 4
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-data",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "One stat explains the match",
+        "hook_type": "data",
+        "thumbnail": "Data card",
+        "thumbnail_style": "stat_card",
+        "publishing_time": "2026-07-02T18:00:00+00:00",
+        "story_angle": "data",
+        "cta": "What did you see?",
+        "metrics": {
+          "views": 720,
+          "watch_time_seconds": 8700,
+          "average_view_duration_seconds": 12.1,
+          "likes": 28,
+          "comments": 9,
+          "shares": 8,
+          "subscribers_gained": 3
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-question",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "Can the press decide it?",
+        "hook_type": "question",
+        "thumbnail": "Question card",
+        "thumbnail_style": "question_text_card",
+        "publishing_time": "2026-07-01T18:00:00+00:00",
+        "story_angle": "question",
+        "cta": "Tell us below.",
+        "metrics": {
+          "views": 900,
+          "watch_time_seconds": 12000,
+          "average_view_duration_seconds": 13.3,
+          "likes": 41,
+          "comments": 18,
+          "shares": 11,
+          "subscribers_gained": 4
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-data",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "One stat explains the match",
+        "hook_type": "data",
+        "thumbnail": "Data card",
+        "thumbnail_style": "stat_card",
+        "publishing_time": "2026-07-02T18:00:00+00:00",
+        "story_angle": "data",
+        "cta": "What did you see?",
+        "metrics": {
+          "views": 720,
+          "watch_time_seconds": 8700,
+          "average_view_duration_seconds": 12.1,
+          "likes": 28,
+          "comments": 9,
+          "shares": 8,
+          "subscribers_gained": 3
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-question",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "Can the press decide it?",
+        "hook_type": "question",
+        "thumbnail": "Question card",
+        "thumbnail_style": "question_text_card",
+        "publishing_time": "2026-07-01T18:00:00+00:00",
+        "story_angle": "question",
+        "cta": "Tell us below.",
+        "metrics": {
+          "views": 900,
+          "watch_time_seconds": 12000,
+          "average_view_duration_seconds": 13.3,
+          "likes": 41,
+          "comments": 18,
+          "shares": 11,
+          "subscribers_gained": 4
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-data",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "One stat explains the match",
+        "hook_type": "data",
+        "thumbnail": "Data card",
+        "thumbnail_style": "stat_card",
+        "publishing_time": "2026-07-02T18:00:00+00:00",
+        "story_angle": "data",
+        "cta": "What did you see?",
+        "metrics": {
+          "views": 720,
+          "watch_time_seconds": 8700,
+          "average_view_duration_seconds": 12.1,
+          "likes": 28,
+          "comments": 9,
+          "shares": 8,
+          "subscribers_gained": 3
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-question",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "Can the press decide it?",
+        "hook_type": "question",
+        "thumbnail": "Question card",
+        "thumbnail_style": "question_text_card",
+        "publishing_time": "2026-07-01T18:00:00+00:00",
+        "story_angle": "question",
+        "cta": "Tell us below.",
+        "metrics": {
+          "views": 900,
+          "watch_time_seconds": 12000,
+          "average_view_duration_seconds": 13.3,
+          "likes": 41,
+          "comments": 18,
+          "shares": 11,
+          "subscribers_gained": 4
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-data",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "One stat explains the match",
+        "hook_type": "data",
+        "thumbnail": "Data card",
+        "thumbnail_style": "stat_card",
+        "publishing_time": "2026-07-02T18:00:00+00:00",
+        "story_angle": "data",
+        "cta": "What did you see?",
+        "metrics": {
+          "views": 720,
+          "watch_time_seconds": 8700,
+          "average_view_duration_seconds": 12.1,
+          "likes": 28,
+          "comments": 9,
+          "shares": 8,
+          "subscribers_gained": 3
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-question",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "Can the press decide it?",
+        "hook_type": "question",
+        "thumbnail": "Question card",
+        "thumbnail_style": "question_text_card",
+        "publishing_time": "2026-07-01T18:00:00+00:00",
+        "story_angle": "question",
+        "cta": "Tell us below.",
+        "metrics": {
+          "views": 900,
+          "watch_time_seconds": 12000,
+          "average_view_duration_seconds": 13.3,
+          "likes": 41,
+          "comments": 18,
+          "shares": 11,
+          "subscribers_gained": 4
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-data",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "One stat explains the match",
+        "hook_type": "data",
+        "thumbnail": "Data card",
+        "thumbnail_style": "stat_card",
+        "publishing_time": "2026-07-02T18:00:00+00:00",
+        "story_angle": "data",
+        "cta": "What did you see?",
+        "metrics": {
+          "views": 720,
+          "watch_time_seconds": 8700,
+          "average_view_duration_seconds": 12.1,
+          "likes": 28,
+          "comments": 9,
+          "shares": 8,
+          "subscribers_gained": 3
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-question",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "Can the press decide it?",
+        "hook_type": "question",
+        "thumbnail": "Question card",
+        "thumbnail_style": "question_text_card",
+        "publishing_time": "2026-07-01T18:00:00+00:00",
+        "story_angle": "question",
+        "cta": "Tell us below.",
+        "metrics": {
+          "views": 900,
+          "watch_time_seconds": 12000,
+          "average_view_duration_seconds": 13.3,
+          "likes": 41,
+          "comments": 18,
+          "shares": 11,
+          "subscribers_gained": 4
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-data",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "One stat explains the match",
+        "hook_type": "data",
+        "thumbnail": "Data card",
+        "thumbnail_style": "stat_card",
+        "publishing_time": "2026-07-02T18:00:00+00:00",
+        "story_angle": "data",
+        "cta": "What did you see?",
+        "metrics": {
+          "views": 720,
+          "watch_time_seconds": 8700,
+          "average_view_duration_seconds": 12.1,
+          "likes": 28,
+          "comments": 9,
+          "shares": 8,
+          "subscribers_gained": 3
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-question",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "Can the press decide it?",
+        "hook_type": "question",
+        "thumbnail": "Question card",
+        "thumbnail_style": "question_text_card",
+        "publishing_time": "2026-07-01T18:00:00+00:00",
+        "story_angle": "question",
+        "cta": "Tell us below.",
+        "metrics": {
+          "views": 900,
+          "watch_time_seconds": 12000,
+          "average_view_duration_seconds": 13.3,
+          "likes": 41,
+          "comments": 18,
+          "shares": 11,
+          "subscribers_gained": 4
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-data",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "One stat explains the match",
+        "hook_type": "data",
+        "thumbnail": "Data card",
+        "thumbnail_style": "stat_card",
+        "publishing_time": "2026-07-02T18:00:00+00:00",
+        "story_angle": "data",
+        "cta": "What did you see?",
+        "metrics": {
+          "views": 720,
+          "watch_time_seconds": 8700,
+          "average_view_duration_seconds": 12.1,
+          "likes": 28,
+          "comments": 9,
+          "shares": 8,
+          "subscribers_gained": 3
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-question",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "Can the press decide it?",
+        "hook_type": "question",
+        "thumbnail": "Question card",
+        "thumbnail_style": "question_text_card",
+        "publishing_time": "2026-07-01T18:00:00+00:00",
+        "story_angle": "question",
+        "cta": "Tell us below.",
+        "metrics": {
+          "views": 900,
+          "watch_time_seconds": 12000,
+          "average_view_duration_seconds": 13.3,
+          "likes": 41,
+          "comments": 18,
+          "shares": 11,
+          "subscribers_gained": 4
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "baseline-data",
+        "match": {},
+        "competition": "Premier League",
+        "hook": "One stat explains the match",
+        "hook_type": "data",
+        "thumbnail": "Data card",
+        "thumbnail_style": "stat_card",
+        "publishing_time": "2026-07-02T18:00:00+00:00",
+        "story_angle": "data",
+        "cta": "What did you see?",
+        "metrics": {
+          "views": 720,
+          "watch_time_seconds": 8700,
+          "average_view_duration_seconds": 12.1,
+          "likes": 28,
+          "comments": 9,
+          "shares": 8,
+          "subscribers_gained": 3
+        },
+        "platform_metrics": []
+      },
+      {
+        "production_id": "if-2026-07-06-liverpool-arsenal",
+        "match": {
+          "home_team": "Liverpool",
+          "away_team": "Arsenal",
+          "competition": "Premier League",
+          "kickoff_time": "20:00",
+          "country": "England"
+        },
+        "competition": "Premier League",
+        "hook": "Can Arsenal survive Liverpool's fast start?",
+        "hook_type": "question",
+        "thumbnail": "Can Arsenal survive Liverpool's fast start?",
+        "thumbnail_style": "question_text_card",
+        "publishing_time": "2026-07-08T11:37:47.774353+00:00",
+        "story_angle": "Can Arsenal survive Liverpool's fast start?",
+        "cta": "Can Arsenal survive the first 20 minutes, or will Liverpool take control early? Tell us below.",
+        "metrics": {
+          "views": 2520,
+          "watch_time_seconds": 35300,
+          "likes": 108,
+          "comments": 64,
+          "shares": 58,
+          "subscribers_gained": 15,
+          "average_view_duration_seconds": 14.01
+        },
+        "platform_metrics": [
+          {
+            "platform": "youtube",
+            "views": 1240,
+            "watch_time_seconds": 18200,
+            "average_view_duration_seconds": 14.68,
+            "audience_retention": [
+              {
+                "second": 0,
+                "retention_percent": 100
+              },
+              {
+                "second": 10,
+                "retention_percent": 78
+              },
+              {
+                "second": 20,
+                "retention_percent": 61
+              },
+              {
+                "second": 30,
+                "retention_percent": 48
+              },
+              {
+                "second": 42,
+                "retention_percent": 31
+              },
+              {
+                "second": 60,
+                "retention_percent": 21
+              }
+            ],
+            "ctr_percent": 5.8,
+            "likes": 53,
+            "comments": 34,
+            "shares": 18,
+            "subscribers_gained": 7,
+            "revenue": 0.0,
+            "rpm": 0.0,
+            "source": "provider_adapter"
+          },
+          {
+            "platform": "facebook",
+            "views": 860,
+            "watch_time_seconds": 11900,
+            "average_view_duration_seconds": 13.84,
+            "audience_retention": [
+              {
+                "second": 0,
+                "retention_percent": 100
+              },
+              {
+                "second": 10,
+                "retention_percent": 78
+              },
+              {
+                "second": 20,
+                "retention_percent": 61
+              },
+              {
+                "second": 30,
+                "retention_percent": 48
+              },
+              {
+                "second": 42,
+                "retention_percent": 31
+              },
+              {
+                "second": 60,
+                "retention_percent": 21
+              }
+            ],
+            "ctr_percent": 4.2,
+            "likes": 37,
+            "comments": 19,
+            "shares": 26,
+            "subscribers_gained": 5,
+            "revenue": 0.0,
+            "rpm": 0.0,
+            "source": "provider_adapter"
+          },
+          {
+            "platform": "telegram",
+            "views": 420,
+            "watch_time_seconds": 5200,
+            "average_view_duration_seconds": 12.38,
+            "audience_retention": [
+              {
+                "second": 0,
+                "retention_percent": 100
+              },
+              {
+                "second": 10,
+                "retention_percent": 78
+              },
+              {
+                "second": 20,
+                "retention_percent": 61
+              },
+              {
+                "second": 30,
+                "retention_percent": 48
+              },
+              {
+                "second": 42,
+                "retention_percent": 31
+              },
+              {
+                "second": 60,
+                "retention_percent": 21
+              }
+            ],
+            "ctr_percent": 3.6,
+            "likes": 18,
+            "comments": 11,
+            "shares": 14,
+            "subscribers_gained": 3,
+            "revenue": 0.0,
+            "rpm": 0.0,
+            "source": "provider_adapter"
+          }
+        ]
+      }
+    ],
+    "updated_at": "2026-07-08T11:38:31.518050+00:00"
+  },
+  "performance_analysis": {
+    "production_id": "if-2026-07-06-liverpool-arsenal",
+    "component_id": "IF-AN03",
+    "component_name": "Performance Analyzer",
+    "timestamp": "2026-07-08T11:38:31.682610+00:00",
+    "performance_score": 211,
+    "views_vs_average_percent": 211.11,
+    "retention_vs_average_percent": 10.31,
+    "trend": "growth",
+    "outliers": [],
+    "approval_status": "approved"
+  },
+  "hook_analysis": {
+    "component_id": "IF-AN04",
+    "component_name": "Hook Analyzer",
+    "timestamp": "2026-07-08T11:38:31.685601+00:00",
+    "hook_leaderboard": [
+      {
+        "key": "question",
+        "average": 921.32,
+        "sample_size": 76
+      },
+      {
+        "key": "data",
+        "average": 720.0,
+        "sample_size": 75
+      }
+    ],
+    "best_hook_type": "question",
+    "approval_status": "approved"
+  },
+  "thumbnail_analysis": {
+    "component_id": "IF-AN05",
+    "component_name": "Thumbnail Analyzer",
+    "timestamp": "2026-07-08T11:38:31.690588+00:00",
+    "thumbnail_leaderboard": [
+      {
+        "key": "question_text_card",
+        "average": 921.32,
+        "sample_size": 76
+      },
+      {
+        "key": "stat_card",
+        "average": 720.0,
+        "sample_size": 75
+      }
+    ],
+    "best_thumbnail_style": "question_text_card",
+    "approval_status": "approved"
+  },
+  "retention_analysis": {
+    "production_id": "if-2026-07-06-liverpool-arsenal",
+    "component_id": "IF-AN06",
+    "component_name": "Audience Retention Analyzer",
+    "timestamp": "2026-07-08T11:38:31.694578+00:00",
+    "drop_off_timeline": [
+      {
+        "second": 0,
+        "retention_percent": 100
+      },
+      {
+        "second": 10,
+        "retention_percent": 78
+      },
+      {
+        "second": 20,
+        "retention_percent": 61
+      },
+      {
+        "second": 30,
+        "retention_percent": 48
+      },
+      {
+        "second": 42,
+        "retention_percent": 31
+      },
+      {
+        "second": 60,
+        "retention_percent": 21
+      }
+    ],
+    "most_engaging_moment": {
+      "second": 0,
+      "retention_percent": 100
+    },
+    "least_engaging_moment": {
+      "second": 60,
+      "retention_percent": 21
+    },
+    "primary_drop_off": {
+      "second": 42,
+      "retention_percent": 31
+    },
+    "approval_status": "approved"
+  },
+  "cta_analysis": {
+    "component_id": "IF-AN07",
+    "component_name": "CTA Analyzer",
+    "timestamp": "2026-07-08T11:38:31.698568+00:00",
+    "cta_leaderboard": [
+      {
+        "key": "Can Arsenal survive the first 20 minutes, or will Liverpool take control early? Tell us below.",
+        "average": 64.0,
+        "sample_size": 1
+      },
+      {
+        "key": "Tell us below.",
+        "average": 18.0,
+        "sample_size": 75
+      },
+      {
+        "key": "What did you see?",
+        "average": 9.0,
+        "sample_size": 75
+      }
+    ],
+    "best_cta": "Can Arsenal survive the first 20 minutes, or will Liverpool take control early? Tell us below.",
+    "approval_status": "approved"
+  },
+  "recommendations": {
+    "component_id": "IF-AN08",
+    "component_name": "Recommendation Engine",
+    "timestamp": "2026-07-08T11:38:31.701559+00:00",
+    "recommendations": [
+      {
+        "area": "retention",
+        "recommendation": "Bring the dashboard insight earlier than 42 seconds.",
+        "priority": "high"
+      },
+      {
+        "area": "hook",
+        "recommendation": "Keep testing short question hooks; they currently lead the hook leaderboard.",
+        "priority": "medium"
+      },
+      {
+        "area": "governance",
+        "recommendation": "Do not automatically rewrite prompts; route these findings to human editorial review.",
+        "priority": "required"
+      }
+    ],
+    "prompt_rewrite_performed": false,
+    "human_editorial_control": true,
+    "approval_status": "approved"
+  },
+  "daily_report": {
+    "component_id": "IF-AN09",
+    "component_name": "Daily Performance Reporter",
+    "report_type": "daily",
+    "generated_at": "2026-07-08T11:38:31.705547+00:00",
+    "top_video": "if-2026-07-06-liverpool-arsenal",
+    "worst_video": "baseline-data",
+    "best_hook": "question",
+    "best_thumbnail": "question_text_card",
+    "best_publishing_time": "2026-07-08T11:37:47.774353+00:00",
+    "retention_summary": {
+      "second": 42,
+      "retention_percent": 31
+    },
+    "ctr_summary": {
+      "average_ctr_percent": 4.53
+    },
+    "revenue_summary": {
+      "revenue": 0.0,
+      "rpm": 0.0
+    },
+    "recommendations": [
+      {
+        "area": "retention",
+        "recommendation": "Bring the dashboard insight earlier than 42 seconds.",
+        "priority": "high"
+      },
+      {
+        "area": "hook",
+        "recommendation": "Keep testing short question hooks; they currently lead the hook leaderboard.",
+        "priority": "medium"
+      },
+      {
+        "area": "governance",
+        "recommendation": "Do not automatically rewrite prompts; route these findings to human editorial review.",
+        "priority": "required"
+      }
+    ],
+    "approval_status": "approved"
+  },
+  "weekly_report": {
+    "component_id": "IF-AN09",
+    "component_name": "Daily Performance Reporter",
+    "report_type": "weekly",
+    "generated_at": "2026-07-08T11:38:31.705547+00:00",
+    "top_video": "if-2026-07-06-liverpool-arsenal",
+    "worst_video": "baseline-data",
+    "best_hook": "question",
+    "best_thumbnail": "question_text_card",
+    "best_publishing_time": "2026-07-08T11:37:47.774353+00:00",
+    "retention_summary": {
+      "second": 42,
+      "retention_percent": 31
+    },
+    "ctr_summary": {
+      "average_ctr_percent": 4.53
+    },
+    "revenue_summary": {
+      "revenue": 0.0,
+      "rpm": 0.0
+    },
+    "recommendations": [
+      {
+        "area": "retention",
+        "recommendation": "Bring the dashboard insight earlier than 42 seconds.",
+        "priority": "high"
+      },
+      {
+        "area": "hook",
+        "recommendation": "Keep testing short question hooks; they currently lead the hook leaderboard.",
+        "priority": "medium"
+      },
+      {
+        "area": "governance",
+        "recommendation": "Do not automatically rewrite prompts; route these findings to human editorial review.",
+        "priority": "required"
+      }
+    ],
+    "approval_status": "approved"
+  },
+  "monthly_report": {
+    "component_id": "IF-AN09",
+    "component_name": "Daily Performance Reporter",
+    "report_type": "monthly",
+    "generated_at": "2026-07-08T11:38:31.705547+00:00",
+    "top_video": "if-2026-07-06-liverpool-arsenal",
+    "worst_video": "baseline-data",
+    "best_hook": "question",
+    "best_thumbnail": "question_text_card",
+    "best_publishing_time": "2026-07-08T11:37:47.774353+00:00",
+    "retention_summary": {
+      "second": 42,
+      "retention_percent": 31
+    },
+    "ctr_summary": {
+      "average_ctr_percent": 4.53
+    },
+    "revenue_summary": {
+      "revenue": 0.0,
+      "rpm": 0.0
+    },
+    "recommendations": [
+      {
+        "area": "retention",
+        "recommendation": "Bring the dashboard insight earlier than 42 seconds.",
+        "priority": "high"
+      },
+      {
+        "area": "hook",
+        "recommendation": "Keep testing short question hooks; they currently lead the hook leaderboard.",
+        "priority": "medium"
+      },
+      {
+        "area": "governance",
+        "recommendation": "Do not automatically rewrite prompts; route these findings to human editorial review.",
+        "priority": "required"
+      }
+    ],
+    "approval_status": "approved"
+  },
+  "approval_status": "approved",
+  "human_editorial_control": "recommendations_only_no_prompt_rewrites"
+}

@@ -1,0 +1,75 @@
+{
+  "production_id": "if-2026-07-06-liverpool-arsenal",
+  "component_id": "IF-FQC06",
+  "component_name": "Legal & Copyright Checker",
+  "timestamp": "2026-07-08T11:37:05.148377+00:00",
+  "blocked_assets_used": [],
+  "manual_review_assets": [
+    {
+      "asset_id": "competition_logo",
+      "asset_name": "Premier League logo",
+      "asset_type": "logo",
+      "category": "match",
+      "required": true,
+      "scenes_used": [],
+      "legal_status": "needs_review",
+      "fallback_strategy": "Use text initials in approved template until badge is confirmed.",
+      "priority": "high"
+    },
+    {
+      "asset_id": "team_logo_away",
+      "asset_name": "Arsenal badge",
+      "asset_type": "logo",
+      "category": "match",
+      "required": true,
+      "scenes_used": [],
+      "legal_status": "needs_review",
+      "fallback_strategy": "Use text initials in approved template until badge is confirmed.",
+      "priority": "high"
+    },
+    {
+      "asset_id": "team_logo_home",
+      "asset_name": "Liverpool badge",
+      "asset_type": "logo",
+      "category": "match",
+      "required": true,
+      "scenes_used": [
+        "scene-06"
+      ],
+      "legal_status": "needs_review",
+      "fallback_strategy": "Use text initials in approved template until badge is confirmed.",
+      "priority": "high"
+    },
+    {
+      "asset_id": "team_logos",
+      "asset_name": "Liverpool and Arsenal badges",
+      "asset_type": "logo",
+      "category": "match",
+      "required": true,
+      "scenes_used": [
+        "scene-02",
+        "scene-03",
+        "scene-04",
+        "scene-05",
+        "scene-07",
+        "scene-08",
+        "scene-09",
+        "scene-11"
+      ],
+      "legal_status": "needs_review",
+      "fallback_strategy": "Use text initials in approved template until badge is confirmed.",
+      "priority": "high"
+    }
+  ],
+  "music_license_status": "no_music_bed",
+  "image_license_status": "fallback_or_manual_review",
+  "badge_license_status": "manual_review_required",
+  "copyright_risk_level": "medium",
+  "betting_safety_status": "safe",
+  "issues_found": [],
+  "warnings": [
+    "manual review assets present"
+  ],
+  "score": 72,
+  "approval_status": "needs_human_review"
+}

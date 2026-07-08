@@ -1,0 +1,74 @@
+{
+  "production_id": "if-2026-07-06-liverpool-arsenal",
+  "component_id": "IF-TL06",
+  "component_name": "Render Plan Generator",
+  "timestamp": "2026-07-08T11:37:42.290877+00:00",
+  "renderer_profile": {
+    "default": "provider_agnostic",
+    "supported_renderers": [
+      "Creatomate",
+      "Remotion",
+      "Shotstack",
+      "After Effects",
+      "FFmpeg custom renderer"
+    ]
+  },
+  "provider_agnostic_timeline": "if-2026-07-06-liverpool-arsenal",
+  "required_assets": [
+    "background_graphic",
+    "brand_logo",
+    "comment_icon",
+    "dashboard_panel",
+    "data_card",
+    "graphic-central_question_card",
+    "graphic-cta_card",
+    "graphic-evidence_card",
+    "graphic-insight_dashboard",
+    "graphic-match_title_card",
+    "graphic-surprising_fact_card",
+    "graphic-tactical_pitch_diagram",
+    "graphic-team_comparison_card",
+    "graphic-x_factor_card",
+    "pitch_graphic",
+    "player_image",
+    "team_logo_home",
+    "team_logos"
+  ],
+  "required_audio": [
+    "voice.ssml",
+    "voice-production-package.json"
+  ],
+  "required_fonts": [
+    "Inter",
+    "Arial"
+  ],
+  "render_settings": {
+    "aspect_ratio": "9:16",
+    "resolution": "1080x1920",
+    "fps": 30,
+    "format": "mp4",
+    "max_duration_seconds": 60,
+    "audio_codec": "aac",
+    "video_codec": "h264"
+  },
+  "scene_templates": [
+    "brand_opening",
+    "comparison_split",
+    "cta_card",
+    "evidence_card",
+    "insight_dashboard",
+    "pitch_tactics",
+    "player_focus",
+    "question_card",
+    "stat_card"
+  ],
+  "layer_map_ref": "layer_map.json",
+  "caption_sync_ref": "caption_sync.json",
+  "audio_sync_ref": "audio_sync.json",
+  "output_settings": {
+    "filename": "if-2026-07-06-liverpool-arsenal.mp4",
+    "container": "mp4"
+  },
+  "fallback_render_strategy": "Use placeholder assets and safe text cards when official assets remain under manual review.",
+  "approval_status": "approved"
+}

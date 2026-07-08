@@ -1,0 +1,26 @@
+{
+  "production_id": "if-2026-07-06-liverpool-arsenal",
+  "platform": "facebook",
+  "video_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\renders\\if-2026-07-06-liverpool-arsenal\\final_video.placeholder.json",
+  "caption": "Can Arsenal survive Liverpool's fast start?\n\nCan Arsenal survive the first 20 minutes, or will Liverpool take control early? Tell us below.\n\n#InsightFootball #FootballAnalysis #PremierLeague #Liverpool #Arsenal #MatchPreview",
+  "title": "Can Arsenal survive Liverpool's fast start?",
+  "description": "Sample data: Liverpool have started quickly in recent home matches, while Arsenal have sometimes needed longer to settle away.\n\nCan Arsenal survive the first 20 minutes, or will Liverpool take control early? Tell us below.\n\n#InsightFootball #FootballAnalysis #PremierLeague #Liverpool #Arsenal #MatchPreview #FootballShorts",
+  "scheduled_publish_time": null,
+  "dry_run": true,
+  "credential_status": {
+    "valid": false,
+    "missing": [
+      "FACEBOOK_PAGE_ID",
+      "FACEBOOK_PAGE_ACCESS_TOKEN"
+    ],
+    "mode": "dry_run",
+    "warnings": [
+      "Missing credentials for dry-run: FACEBOOK_PAGE_ID, FACEBOOK_PAGE_ACCESS_TOKEN"
+    ]
+  },
+  "upload_status": "dry_run_ready",
+  "warnings": [
+    "Missing credentials for dry-run: FACEBOOK_PAGE_ID, FACEBOOK_PAGE_ACCESS_TOKEN"
+  ],
+  "approval_status": "approved"
+}

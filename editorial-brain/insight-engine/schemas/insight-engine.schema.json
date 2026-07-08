@@ -1,0 +1,69 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "InsightFootballInsightEngineOutput",
+  "title": "InsightFootballInsightEngineOutput",
+  "type": "object",
+  "required": [
+    "production_id",
+    "agent_id",
+    "agent_name",
+    "prompt_id",
+    "prompt_version",
+    "timestamp",
+    "story_angle",
+    "central_question",
+    "insight_summary",
+    "match_edge",
+    "key_advantage",
+    "tactical_explanation",
+    "uncertainty_summary",
+    "x_factor",
+    "surprising_takeaway",
+    "viewer_takeaway",
+    "editorial_notes",
+    "confidence",
+    "warnings",
+    "human_review_flags",
+    "locked_fields",
+    "approval_status",
+    "next_agent"
+  ],
+  "properties": {
+    "production_id": { "type": "string", "minLength": 1 },
+    "agent_id": { "type": "string", "enum": ["IF-A04"] },
+    "agent_name": { "type": "string", "minLength": 1 },
+    "prompt_id": { "type": "string", "enum": ["IF-PROMPT-04-INSIGHT-ENGINE"] },
+    "prompt_version": { "type": "string", "enum": ["v1.0"] },
+    "timestamp": { "type": "string", "minLength": 1 },
+    "story_angle": { "type": "string", "minLength": 1 },
+    "central_question": { "type": "string", "minLength": 1 },
+    "insight_summary": { "type": "string", "minLength": 1 },
+    "match_edge": {
+      "type": "string",
+      "enum": ["Home Edge", "Away Edge", "Balanced", "Slight Home Edge", "Slight Away Edge"]
+    },
+    "key_advantage": { "type": "string", "minLength": 1 },
+    "tactical_explanation": { "type": "string", "minLength": 1 },
+    "uncertainty_summary": { "type": "string", "minLength": 1 },
+    "x_factor": { "type": "string", "minLength": 1 },
+    "surprising_takeaway": { "type": "string", "minLength": 1 },
+    "viewer_takeaway": { "type": "string", "minLength": 1 },
+    "editorial_notes": { "type": "array" },
+    "confidence": {
+      "type": "object",
+      "required": ["score", "reason"],
+      "properties": {
+        "score": { "type": "integer", "minimum": 0, "maximum": 100 },
+        "reason": { "type": "string", "minLength": 1 }
+      }
+    },
+    "warnings": { "type": "array" },
+    "human_review_flags": { "type": "array" },
+    "locked_fields": {
+      "type": "object",
+      "required": ["story_angle", "central_question", "surprising_fact"]
+    },
+    "approval_status": { "type": "string", "enum": ["approved", "needs_revision", "rejected", "blocked", "human_review_required"] },
+    "next_agent": { "type": "string", "enum": ["IF-A05"] }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "InsightFootballEvidenceFilterForInsightEngine",
+  "type": "object",
+  "required": [
+    "production_id",
+    "agent_id",
+    "story_angle",
+    "central_question",
+    "evidence_summary",
+    "primary_evidence",
+    "evidence_quality",
+    "evidence_confidence",
+    "locked_fields",
+    "approval_status",
+    "next_agent"
+  ],
+  "properties": {
+    "production_id": { "type": "string", "minLength": 1 },
+    "agent_id": { "type": "string", "enum": ["IF-A03"] },
+    "story_angle": { "type": "string", "minLength": 1 },
+    "central_question": { "type": "string", "minLength": 1 },
+    "evidence_summary": { "type": "string", "minLength": 1 },
+    "primary_evidence": { "type": "array", "minItems": 2 },
+    "evidence_quality": { "type": "object" },
+    "evidence_confidence": { "type": "integer", "minimum": 0, "maximum": 100 },
+    "locked_fields": { "type": "object" },
+    "approval_status": { "type": "string", "enum": ["approved"] },
+    "next_agent": { "type": "string", "enum": ["IF-A04"] }
+  }
+}

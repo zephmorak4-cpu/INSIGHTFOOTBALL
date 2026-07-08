@@ -1,0 +1,63 @@
+{
+  "production_id": "if-2026-07-06-liverpool-arsenal",
+  "component_id": "IF-MAE06",
+  "component_name": "Illustration Provider Adapter",
+  "timestamp": "2026-07-08T11:37:14.383480+00:00",
+  "generation_tasks": [
+    {
+      "task_id": "generate-stadium_image",
+      "asset_id": "stadium_image",
+      "asset_type": "generated_illustration",
+      "prompt": "Confirm or prepare Stadium-style background",
+      "negative_prompt": "No player likeness, no broadcast screenshot, no copyrighted match footage, no betting aesthetic.",
+      "style_notes": "Clean football intelligence dashboard, premium dark sports interface, safe abstract shapes.",
+      "dimensions": "1080x1920",
+      "scenes_used": [],
+      "provider": "static_placeholder",
+      "legal_notes": "Legal status: approved. Use custom vector/template graphic from internal library.",
+      "priority": "low"
+    },
+    {
+      "task_id": "generate-background_graphic",
+      "asset_id": "background_graphic",
+      "asset_type": "background",
+      "prompt": "Create a clean football intelligence background; avoid broadcast footage.",
+      "negative_prompt": "No player likeness, no broadcast screenshot, no copyrighted match footage, no betting aesthetic.",
+      "style_notes": "Clean football intelligence dashboard, premium dark sports interface, safe abstract shapes.",
+      "dimensions": "1080x1920",
+      "scenes_used": [
+        "scene-01"
+      ],
+      "provider": "static_placeholder",
+      "legal_notes": "Use internally generated or placeholder background only.",
+      "priority": "high"
+    },
+    {
+      "task_id": "generate-pitch_graphic",
+      "asset_id": "pitch_graphic",
+      "asset_type": "background",
+      "prompt": "Create a clean football intelligence background; avoid broadcast footage.",
+      "negative_prompt": "No player likeness, no broadcast screenshot, no copyrighted match footage, no betting aesthetic.",
+      "style_notes": "Clean football intelligence dashboard, premium dark sports interface, safe abstract shapes.",
+      "dimensions": "1080x1920",
+      "scenes_used": [
+        "scene-04",
+        "scene-10"
+      ],
+      "provider": "static_placeholder",
+      "legal_notes": "Use internally generated or placeholder background only.",
+      "priority": "high"
+    }
+  ],
+  "provider_recommendations": [
+    "placeholder",
+    "local_svg_generator",
+    "openai_image_generation",
+    "google_image_generation",
+    "stability",
+    "midjourney_manual_workflow"
+  ],
+  "blocked_generation_tasks": [],
+  "manual_review_tasks": [],
+  "approval_status": "approved"
+}

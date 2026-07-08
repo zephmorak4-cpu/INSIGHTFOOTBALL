@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ProductionBriefValidatedEditorialPackageInput",
+  "type": "object",
+  "required": [
+    "metadata",
+    "match",
+    "competition",
+    "story_angle",
+    "central_question",
+    "surprising_fact",
+    "primary_evidence",
+    "contradictory_evidence",
+    "insight_summary",
+    "match_edge",
+    "key_advantage",
+    "x_factor",
+    "viewer_takeaway",
+    "locked_fields",
+    "approval_status",
+    "publishability_score"
+  ],
+  "properties": {
+    "metadata": { "type": "object", "required": ["production_id"] },
+    "approval_status": { "type": "string", "enum": ["approved"] },
+    "publishability_score": { "type": "number", "minimum": 0, "maximum": 100 }
+  }
+}

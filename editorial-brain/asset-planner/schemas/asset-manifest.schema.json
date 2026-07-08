@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "AssetManifest",
+  "type": "object",
+  "required": ["production_id", "component_id", "component_name", "timestamp", "source_storyboard_package", "match", "competition", "required_assets", "optional_assets", "reusable_assets", "scene_asset_map", "missing_assets", "legal_warnings", "asset_priority", "approval_status", "next_component"],
+  "properties": {
+    "production_id": { "type": "string" },
+    "required_assets": { "type": "array" },
+    "optional_assets": { "type": "array" },
+    "reusable_assets": { "type": "array" },
+    "scene_asset_map": { "type": "array" },
+    "missing_assets": { "type": "array" },
+    "legal_warnings": { "type": "array" },
+    "asset_priority": { "type": "object" },
+    "approval_status": { "type": "string" },
+    "next_component": { "type": "string" }
+  }
+}
+

@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","type":"object","required":["component_id","videos"],"properties":{"component_id":{"const":"IF-AN02"}}}

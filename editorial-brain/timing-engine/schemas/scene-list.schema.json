@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "TimingSceneListInput",
+  "type": "object",
+  "required": ["production_id", "total_duration_seconds", "scene_count", "scenes", "approval_status"],
+  "properties": {
+    "production_id": { "type": "string" },
+    "total_duration_seconds": { "type": "number" },
+    "scene_count": { "type": "integer" },
+    "scenes": { "type": "array" },
+    "approval_status": { "type": "string" }
+  }
+}
+

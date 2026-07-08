@@ -1,0 +1,12 @@
+{
+  "production_id": "if-2026-07-06-liverpool-arsenal",
+  "component_id": "IF-AN03",
+  "component_name": "Performance Analyzer",
+  "timestamp": "2026-07-08T11:38:31.682610+00:00",
+  "performance_score": 211,
+  "views_vs_average_percent": 211.11,
+  "retention_vs_average_percent": 10.31,
+  "trend": "growth",
+  "outliers": [],
+  "approval_status": "approved"
+}

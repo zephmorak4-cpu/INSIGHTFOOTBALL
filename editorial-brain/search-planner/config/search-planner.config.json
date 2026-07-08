@@ -1,0 +1,15 @@
+{
+  "component_id": "S5-C02",
+  "component_name": "Search Planner",
+  "input_schema": "editorial-brain/search-planner/schemas/asset-manifest.schema.json",
+  "output_schema": "editorial-brain/search-planner/schemas/asset-search-plan.schema.json",
+  "output": {
+    "output_directory": "editorial-brain/output",
+    "log_directory": "editorial-brain/logs"
+  },
+  "approved_source_types": ["approved_internal_or_rights_checked_source", "manual_upload", "generated_illustration", "internal_template"],
+  "blocked_source_types": ["broadcast_footage", "unsafe_scraped_image", "unclear_rights"],
+  "task_priority_rules": { "high": "required before render", "medium": "prepare before visual direction", "low": "optional" },
+  "next_component": "Graphic Planner"
+}
+

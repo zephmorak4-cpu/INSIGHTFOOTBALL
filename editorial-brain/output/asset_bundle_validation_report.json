@@ -1,0 +1,22 @@
+{
+  "production_id": "if-2026-07-06-liverpool-arsenal",
+  "component_id": "IF-MAE08",
+  "component_name": "Asset Bundle Validator",
+  "timestamp": "2026-07-08T11:37:14.585115+00:00",
+  "checks": {
+    "required_assets_have_fallbacks": true,
+    "blocked_assets_excluded": true,
+    "legal_warnings_surfaced": true,
+    "cache_checksums_exist": true,
+    "placeholder_paths_exist": true,
+    "scene_asset_mapping_complete": true
+  },
+  "render_readiness_status": "needs_manual_assets",
+  "warnings": [
+    "Arsenal badge requires rights confirmation.",
+    "Liverpool badge requires rights confirmation.",
+    "Liverpool and Arsenal badges requires rights confirmation.",
+    "Premier League logo requires rights confirmation."
+  ],
+  "approval_status": "approved"
+}

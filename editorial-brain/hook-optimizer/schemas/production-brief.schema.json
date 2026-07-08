@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "HookOptimizerBriefInput",
+  "type": "object",
+  "required": ["production_id", "central_question", "surprising_fact", "locked_fields"],
+  "properties": {
+    "production_id": { "type": "string" },
+    "central_question": { "type": "string" },
+    "surprising_fact": { "type": "string" },
+    "locked_fields": { "type": "object" }
+  }
+}
+

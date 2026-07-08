@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","type":"object","required":["production_id","component_id","home_badge","away_badge","missing_badges","fallback_badges","approval_status"],"properties":{"component_id":{"const":"IF-MAE02"}}}

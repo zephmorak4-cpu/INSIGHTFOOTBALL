@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","type":"object","required":["production_id","component_id","brand_opening_present","tone_status","issues_found","warnings","score","approval_status"],"properties":{"component_id":{"const":"IF-FQC04"}}}
