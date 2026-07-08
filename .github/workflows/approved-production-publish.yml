@@ -49,12 +49,13 @@ jobs:
 
       - name: Run publishing workflow
         env:
+          HUMAN_APPROVAL_CONFIRMED: "true"
           PYTHONPATH: distribution/publishing-engine/shared:distribution/publishing-engine/publishing-report-generator/src
         run: |
           if [ "${{ github.event.inputs.live_publish }}" = "true" ]; then
-            python -m publishing_report_generator.cli --live
+            python -m publishing_report_generator.cli --platform telegram --live
           else
-            python -m publishing_report_generator.cli
+            python -m publishing_report_generator.cli --platform telegram
           fi
 
       - name: Upload publishing artifacts

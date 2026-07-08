@@ -113,3 +113,35 @@ approval_statement=APPROVED
 ```
 
 Do not set `live_publish=true` until the render output is a real `.mp4` and all review warnings are cleared.
+
+## Live Telegram Publishing After Approval
+
+The manual GitHub workflow:
+
+```text
+Approved Production Publish
+```
+
+publishes Telegram only. This avoids blocking Telegram release on missing YouTube or Facebook credentials.
+
+For a live Telegram publish, configure:
+
+```text
+TELEGRAM_BOT_TOKEN
+TELEGRAM_CHANNEL_ID
+```
+
+Then run the workflow with:
+
+```text
+approval_statement=APPROVED
+live_publish=true
+```
+
+The workflow sets:
+
+```text
+HUMAN_APPROVAL_CONFIRMED=true
+```
+
+The publisher will reject placeholder renders and only send a real `.mp4`.

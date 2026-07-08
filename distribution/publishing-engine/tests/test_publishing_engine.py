@@ -13,6 +13,8 @@ sys.path.insert(0, str(SRC))
 from publishing_engine.core import (
     facebook_payload,
     generate_metadata,
+    _multipart_body,
+    _publish_telegram_video,
     publish_report,
     publishing_schedule,
     publishing_status,
@@ -116,6 +118,50 @@ class PublishingEngineTests(unittest.TestCase):
 
     def test_telegram_schema_shape(self):
         self.assertEqual(telegram_payload(self.package, self.metadata(), root=ROOT)["platform"], "telegram")
+
+    def test_telegram_live_blocks_placeholder_video(self):
+        with patch.dict("os.environ", {"TELEGRAM_BOT_TOKEN": "token", "TELEGRAM_CHANNEL_ID": "channel", "HUMAN_APPROVAL_CONFIRMED": "true"}, clear=True):
+            payload = telegram_payload(self.package, self.metadata(), dry_run=False, root=ROOT)
+        self.assertEqual(payload["approval_status"], "blocked")
+        self.assertIn("telegram live publishing requires a real .mp4 video", payload["blocking_issues"])
+
+    def test_telegram_live_requires_human_approval_flag(self):
+        package = copy.deepcopy(self.package)
+        package["final_video_path"] = str(ROOT / "renders" / "approved.mp4")
+        Path(package["final_video_path"]).write_bytes(b"mp4")
+        self.addCleanup(Path(package["final_video_path"]).unlink)
+        with patch.dict("os.environ", {"TELEGRAM_BOT_TOKEN": "token", "TELEGRAM_CHANNEL_ID": "channel"}, clear=True):
+            payload = telegram_payload(package, self.metadata(), dry_run=False, root=ROOT)
+        self.assertEqual(payload["approval_status"], "blocked")
+        self.assertIn("human approval confirmation required for telegram live publishing", payload["blocking_issues"])
+
+    def test_telegram_live_payload_approved_with_real_video_and_approval(self):
+        package = copy.deepcopy(self.package)
+        package["final_video_path"] = str(ROOT / "renders" / "approved.mp4")
+        Path(package["final_video_path"]).write_bytes(b"mp4")
+        self.addCleanup(Path(package["final_video_path"]).unlink)
+        with patch.dict("os.environ", {"TELEGRAM_BOT_TOKEN": "token", "TELEGRAM_CHANNEL_ID": "channel", "HUMAN_APPROVAL_CONFIRMED": "true"}, clear=True):
+            payload = telegram_payload(package, self.metadata(), dry_run=False, root=ROOT)
+        self.assertEqual(payload["approval_status"], "approved")
+        self.assertTrue(payload["real_video"])
+
+    def test_telegram_multipart_body_contains_video(self):
+        video = ROOT / "renders" / "telegram-test.mp4"
+        video.write_bytes(b"mp4")
+        self.addCleanup(video.unlink)
+        body, content_type = _multipart_body({"chat_id": "channel", "caption": "caption"}, "video", video)
+        self.assertIn("multipart/form-data", content_type)
+        self.assertIn(b'name="video"; filename="telegram-test.mp4"', body)
+
+    def test_telegram_publish_uses_send_video(self):
+        video = ROOT / "renders" / "telegram-live.mp4"
+        video.write_bytes(b"mp4")
+        self.addCleanup(video.unlink)
+        payload = {"platform": "telegram", "video_path": str(video), "caption": "caption"}
+        response = type("Response", (), {"__enter__": lambda self: self, "__exit__": lambda self, *args: None, "read": lambda self: b'{"ok": true, "result": {"message_id": 12, "chat": {"id": "channel"}}}'})
+        with patch.dict("os.environ", {"TELEGRAM_BOT_TOKEN": "token", "TELEGRAM_CHANNEL_ID": "channel"}, clear=True), patch("urllib.request.urlopen", return_value=response()):
+            result = _publish_telegram_video(payload)
+        self.assertEqual(result["telegram_message_id"], 12)
 
     def test_publish_now_schedule(self):
         self.assertEqual(publishing_schedule(self.package, root=ROOT)["schedule_mode"], "publish_now")

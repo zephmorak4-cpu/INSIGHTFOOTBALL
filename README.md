@@ -225,6 +225,28 @@ By default, this workflow still runs publishing in dry-run mode. Set `live_publi
 - The publish-ready package has no blocking issues.
 - Human approval has been explicitly given.
 
+The approved workflow currently targets Telegram only, so missing YouTube or Facebook credentials cannot block the first live Telegram release.
+
+## Live Telegram Publishing
+
+After human approval, the manual workflow can publish the approved MP4 to the public Telegram channel.
+
+Required secrets:
+
+```text
+TELEGRAM_BOT_TOKEN
+TELEGRAM_CHANNEL_ID
+```
+
+Required runtime conditions:
+
+- `approval_statement=APPROVED`
+- `live_publish=true`
+- `HUMAN_APPROVAL_CONFIRMED=true` set by the workflow
+- `publish-ready-package.final_video_path` points to a real `.mp4`
+
+The Telegram publisher uses `sendVideo`. Placeholder JSON renders are blocked and cannot be live-published.
+
 ## Analytics Run
 
 ```powershell
