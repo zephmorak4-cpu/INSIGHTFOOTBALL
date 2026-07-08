@@ -61,6 +61,16 @@ python scripts/run_tests.py
 
 The full regression suite currently covers editorial, production, publishing, and analytics modules.
 
+## Readiness Check
+
+Run:
+
+```bash
+python scripts/readiness_check.py
+```
+
+This checks the local runtime, Render configuration, workflow files, and whether required Telegram environment variables are present locally. It never prints secret values.
+
 ## Sample Editorial Run
 
 From the repository root:
@@ -182,6 +192,12 @@ FFMPEG_BINARY_PATH=/path/to/ffmpeg
 ```
 
 If FFmpeg is unavailable, real rendering fails clearly and no publishable MP4 is produced.
+
+Render installs FFmpeg via:
+
+```text
+Aptfile
+```
 
 ## Telegram Approval With Video
 

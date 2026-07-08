@@ -10,6 +10,12 @@ The Render Blueprint is defined in:
 render.yaml
 ```
 
+FFmpeg is installed on Render through:
+
+```text
+Aptfile
+```
+
 It creates:
 
 ```text
@@ -76,7 +82,7 @@ INSIGHT_FOOTBALL_ENV=production
 INSIGHT_FOOTBALL_DRY_RUN=true
 INSIGHT_FOOTBALL_REQUIRE_HUMAN_APPROVAL=true
 INSIGHT_FOOTBALL_RUN_TESTS_ON_RENDER=true
-INSIGHT_FOOTBALL_RENDERER_PROFILE=placeholder
+INSIGHT_FOOTBALL_RENDERER_PROFILE=ffmpeg
 DAILY_INPUT_PATH=editorial-brain/examples/liverpool-arsenal-daily-input.json
 ```
 

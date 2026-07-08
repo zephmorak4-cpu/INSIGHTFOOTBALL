@@ -19,6 +19,8 @@ jobs:
       INSIGHT_FOOTBALL_ENV: production
       INSIGHT_FOOTBALL_DRY_RUN: "true"
       INSIGHT_FOOTBALL_REQUIRE_HUMAN_APPROVAL: "true"
+      INSIGHT_FOOTBALL_RENDERER_PROFILE: ${{ secrets.INSIGHT_FOOTBALL_RENDERER_PROFILE || 'ffmpeg' }}
+      FFMPEG_BINARY_PATH: ${{ secrets.FFMPEG_BINARY_PATH }}
       DAILY_INPUT_PATH: ${{ github.event.inputs.daily_input_path || 'editorial-brain/examples/liverpool-arsenal-daily-input.json' }}
       GITHUB_RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
       OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
@@ -27,6 +29,7 @@ jobs:
       GNEWS_API_KEY: ${{ secrets.GNEWS_API_KEY }}
       TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
       TELEGRAM_APPROVAL_CHAT_ID: ${{ secrets.TELEGRAM_APPROVAL_CHAT_ID }}
+      TELEGRAM_CHANNEL_ID: ${{ secrets.TELEGRAM_CHANNEL_ID }}
 
     steps:
       - name: Checkout
@@ -63,4 +66,3 @@ jobs:
             editorial-brain/output/published-package.json
             editorial-brain/output/learning-package.json
           if-no-files-found: warn
-

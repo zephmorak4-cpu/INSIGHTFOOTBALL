@@ -17,7 +17,7 @@ services:
       - key: INSIGHT_FOOTBALL_REQUIRE_HUMAN_APPROVAL
         value: "true"
       - key: INSIGHT_FOOTBALL_RENDERER_PROFILE
-        value: placeholder
+        value: ffmpeg
       - key: DAILY_INPUT_PATH
         value: editorial-brain/examples/liverpool-arsenal-daily-input.json
       - key: FFMPEG_BINARY_PATH
