@@ -128,6 +128,35 @@ TELEGRAM_APPROVAL_CHAT_ID
 
 Use `TELEGRAM_APPROVAL_CHAT_ID` for the private approval chat, group, or channel that receives review requests. Keep it separate from `TELEGRAM_CHANNEL_ID`, which is reserved for the eventual public publishing destination.
 
+## Render Deployment
+
+Render deployment is defined in:
+
+```text
+render.yaml
+```
+
+It provisions a Render cron service that runs at:
+
+```text
+10:00 Africa/Lagos
+09:00 UTC
+```
+
+The Render entrypoint is:
+
+```text
+python scripts/render_daily_entrypoint.py
+```
+
+The cron job runs tests, runs the daily dry-run production flow, and sends a Telegram approval request when secrets are configured. It does not live-publish.
+
+Render setup details are in:
+
+```text
+docs/render-deployment.md
+```
+
 ## Human Approval Gate
 
 Production publishing is separated from daily package generation.

@@ -1,0 +1,22 @@
+name: Render Deploy
+
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    name: Trigger Render deploy hook
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Validate deploy hook secret
+        run: |
+          if [ -z "${{ secrets.RENDER_DEPLOY_HOOK_URL }}" ]; then
+            echo "Missing RENDER_DEPLOY_HOOK_URL secret."
+            exit 1
+          fi
+
+      - name: Trigger deploy
+        run: |
+          curl --fail --request POST "${{ secrets.RENDER_DEPLOY_HOOK_URL }}"
+
