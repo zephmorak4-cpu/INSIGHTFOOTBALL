@@ -13,7 +13,7 @@
     "production_id": "if-2026-07-06-liverpool-arsenal",
     "component_id": "IF-PUB01",
     "component_name": "Publishing Metadata Generator",
-    "timestamp": "2026-07-08T11:37:47.769368+00:00",
+    "timestamp": "2026-07-09T15:43:35.163299+00:00",
     "match": {
       "home_team": "Liverpool",
       "away_team": "Arsenal",
@@ -58,7 +58,7 @@
     "production_id": "if-2026-07-06-liverpool-arsenal",
     "component_id": "IF-PUB05",
     "component_name": "Publishing Scheduler",
-    "timestamp": "2026-07-08T11:37:47.774353+00:00",
+    "timestamp": "2026-07-09T15:43:35.195165+00:00",
     "timezone": "Africa/Lagos",
     "schedule_mode": "publish_now",
     "platforms": [
@@ -67,9 +67,9 @@
       "telegram"
     ],
     "publish_times": {
-      "youtube": "2026-07-08T11:37:47.774353+00:00",
-      "facebook": "2026-07-08T11:37:47.774353+00:00",
-      "telegram": "2026-07-08T11:37:47.774353+00:00"
+      "youtube": "2026-07-09T15:43:35.195165+00:00",
+      "facebook": "2026-07-09T15:43:35.195165+00:00",
+      "telegram": "2026-07-09T15:43:35.195165+00:00"
     },
     "platform_order": [
       "youtube",
@@ -98,7 +98,7 @@
     "production_id": "if-2026-07-06-liverpool-arsenal",
     "component_id": "IF-PUB08",
     "component_name": "Publishing Report Generator",
-    "timestamp": "2026-07-08T11:37:47.775351+00:00",
+    "timestamp": "2026-07-09T15:43:35.195165+00:00",
     "platforms_attempted": [
       "youtube"
     ],

@@ -1,7 +1,7 @@
 {
   "component_id": "IF-AN07",
   "component_name": "CTA Analyzer",
-  "timestamp": "2026-07-08T11:38:31.698568+00:00",
+  "timestamp": "2026-07-09T15:43:34.516968+00:00",
   "cta_leaderboard": [
     {
       "key": "Can Arsenal survive the first 20 minutes, or will Liverpool take control early? Tell us below.",
@@ -11,12 +11,12 @@
     {
       "key": "Tell us below.",
       "average": 18.0,
-      "sample_size": 75
+      "sample_size": 90
     },
     {
       "key": "What did you see?",
       "average": 9.0,
-      "sample_size": 75
+      "sample_size": 90
     }
   ],
   "best_cta": "Can Arsenal survive the first 20 minutes, or will Liverpool take control early? Tell us below.",

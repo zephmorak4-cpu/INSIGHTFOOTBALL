@@ -2,7 +2,7 @@
   "production_id": "if-2026-07-06-liverpool-arsenal",
   "component_id": "IF-TL02",
   "component_name": "Scene Composer",
-  "timestamp": "2026-07-08T11:37:41.932834+00:00",
+  "timestamp": "2026-07-09T15:44:36.164740+00:00",
   "scenes": [
     {
       "scene_id": "scene-01",
@@ -97,6 +97,15 @@
           "priority": "high"
         }
       ],
+      "visual_elements": [
+        "club_badge_home",
+        "club_badge_away",
+        "competition_logo",
+        "match_title",
+        "modern_scoreboard",
+        "broadcast_animation"
+      ],
+      "broadcast_elements": {},
       "dashboard_elements": [],
       "caption_element": {
         "text": "Before the first whistle",
@@ -218,6 +227,12 @@
           "priority": "high"
         }
       ],
+      "visual_elements": [
+        "stadium_background",
+        "lower_third",
+        "motion_graphics"
+      ],
+      "broadcast_elements": {},
       "dashboard_elements": [],
       "caption_element": {
         "text": "Sample data: Liverpool have started quickly in\nrecent home",
@@ -321,6 +336,12 @@
           "priority": "high"
         }
       ],
+      "visual_elements": [
+        "stadium_background",
+        "lower_third",
+        "motion_graphics"
+      ],
+      "broadcast_elements": {},
       "dashboard_elements": [],
       "caption_element": {
         "text": "Can Arsenal survive Liverpool's fast start?",
@@ -437,6 +458,12 @@
           "priority": "high"
         }
       ],
+      "visual_elements": [
+        "stadium_background",
+        "lower_third",
+        "motion_graphics"
+      ],
+      "broadcast_elements": {},
       "dashboard_elements": [],
       "caption_element": {
         "text": "Liverpool usually start aggressively, pressing high and\nforcing rushed",
@@ -540,6 +567,12 @@
           "priority": "high"
         }
       ],
+      "visual_elements": [
+        "stadium_background",
+        "lower_third",
+        "motion_graphics"
+      ],
+      "broadcast_elements": {},
       "dashboard_elements": [],
       "caption_element": {
         "text": "Arsenal have enough quality to play through\nit, but",
@@ -651,6 +684,12 @@
           "fallback": true
         }
       ],
+      "visual_elements": [
+        "stadium_background",
+        "lower_third",
+        "motion_graphics"
+      ],
+      "broadcast_elements": {},
       "dashboard_elements": [],
       "caption_element": {
         "text": "The evidence is simple: Liverpool usually make\nopponents uncomfortable",
@@ -754,6 +793,12 @@
           "priority": "high"
         }
       ],
+      "visual_elements": [
+        "stadium_background",
+        "lower_third",
+        "motion_graphics"
+      ],
+      "broadcast_elements": {},
       "dashboard_elements": [],
       "caption_element": {
         "text": "The balance matters too: Arsenal may be\nbetter prepared",
@@ -844,7 +889,7 @@
         },
         {
           "type": "secondary",
-          "text": "Edge, uncertainty, x-factor"
+          "text": "Edge, uncertainty, one thing"
         }
       ],
       "graphic_elements": [
@@ -876,6 +921,12 @@
           "priority": "high"
         }
       ],
+      "visual_elements": [
+        "stadium_background",
+        "lower_third",
+        "motion_graphics"
+      ],
+      "broadcast_elements": {},
       "dashboard_elements": [
         {
           "usage": "visible",
@@ -988,7 +1039,7 @@
         },
         {
           "type": "secondary",
-          "text": "Edge, uncertainty, x-factor"
+          "text": "Edge, uncertainty, one thing"
         }
       ],
       "graphic_elements": [
@@ -1020,6 +1071,12 @@
           "priority": "high"
         }
       ],
+      "visual_elements": [
+        "stadium_background",
+        "lower_third",
+        "motion_graphics"
+      ],
+      "broadcast_elements": {},
       "dashboard_elements": [
         {
           "usage": "visible",
@@ -1109,11 +1166,11 @@
       "text_elements": [
         {
           "type": "primary",
-          "text": "The x-factor is arsenal's ability to escape liverpool's first..."
+          "text": "One thing that could change everything is arsenal's ability to escape liverpool's first..."
         },
         {
           "type": "secondary",
-          "text": "Make the x-factor player easy to understand in one glance."
+          "text": "Make one thing that could change everything player easy to understand in one glance."
         }
       ],
       "graphic_elements": [
@@ -1124,9 +1181,15 @@
         }
       ],
       "logo_elements": [],
+      "visual_elements": [
+        "stadium_background",
+        "lower_third",
+        "motion_graphics"
+      ],
+      "broadcast_elements": {},
       "dashboard_elements": [],
       "caption_element": {
-        "text": "The x-factor is arsenal's ability to escape\nliverpool's first",
+        "text": "One thing that could change everything is arsenal's ability to escape\nliverpool's first",
         "style": "lower_safe_two_line",
         "position": "lower_third_safe"
       },
@@ -1242,6 +1305,12 @@
           "priority": "high"
         }
       ],
+      "visual_elements": [
+        "stadium_background",
+        "lower_third",
+        "motion_graphics"
+      ],
+      "broadcast_elements": {},
       "dashboard_elements": [],
       "caption_element": {
         "text": "Tell us below",

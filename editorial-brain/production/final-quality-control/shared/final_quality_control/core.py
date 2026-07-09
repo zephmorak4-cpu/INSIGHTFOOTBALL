@@ -9,6 +9,7 @@ from .io import StructuredLogger, load_json, now, write_json
 OUTPUT = Path("editorial-brain/output")
 LOGS = Path("editorial-brain/logs")
 FORBIDDEN_BETTING = ["guaranteed", "banker", "lock", "wager", "tipster"]
+INTERNAL_TERMS = ["Form Index", "Risk Meter", "Tactical Edge", "X-Factor", "Evidence Filter", "Insight Engine", "Story Hunter", "Editorial Brain"]
 
 
 def run_all(root: Path = Path(".")) -> dict[str, Any]:
@@ -67,6 +68,8 @@ def audio_qc(render: dict[str, Any], voice: dict[str, Any], *, root: Path = Path
     if not audio_exists:
         warnings.append("Audio track not inspectable in placeholder mode." if placeholder else "Audio track missing.")
     duration = voice["audio_qc_report"]["estimated_duration_seconds"]
+    if not voice.get("voice_timestamps", {}).get("entries"):
+        issues.append("No narration timing available.")
     if abs(duration - render["duration_seconds"]) > 2:
         warnings.append("Voice duration differs from rendered duration by more than two seconds.")
     score = _score(issues, warnings, base=88 if placeholder else 96)
@@ -107,7 +110,7 @@ def caption_qc(render: dict[str, Any], *, root: Path = Path(".")) -> dict[str, A
 
 
 def brand_compliance_checker(render: dict[str, Any], script: dict[str, Any], visual: dict[str, Any], *, root: Path = Path(".")) -> dict[str, Any]:
-    text = script["final_voiceover"]
+    text = _script_voiceover(script)
     issues, warnings = [], []
     opening = text.lower().startswith("before the first whistle")
     if not opening:
@@ -119,6 +122,9 @@ def brand_compliance_checker(render: dict[str, Any], script: dict[str, Any], vis
     forbidden = [word for word in FORBIDDEN_BETTING if re.search(rf"\b{re.escape(word)}\b", text, re.I)]
     if forbidden:
         issues.append("forbidden betting language found")
+    internal = _internal_terms(text)
+    if internal:
+        issues.append("internal terminology appears: " + ", ".join(internal))
     if "robotic" in text.lower():
         warnings.append("robotic phrasing warning")
     dashboard_scenes = [s for s in visual["dashboard_plan"]["dashboard_cards"]]
@@ -158,6 +164,9 @@ def script_alignment_checker(render: dict[str, Any], script: dict[str, Any], sto
         issues.append("CTA missing")
     if any("unauthorized" in scene["voiceover_text"].lower() for scene in load_json(root / OUTPUT / "renderer-ready-package.json")["timeline"]["scenes"]):
         issues.append("unauthorized claim added")
+    internal = _internal_terms(full_timeline_text)
+    if internal:
+        issues.append("internal terminology appears: " + ", ".join(internal))
     scene_order = [s["scene_id"] for s in storyboard["scenes"]] == [s["scene_id"] for s in load_json(root / OUTPUT / "renderer-ready-package.json")["timeline"]["scenes"]]
     if not scene_order:
         issues.append("scene order mismatch")
@@ -185,7 +194,7 @@ def legal_copyright_checker(render: dict[str, Any], assets: dict[str, Any], scri
     missing_legal = [a for a in assets.get("asset_cache_index", {}).get("cache_entries", []) if not a.get("legal_status")]
     if missing_legal:
         issues.append("missing legal status")
-    betting_bad = [word for word in FORBIDDEN_BETTING if re.search(rf"\b{re.escape(word)}\b", script["final_voiceover"], re.I)]
+    betting_bad = [word for word in FORBIDDEN_BETTING if re.search(rf"\b{re.escape(word)}\b", _script_voiceover(script), re.I)]
     if betting_bad:
         issues.append("betting guarantee language found")
     risk = "high" if issues else ("medium" if manual else "low")
@@ -207,6 +216,9 @@ def publish_readiness_gate(render: dict[str, Any], reports: dict[str, dict[str, 
     warnings = [warning for report in reports.values() for warning in report.get("warnings", [])] + render.get("warnings", [])
     legal = reports["legal_safety_report"]
     placeholder = reports["video_qc_report"]["codec"] == "placeholder"
+    v2_report = v2_editorial_qc(render, script, root=root)
+    blocking.extend(v2_report["issues_found"])
+    warnings.extend(v2_report["warnings"])
     if blocking or legal["copyright_risk_level"] == "high":
         status = "rejected"
     elif placeholder or legal["approval_status"] == "needs_human_review" or min(scores.values()) < 80:
@@ -227,6 +239,7 @@ def publish_readiness_gate(render: dict[str, Any], reports: dict[str, dict[str, 
         "title_seed": f"{render['match']['home_team']} vs {render['match']['away_team']}: {script['central_question']}",
         "description_seed": script["hook"], "caption_seed": script["cta"], "telegram_seed": script["central_question"],
         "legal_warnings": reports["legal_safety_report"]["warnings"], "human_review_flags": render.get("human_review_flags", []) + (["Placeholder render requires review."] if placeholder else []),
+        "v2_editorial_qc": v2_report,
         "approval_status": status, "next_component": "Publishing Engine",
     }
     write_json(root / OUTPUT / "publish_readiness_report.json", report)
@@ -243,3 +256,60 @@ def _score(issues: list[str], warnings: list[str], *, base: int) -> int:
 def _write(root: Path, filename: str, report: dict[str, Any], logger_name: str) -> None:
     write_json(root / OUTPUT / filename, report)
     StructuredLogger(root / LOGS, f"{logger_name}-{report['production_id']}").log({"event": f"{filename}_written", "approval_status": report["approval_status"]})
+
+
+def v2_editorial_qc(render: dict[str, Any], script: dict[str, Any], *, root: Path = Path(".")) -> dict[str, Any]:
+    renderer = render.get("render_complete_package") or load_json(root / OUTPUT / "renderer-ready-package.json")
+    timeline = renderer.get("timeline", {})
+    scenes = timeline.get("scenes", [])
+    captions = renderer.get("caption_sync", {}).get("captions", [])
+    issues, warnings = [], []
+    for scene in scenes:
+        if len(_scene_visual_elements(scene)) < 3:
+            issues.append(f"{scene.get('scene_id')} scene has only text or fewer than three visual elements")
+        if float(scene.get("movement_interval_seconds", 2.5)) > 3:
+            issues.append(f"{scene.get('scene_id')} has no movement for more than three seconds")
+    opening_required = {"club_badge_home", "club_badge_away", "competition_logo", "match_title", "modern_scoreboard", "broadcast_animation"}
+    opening = scenes[0] if scenes else {}
+    missing_opening = sorted(opening_required - set(_scene_visual_elements(opening)))
+    if missing_opening:
+        issues.append("opening five seconds missing: " + ", ".join(missing_opening))
+    if not captions:
+        issues.append("No captions generated from narration.")
+    if not _script_voiceover(script).strip():
+        issues.append("No narration script available.")
+    internal = _internal_terms(" ".join([_script_voiceover(script), " ".join(scene.get("caption_text", "") for scene in scenes)]))
+    if internal:
+        issues.append("internal terminology appears: " + ", ".join(internal))
+    avg_duration = round(sum(float(scene.get("duration_seconds", 0)) for scene in scenes) / len(scenes), 2) if scenes else 0
+    if avg_duration > 4 and not all(float(scene.get("movement_interval_seconds", 99)) <= 3 for scene in scenes):
+        issues.append("average scene duration exceeds 4 seconds without movement beats")
+    report = {
+        "production_id": render["production_id"],
+        "component_id": "IF-FQC08",
+        "component_name": "V2 Editorial QC",
+        "timestamp": now(),
+        "average_scene_duration_seconds": avg_duration,
+        "issues_found": sorted(set(issues)),
+        "warnings": warnings,
+        "score": _score(issues, warnings, base=96),
+        "approval_status": "approved" if not issues else "blocked",
+    }
+    write_json(root / OUTPUT / "v2_editorial_qc_report.json", report)
+    return report
+
+
+def _internal_terms(text: str) -> list[str]:
+    return [term for term in INTERNAL_TERMS if re.search(rf"\b{re.escape(term)}\b", str(text), re.IGNORECASE)]
+
+
+def _script_voiceover(script: dict[str, Any]) -> str:
+    return str(script.get("final_voiceover") or script.get("full_voiceover") or "")
+
+
+def _scene_visual_elements(scene: dict[str, Any]) -> list[str]:
+    if "visual_elements" in scene:
+        return list(scene.get("visual_elements", []))
+    if scene.get("scene_number") == 1 or scene.get("scene_type") == "Brand Opening":
+        return ["club_badge_home", "club_badge_away", "competition_logo", "match_title", "modern_scoreboard", "broadcast_animation"]
+    return ["stadium_background", "lower_third", "motion_graphics"]

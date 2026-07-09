@@ -2,8 +2,8 @@
   "production_id": "if-2026-07-06-liverpool-arsenal",
   "component_id": "IF-FQC01",
   "component_name": "Video QC",
-  "timestamp": "2026-07-08T11:37:05.298360+00:00",
-  "video_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\renders\\if-2026-07-06-liverpool-arsenal\\final_video.placeholder.json",
+  "timestamp": "2026-07-09T15:43:46.356710+00:00",
+  "video_path": "renders\\if-2026-07-06-liverpool-arsenal\\final_video.placeholder.json",
   "file_exists": true,
   "file_size": 261,
   "duration_seconds": 60.0,
@@ -11,7 +11,7 @@
   "aspect_ratio": "9:16",
   "fps": 30,
   "codec": "placeholder",
-  "thumbnail_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\renders\\if-2026-07-06-liverpool-arsenal\\thumbnail_frame.placeholder.json",
+  "thumbnail_path": "renders\\if-2026-07-06-liverpool-arsenal\\thumbnail_frame.placeholder.json",
   "issues_found": [],
   "warnings": [
     "Placeholder render documented; no real video integrity checks available."

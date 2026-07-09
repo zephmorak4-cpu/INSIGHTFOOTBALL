@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import os
 from pathlib import Path
 from typing import Any
 
@@ -25,6 +26,14 @@ class MatchSelectorValidator:
         fixtures = daily_input.get("fixtures", [])
         if len(fixtures) < 1:
             issues.append("$.fixtures: at least one fixture is required")
+        if _production_mode():
+            production_date = daily_input.get("production_metadata", {}).get("date", "")
+            if not production_date:
+                issues.append("$.production_metadata.date: required in production")
+            for index, fixture in enumerate(fixtures):
+                kickoff = str(fixture.get("kickoff_time", ""))
+                if production_date and production_date not in kickoff:
+                    issues.append(f"$.fixtures[{index}].kickoff_time: production fixtures must be for {production_date}")
         if issues:
             raise ValidationError("Daily input validation failed", issues)
 
@@ -47,6 +56,10 @@ class MatchSelectorValidator:
         fixtures = daily_input.get("fixtures", [])
         if selected and not self._selected_match_exists(selected, fixtures):
             issues.append("$.selected_match: selected match must exist in Daily Input fixtures")
+        if _production_mode():
+            production_date = daily_input.get("production_metadata", {}).get("date", "")
+            if production_date and selected and production_date not in str(selected.get("kickoff_time", "")):
+                issues.append("$.selected_match.kickoff_time: selected match must be from today's live fixtures")
 
         confidence = output.get("confidence", {}).get("score")
         if not isinstance(confidence, int):
@@ -100,3 +113,7 @@ def calculate_confidence_floor(output: dict[str, Any]) -> int:
     )
     data_gap_penalty = len(output.get("data_gaps", [])) * 4
     return max(0, min(100, int(round(weighted - data_gap_penalty))))
+
+
+def _production_mode() -> bool:
+    return os.environ.get("INSIGHT_FOOTBALL_ENV", "").lower() == "production"

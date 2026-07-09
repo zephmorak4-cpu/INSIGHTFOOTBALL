@@ -39,7 +39,7 @@ class PronunciationEngineTests(unittest.TestCase):
 
     def test_abbreviations(self):
         items = self.run_service()["pronunciation_dictionary"]["items"]
-        self.assertTrue(any(item["term"] == "x-factor" for item in items))
+        self.assertFalse(any(item["term"] == "x-factor" for item in items))
 
     def test_competition_names(self):
         terms = {item["term"] for item in self.run_service()["pronunciation_dictionary"]["items"]}

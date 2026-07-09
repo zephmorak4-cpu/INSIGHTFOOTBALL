@@ -2,7 +2,7 @@
   "production_id": "if-2026-07-06-liverpool-arsenal",
   "component_id": "IF-TL04",
   "component_name": "Caption Synchronizer",
-  "timestamp": "2026-07-08T11:37:42.273920+00:00",
+  "timestamp": "2026-07-09T15:44:36.534470+00:00",
   "captions": [
     {
       "caption_id": "caption-01",
@@ -151,7 +151,7 @@
     {
       "caption_id": "caption-10",
       "scene_id": "scene-10",
-      "text": "The x-factor is arsenal's ability to escape\nliverpool's first press",
+      "text": "One thing that could change everything is\narsenal's ability to escape liverpool's first press",
       "start_time_seconds": 49.18,
       "end_time_seconds": 53.35,
       "position": "lower_safe",

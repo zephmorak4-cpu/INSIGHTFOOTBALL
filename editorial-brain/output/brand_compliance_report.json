@@ -2,13 +2,34 @@
   "production_id": "if-2026-07-06-liverpool-arsenal",
   "component_id": "IF-FQC04",
   "component_name": "Brand Compliance Checker",
-  "timestamp": "2026-07-08T11:37:05.176785+00:00",
+  "timestamp": "2026-07-09T15:43:46.246422+00:00",
   "brand_opening_present": true,
   "tone_status": "conversational",
   "central_question_present": true,
   "story_clarity_score": 92,
   "dashboard_clarity_score": 90,
   "cta_status": "present",
+  "brand_motion_standard": {
+    "standard_id": "IF-BMS-1.0",
+    "mandatory_checks": {
+      "persistent_corner_logo": true,
+      "opening_sting": true,
+      "transition_sting": true,
+      "end_card": true
+    },
+    "source_report": {
+      "standard_id": "IF-BMS-1.0",
+      "checks": {
+        "persistent_corner_logo": true,
+        "opening_sting": true,
+        "transition_sting": true,
+        "end_card": true,
+        "thumbnail_logo": true
+      },
+      "issues": [],
+      "passed": true
+    }
+  },
   "forbidden_language_found": [],
   "issues_found": [],
   "warnings": [

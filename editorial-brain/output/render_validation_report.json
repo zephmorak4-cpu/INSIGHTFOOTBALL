@@ -2,7 +2,7 @@
   "production_id": "if-2026-07-06-liverpool-arsenal",
   "component_id": "IF-RE08",
   "component_name": "Render Validator",
-  "timestamp": "2026-07-08T11:37:19.878643+00:00",
+  "timestamp": "2026-07-09T15:44:13.490963+00:00",
   "checks": {
     "video_exists_or_placeholder": true,
     "duration": true,
@@ -13,7 +13,20 @@
     "captions_documented": true,
     "thumbnail_exists": true,
     "job_terminal": true,
-    "legal": true
+    "legal": true,
+    "brand_motion_standard": true
+  },
+  "brand_motion_report": {
+    "standard_id": "IF-BMS-1.0",
+    "checks": {
+      "persistent_corner_logo": true,
+      "opening_sting": true,
+      "transition_sting": true,
+      "end_card": true,
+      "thumbnail_logo": true
+    },
+    "issues": [],
+    "passed": true
   },
   "issues": [
     "wrong aspect ratio"

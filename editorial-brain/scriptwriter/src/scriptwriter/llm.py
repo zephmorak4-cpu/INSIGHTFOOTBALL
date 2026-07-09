@@ -37,7 +37,7 @@ class RuleBasedScriptwriterClient:
         )
         conclusion = (
             f"{brief['viewer_takeaway']} "
-            f"The x-factor is {brief['x_factor'].rstrip('.').lower()}."
+            f"Watch {brief['x_factor'].rstrip('.').lower()}."
         )
         cta = "Can Arsenal survive the first 20 minutes, or will Liverpool take control early? Tell us below."
         voiceover = f"{brand} {hook} {main_body} {conclusion} {cta}"
@@ -61,6 +61,7 @@ class RuleBasedScriptwriterClient:
             "conclusion": conclusion,
             "cta": cta,
             "full_voiceover": voiceover,
+            "final_voiceover": voiceover,
             "claims_used": [fact, *evidence, *contradiction, brief["match_edge"], brief["key_advantage"], brief["x_factor"]],
             "claims_rejected": brief.get("evidence_to_avoid", []),
             "locked_fields": brief["locked_fields"],

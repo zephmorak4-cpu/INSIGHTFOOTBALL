@@ -34,10 +34,16 @@ class VisualDirectorValidator:
             for field in ["template_id", "layout_type", "background_asset", "foreground_assets", "camera_style", "motion_style", "transition_style", "caption_style", "dashboard_usage", "safe_area_notes"]:
                 if field not in scene or scene[field] in ("", []):
                     issues.append(f"{scene.get('scene_id')}.{field}: required")
+            if len(scene.get("visual_elements", [])) < 3:
+                issues.append(f"{scene.get('scene_id')}.visual_elements: at least three visual elements required")
+            if scene.get("scene_type") == "Brand Opening":
+                required = {"club_badge_home", "club_badge_away", "competition_logo", "match_title", "modern_scoreboard", "broadcast_animation"}
+                missing = sorted(required - set(scene.get("visual_elements", [])))
+                if missing:
+                    issues.append(f"{scene.get('scene_id')}.visual_elements: opening missing {', '.join(missing)}")
             if scene.get("template_id") not in self.templates:
                 issues.append(f"{scene.get('scene_id')}.template_id: unsupported")
             if scene.get("layout_type") not in self.layouts:
                 issues.append(f"{scene.get('scene_id')}.layout_type: unsupported")
         if issues:
             raise ValidationError("Visual Director output validation failed", sorted(set(issues)))
-

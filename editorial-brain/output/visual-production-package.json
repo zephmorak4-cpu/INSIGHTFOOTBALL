@@ -1,4 +1,4 @@
-{
+﻿{
   "production_id": "if-2026-07-06-liverpool-arsenal",
   "match": {
     "home_team": "Liverpool",
@@ -214,7 +214,7 @@
           "team_logos"
         ],
         "primary_text": "Slight Home Edge",
-        "secondary_text": "Edge, uncertainty, x-factor",
+        "secondary_text": "Edge, uncertainty, one thing",
         "team_badges": [
           "team_logos"
         ],
@@ -240,7 +240,7 @@
           "team_logos"
         ],
         "primary_text": "Slight Home Edge",
-        "secondary_text": "Edge, uncertainty, x-factor",
+        "secondary_text": "Edge, uncertainty, one thing",
         "team_badges": [
           "team_logos"
         ],
@@ -257,7 +257,7 @@
       },
       {
         "scene_id": "scene-10",
-        "scene_type": "X-Factor Player",
+        "scene_type": "Key Player",
         "template_id": "player_focus",
         "layout_type": "player_focus",
         "background_asset": "background_graphic",
@@ -265,8 +265,8 @@
           "player_image",
           "pitch_graphic"
         ],
-        "primary_text": "The x-factor is arsenal's ability to escape liverpool's first...",
-        "secondary_text": "Make the x-factor player easy to understand in one glance.",
+        "primary_text": "One thing that could change everything is arsenal's ability to escape liverpool's first...",
+        "secondary_text": "Make one thing that could change everything player easy to understand in one glance.",
         "team_badges": [],
         "player_assets": [
           "player_image"
@@ -418,8 +418,8 @@
         "camera_duration": 4.0,
         "zoom_level": 1.07,
         "pan_direction": "center",
-        "focus_target": "x-factor card",
-        "camera_reason": "Slow Zoom supports the x-factor player without random movement."
+        "focus_target": "key player card",
+        "camera_reason": "Slow Zoom supports one thing that could change everything player without random movement."
       },
       {
         "scene_id": "scene-11",
@@ -520,7 +520,7 @@
         "duration": 0.8,
         "delay": 0.1,
         "easing": "easeOutCubic",
-        "animation_reason": "Highlight Pulse clarifies the x-factor player without flashy effects."
+        "animation_reason": "Highlight Pulse clarifies one thing that could change everything player without flashy effects."
       },
       {
         "scene_id": "scene-11",
@@ -690,14 +690,14 @@
       },
       {
         "scene_id": "scene-10",
-        "caption": "The x-factor is arsenal's ability to escape\nliverpool's first",
+        "caption": "One thing that could change everything is arsenal's ability to escape\nliverpool's first",
         "caption_position": "lower_third_safe",
         "font_size": 46,
         "font_weight": "semibold",
         "highlight_words": [
           "Liverpool",
           "Arsenal",
-          "x-factor",
+          "one thing",
           "first"
         ],
         "background_style": "dark_translucent_strip",
@@ -750,9 +750,9 @@
         "display_time": 2.5
       },
       {
-        "card_type": "X-Factor",
-        "title": "X-Factor",
-        "content": "The x-factor is arsenal's ability to escape liverpool's first...",
+        "card_type": "Key Player",
+        "title": "Key Player",
+        "content": "One thing that could change everything is arsenal's ability to escape liverpool's first...",
         "icon": "player_marker",
         "animation": "Pop",
         "display_time": 2.5
@@ -793,3 +793,4 @@
   "approval_status": "approved",
   "next_component": "Rendering Engine"
 }
+

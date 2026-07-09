@@ -4,8 +4,8 @@
   "renderer_profile": "placeholder",
   "status": "completed",
   "progress": 100,
-  "started_at": "2026-07-08T11:37:19.591411+00:00",
-  "completed_at": "2026-07-08T11:37:19.876648+00:00",
+  "started_at": "2026-07-09T15:44:13.254197+00:00",
+  "completed_at": "2026-07-09T15:44:13.490963+00:00",
   "duration_seconds": 60.0,
   "errors": [],
   "warnings": [
@@ -26,12 +26,12 @@
     "file_sizes": {
       "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\renders\\if-2026-07-06-liverpool-arsenal\\final_video.placeholder.json": 261,
       "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\renders\\if-2026-07-06-liverpool-arsenal\\thumbnail_frame.placeholder.json": 269,
-      "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\renders\\if-2026-07-06-liverpool-arsenal\\render_payload.json": 263
+      "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\renders\\if-2026-07-06-liverpool-arsenal\\render_payload.json": 3261
     },
     "checksums": {
-      "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\renders\\if-2026-07-06-liverpool-arsenal\\final_video.placeholder.json": "b295918737dbb3d4049139b7270669c0d370c348cd81f7f2429cd0c87cc3f36e",
-      "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\renders\\if-2026-07-06-liverpool-arsenal\\thumbnail_frame.placeholder.json": "4cd42c8fe6a60756a6bf215ebb3ece62727c443490bf11daafd8483fad77db08",
-      "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\renders\\if-2026-07-06-liverpool-arsenal\\render_payload.json": "e99616dce27dc543570d9d0db1f032071d80b1fa9f368978e974862cd128327c"
+      "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\renders\\if-2026-07-06-liverpool-arsenal\\final_video.placeholder.json": "27938950323653c97c409ffe3751b97287a48a12c1a061f1f886336b10f0dd3e",
+      "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\renders\\if-2026-07-06-liverpool-arsenal\\thumbnail_frame.placeholder.json": "f46946afd8a510c20b5080e748c7c7e8e46dfea1242d559eccb1b134d462adbe",
+      "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\renders\\if-2026-07-06-liverpool-arsenal\\render_payload.json": "078cad20b2779d6522e91a83ec0920a417ff1ed0c070d05166adc2c3394ad72f"
     },
     "missing_artifacts": [],
     "approval_status": "approved"

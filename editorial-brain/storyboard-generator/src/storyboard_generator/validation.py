@@ -20,6 +20,8 @@ class StoryboardValidator:
         self.schema_validator = SchemaValidator()
 
     def validate_inputs(self, package: dict[str, Any], voiceover: str) -> None:
+        if "final_voiceover" not in package and "full_voiceover" in package:
+            package["final_voiceover"] = package["full_voiceover"]
         issues = self.schema_validator.validate(package, self.script_schema)
         if not package.get("production_id"):
             issues.append("$.production_id: required")
@@ -53,10 +55,10 @@ class StoryboardValidator:
             issues.append("$.scenes: dashboard scene required")
         if "Final Question / CTA" not in {scene.get("scene_type") for scene in scenes}:
             issues.append("$.scenes: CTA scene required")
-        if " ".join(voiceover_parts).strip() != package.get("final_voiceover", "").strip():
+        expected_voiceover = package.get("final_voiceover") or package.get("full_voiceover", "")
+        if " ".join(voiceover_parts).strip() != expected_voiceover.strip():
             issues.append("$.scenes.voiceover_text: must preserve final script order")
         if storyboard.get("locked_fields") != package.get("locked_fields"):
             issues.append("$.locked_fields: must be preserved")
         if issues:
             raise ValidationError("Storyboard Generator output validation failed", sorted(set(issues)))
-

@@ -2,12 +2,12 @@
   "component_id": "IF-AN09",
   "component_name": "Daily Performance Reporter",
   "report_type": "daily",
-  "generated_at": "2026-07-08T11:38:31.705547+00:00",
+  "generated_at": "2026-07-09T15:43:33.795797+00:00",
   "top_video": "if-2026-07-06-liverpool-arsenal",
   "worst_video": "baseline-data",
   "best_hook": "question",
   "best_thumbnail": "question_text_card",
-  "best_publishing_time": "2026-07-08T11:37:47.774353+00:00",
+  "best_publishing_time": "2026-07-09T15:39:50.322172+00:00",
   "retention_summary": {
     "second": 42,
     "retention_percent": 31

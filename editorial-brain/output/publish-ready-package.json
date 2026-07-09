@@ -8,8 +8,8 @@
     "country": "England"
   },
   "competition": "Premier League",
-  "final_video_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\renders\\if-2026-07-06-liverpool-arsenal\\final_video.placeholder.json",
-  "thumbnail_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\renders\\if-2026-07-06-liverpool-arsenal\\thumbnail_frame.placeholder.json",
+  "final_video_path": "renders\\if-2026-07-06-liverpool-arsenal\\final_video.placeholder.json",
+  "thumbnail_path": "renders\\if-2026-07-06-liverpool-arsenal\\thumbnail_frame.placeholder.json",
   "render_complete_package": {
     "production_id": "if-2026-07-06-liverpool-arsenal",
     "match": {
@@ -22,10 +22,127 @@
     "competition": "Premier League",
     "source_renderer_ready_package": "if-2026-07-06-liverpool-arsenal",
     "renderer_profile": "placeholder",
+    "brand_motion_standard": {
+      "standard_id": "IF-BMS-1.0",
+      "version": "1.0",
+      "persistent_logo": {
+        "required": true,
+        "position": "top-left",
+        "fallback_position": "top-right",
+        "size_percent_frame_width": {
+          "min": 5,
+          "max": 8
+        },
+        "opacity_percent": {
+          "min": 85,
+          "max": 90
+        },
+        "respect_title_safe_margins": true,
+        "avoid_subtitles_dashboards_and_statistics": true,
+        "continuous_animation_allowed": false,
+        "distort_stretch_rotate_recolor_crop_allowed": false
+      },
+      "opening_sting": {
+        "required": true,
+        "duration_seconds": 1.5,
+        "sequence": [
+          "dark_stadium_background",
+          "stadium_floodlights_illuminate",
+          "red_motion_streak",
+          "center_logo_fade_scale",
+          "metallic_light_sweep",
+          "subtle_camera_push"
+        ],
+        "audio": [
+          "deep_cinematic_impact",
+          "short_whoosh",
+          "low_crowd_ambience"
+        ]
+      },
+      "transition_sting": {
+        "required": true,
+        "duration_seconds": 0.3,
+        "between_sections": [
+          "hook_to_analysis",
+          "analysis_to_tactical_view",
+          "tactical_view_to_wild_card",
+          "wild_card_to_conclusion"
+        ],
+        "animation": [
+          "red_diagonal_swipe",
+          "brief_logo_flash",
+          "motion_blur",
+          "dashboard_wipe"
+        ],
+        "audio": [
+          "short_branded_swoosh"
+        ]
+      },
+      "end_card": {
+        "required": true,
+        "duration_seconds": 4.0,
+        "scene": [
+          "dark_stadium_background",
+          "slow_camera_push",
+          "stadium_floodlights",
+          "soft_smoke",
+          "floating_particles",
+          "centered_logo",
+          "metallic_light_reflection"
+        ],
+        "tagline": "KNOW MORE. SEE MORE. WIN MORE.",
+        "cta": "Subscribe for Daily Football Intelligence",
+        "icons": [
+          "youtube",
+          "telegram"
+        ],
+        "finish": "fade_to_black",
+        "audio": [
+          "sonic_logo",
+          "stadium_crowd_ambience",
+          "soft_cinematic_finish"
+        ]
+      },
+      "graphics": {
+        "panel_rules": [
+          "logo",
+          "red_accent_line",
+          "dark_navy_background",
+          "white_typography",
+          "rounded_broadcast_panels"
+        ],
+        "lower_thirds": [
+          "small_logo",
+          "dark_navy_background",
+          "red_accent_strip",
+          "white_typography",
+          "rounded_corners"
+        ],
+        "thumbnail": {
+          "logo_required": true,
+          "position": "top-left",
+          "consistent_size_and_spacing": true
+        }
+      },
+      "colors": {
+        "deep_navy": "#0B132B",
+        "sports_blue": "#0D47A1",
+        "espn_red": "#E10600",
+        "clean_white": "#F5F5F5",
+        "charcoal": "#1A1A1A"
+      },
+      "typography": {
+        "primary": [
+          "Bebas Neue",
+          "Anton"
+        ],
+        "secondary": "Montserrat"
+      }
+    },
     "render_job": {
       "production_id": "if-2026-07-06-liverpool-arsenal",
       "job_id": "render-if-2026-07-06-liverpool-arsenal",
-      "timestamp": "2026-07-08T11:29:36.820690+00:00",
+      "timestamp": "2026-07-09T15:39:46.726990+00:00",
       "renderer_profile": "placeholder",
       "input_package": "renderer-ready-package.json",
       "render_payload": {
@@ -34,7 +151,241 @@
         "production_id": "if-2026-07-06-liverpool-arsenal",
         "scene_count": 11,
         "duration": 60.0,
+        "brand_motion_standard": {
+          "standard_id": "IF-BMS-1.0",
+          "version": "1.0",
+          "persistent_logo": {
+            "required": true,
+            "position": "top-left",
+            "fallback_position": "top-right",
+            "size_percent_frame_width": {
+              "min": 5,
+              "max": 8
+            },
+            "opacity_percent": {
+              "min": 85,
+              "max": 90
+            },
+            "respect_title_safe_margins": true,
+            "avoid_subtitles_dashboards_and_statistics": true,
+            "continuous_animation_allowed": false,
+            "distort_stretch_rotate_recolor_crop_allowed": false
+          },
+          "opening_sting": {
+            "required": true,
+            "duration_seconds": 1.5,
+            "sequence": [
+              "dark_stadium_background",
+              "stadium_floodlights_illuminate",
+              "red_motion_streak",
+              "center_logo_fade_scale",
+              "metallic_light_sweep",
+              "subtle_camera_push"
+            ],
+            "audio": [
+              "deep_cinematic_impact",
+              "short_whoosh",
+              "low_crowd_ambience"
+            ]
+          },
+          "transition_sting": {
+            "required": true,
+            "duration_seconds": 0.3,
+            "between_sections": [
+              "hook_to_analysis",
+              "analysis_to_tactical_view",
+              "tactical_view_to_wild_card",
+              "wild_card_to_conclusion"
+            ],
+            "animation": [
+              "red_diagonal_swipe",
+              "brief_logo_flash",
+              "motion_blur",
+              "dashboard_wipe"
+            ],
+            "audio": [
+              "short_branded_swoosh"
+            ]
+          },
+          "end_card": {
+            "required": true,
+            "duration_seconds": 4.0,
+            "scene": [
+              "dark_stadium_background",
+              "slow_camera_push",
+              "stadium_floodlights",
+              "soft_smoke",
+              "floating_particles",
+              "centered_logo",
+              "metallic_light_reflection"
+            ],
+            "tagline": "KNOW MORE. SEE MORE. WIN MORE.",
+            "cta": "Subscribe for Daily Football Intelligence",
+            "icons": [
+              "youtube",
+              "telegram"
+            ],
+            "finish": "fade_to_black",
+            "audio": [
+              "sonic_logo",
+              "stadium_crowd_ambience",
+              "soft_cinematic_finish"
+            ]
+          },
+          "graphics": {
+            "panel_rules": [
+              "logo",
+              "red_accent_line",
+              "dark_navy_background",
+              "white_typography",
+              "rounded_broadcast_panels"
+            ],
+            "lower_thirds": [
+              "small_logo",
+              "dark_navy_background",
+              "red_accent_strip",
+              "white_typography",
+              "rounded_corners"
+            ],
+            "thumbnail": {
+              "logo_required": true,
+              "position": "top-left",
+              "consistent_size_and_spacing": true
+            }
+          },
+          "colors": {
+            "deep_navy": "#0B132B",
+            "sports_blue": "#0D47A1",
+            "espn_red": "#E10600",
+            "clean_white": "#F5F5F5",
+            "charcoal": "#1A1A1A"
+          },
+          "typography": {
+            "primary": [
+              "Bebas Neue",
+              "Anton"
+            ],
+            "secondary": "Montserrat"
+          }
+        },
         "reason": "Placeholder renderer documents render intent without producing video frames."
+      },
+      "brand_motion_standard": {
+        "standard_id": "IF-BMS-1.0",
+        "version": "1.0",
+        "persistent_logo": {
+          "required": true,
+          "position": "top-left",
+          "fallback_position": "top-right",
+          "size_percent_frame_width": {
+            "min": 5,
+            "max": 8
+          },
+          "opacity_percent": {
+            "min": 85,
+            "max": 90
+          },
+          "respect_title_safe_margins": true,
+          "avoid_subtitles_dashboards_and_statistics": true,
+          "continuous_animation_allowed": false,
+          "distort_stretch_rotate_recolor_crop_allowed": false
+        },
+        "opening_sting": {
+          "required": true,
+          "duration_seconds": 1.5,
+          "sequence": [
+            "dark_stadium_background",
+            "stadium_floodlights_illuminate",
+            "red_motion_streak",
+            "center_logo_fade_scale",
+            "metallic_light_sweep",
+            "subtle_camera_push"
+          ],
+          "audio": [
+            "deep_cinematic_impact",
+            "short_whoosh",
+            "low_crowd_ambience"
+          ]
+        },
+        "transition_sting": {
+          "required": true,
+          "duration_seconds": 0.3,
+          "between_sections": [
+            "hook_to_analysis",
+            "analysis_to_tactical_view",
+            "tactical_view_to_wild_card",
+            "wild_card_to_conclusion"
+          ],
+          "animation": [
+            "red_diagonal_swipe",
+            "brief_logo_flash",
+            "motion_blur",
+            "dashboard_wipe"
+          ],
+          "audio": [
+            "short_branded_swoosh"
+          ]
+        },
+        "end_card": {
+          "required": true,
+          "duration_seconds": 4.0,
+          "scene": [
+            "dark_stadium_background",
+            "slow_camera_push",
+            "stadium_floodlights",
+            "soft_smoke",
+            "floating_particles",
+            "centered_logo",
+            "metallic_light_reflection"
+          ],
+          "tagline": "KNOW MORE. SEE MORE. WIN MORE.",
+          "cta": "Subscribe for Daily Football Intelligence",
+          "icons": [
+            "youtube",
+            "telegram"
+          ],
+          "finish": "fade_to_black",
+          "audio": [
+            "sonic_logo",
+            "stadium_crowd_ambience",
+            "soft_cinematic_finish"
+          ]
+        },
+        "graphics": {
+          "panel_rules": [
+            "logo",
+            "red_accent_line",
+            "dark_navy_background",
+            "white_typography",
+            "rounded_broadcast_panels"
+          ],
+          "lower_thirds": [
+            "small_logo",
+            "dark_navy_background",
+            "red_accent_strip",
+            "white_typography",
+            "rounded_corners"
+          ],
+          "thumbnail": {
+            "logo_required": true,
+            "position": "top-left",
+            "consistent_size_and_spacing": true
+          }
+        },
+        "colors": {
+          "deep_navy": "#0B132B",
+          "sports_blue": "#0D47A1",
+          "espn_red": "#E10600",
+          "clean_white": "#F5F5F5",
+          "charcoal": "#1A1A1A"
+        },
+        "typography": {
+          "primary": [
+            "Bebas Neue",
+            "Anton"
+          ],
+          "secondary": "Montserrat"
+        }
       },
       "output_settings": {
         "filename": "if-2026-07-06-liverpool-arsenal.mp4",
@@ -87,8 +438,8 @@
       "renderer_profile": "placeholder",
       "status": "completed",
       "progress": 100,
-      "started_at": "2026-07-08T11:29:36.820690+00:00",
-      "completed_at": "2026-07-08T11:29:37.095952+00:00",
+      "started_at": "2026-07-09T15:39:46.726990+00:00",
+      "completed_at": "2026-07-09T15:39:46.943505+00:00",
       "duration_seconds": 60.0,
       "errors": [],
       "warnings": [
@@ -101,20 +452,20 @@
       "artifact_refs": {
         "production_id": "if-2026-07-06-liverpool-arsenal",
         "job_id": "render-if-2026-07-06-liverpool-arsenal",
-        "artifact_root": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\renders\\if-2026-07-06-liverpool-arsenal",
-        "final_video_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\renders\\if-2026-07-06-liverpool-arsenal\\final_video.placeholder.json",
-        "thumbnail_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\renders\\if-2026-07-06-liverpool-arsenal\\thumbnail_frame.placeholder.json",
-        "payload_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\renders\\if-2026-07-06-liverpool-arsenal\\render_payload.json",
-        "logs_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\renders\\if-2026-07-06-liverpool-arsenal\\logs",
+        "artifact_root": "renders\\if-2026-07-06-liverpool-arsenal",
+        "final_video_path": "renders\\if-2026-07-06-liverpool-arsenal\\final_video.placeholder.json",
+        "thumbnail_path": "renders\\if-2026-07-06-liverpool-arsenal\\thumbnail_frame.placeholder.json",
+        "payload_path": "renders\\if-2026-07-06-liverpool-arsenal\\render_payload.json",
+        "logs_path": "renders\\if-2026-07-06-liverpool-arsenal\\logs",
         "file_sizes": {
-          "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\renders\\if-2026-07-06-liverpool-arsenal\\final_video.placeholder.json": 261,
-          "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\renders\\if-2026-07-06-liverpool-arsenal\\thumbnail_frame.placeholder.json": 269,
-          "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\renders\\if-2026-07-06-liverpool-arsenal\\render_payload.json": 263
+          "renders\\if-2026-07-06-liverpool-arsenal\\final_video.placeholder.json": 261,
+          "renders\\if-2026-07-06-liverpool-arsenal\\thumbnail_frame.placeholder.json": 269,
+          "renders\\if-2026-07-06-liverpool-arsenal\\render_payload.json": 3261
         },
         "checksums": {
-          "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\renders\\if-2026-07-06-liverpool-arsenal\\final_video.placeholder.json": "c69905f6d6a2088e1414583b717bef4c315cc8a2fb740d22e71ba5d00ac064e8",
-          "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\renders\\if-2026-07-06-liverpool-arsenal\\thumbnail_frame.placeholder.json": "88fef6035dc6da1e46455d6a63f4cd451d70b541a18ce79de1675e5b09e65e96",
-          "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\renders\\if-2026-07-06-liverpool-arsenal\\render_payload.json": "e99616dce27dc543570d9d0db1f032071d80b1fa9f368978e974862cd128327c"
+          "renders\\if-2026-07-06-liverpool-arsenal\\final_video.placeholder.json": "781601b8547d26f8b06fb3026bb65875399d4d4dfd90c58199b1737b9b05ad5f",
+          "renders\\if-2026-07-06-liverpool-arsenal\\thumbnail_frame.placeholder.json": "a3837d6b4ac539aede0142bd29db3612e462181acb672174c13a4aabed118d94",
+          "renders\\if-2026-07-06-liverpool-arsenal\\render_payload.json": "078cad20b2779d6522e91a83ec0920a417ff1ed0c070d05166adc2c3394ad72f"
         },
         "missing_artifacts": [],
         "approval_status": "approved"
@@ -123,20 +474,20 @@
     "render_artifacts": {
       "production_id": "if-2026-07-06-liverpool-arsenal",
       "job_id": "render-if-2026-07-06-liverpool-arsenal",
-      "artifact_root": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\renders\\if-2026-07-06-liverpool-arsenal",
-      "final_video_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\renders\\if-2026-07-06-liverpool-arsenal\\final_video.placeholder.json",
-      "thumbnail_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\renders\\if-2026-07-06-liverpool-arsenal\\thumbnail_frame.placeholder.json",
-      "payload_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\renders\\if-2026-07-06-liverpool-arsenal\\render_payload.json",
-      "logs_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\renders\\if-2026-07-06-liverpool-arsenal\\logs",
+      "artifact_root": "renders\\if-2026-07-06-liverpool-arsenal",
+      "final_video_path": "renders\\if-2026-07-06-liverpool-arsenal\\final_video.placeholder.json",
+      "thumbnail_path": "renders\\if-2026-07-06-liverpool-arsenal\\thumbnail_frame.placeholder.json",
+      "payload_path": "renders\\if-2026-07-06-liverpool-arsenal\\render_payload.json",
+      "logs_path": "renders\\if-2026-07-06-liverpool-arsenal\\logs",
       "file_sizes": {
-        "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\renders\\if-2026-07-06-liverpool-arsenal\\final_video.placeholder.json": 261,
-        "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\renders\\if-2026-07-06-liverpool-arsenal\\thumbnail_frame.placeholder.json": 269,
-        "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\renders\\if-2026-07-06-liverpool-arsenal\\render_payload.json": 263
+        "renders\\if-2026-07-06-liverpool-arsenal\\final_video.placeholder.json": 261,
+        "renders\\if-2026-07-06-liverpool-arsenal\\thumbnail_frame.placeholder.json": 269,
+        "renders\\if-2026-07-06-liverpool-arsenal\\render_payload.json": 3261
       },
       "checksums": {
-        "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\renders\\if-2026-07-06-liverpool-arsenal\\final_video.placeholder.json": "c69905f6d6a2088e1414583b717bef4c315cc8a2fb740d22e71ba5d00ac064e8",
-        "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\renders\\if-2026-07-06-liverpool-arsenal\\thumbnail_frame.placeholder.json": "88fef6035dc6da1e46455d6a63f4cd451d70b541a18ce79de1675e5b09e65e96",
-        "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\renders\\if-2026-07-06-liverpool-arsenal\\render_payload.json": "e99616dce27dc543570d9d0db1f032071d80b1fa9f368978e974862cd128327c"
+        "renders\\if-2026-07-06-liverpool-arsenal\\final_video.placeholder.json": "781601b8547d26f8b06fb3026bb65875399d4d4dfd90c58199b1737b9b05ad5f",
+        "renders\\if-2026-07-06-liverpool-arsenal\\thumbnail_frame.placeholder.json": "a3837d6b4ac539aede0142bd29db3612e462181acb672174c13a4aabed118d94",
+        "renders\\if-2026-07-06-liverpool-arsenal\\render_payload.json": "078cad20b2779d6522e91a83ec0920a417ff1ed0c070d05166adc2c3394ad72f"
       },
       "missing_artifacts": [],
       "approval_status": "approved"
@@ -145,7 +496,7 @@
       "production_id": "if-2026-07-06-liverpool-arsenal",
       "component_id": "IF-RE08",
       "component_name": "Render Validator",
-      "timestamp": "2026-07-08T11:29:37.097946+00:00",
+      "timestamp": "2026-07-09T15:39:46.943505+00:00",
       "checks": {
         "video_exists_or_placeholder": true,
         "duration": true,
@@ -156,7 +507,20 @@
         "captions_documented": true,
         "thumbnail_exists": true,
         "job_terminal": true,
-        "legal": true
+        "legal": true,
+        "brand_motion_standard": true
+      },
+      "brand_motion_report": {
+        "standard_id": "IF-BMS-1.0",
+        "checks": {
+          "persistent_corner_logo": true,
+          "opening_sting": true,
+          "transition_sting": true,
+          "end_card": true,
+          "thumbnail_logo": true
+        },
+        "issues": [],
+        "passed": true
       },
       "issues": [],
       "warnings": [
@@ -170,14 +534,14 @@
       "placeholder_mode": true,
       "approval_status": "approved"
     },
-    "final_video_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\renders\\if-2026-07-06-liverpool-arsenal\\final_video.placeholder.json",
-    "thumbnail_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\renders\\if-2026-07-06-liverpool-arsenal\\thumbnail_frame.placeholder.json",
+    "final_video_path": "renders\\if-2026-07-06-liverpool-arsenal\\final_video.placeholder.json",
+    "thumbnail_path": "renders\\if-2026-07-06-liverpool-arsenal\\thumbnail_frame.placeholder.json",
     "duration_seconds": 60.0,
     "file_size": 261,
     "checksums": {
-      "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\renders\\if-2026-07-06-liverpool-arsenal\\final_video.placeholder.json": "c69905f6d6a2088e1414583b717bef4c315cc8a2fb740d22e71ba5d00ac064e8",
-      "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\renders\\if-2026-07-06-liverpool-arsenal\\thumbnail_frame.placeholder.json": "88fef6035dc6da1e46455d6a63f4cd451d70b541a18ce79de1675e5b09e65e96",
-      "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\renders\\if-2026-07-06-liverpool-arsenal\\render_payload.json": "e99616dce27dc543570d9d0db1f032071d80b1fa9f368978e974862cd128327c"
+      "renders\\if-2026-07-06-liverpool-arsenal\\final_video.placeholder.json": "781601b8547d26f8b06fb3026bb65875399d4d4dfd90c58199b1737b9b05ad5f",
+      "renders\\if-2026-07-06-liverpool-arsenal\\thumbnail_frame.placeholder.json": "a3837d6b4ac539aede0142bd29db3612e462181acb672174c13a4aabed118d94",
+      "renders\\if-2026-07-06-liverpool-arsenal\\render_payload.json": "078cad20b2779d6522e91a83ec0920a417ff1ed0c070d05166adc2c3394ad72f"
     },
     "warnings": [
       "Arsenal badge requires rights confirmation.",
@@ -199,8 +563,8 @@
       "production_id": "if-2026-07-06-liverpool-arsenal",
       "component_id": "IF-FQC01",
       "component_name": "Video QC",
-      "timestamp": "2026-07-08T11:37:05.084865+00:00",
-      "video_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\renders\\if-2026-07-06-liverpool-arsenal\\final_video.placeholder.json",
+      "timestamp": "2026-07-09T15:43:46.129302+00:00",
+      "video_path": "renders\\if-2026-07-06-liverpool-arsenal\\final_video.placeholder.json",
       "file_exists": true,
       "file_size": 261,
       "duration_seconds": 60.0,
@@ -208,7 +572,7 @@
       "aspect_ratio": "9:16",
       "fps": 30,
       "codec": "placeholder",
-      "thumbnail_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\renders\\if-2026-07-06-liverpool-arsenal\\thumbnail_frame.placeholder.json",
+      "thumbnail_path": "renders\\if-2026-07-06-liverpool-arsenal\\thumbnail_frame.placeholder.json",
       "issues_found": [],
       "warnings": [
         "Placeholder render documented; no real video integrity checks available."
@@ -220,7 +584,7 @@
       "production_id": "if-2026-07-06-liverpool-arsenal",
       "component_id": "IF-FQC02",
       "component_name": "Audio QC",
-      "timestamp": "2026-07-08T11:37:05.084865+00:00",
+      "timestamp": "2026-07-09T15:43:46.129302+00:00",
       "audio_exists": false,
       "duration_seconds": 60.0,
       "loudness_status": "not_inspectable_placeholder",
@@ -239,7 +603,7 @@
       "production_id": "if-2026-07-06-liverpool-arsenal",
       "component_id": "IF-FQC03",
       "component_name": "Caption QC",
-      "timestamp": "2026-07-08T11:37:05.098344+00:00",
+      "timestamp": "2026-07-09T15:43:46.149152+00:00",
       "captions_exist": true,
       "caption_count": 11,
       "timing_status": "aligned",
@@ -256,13 +620,34 @@
       "production_id": "if-2026-07-06-liverpool-arsenal",
       "component_id": "IF-FQC04",
       "component_name": "Brand Compliance Checker",
-      "timestamp": "2026-07-08T11:37:05.098344+00:00",
+      "timestamp": "2026-07-09T15:43:46.149152+00:00",
       "brand_opening_present": true,
       "tone_status": "conversational",
       "central_question_present": true,
       "story_clarity_score": 92,
       "dashboard_clarity_score": 90,
       "cta_status": "present",
+      "brand_motion_standard": {
+        "standard_id": "IF-BMS-1.0",
+        "mandatory_checks": {
+          "persistent_corner_logo": true,
+          "opening_sting": true,
+          "transition_sting": true,
+          "end_card": true
+        },
+        "source_report": {
+          "standard_id": "IF-BMS-1.0",
+          "checks": {
+            "persistent_corner_logo": true,
+            "opening_sting": true,
+            "transition_sting": true,
+            "end_card": true,
+            "thumbnail_logo": true
+          },
+          "issues": [],
+          "passed": true
+        }
+      },
       "forbidden_language_found": [],
       "issues_found": [],
       "warnings": [],
@@ -273,7 +658,7 @@
       "production_id": "if-2026-07-06-liverpool-arsenal",
       "component_id": "IF-FQC05",
       "component_name": "Script Alignment Checker",
-      "timestamp": "2026-07-08T11:37:05.148377+00:00",
+      "timestamp": "2026-07-09T15:43:46.200905+00:00",
       "script_match_status": "aligned",
       "hook_present": true,
       "central_question_present": true,
@@ -291,7 +676,7 @@
       "production_id": "if-2026-07-06-liverpool-arsenal",
       "component_id": "IF-FQC06",
       "component_name": "Legal & Copyright Checker",
-      "timestamp": "2026-07-08T11:37:05.148377+00:00",
+      "timestamp": "2026-07-09T15:43:46.216416+00:00",
       "blocked_assets_used": [],
       "manual_review_assets": [
         {
@@ -367,7 +752,7 @@
     "production_id": "if-2026-07-06-liverpool-arsenal",
     "component_id": "IF-FQC07",
     "component_name": "Publish Readiness Gate",
-    "timestamp": "2026-07-08T11:37:05.169209+00:00",
+    "timestamp": "2026-07-09T15:43:46.229316+00:00",
     "video_qc_score": 78,
     "audio_qc_score": 84,
     "caption_qc_score": 96,
@@ -405,6 +790,17 @@
     "Review placeholder render before publishing.",
     "Placeholder render requires review."
   ],
+  "v2_editorial_qc": {
+    "production_id": "if-2026-07-06-liverpool-arsenal",
+    "component_id": "IF-FQC08",
+    "component_name": "V2 Editorial QC",
+    "timestamp": "2026-07-09T15:43:46.229316+00:00",
+    "average_scene_duration_seconds": 5.45,
+    "issues_found": [],
+    "warnings": [],
+    "score": 96,
+    "approval_status": "approved"
+  },
   "approval_status": "needs_human_review",
   "next_component": "Publishing Engine"
 }

@@ -6,6 +6,7 @@ import tempfile
 import unittest
 from dataclasses import replace
 from pathlib import Path
+from unittest.mock import patch
 
 ROOT = Path(__file__).resolve().parents[3]
 SRC = ROOT / "editorial-brain" / "match-selector" / "src"
@@ -120,6 +121,16 @@ class MatchSelectorModuleTests(unittest.TestCase):
         with self.assertRaises(Exception) as context:
             validator.validate_output(output, daily_input)
         self.assertIn("selected match must exist", str(context.exception.issues))
+
+    def test_production_rejects_non_today_fixture(self):
+        config, temp_dir = load_test_config()
+        self.addCleanup(temp_dir.cleanup)
+        daily_input = load_sample_input()
+        daily_input["production_metadata"]["date"] = "2026-07-09"
+        validator = MatchSelectorValidator(config.input_schema_path, config.output_schema_path, config.minimum_confidence)
+        with patch.dict("os.environ", {"INSIGHT_FOOTBALL_ENV": "production"}, clear=False), self.assertRaises(Exception) as context:
+            validator.validate_daily_input(daily_input)
+        self.assertIn("production fixtures must be for 2026-07-09", str(context.exception.issues))
 
 
 if __name__ == "__main__":

@@ -414,6 +414,7 @@ def _draw_segment_frame(package: dict[str, Any], segment: dict[str, Any], path: 
     _draw_stadium_background(draw, width, height, segment["kind"])
     if segment["kind"] == "opening_sting":
         _draw_center_logo(draw, width, height, scale=1.55)
+        _draw_match_scoreboard(draw, package, y=250)
         _draw_text_center(draw, segment["subtitle"], y=1200, size=42, fill=colors["clean_white"], max_width=880)
         _draw_red_streak(draw, width, height, y=1040)
     elif segment["kind"] == "transition_sting":
@@ -425,6 +426,8 @@ def _draw_segment_frame(package: dict[str, Any], segment: dict[str, Any], path: 
         _draw_social_icons(draw, width, height)
     else:
         _draw_corner_logo(draw)
+        _draw_live_score_bar(draw, package)
+        _draw_ticker(draw, segment)
         _draw_brand_panel(draw, segment, package)
         _draw_lower_third(draw, segment)
     output_width, output_height = DEFAULT_OUTPUT_SIZE
@@ -475,6 +478,46 @@ def _draw_center_logo(draw: ImageDraw.ImageDraw, width: int, height: int, *, sca
     draw.arc([x - int(18 * scale), y + int(142 * scale), x + int(185 * scale), y + int(280 * scale)], 15, 165, fill=colors["espn_red"], width=max(5, int(8 * scale)))
     draw.text((x + int(270 * scale), y + int(70 * scale)), "INSIGHT", font=font_name, fill=colors["clean_white"])
     draw.text((x + int(270 * scale), y + int(150 * scale)), "FOOTBALL", font=font_name, fill=colors["espn_red"])
+
+
+def _draw_match_scoreboard(draw: ImageDraw.ImageDraw, package: dict[str, Any], *, y: int) -> None:
+    colors = BRAND_MOTION_STANDARD["colors"]
+    match = package.get("match", {})
+    home = match.get("home_team", "HOME")
+    away = match.get("away_team", "AWAY")
+    competition = package.get("competition", "Competition")
+    draw.rounded_rectangle([90, y, 990, y + 210], radius=24, fill=(7, 14, 28), outline=(245, 245, 245), width=3)
+    draw.rectangle([90, y, 990, y + 14], fill=colors["espn_red"])
+    _draw_badge(draw, 160, y + 64, home)
+    _draw_badge(draw, 850, y + 64, away)
+    draw.text((300, y + 54), f"{home}  v  {away}", font=_font(48), fill=colors["clean_white"])
+    draw.text((300, y + 118), competition, font=_font(30), fill=(210, 220, 235))
+    draw.text((440, y + 160), "MATCH PREVIEW", font=_font(28), fill=colors["espn_red"])
+
+
+def _draw_badge(draw: ImageDraw.ImageDraw, x: int, y: int, name: str) -> None:
+    colors = BRAND_MOTION_STANDARD["colors"]
+    initials = "".join(part[:1] for part in str(name).split()[:2]).upper() or "FC"
+    draw.ellipse([x - 46, y - 46, x + 46, y + 46], fill=(11, 24, 48), outline=colors["espn_red"], width=5)
+    draw.text((x - 24, y - 24), initials[:2], font=_font(34), fill=colors["clean_white"])
+
+
+def _draw_live_score_bar(draw: ImageDraw.ImageDraw, package: dict[str, Any]) -> None:
+    colors = BRAND_MOTION_STANDARD["colors"]
+    match = package.get("match", {})
+    draw.rounded_rectangle([210, 48, 1032, 138], radius=14, fill=(7, 14, 28), outline=(34, 58, 86), width=2)
+    draw.rectangle([210, 48, 230, 138], fill=colors["espn_red"])
+    draw.text((250, 70), f"{match.get('home_team', 'HOME')} v {match.get('away_team', 'AWAY')}", font=_font(34), fill=colors["clean_white"])
+    draw.text((790, 74), package.get("competition", "Competition"), font=_font(26), fill=(210, 220, 235))
+
+
+def _draw_ticker(draw: ImageDraw.ImageDraw, segment: dict[str, Any]) -> None:
+    colors = BRAND_MOTION_STANDARD["colors"]
+    draw.rectangle([0, 1818, 1080, 1884], fill=(7, 14, 28))
+    draw.rectangle([0, 1818, 115, 1884], fill=colors["espn_red"])
+    draw.text((28, 1834), "IF", font=_font(32), fill=colors["clean_white"])
+    label = str(segment.get("scene_type", "Match intelligence")).upper()
+    draw.text((140, 1834), label[:55], font=_font(28), fill=colors["clean_white"])
 
 
 def _draw_corner_logo(draw: ImageDraw.ImageDraw) -> None:

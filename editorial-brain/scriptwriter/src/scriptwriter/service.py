@@ -48,6 +48,8 @@ class ScriptwriterService:
             try:
                 raw = self.llm_client.generate(base_prompt if attempt == 1 else self._retry_prompt(base_prompt, last_issues), temperature=self.config.temperature, max_tokens=self.config.max_tokens)
                 output = parse_json_object(raw)
+                if "final_voiceover" not in output and "full_voiceover" in output:
+                    output["final_voiceover"] = output["full_voiceover"]
                 self.validator.validate_output(output, brief)
                 script_path = self.config.output_directory / f"script-output-{production_id}.json"
                 voiceover_path = self.config.output_directory / f"voiceover-{production_id}.txt"
@@ -79,4 +81,3 @@ class ScriptwriterService:
             "next_agent": None,
             "timestamp": datetime.now(timezone.utc).isoformat(),
         }
-

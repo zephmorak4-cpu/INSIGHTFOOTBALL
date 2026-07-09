@@ -80,6 +80,13 @@ class ScriptwriterTests(unittest.TestCase):
         self.assertFalse(result["success"])
         self.assertTrue(any(">= 120" in issue for issue in result["error"]["issues"]))
 
+    def test_internal_terms_do_not_leak_to_voiceover(self):
+        result, _ = self.run_service(load_brief())
+        self.assertTrue(result["success"])
+        voiceover = result["script"]["full_voiceover"]
+        for term in ["X-Factor", "Tactical Edge", "Form Index", "Risk Meter"]:
+            self.assertNotIn(term, voiceover)
+
     def test_missing_brand_opening_fails(self):
         brief = load_brief()
         _, config = self.run_service(brief)
@@ -128,4 +135,3 @@ class ScriptwriterTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
-

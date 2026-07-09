@@ -2,6 +2,123 @@
   "renderer": "remotion",
   "status": "not_implemented",
   "composition_id": "InsightFootballVertical",
+  "brand_motion_standard": {
+    "standard_id": "IF-BMS-1.0",
+    "version": "1.0",
+    "persistent_logo": {
+      "required": true,
+      "position": "top-left",
+      "fallback_position": "top-right",
+      "size_percent_frame_width": {
+        "min": 5,
+        "max": 8
+      },
+      "opacity_percent": {
+        "min": 85,
+        "max": 90
+      },
+      "respect_title_safe_margins": true,
+      "avoid_subtitles_dashboards_and_statistics": true,
+      "continuous_animation_allowed": false,
+      "distort_stretch_rotate_recolor_crop_allowed": false
+    },
+    "opening_sting": {
+      "required": true,
+      "duration_seconds": 1.5,
+      "sequence": [
+        "dark_stadium_background",
+        "stadium_floodlights_illuminate",
+        "red_motion_streak",
+        "center_logo_fade_scale",
+        "metallic_light_sweep",
+        "subtle_camera_push"
+      ],
+      "audio": [
+        "deep_cinematic_impact",
+        "short_whoosh",
+        "low_crowd_ambience"
+      ]
+    },
+    "transition_sting": {
+      "required": true,
+      "duration_seconds": 0.3,
+      "between_sections": [
+        "hook_to_analysis",
+        "analysis_to_tactical_view",
+        "tactical_view_to_wild_card",
+        "wild_card_to_conclusion"
+      ],
+      "animation": [
+        "red_diagonal_swipe",
+        "brief_logo_flash",
+        "motion_blur",
+        "dashboard_wipe"
+      ],
+      "audio": [
+        "short_branded_swoosh"
+      ]
+    },
+    "end_card": {
+      "required": true,
+      "duration_seconds": 4.0,
+      "scene": [
+        "dark_stadium_background",
+        "slow_camera_push",
+        "stadium_floodlights",
+        "soft_smoke",
+        "floating_particles",
+        "centered_logo",
+        "metallic_light_reflection"
+      ],
+      "tagline": "KNOW MORE. SEE MORE. WIN MORE.",
+      "cta": "Subscribe for Daily Football Intelligence",
+      "icons": [
+        "youtube",
+        "telegram"
+      ],
+      "finish": "fade_to_black",
+      "audio": [
+        "sonic_logo",
+        "stadium_crowd_ambience",
+        "soft_cinematic_finish"
+      ]
+    },
+    "graphics": {
+      "panel_rules": [
+        "logo",
+        "red_accent_line",
+        "dark_navy_background",
+        "white_typography",
+        "rounded_broadcast_panels"
+      ],
+      "lower_thirds": [
+        "small_logo",
+        "dark_navy_background",
+        "red_accent_strip",
+        "white_typography",
+        "rounded_corners"
+      ],
+      "thumbnail": {
+        "logo_required": true,
+        "position": "top-left",
+        "consistent_size_and_spacing": true
+      }
+    },
+    "colors": {
+      "deep_navy": "#0B132B",
+      "sports_blue": "#0D47A1",
+      "espn_red": "#E10600",
+      "clean_white": "#F5F5F5",
+      "charcoal": "#1A1A1A"
+    },
+    "typography": {
+      "primary": [
+        "Bebas Neue",
+        "Anton"
+      ],
+      "secondary": "Montserrat"
+    }
+  },
   "props": {
     "production_id": "if-2026-07-06-liverpool-arsenal",
     "scene_count": 11

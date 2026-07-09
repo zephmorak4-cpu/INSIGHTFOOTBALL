@@ -1,20 +1,297 @@
 {
   "renderer": "ffmpeg",
-  "ffmpeg_path": null,
-  "output_resolution": "1080x1920",
+  "ffmpeg_path": "C:\\Users\\HP\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\site-packages\\imageio_ffmpeg\\binaries\\ffmpeg-win-x86_64-v7.1.exe",
+  "output_resolution": "720x1280",
   "fps": 30,
-  "scene_text": [
-    "Before the first whistle... here's the insight",
-    "Sample data: Liverpool have started quickly in recent home matches, while Arsenal...",
-    "So the real question is: Can Arsenal survive Liverpool's fast start?",
-    "Liverpool usually start aggressively, pressing high and forcing rushed decisions",
-    "Arsenal have enough quality to play through it, but a messy opening...",
-    "The evidence is simple: Liverpool usually make opponents uncomfortable early at home",
-    "The balance matters too: Arsenal may be better prepared for pressure than...",
-    "That makes it a slight home edge, not a prediction",
-    "Watch the opening phase closely; it may tell you how the rest...",
-    "The x-factor is arsenal's ability to escape liverpool's first press",
-    "Can Arsenal survive the first 20 minutes, or will Liverpool take control..."
+  "output_format": "mp4",
+  "brand_motion_standard": {
+    "standard_id": "IF-BMS-1.0",
+    "version": "1.0",
+    "persistent_logo": {
+      "required": true,
+      "position": "top-left",
+      "fallback_position": "top-right",
+      "size_percent_frame_width": {
+        "min": 5,
+        "max": 8
+      },
+      "opacity_percent": {
+        "min": 85,
+        "max": 90
+      },
+      "respect_title_safe_margins": true,
+      "avoid_subtitles_dashboards_and_statistics": true,
+      "continuous_animation_allowed": false,
+      "distort_stretch_rotate_recolor_crop_allowed": false
+    },
+    "opening_sting": {
+      "required": true,
+      "duration_seconds": 1.5,
+      "sequence": [
+        "dark_stadium_background",
+        "stadium_floodlights_illuminate",
+        "red_motion_streak",
+        "center_logo_fade_scale",
+        "metallic_light_sweep",
+        "subtle_camera_push"
+      ],
+      "audio": [
+        "deep_cinematic_impact",
+        "short_whoosh",
+        "low_crowd_ambience"
+      ]
+    },
+    "transition_sting": {
+      "required": true,
+      "duration_seconds": 0.3,
+      "between_sections": [
+        "hook_to_analysis",
+        "analysis_to_tactical_view",
+        "tactical_view_to_wild_card",
+        "wild_card_to_conclusion"
+      ],
+      "animation": [
+        "red_diagonal_swipe",
+        "brief_logo_flash",
+        "motion_blur",
+        "dashboard_wipe"
+      ],
+      "audio": [
+        "short_branded_swoosh"
+      ]
+    },
+    "end_card": {
+      "required": true,
+      "duration_seconds": 4.0,
+      "scene": [
+        "dark_stadium_background",
+        "slow_camera_push",
+        "stadium_floodlights",
+        "soft_smoke",
+        "floating_particles",
+        "centered_logo",
+        "metallic_light_reflection"
+      ],
+      "tagline": "KNOW MORE. SEE MORE. WIN MORE.",
+      "cta": "Subscribe for Daily Football Intelligence",
+      "icons": [
+        "youtube",
+        "telegram"
+      ],
+      "finish": "fade_to_black",
+      "audio": [
+        "sonic_logo",
+        "stadium_crowd_ambience",
+        "soft_cinematic_finish"
+      ]
+    },
+    "graphics": {
+      "panel_rules": [
+        "logo",
+        "red_accent_line",
+        "dark_navy_background",
+        "white_typography",
+        "rounded_broadcast_panels"
+      ],
+      "lower_thirds": [
+        "small_logo",
+        "dark_navy_background",
+        "red_accent_strip",
+        "white_typography",
+        "rounded_corners"
+      ],
+      "thumbnail": {
+        "logo_required": true,
+        "position": "top-left",
+        "consistent_size_and_spacing": true
+      }
+    },
+    "colors": {
+      "deep_navy": "#0B132B",
+      "sports_blue": "#0D47A1",
+      "espn_red": "#E10600",
+      "clean_white": "#F5F5F5",
+      "charcoal": "#1A1A1A"
+    },
+    "typography": {
+      "primary": [
+        "Bebas Neue",
+        "Anton"
+      ],
+      "secondary": "Montserrat"
+    }
+  },
+  "segments": [
+    {
+      "kind": "opening_sting",
+      "duration_seconds": 1.5,
+      "title": "INSIGHT FOOTBALL",
+      "subtitle": "KNOW MORE. SEE MORE. WIN MORE."
+    },
+    {
+      "kind": "content_scene",
+      "duration_seconds": 7.07,
+      "scene_id": "scene-02",
+      "scene_type": "Surprising Fact",
+      "title": "Surprising Fact",
+      "body": "Sample data Liverpool have started quickly in\nrecent home matches while Arsenal",
+      "voiceover_text": "Sample data: Liverpool have started quickly in recent home matches, while Arsenal have sometimes needed longer to settle away.",
+      "brand_panel": true,
+      "lower_third": true,
+      "persistent_logo": true
+    },
+    {
+      "kind": "transition_sting",
+      "duration_seconds": 0.3,
+      "transition": "analysis_to_tactical_view",
+      "persistent_logo": true
+    },
+    {
+      "kind": "content_scene",
+      "duration_seconds": 4.28,
+      "scene_id": "scene-03",
+      "scene_type": "Central Question",
+      "title": "Central Question",
+      "body": "So the real question is Can Arsenal\nsurvive Liverpool's fast start",
+      "voiceover_text": "So the real question is: Can Arsenal survive Liverpool's fast start?",
+      "brand_panel": true,
+      "lower_third": true,
+      "persistent_logo": true
+    },
+    {
+      "kind": "transition_sting",
+      "duration_seconds": 0.3,
+      "transition": "hook_to_analysis",
+      "persistent_logo": true
+    },
+    {
+      "kind": "content_scene",
+      "duration_seconds": 3.88,
+      "scene_id": "scene-04",
+      "scene_type": "Tactical Moment",
+      "title": "Tactical Moment",
+      "body": "Liverpool usually start aggressively pressing high and\nforcing rushed decisions",
+      "voiceover_text": "Liverpool usually start aggressively, pressing high and forcing rushed decisions.",
+      "brand_panel": true,
+      "lower_third": true,
+      "persistent_logo": true
+    },
+    {
+      "kind": "transition_sting",
+      "duration_seconds": 0.3,
+      "transition": "wild_card_to_conclusion",
+      "persistent_logo": true
+    },
+    {
+      "kind": "content_scene",
+      "duration_seconds": 6.99,
+      "scene_id": "scene-05",
+      "scene_type": "Team Comparison",
+      "title": "Team Comparison",
+      "body": "Arsenal have enough quality to play through\nit but a messy opening",
+      "voiceover_text": "Arsenal have enough quality to play through it, but a messy opening can drag them from their plan.",
+      "brand_panel": true,
+      "lower_third": true,
+      "persistent_logo": true
+    },
+    {
+      "kind": "transition_sting",
+      "duration_seconds": 0.3,
+      "transition": "tactical_view_to_wild_card",
+      "persistent_logo": true
+    },
+    {
+      "kind": "content_scene",
+      "duration_seconds": 4.66,
+      "scene_id": "scene-06",
+      "scene_type": "Evidence Card",
+      "title": "Evidence Card",
+      "body": "The evidence is simple Liverpool usually make\nopponents uncomfortable early at home",
+      "voiceover_text": "The evidence is simple: Liverpool usually make opponents uncomfortable early at home.",
+      "brand_panel": true,
+      "lower_third": true,
+      "persistent_logo": true
+    },
+    {
+      "kind": "content_scene",
+      "duration_seconds": 5.83,
+      "scene_id": "scene-07",
+      "scene_type": "Team Comparison",
+      "title": "Team Comparison",
+      "body": "The balance matters too Arsenal may be\nbetter prepared for pressure than",
+      "voiceover_text": "The balance matters too: Arsenal may be better prepared for pressure than older form suggests.",
+      "brand_panel": true,
+      "lower_third": true,
+      "persistent_logo": true
+    },
+    {
+      "kind": "content_scene",
+      "duration_seconds": 3.89,
+      "scene_id": "scene-08",
+      "scene_type": "Insight Dashboard",
+      "title": "Insight Dashboard",
+      "body": "That makes it a slight home edge\nnot a prediction",
+      "voiceover_text": "That makes it a slight home edge, not a prediction.",
+      "brand_panel": true,
+      "lower_third": true,
+      "persistent_logo": true
+    },
+    {
+      "kind": "content_scene",
+      "duration_seconds": 6.6,
+      "scene_id": "scene-09",
+      "scene_type": "Insight Dashboard",
+      "title": "Insight Dashboard",
+      "body": "Watch the opening phase closely it may\ntell you how the rest",
+      "voiceover_text": "Watch the opening phase closely; it may tell you how the rest of the game will unfold.",
+      "brand_panel": true,
+      "lower_third": true,
+      "persistent_logo": true
+    },
+    {
+      "kind": "content_scene",
+      "duration_seconds": 3.89,
+      "scene_id": "scene-10",
+      "scene_type": "Key Player",
+      "title": "Key Player",
+      "body": "One thing that could change everything is\narsenal's ability to escape liverpool's first press",
+      "voiceover_text": "One thing that could change everything is arsenal's ability to escape liverpool's first press.",
+      "brand_panel": true,
+      "lower_third": true,
+      "persistent_logo": true
+    },
+    {
+      "kind": "content_scene",
+      "duration_seconds": 6.21,
+      "scene_id": "scene-11",
+      "scene_type": "Final Question / CTA",
+      "title": "Final Question / CTA",
+      "body": "Can Arsenal survive the first 20 minutes\nor will Liverpool take control",
+      "voiceover_text": "Can Arsenal survive the first 20 minutes, or will Liverpool take control early? Tell us below.",
+      "brand_panel": true,
+      "lower_third": true,
+      "persistent_logo": true
+    },
+    {
+      "kind": "end_card",
+      "duration_seconds": 4.0,
+      "title": "INSIGHT FOOTBALL",
+      "tagline": "KNOW MORE. SEE MORE. WIN MORE.",
+      "cta": "Subscribe for Daily Football Intelligence"
+    }
   ],
-  "fallback_render_enabled": true
+  "scene_text": [
+    "Before the first whistle here's the insight",
+    "Sample data Liverpool have started quickly in\nrecent home matches while Arsenal",
+    "So the real question is Can Arsenal\nsurvive Liverpool's fast start",
+    "Liverpool usually start aggressively pressing high and\nforcing rushed decisions",
+    "Arsenal have enough quality to play through\nit but a messy opening",
+    "The evidence is simple Liverpool usually make\nopponents uncomfortable early at home",
+    "The balance matters too Arsenal may be\nbetter prepared for pressure than",
+    "That makes it a slight home edge\nnot a prediction",
+    "Watch the opening phase closely it may\ntell you how the rest",
+    "One thing that could change everything is\narsenal's ability to escape liverpool's first press",
+    "Can Arsenal survive the first 20 minutes\nor will Liverpool take control"
+  ],
+  "fallback_render_enabled": false
 }

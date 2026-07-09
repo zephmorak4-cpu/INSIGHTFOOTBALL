@@ -1,4 +1,4 @@
-{
+﻿{
   "production_id": "if-2026-07-06-liverpool-arsenal",
   "match": {
     "home_team": "Liverpool",
@@ -9,7 +9,7 @@
   },
   "competition": "Premier League",
   "source_script_package": "if-2026-07-06-liverpool-arsenal",
-  "final_voiceover": "Before the first whistle... here's the insight. Sample data: Liverpool have started quickly in recent home matches, while Arsenal have sometimes needed longer to settle away. So the real question is: Can Arsenal survive Liverpool's fast start? Liverpool usually start aggressively, pressing high and forcing rushed decisions. Arsenal have enough quality to play through it, but a messy opening can drag them from their plan. The evidence is simple: Liverpool usually make opponents uncomfortable early at home. The balance matters too: Arsenal may be better prepared for pressure than older form suggests. That makes it a slight home edge, not a prediction. Watch the opening phase closely; it may tell you how the rest of the game will unfold. The x-factor is arsenal's ability to escape liverpool's first press. Can Arsenal survive the first 20 minutes, or will Liverpool take control early? Tell us below.",
+  "final_voiceover": "Before the first whistle... here's the insight. Sample data: Liverpool have started quickly in recent home matches, while Arsenal have sometimes needed longer to settle away. So the real question is: Can Arsenal survive Liverpool's fast start? Liverpool usually start aggressively, pressing high and forcing rushed decisions. Arsenal have enough quality to play through it, but a messy opening can drag them from their plan. The evidence is simple: Liverpool usually make opponents uncomfortable early at home. The balance matters too: Arsenal may be better prepared for pressure than older form suggests. That makes it a slight home edge, not a prediction. Watch the opening phase closely; it may tell you how the rest of the game will unfold. One thing that could change everything is arsenal's ability to escape liverpool's first press. Can Arsenal survive the first 20 minutes, or will Liverpool take control early? Tell us below.",
   "total_duration_seconds": 55.47,
   "scene_count": 11,
   "scenes": [
@@ -160,7 +160,7 @@
       "voiceover_text": "That makes it a slight home edge, not a prediction.",
       "caption_text": "That makes it a slight home edge, not a prediction",
       "primary_text": "Slight Home Edge",
-      "secondary_text": "Edge, uncertainty, x-factor",
+      "secondary_text": "Edge, uncertainty, one thing",
       "visual_priority": "high",
       "required_assets": [
         "dashboard_panel",
@@ -180,7 +180,7 @@
       "voiceover_text": "Watch the opening phase closely; it may tell you how the rest of the game will unfold.",
       "caption_text": "Watch the opening phase closely; it may tell you how the rest...",
       "primary_text": "Slight Home Edge",
-      "secondary_text": "Edge, uncertainty, x-factor",
+      "secondary_text": "Edge, uncertainty, one thing",
       "visual_priority": "high",
       "required_assets": [
         "dashboard_panel",
@@ -193,14 +193,14 @@
     {
       "scene_id": "scene-10",
       "template_id": "player_focus",
-      "scene_type": "X-Factor Player",
+      "scene_type": "Key Player",
       "start_time_seconds": 45.47,
       "end_time_seconds": 49.32,
       "duration_seconds": 3.85,
-      "voiceover_text": "The x-factor is arsenal's ability to escape liverpool's first press.",
-      "caption_text": "The x-factor is arsenal's ability to escape liverpool's first press",
-      "primary_text": "The x-factor is arsenal's ability to escape liverpool's first...",
-      "secondary_text": "Make the x-factor player easy to understand in one glance.",
+      "voiceover_text": "One thing that could change everything is arsenal's ability to escape liverpool's first press.",
+      "caption_text": "One thing that could change everything is arsenal's ability to escape liverpool's first press",
+      "primary_text": "One thing that could change everything is arsenal's ability to escape liverpool's first...",
+      "secondary_text": "Make one thing that could change everything player easy to understand in one glance.",
       "visual_priority": "medium",
       "required_assets": [
         "player_image",
@@ -364,8 +364,8 @@
         "start_time_seconds": 45.47,
         "end_time_seconds": 49.32,
         "duration_seconds": 3.85,
-        "voiceover_text": "The x-factor is arsenal's ability to escape liverpool's first press.",
-        "caption_text": "The x-factor is arsenal's ability to escape liverpool's first press",
+        "voiceover_text": "One thing that could change everything is arsenal's ability to escape liverpool's first press.",
+        "caption_text": "One thing that could change everything is arsenal's ability to escape liverpool's first press",
         "estimated_words": 10,
         "estimated_speech_duration": 3.85,
         "timing_status": "ok",
@@ -433,7 +433,7 @@
     },
     {
       "scene_id": "scene-10",
-      "caption_text": "The x-factor is arsenal's ability to escape liverpool's first press"
+      "caption_text": "One thing that could change everything is arsenal's ability to escape liverpool's first press"
     },
     {
       "scene_id": "scene-11",
@@ -479,3 +479,4 @@
   "approval_status": "approved",
   "next_component": "Asset Planner"
 }
+

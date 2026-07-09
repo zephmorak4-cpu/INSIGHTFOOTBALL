@@ -2,7 +2,7 @@
   "production_id": "if-2026-07-06-liverpool-arsenal",
   "component_id": "IF-AN01",
   "component_name": "Metrics Collector",
-  "timestamp": "2026-07-08T11:38:31.427292+00:00",
+  "timestamp": "2026-07-09T15:43:34.137446+00:00",
   "platforms": [
     {
       "platform": "youtube",
@@ -42,7 +42,7 @@
       "subscribers_gained": 7,
       "revenue": 0.0,
       "rpm": 0.0,
-      "source": "provider_adapter"
+      "source": "mock_provider_dry_run"
     },
     {
       "platform": "facebook",
@@ -82,7 +82,7 @@
       "subscribers_gained": 5,
       "revenue": 0.0,
       "rpm": 0.0,
-      "source": "provider_adapter"
+      "source": "mock_provider_dry_run"
     },
     {
       "platform": "telegram",
@@ -122,7 +122,7 @@
       "subscribers_gained": 3,
       "revenue": 0.0,
       "rpm": 0.0,
-      "source": "provider_adapter"
+      "source": "mock_provider_dry_run"
     }
   ],
   "totals": {
@@ -134,6 +134,8 @@
     "subscribers_gained": 15,
     "average_view_duration_seconds": 14.01
   },
-  "warnings": [],
+  "warnings": [
+    "Dry-run/mock analytics used; replace with live adapters when publishing is live."
+  ],
   "approval_status": "approved"
 }

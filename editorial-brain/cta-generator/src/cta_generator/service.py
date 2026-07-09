@@ -45,7 +45,7 @@ class CtaGeneratorService:
                 final_package_path = self.config.output_directory / "final-script-package.json"
                 voiceover_path = self.config.output_directory / "voiceover_final.txt"
                 write_json_file(cta_path, cta)
-                write_json_file(final_script_path, {**script, "cta": cta["selected_cta"], "full_voiceover": cta["final_voiceover"], "word_count": cta["final_word_count"], "estimated_duration_seconds": cta["final_estimated_duration_seconds"], "script_version": "v3-final"})
+                write_json_file(final_script_path, {**script, "cta": cta["selected_cta"], "full_voiceover": cta["final_voiceover"], "final_voiceover": cta["final_voiceover"], "word_count": cta["final_word_count"], "estimated_duration_seconds": cta["final_estimated_duration_seconds"], "script_version": "v3-final"})
                 write_json_file(final_package_path, final_package)
                 write_text_file(voiceover_path, cta["final_voiceover"])
                 logger.log({"event": "cta_generator_completed", "attempt": attempt, "final_package_path": str(final_package_path), "voiceover_path": str(voiceover_path)})
@@ -61,6 +61,7 @@ class CtaGeneratorService:
             "match": brief["match"],
             "competition": brief["competition"],
             "source_production_brief": brief["brief_id"],
+            "full_voiceover": cta["final_voiceover"],
             "final_voiceover": cta["final_voiceover"],
             "word_count": cta["final_word_count"],
             "estimated_duration_seconds": cta["final_estimated_duration_seconds"],
@@ -88,4 +89,3 @@ class CtaGeneratorService:
     @staticmethod
     def _error(production_id: str, code: str, issues: list[str]) -> dict[str, Any]:
         return {"success": False, "component_id": "S3-C03", "component_name": "CTA Generator", "production_id": production_id, "error": {"code": code, "issues": issues}, "approval_status": "blocked"}
-

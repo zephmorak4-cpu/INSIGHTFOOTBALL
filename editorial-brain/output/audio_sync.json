@@ -2,18 +2,24 @@
   "production_id": "if-2026-07-06-liverpool-arsenal",
   "component_id": "IF-TL05",
   "component_name": "Audio Synchronizer",
-  "timestamp": "2026-07-08T11:37:42.284891+00:00",
+  "timestamp": "2026-07-09T15:44:36.545483+00:00",
   "total_audio_duration_seconds": 60.0,
   "timeline_duration_seconds": 60.0,
   "sync_status": "aligned",
   "voice_track": {
     "source": "voice.ssml",
-    "package_ref": "if-2026-07-06-liverpool-arsenal"
+    "package_ref": "if-2026-07-06-liverpool-arsenal",
+    "priority": "dominant"
   },
   "music_bed": {
-    "enabled": false
+    "enabled": true,
+    "level": "low_under_voice"
   },
-  "sound_effect_cues": [],
+  "sound_effect_cues": [
+    "opening_impact",
+    "transition_swoosh",
+    "soft_bass_finish"
+  ],
   "scene_audio_map": [
     {
       "scene_id": "scene-01",

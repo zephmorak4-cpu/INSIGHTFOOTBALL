@@ -1,7 +1,7 @@
 {
   "production_id": "if-2026-07-06-liverpool-arsenal",
   "platform": "telegram",
-  "video_path": "C:\\Users\\HP\\Documents\\INSIGHT FOOTBALL\\renders\\if-2026-07-06-liverpool-arsenal\\final_video.placeholder.json",
+  "video_path": "renders\\if-2026-07-06-liverpool-arsenal\\final_video.placeholder.json",
   "message_text": "Can Arsenal survive Liverpool's fast start?\n\nCan Arsenal survive Liverpool's fast start?\n\nCan Arsenal survive the first 20 minutes, or will Liverpool take control early? Tell us below.",
   "caption": "Can Arsenal survive Liverpool's fast start?\n\nCan Arsenal survive Liverpool's fast start?\n\nCan Arsenal survive the first 20 minutes, or will Liverpool take control early? Tell us below.",
   "dry_run": true,
@@ -15,9 +15,11 @@
       "Missing credentials for dry-run: TELEGRAM_CHANNEL_ID"
     ]
   },
+  "real_video": false,
   "send_status": "dry_run_ready",
   "warnings": [
     "Missing credentials for dry-run: TELEGRAM_CHANNEL_ID"
   ],
+  "blocking_issues": [],
   "approval_status": "approved"
 }

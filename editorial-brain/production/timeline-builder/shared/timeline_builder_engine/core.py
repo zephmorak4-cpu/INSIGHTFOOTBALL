@@ -13,6 +13,7 @@ ASPECT_RATIO = "9:16"
 RESOLUTION = "1080x1920"
 MAX_DURATION = 60.0
 LAYER_ORDER = ["background", "background_overlay", "pitch_or_dashboard_graphics", "team_badges", "player_or_icon_assets", "data_cards", "primary_text", "captions", "watermark", "transitions"]
+INTERNAL_TERMS = ["Form Index", "Risk Meter", "Tactical Edge", "X-Factor", "Evidence Filter", "Insight Engine", "Story Hunter", "Editorial Brain"]
 
 
 def run_all(root: Path = Path(".")) -> dict[str, Any]:
@@ -48,6 +49,9 @@ def timeline_builder(storyboard: dict[str, Any], visual_pkg: dict[str, Any], voi
         if index == len(storyboard["scenes"]):
             end = round(target_total, 2)
         asset_refs = sorted(set(visual.get("foreground_assets", []) + visual.get("team_badges", []) + visual.get("graphic_assets", []) + [visual.get("background_asset", "")]) - {""})
+        duration = round(end - start, 2)
+        visual_elements = _visual_elements_for_scene(scene, visual)
+        movement_interval = float(motion_by_id.get(scene["scene_id"], {}).get("movement_interval_seconds", 2.5))
         scenes.append({
             "scene_id": scene["scene_id"],
             "scene_number": index,
@@ -55,14 +59,18 @@ def timeline_builder(storyboard: dict[str, Any], visual_pkg: dict[str, Any], voi
             "template_id": visual.get("template_id", scene.get("template_id", "fallback_text_card")),
             "start_time_seconds": start,
             "end_time_seconds": end,
-            "duration_seconds": round(end - start, 2),
-            "voiceover_text": scene.get("voiceover_text", ""),
+            "duration_seconds": duration,
+            "voiceover_text": _viewer_text(scene.get("voiceover_text", "")),
             "voiceover_start": start,
             "voiceover_end": end,
-            "caption_text": scene.get("caption_text", ""),
+            "caption_text": _fit_caption(_viewer_text(scene.get("caption_text", ""))),
             "visual_plan_ref": scene["scene_id"],
             "camera_plan_ref": camera_by_id.get(scene["scene_id"], {}).get("movement", visual.get("camera_style", "Static")),
             "motion_plan_ref": motion_by_id.get(scene["scene_id"], {}).get("motion_preset", visual.get("motion_style", "Fade")),
+            "movement_interval_seconds": movement_interval,
+            "motion_beats": _motion_beats(start, end, movement_interval),
+            "visual_elements": visual_elements,
+            "broadcast_elements": visual.get("broadcast_elements", {}),
             "asset_refs": asset_refs,
             "layer_refs": [f"{scene['scene_id']}-{layer}" for layer in LAYER_ORDER],
             "transition_in": "quick_cut" if index > 1 else "none",
@@ -86,7 +94,16 @@ def timeline_builder(storyboard: dict[str, Any], visual_pkg: dict[str, Any], voi
         "source_voice_package": voice_pkg["production_id"],
         "source_asset_bundle": asset_bundle["production_id"],
         "scenes": scenes,
-        "global_audio": {"voice_track_ref": "voice-production-package.json", "music_bed": "disabled", "sound_effects": "disabled"},
+        "global_audio": {
+            "voice_track_ref": "voice-production-package.json",
+            "narration_priority": "dominant",
+            "stadium_ambience": "low_bed",
+            "crowd_atmosphere": "subtle",
+            "transition_swooshes": "enabled",
+            "goal_impact": "available",
+            "low_cinematic_bass": "enabled",
+            "background_music": "low_under_voice",
+        },
         "global_style": {"brand": "INSIGHT FOOTBALL", "caption_style": "lower_safe_two_line", "safe_area": "vertical_center_80"},
         "warnings": _status_warnings(asset_bundle),
         "approval_status": "approved",
@@ -113,6 +130,8 @@ def scene_composer(timeline: dict[str, Any], storyboard: dict[str, Any], visual_
             "text_elements": [{"type": "primary", "text": visual.get("primary_text", scene["caption_text"])}, {"type": "secondary", "text": visual.get("secondary_text", "")}],
             "graphic_elements": [_asset_ref(asset_id, asset_bundle) for asset_id in visual.get("graphic_assets", [])],
             "logo_elements": [_asset_ref(asset_id, asset_bundle) for asset_id in visual.get("team_badges", [])],
+            "visual_elements": scene.get("visual_elements", []),
+            "broadcast_elements": scene.get("broadcast_elements", {}),
             "dashboard_elements": [{"usage": visual.get("dashboard_usage", "hidden"), "asset": _asset_ref("dashboard_panel", asset_bundle)}] if "dashboard" in scene["scene_type"].lower() else [],
             "caption_element": {"text": caption.get("caption", scene["caption_text"]), "style": caption.get("caption_style", "lower_safe_two_line"), "position": caption.get("caption_position", "lower_safe")},
             "motion_elements": [{"preset": scene["motion_plan_ref"], "duration": min(1.2, scene["duration_seconds"])}],
@@ -192,7 +211,7 @@ def audio_synchronizer(timeline: dict[str, Any], voice_pkg: dict[str, Any], *, r
         if abs(offset) > 0.5:
             warnings.append(f"{scene['scene_id']} sync offset exceeds 0.5 seconds")
         scene_map.append({"scene_id": scene["scene_id"], "voice_start": voice_start, "voice_end": voice_end, "scene_start": scene["start_time_seconds"], "scene_end": scene["end_time_seconds"], "sync_offset": offset, "adjustment_required": abs(offset) > 0.5, "notes": "Aligned to Sprint 9 normalized scene timing."})
-    output = {"production_id": timeline["production_id"], "component_id": "IF-TL05", "component_name": "Audio Synchronizer", "timestamp": now(), "total_audio_duration_seconds": voice_pkg["audio_qc_report"]["estimated_duration_seconds"], "timeline_duration_seconds": timeline["total_duration_seconds"], "sync_status": "aligned" if not warnings else "aligned_with_warnings", "voice_track": {"source": "voice.ssml", "package_ref": voice_pkg["production_id"]}, "music_bed": {"enabled": False}, "sound_effect_cues": [], "scene_audio_map": scene_map, "warnings": warnings, "approval_status": "approved"}
+    output = {"production_id": timeline["production_id"], "component_id": "IF-TL05", "component_name": "Audio Synchronizer", "timestamp": now(), "total_audio_duration_seconds": voice_pkg["audio_qc_report"]["estimated_duration_seconds"], "timeline_duration_seconds": timeline["total_duration_seconds"], "sync_status": "aligned" if not warnings else "aligned_with_warnings", "voice_track": {"source": "voice.ssml", "package_ref": voice_pkg["production_id"], "priority": "dominant"}, "music_bed": {"enabled": True, "level": "low_under_voice"}, "sound_effect_cues": ["opening_impact", "transition_swoosh", "soft_bass_finish"], "scene_audio_map": scene_map, "warnings": warnings, "approval_status": "approved"}
     write_json(root / OUTPUT / "audio_sync.json", output)
     StructuredLogger(root / LOGS, f"audio-synchronizer-{timeline['production_id']}").log({"event": "audio_sync_written", "warnings": len(warnings)})
     return output
@@ -237,6 +256,18 @@ def timeline_validator(timeline: dict[str, Any], scenes: dict[str, Any], layer_m
         missing = [asset for asset in scene["asset_refs"] if asset not in valid_assets]
         if missing:
             issues.append(f"{scene['scene_id']} missing asset refs: {', '.join(missing)}")
+        if len(scene.get("visual_elements", [])) < 3:
+            issues.append(f"{scene['scene_id']} has fewer than three visual elements")
+        if float(scene.get("movement_interval_seconds", 99)) > 3:
+            issues.append(f"{scene['scene_id']} has no planned movement within three seconds")
+        leaked = _internal_terms(" ".join([scene.get("voiceover_text", ""), scene.get("caption_text", "")]))
+        if leaked:
+            issues.append(f"{scene['scene_id']} contains internal terminology: {', '.join(leaked)}")
+    opening = timeline["scenes"][0] if timeline["scenes"] else {}
+    opening_required = {"club_badge_home", "club_badge_away", "competition_logo", "match_title", "modern_scoreboard", "broadcast_animation"}
+    missing_opening = sorted(opening_required - set(opening.get("visual_elements", [])))
+    if missing_opening:
+        issues.append("opening five seconds missing: " + ", ".join(missing_opening))
     if not voice_pkg.get("voice_timestamps", {}).get("entries"):
         issues.append("missing voice refs")
     if len(visual_pkg.get("visual_plan", {}).get("scenes", [])) != len(timeline["scenes"]):
@@ -337,3 +368,40 @@ def _fit_caption(text: str) -> str:
     if len(words) <= 7:
         return " ".join(words)
     return " ".join(words[:7]) + "\n" + " ".join(words[7:14])
+
+
+def _viewer_text(text: str) -> str:
+    replacements = {
+        "X-Factor": "One thing that could change everything",
+        "Tactical Edge": "biggest advantage",
+        "Form Index": "recent form",
+        "Risk Meter": "what could go wrong",
+    }
+    output = str(text)
+    for internal, replacement in replacements.items():
+        output = output.replace(internal, replacement)
+    return output
+
+
+def _internal_terms(text: str) -> list[str]:
+    return [term for term in INTERNAL_TERMS if re.search(rf"\b{re.escape(term)}\b", text, re.IGNORECASE)]
+
+
+def _motion_beats(start: float, end: float, interval: float) -> list[dict[str, Any]]:
+    beats = []
+    current = round(start, 2)
+    index = 1
+    while current < end:
+        beats.append({"time_seconds": current, "movement": ["slow_zoom", "parallax", "light_sweep", "badge_slide"][index % 4]})
+        current = round(current + min(interval, 2.8), 2)
+        index += 1
+    return beats
+
+
+def _visual_elements_for_scene(scene: dict[str, Any], visual: dict[str, Any]) -> list[str]:
+    elements = list(visual.get("visual_elements", []))
+    if not elements and scene.get("scene_type") == "Brand Opening":
+        elements = ["club_badge_home", "club_badge_away", "competition_logo", "match_title", "modern_scoreboard", "broadcast_animation"]
+    if not elements:
+        elements = ["stadium_background", "lower_third", "motion_graphics"]
+    return elements

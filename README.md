@@ -6,13 +6,16 @@ The repository contains the frozen architecture, production blueprints, editoria
 
 ## Current Production Status
 
-The codebase is production-baseline ready and defaults to safe dry-run behavior.
+The codebase is Version 2.0 production-baseline ready and defaults to safe dry-run behavior.
 
 - Editorial Brain: implemented.
 - Script, storyboard, voice, asset, timeline, render, QC, distribution, and analytics modules: implemented as sprint modules.
+- Production Match Selector: live fixture enforced. Example matches are tests only.
+- Visual production: V2 broadcast rules enforce club identity, motion beats, captions, and non-text-only scenes.
+- Voice pipeline: human recorded narration is the default mode, with voice clone and fallback AI voice support.
 - Publishing: dry-run by default.
 - Live platform upload: disabled until credentials, real media assets, and human approval are present.
-- Current sample render: placeholder JSON, not an encoded video file.
+- MP4 rendering: FFmpeg adapter supports real 9:16 approval videos with branded opening, watermark, transitions, and end card.
 
 ## Repository Layout
 
@@ -32,8 +35,9 @@ scripts/                Local and CI utility scripts.
 ## Requirements
 
 - Python 3.12 or newer.
-- No required third-party Python packages for the current deterministic test suite.
+- Python packages listed in `requirements.txt`.
 - Live LLM, analytics, rendering, and publishing integrations require environment variables listed in `.env.example`.
+- Production live match selection requires `APP_FOOTBALL_API_KEY` or `API_FOOTBALL_API_KEY`.
 
 ## Setup
 
@@ -60,6 +64,16 @@ python scripts/run_tests.py
 ```
 
 The full regression suite currently covers editorial, production, publishing, and analytics modules.
+
+## Version 2.0 Production Rules
+
+- Production runs must not use `editorial-brain/examples/*` Daily Input files.
+- `scripts/render_daily_entrypoint.py` builds a live Daily Input from today's football API fixtures when `INSIGHT_FOOTBALL_ENV=production`.
+- Viewer-facing output must not contain internal terms such as `X-Factor`, `Tactical Edge`, `Story Hunter`, or `Editorial Brain`.
+- Every scene must include at least three visual elements and movement every 2 to 3 seconds.
+- Opening five seconds must show both club identities, competition identity, match title, scoreboard, and broadcast animation.
+
+See [docs/version-2-production-upgrade.md](docs/version-2-production-upgrade.md).
 
 ## Readiness Check
 

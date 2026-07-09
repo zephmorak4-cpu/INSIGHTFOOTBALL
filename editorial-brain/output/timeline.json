@@ -2,7 +2,7 @@
   "production_id": "if-2026-07-06-liverpool-arsenal",
   "component_id": "IF-TL01",
   "component_name": "Timeline Builder",
-  "timestamp": "2026-07-08T11:37:41.695501+00:00",
+  "timestamp": "2026-07-09T15:44:35.927802+00:00",
   "match": {
     "home_team": "Liverpool",
     "away_team": "Arsenal",
@@ -31,10 +31,30 @@
       "voiceover_text": "Before the first whistle... here's the insight.",
       "voiceover_start": 0.0,
       "voiceover_end": 2.91,
-      "caption_text": "Before the first whistle... here's the insight",
+      "caption_text": "Before the first whistle here's the insight",
       "visual_plan_ref": "scene-01",
       "camera_plan_ref": "Reveal",
       "motion_plan_ref": "Fade",
+      "movement_interval_seconds": 2.5,
+      "motion_beats": [
+        {
+          "time_seconds": 0.0,
+          "movement": "parallax"
+        },
+        {
+          "time_seconds": 2.5,
+          "movement": "light_sweep"
+        }
+      ],
+      "visual_elements": [
+        "club_badge_home",
+        "club_badge_away",
+        "competition_logo",
+        "match_title",
+        "modern_scoreboard",
+        "broadcast_animation"
+      ],
+      "broadcast_elements": {},
       "asset_refs": [
         "background_graphic",
         "brand_logo",
@@ -68,10 +88,35 @@
       "voiceover_text": "Sample data: Liverpool have started quickly in recent home matches, while Arsenal have sometimes needed longer to settle away.",
       "voiceover_start": 2.91,
       "voiceover_end": 10.48,
-      "caption_text": "Sample data: Liverpool have started quickly in recent home matches, while Arsenal...",
+      "caption_text": "Sample data Liverpool have started quickly in\nrecent home matches while Arsenal",
       "visual_plan_ref": "scene-02",
       "camera_plan_ref": "Punch In",
       "motion_plan_ref": "Counter",
+      "movement_interval_seconds": 2.5,
+      "motion_beats": [
+        {
+          "time_seconds": 2.91,
+          "movement": "parallax"
+        },
+        {
+          "time_seconds": 5.41,
+          "movement": "light_sweep"
+        },
+        {
+          "time_seconds": 7.91,
+          "movement": "badge_slide"
+        },
+        {
+          "time_seconds": 10.41,
+          "movement": "slow_zoom"
+        }
+      ],
+      "visual_elements": [
+        "stadium_background",
+        "lower_third",
+        "motion_graphics"
+      ],
+      "broadcast_elements": {},
       "asset_refs": [
         "background_graphic",
         "data_card",
@@ -106,10 +151,27 @@
       "voiceover_text": "So the real question is: Can Arsenal survive Liverpool's fast start?",
       "voiceover_start": 10.48,
       "voiceover_end": 15.06,
-      "caption_text": "So the real question is: Can Arsenal survive Liverpool's fast start?",
+      "caption_text": "So the real question is Can Arsenal\nsurvive Liverpool's fast start",
       "visual_plan_ref": "scene-03",
       "camera_plan_ref": "Slow Zoom",
       "motion_plan_ref": "Text Reveal",
+      "movement_interval_seconds": 2.5,
+      "motion_beats": [
+        {
+          "time_seconds": 10.48,
+          "movement": "parallax"
+        },
+        {
+          "time_seconds": 12.98,
+          "movement": "light_sweep"
+        }
+      ],
+      "visual_elements": [
+        "stadium_background",
+        "lower_third",
+        "motion_graphics"
+      ],
+      "broadcast_elements": {},
       "asset_refs": [
         "background_graphic",
         "graphic-central_question_card",
@@ -143,10 +205,27 @@
       "voiceover_text": "Liverpool usually start aggressively, pressing high and forcing rushed decisions.",
       "voiceover_start": 15.06,
       "voiceover_end": 19.22,
-      "caption_text": "Liverpool usually start aggressively, pressing high and forcing rushed decisions",
+      "caption_text": "Liverpool usually start aggressively pressing high and\nforcing rushed decisions",
       "visual_plan_ref": "scene-04",
       "camera_plan_ref": "Pan",
       "motion_plan_ref": "Arrow Animation",
+      "movement_interval_seconds": 2.5,
+      "motion_beats": [
+        {
+          "time_seconds": 15.06,
+          "movement": "parallax"
+        },
+        {
+          "time_seconds": 17.56,
+          "movement": "light_sweep"
+        }
+      ],
+      "visual_elements": [
+        "stadium_background",
+        "lower_third",
+        "motion_graphics"
+      ],
+      "broadcast_elements": {},
       "asset_refs": [
         "graphic-tactical_pitch_diagram",
         "pitch_graphic",
@@ -180,10 +259,31 @@
       "voiceover_text": "Arsenal have enough quality to play through it, but a messy opening can drag them from their plan.",
       "voiceover_start": 19.22,
       "voiceover_end": 26.71,
-      "caption_text": "Arsenal have enough quality to play through it, but a messy opening...",
+      "caption_text": "Arsenal have enough quality to play through\nit but a messy opening",
       "visual_plan_ref": "scene-05",
       "camera_plan_ref": "Slide Left",
       "motion_plan_ref": "Slide",
+      "movement_interval_seconds": 2.5,
+      "motion_beats": [
+        {
+          "time_seconds": 19.22,
+          "movement": "parallax"
+        },
+        {
+          "time_seconds": 21.72,
+          "movement": "light_sweep"
+        },
+        {
+          "time_seconds": 24.22,
+          "movement": "badge_slide"
+        }
+      ],
+      "visual_elements": [
+        "stadium_background",
+        "lower_third",
+        "motion_graphics"
+      ],
+      "broadcast_elements": {},
       "asset_refs": [
         "background_graphic",
         "graphic-team_comparison_card",
@@ -217,10 +317,27 @@
       "voiceover_text": "The evidence is simple: Liverpool usually make opponents uncomfortable early at home.",
       "voiceover_start": 26.71,
       "voiceover_end": 31.7,
-      "caption_text": "The evidence is simple: Liverpool usually make opponents uncomfortable early at home",
+      "caption_text": "The evidence is simple Liverpool usually make\nopponents uncomfortable early at home",
       "visual_plan_ref": "scene-06",
       "camera_plan_ref": "Static",
       "motion_plan_ref": "Pop",
+      "movement_interval_seconds": 2.5,
+      "motion_beats": [
+        {
+          "time_seconds": 26.71,
+          "movement": "parallax"
+        },
+        {
+          "time_seconds": 29.21,
+          "movement": "light_sweep"
+        }
+      ],
+      "visual_elements": [
+        "stadium_background",
+        "lower_third",
+        "motion_graphics"
+      ],
+      "broadcast_elements": {},
       "asset_refs": [
         "background_graphic",
         "data_card",
@@ -255,10 +372,31 @@
       "voiceover_text": "The balance matters too: Arsenal may be better prepared for pressure than older form suggests.",
       "voiceover_start": 31.7,
       "voiceover_end": 37.94,
-      "caption_text": "The balance matters too: Arsenal may be better prepared for pressure than...",
+      "caption_text": "The balance matters too Arsenal may be\nbetter prepared for pressure than",
       "visual_plan_ref": "scene-07",
       "camera_plan_ref": "Slide Left",
       "motion_plan_ref": "Slide",
+      "movement_interval_seconds": 2.5,
+      "motion_beats": [
+        {
+          "time_seconds": 31.7,
+          "movement": "parallax"
+        },
+        {
+          "time_seconds": 34.2,
+          "movement": "light_sweep"
+        },
+        {
+          "time_seconds": 36.7,
+          "movement": "badge_slide"
+        }
+      ],
+      "visual_elements": [
+        "stadium_background",
+        "lower_third",
+        "motion_graphics"
+      ],
+      "broadcast_elements": {},
       "asset_refs": [
         "background_graphic",
         "graphic-team_comparison_card",
@@ -292,10 +430,27 @@
       "voiceover_text": "That makes it a slight home edge, not a prediction.",
       "voiceover_start": 37.94,
       "voiceover_end": 42.11,
-      "caption_text": "That makes it a slight home edge, not a prediction",
+      "caption_text": "That makes it a slight home edge\nnot a prediction",
       "visual_plan_ref": "scene-08",
       "camera_plan_ref": "Static",
       "motion_plan_ref": "Dashboard Reveal",
+      "movement_interval_seconds": 2.5,
+      "motion_beats": [
+        {
+          "time_seconds": 37.94,
+          "movement": "parallax"
+        },
+        {
+          "time_seconds": 40.44,
+          "movement": "light_sweep"
+        }
+      ],
+      "visual_elements": [
+        "stadium_background",
+        "lower_third",
+        "motion_graphics"
+      ],
+      "broadcast_elements": {},
       "asset_refs": [
         "dashboard_panel",
         "graphic-insight_dashboard",
@@ -329,10 +484,31 @@
       "voiceover_text": "Watch the opening phase closely; it may tell you how the rest of the game will unfold.",
       "voiceover_start": 42.11,
       "voiceover_end": 49.18,
-      "caption_text": "Watch the opening phase closely; it may tell you how the rest...",
+      "caption_text": "Watch the opening phase closely it may\ntell you how the rest",
       "visual_plan_ref": "scene-09",
       "camera_plan_ref": "Static",
       "motion_plan_ref": "Dashboard Reveal",
+      "movement_interval_seconds": 2.5,
+      "motion_beats": [
+        {
+          "time_seconds": 42.11,
+          "movement": "parallax"
+        },
+        {
+          "time_seconds": 44.61,
+          "movement": "light_sweep"
+        },
+        {
+          "time_seconds": 47.11,
+          "movement": "badge_slide"
+        }
+      ],
+      "visual_elements": [
+        "stadium_background",
+        "lower_third",
+        "motion_graphics"
+      ],
+      "broadcast_elements": {},
       "asset_refs": [
         "dashboard_panel",
         "graphic-insight_dashboard",
@@ -358,18 +534,35 @@
     {
       "scene_id": "scene-10",
       "scene_number": 10,
-      "scene_type": "X-Factor Player",
+      "scene_type": "Key Player",
       "template_id": "player_focus",
       "start_time_seconds": 49.18,
       "end_time_seconds": 53.35,
       "duration_seconds": 4.17,
-      "voiceover_text": "The x-factor is arsenal's ability to escape liverpool's first press.",
+      "voiceover_text": "One thing that could change everything is arsenal's ability to escape liverpool's first press.",
       "voiceover_start": 49.18,
       "voiceover_end": 53.35,
-      "caption_text": "The x-factor is arsenal's ability to escape liverpool's first press",
+      "caption_text": "One thing that could change everything is\narsenal's ability to escape liverpool's first press",
       "visual_plan_ref": "scene-10",
       "camera_plan_ref": "Static",
       "motion_plan_ref": "Highlight Pulse",
+      "movement_interval_seconds": 2.5,
+      "motion_beats": [
+        {
+          "time_seconds": 49.18,
+          "movement": "parallax"
+        },
+        {
+          "time_seconds": 51.68,
+          "movement": "light_sweep"
+        }
+      ],
+      "visual_elements": [
+        "stadium_background",
+        "lower_third",
+        "motion_graphics"
+      ],
+      "broadcast_elements": {},
       "asset_refs": [
         "background_graphic",
         "graphic-x_factor_card",
@@ -404,10 +597,31 @@
       "voiceover_text": "Can Arsenal survive the first 20 minutes, or will Liverpool take control early? Tell us below.",
       "voiceover_start": 53.35,
       "voiceover_end": 60.0,
-      "caption_text": "Can Arsenal survive the first 20 minutes, or will Liverpool take control...",
+      "caption_text": "Can Arsenal survive the first 20 minutes\nor will Liverpool take control",
       "visual_plan_ref": "scene-11",
       "camera_plan_ref": "Pull Back",
       "motion_plan_ref": "Scale",
+      "movement_interval_seconds": 2.5,
+      "motion_beats": [
+        {
+          "time_seconds": 53.35,
+          "movement": "parallax"
+        },
+        {
+          "time_seconds": 55.85,
+          "movement": "light_sweep"
+        },
+        {
+          "time_seconds": 58.35,
+          "movement": "badge_slide"
+        }
+      ],
+      "visual_elements": [
+        "stadium_background",
+        "lower_third",
+        "motion_graphics"
+      ],
+      "broadcast_elements": {},
       "asset_refs": [
         "background_graphic",
         "comment_icon",
@@ -434,8 +648,13 @@
   ],
   "global_audio": {
     "voice_track_ref": "voice-production-package.json",
-    "music_bed": "disabled",
-    "sound_effects": "disabled"
+    "narration_priority": "dominant",
+    "stadium_ambience": "low_bed",
+    "crowd_atmosphere": "subtle",
+    "transition_swooshes": "enabled",
+    "goal_impact": "available",
+    "low_cinematic_bass": "enabled",
+    "background_music": "low_under_voice"
   },
   "global_style": {
     "brand": "INSIGHT FOOTBALL",

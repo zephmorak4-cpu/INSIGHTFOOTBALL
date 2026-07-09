@@ -20,6 +20,9 @@ class VoiceDirectorService:
         return self.run(load_json_file(script_package_path))
 
     def run(self, script_package: dict[str, Any]) -> dict[str, Any]:
+        script_package = dict(script_package)
+        if "final_voiceover" not in script_package and "full_voiceover" in script_package:
+            script_package["final_voiceover"] = script_package["full_voiceover"]
         production_id = script_package.get("production_id", "unknown-production")
         logger = StructuredLogger(self.config.log_directory, f"voice-director-{production_id}")
         issues = self.validator.validate_input(script_package)
@@ -31,6 +34,22 @@ class VoiceDirectorService:
             "timestamp": datetime.now(timezone.utc).isoformat(),
             "source_script_package": production_id,
             "voice_profile": self.config.voice_profile,
+            "narration_modes": [
+                {"mode": "human_recorded", "priority": 1, "default": True, "accepted_formats": ["wav", "mp3", "m4a"]},
+                {"mode": "voice_clone", "priority": 2, "default": False},
+                {"mode": "fallback_ai_voice", "priority": 3, "default": False},
+            ],
+            "selected_narration_mode": script_package.get("narration_mode", "human_recorded"),
+            "human_voice_workflow": [
+                "script_generated",
+                "narration_script_exported",
+                "user_records_audio",
+                "system_aligns_audio_with_storyboard",
+                "timeline_auto_adjusts",
+                "captions_generated",
+                "render",
+            ],
+            "voice_pipeline_modules": ["voice-input", "voice-processing", "voice-cleaning", "speech-alignment", "voice-sync"],
             "preferred_provider": self.config.preferred_provider,
             "fallback_provider": self.config.fallback_provider,
             "target_speed_wpm": self.config.target_speed_wpm,
@@ -51,7 +70,7 @@ class VoiceDirectorService:
 
 
 def _build_sections(script: dict[str, Any], config: VoiceDirectorConfig) -> list[dict[str, Any]]:
-    sentences = _sentences(script["final_voiceover"])
+    sentences = _sentences(script.get("final_voiceover") or script.get("full_voiceover", ""))
     candidates = [
         ("hook", " ".join(sentences[:2])),
         ("central_question", sentences[2] if len(sentences) > 2 else script.get("central_question", "")),
@@ -88,7 +107,7 @@ def _pace(name: str) -> str:
 
 
 def _emphasis_words(text: str, script: dict[str, Any]) -> list[str]:
-    terms = [script.get("match", {}).get("home_team", ""), script.get("match", {}).get("away_team", ""), "fast start", "slight home edge", "x-factor"]
+    terms = [script.get("match", {}).get("home_team", ""), script.get("match", {}).get("away_team", ""), "fast start", "slight home edge", "one thing"]
     return [term for term in terms if term and term.lower() in text.lower()][:4]
 
 

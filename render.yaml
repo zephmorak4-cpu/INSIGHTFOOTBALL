@@ -28,6 +28,10 @@ services:
         sync: false
       - key: APP_FOOTBALL_API_KEY
         sync: false
+      - key: API_FOOTBALL_API_KEY
+        sync: false
+      - key: FOOTBALL_API_BASE_URL
+        sync: false
       - key: NEWS_API_KEY
         sync: false
       - key: GNEWS_API_KEY

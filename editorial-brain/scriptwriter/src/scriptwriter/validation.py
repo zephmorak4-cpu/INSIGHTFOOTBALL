@@ -15,6 +15,7 @@ from .schema_validator import SchemaValidator
 BETTING_LANGUAGE = ["guaranteed", "sure win", "banker", "lock", "bet of the day", "risk-free", "100 percent", "definitely will win", "must win bet", "free money"]
 ROBOTIC_LANGUAGE = ["based on the data provided", "the model indicates", "statistical analysis suggests", "the home side possesses", "expected goals differential"]
 UNSUPPORTED_TERMS = ["red card", "injury", "suspension", "weather"]
+INTERNAL_TERMS = ["Form Index", "Risk Meter", "Tactical Edge", "X-Factor", "Evidence Filter", "Insight Engine", "Story Hunter", "Editorial Brain"]
 
 
 class ScriptwriterValidator:
@@ -54,6 +55,8 @@ class ScriptwriterValidator:
             issues.append("$.word_count: must match full_voiceover")
         if output.get("estimated_duration_seconds") != seconds:
             issues.append("$.estimated_duration_seconds: must match full_voiceover")
+        if output.get("final_voiceover") and output.get("final_voiceover") != voiceover:
+            issues.append("$.final_voiceover: must match full_voiceover")
         if brief.get("central_question") not in voiceover:
             issues.append("$.full_voiceover: central question must be included")
         if brief.get("surprising_fact") not in voiceover:
@@ -66,6 +69,9 @@ class ScriptwriterValidator:
         for phrase in ROBOTIC_LANGUAGE:
             if phrase in lower:
                 issues.append(f"robotic language: {phrase}")
+        for term in INTERNAL_TERMS:
+            if _contains_phrase(lower, term.lower()):
+                issues.append(f"internal terminology leaked: {term}")
         source = " ".join([str(brief), str(output.get("claims_used", []))]).lower()
         for term in UNSUPPORTED_TERMS:
             if term in lower and term not in source:
@@ -86,4 +92,3 @@ class ScriptwriterValidator:
 
 def _contains_phrase(text: str, phrase: str) -> bool:
     return re.search(rf"\b{re.escape(phrase)}\b", text) is not None
-

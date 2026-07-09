@@ -44,7 +44,15 @@ class VisualDirectorTests(unittest.TestCase):
         result = self.run_service()
         self.assertTrue(result["success"])
 
+    def test_v2_visual_elements_per_scene(self):
+        result = self.run_service()
+        self.assertTrue(all(len(scene["visual_elements"]) >= 3 for scene in result["visual_plan"]["scenes"]))
+
+    def test_v2_opening_contains_club_and_competition_identity(self):
+        opening = self.run_service()["visual_plan"]["scenes"][0]
+        required = {"club_badge_home", "club_badge_away", "competition_logo", "match_title", "modern_scoreboard", "broadcast_animation"}
+        self.assertTrue(required.issubset(set(opening["visual_elements"])))
+
 
 if __name__ == "__main__":
     unittest.main()
-

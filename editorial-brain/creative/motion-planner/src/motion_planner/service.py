@@ -45,6 +45,8 @@ class MotionPlannerService:
                 "duration": 0.8 if preset not in {"Dashboard Reveal", "Arrow Animation"} else 1.2,
                 "delay": 0.1 if index else 0.0,
                 "easing": "easeOutCubic",
+                "movement_interval_seconds": 2.5,
+                "secondary_motion": "light_sweep" if index == 0 else "parallax_slide",
                 "animation_reason": f"{preset} clarifies the {scene['scene_type'].lower()} without flashy effects.",
             })
         plan = {

@@ -2,7 +2,7 @@
   "production_id": "if-2026-07-06-liverpool-arsenal",
   "component_id": "IF-TL07",
   "component_name": "Timeline Validator",
-  "timestamp": "2026-07-08T11:37:42.324677+00:00",
+  "timestamp": "2026-07-09T15:44:36.563251+00:00",
   "checks": {
     "duration": true,
     "scene_order": true,

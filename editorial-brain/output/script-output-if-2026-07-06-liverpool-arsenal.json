@@ -4,7 +4,7 @@
   "agent_name": "Scriptwriter",
   "prompt_id": "IF-PROMPT-05-SCRIPTWRITER",
   "prompt_version": "v1.0",
-  "timestamp": "2026-07-07T08:09:48.718376+00:00",
+  "timestamp": "2026-07-09T13:11:21.386082+00:00",
   "input_brief_id": "brief-if-2026-07-06-liverpool-arsenal",
   "match": {
     "home_team": "Liverpool",
@@ -15,15 +15,15 @@
   },
   "competition": "Premier League",
   "script_version": "v1",
-  "word_count": 145,
-  "estimated_duration_seconds": 56,
+  "word_count": 143,
+  "estimated_duration_seconds": 55,
   "brand_opening": "Before the first whistle... here's the insight.",
   "hook": "Sample data: Liverpool have started quickly in recent home matches, while Arsenal have sometimes needed longer to settle away.",
   "central_question": "Can Arsenal survive Liverpool's fast start?",
   "main_body": "So the real question is: Can Arsenal survive Liverpool's fast start? Liverpool usually start aggressively, pressing high and forcing rushed decisions. Arsenal have enough quality to play through it, but a messy opening can drag them from their plan. The evidence is simple: Liverpool usually make opponents uncomfortable early at home. The balance matters too: Arsenal may be better prepared for pressure than older form suggests. That makes it a slight home edge, not a prediction.",
-  "conclusion": "Watch the opening phase closely; it may tell you how the rest of the game will unfold. The x-factor is arsenal's ability to escape liverpool's first press.",
+  "conclusion": "Watch the opening phase closely; it may tell you how the rest of the game will unfold. Watch arsenal's ability to escape liverpool's first press.",
   "cta": "Can Arsenal survive the first 20 minutes, or will Liverpool take control early? Tell us below.",
-  "full_voiceover": "Before the first whistle... here's the insight. Sample data: Liverpool have started quickly in recent home matches, while Arsenal have sometimes needed longer to settle away. So the real question is: Can Arsenal survive Liverpool's fast start? Liverpool usually start aggressively, pressing high and forcing rushed decisions. Arsenal have enough quality to play through it, but a messy opening can drag them from their plan. The evidence is simple: Liverpool usually make opponents uncomfortable early at home. The balance matters too: Arsenal may be better prepared for pressure than older form suggests. That makes it a slight home edge, not a prediction. Watch the opening phase closely; it may tell you how the rest of the game will unfold. The x-factor is arsenal's ability to escape liverpool's first press. Can Arsenal survive the first 20 minutes, or will Liverpool take control early? Tell us below.",
+  "full_voiceover": "Before the first whistle... here's the insight. Sample data: Liverpool have started quickly in recent home matches, while Arsenal have sometimes needed longer to settle away. So the real question is: Can Arsenal survive Liverpool's fast start? Liverpool usually start aggressively, pressing high and forcing rushed decisions. Arsenal have enough quality to play through it, but a messy opening can drag them from their plan. The evidence is simple: Liverpool usually make opponents uncomfortable early at home. The balance matters too: Arsenal may be better prepared for pressure than older form suggests. That makes it a slight home edge, not a prediction. Watch the opening phase closely; it may tell you how the rest of the game will unfold. Watch arsenal's ability to escape liverpool's first press. Can Arsenal survive the first 20 minutes, or will Liverpool take control early? Tell us below.",
   "claims_used": [
     "Sample data: Liverpool have started quickly in recent home matches, while Arsenal have sometimes needed longer to settle away.",
     "Liverpool usually make opponents uncomfortable early at home.",
@@ -53,5 +53,6 @@
   "warnings": [],
   "human_review_flags": [],
   "approval_status": "approved",
-  "next_agent": "IF-A06"
+  "next_agent": "IF-A06",
+  "final_voiceover": "Before the first whistle... here's the insight. Sample data: Liverpool have started quickly in recent home matches, while Arsenal have sometimes needed longer to settle away. So the real question is: Can Arsenal survive Liverpool's fast start? Liverpool usually start aggressively, pressing high and forcing rushed decisions. Arsenal have enough quality to play through it, but a messy opening can drag them from their plan. The evidence is simple: Liverpool usually make opponents uncomfortable early at home. The balance matters too: Arsenal may be better prepared for pressure than older form suggests. That makes it a slight home edge, not a prediction. Watch the opening phase closely; it may tell you how the rest of the game will unfold. Watch arsenal's ability to escape liverpool's first press. Can Arsenal survive the first 20 minutes, or will Liverpool take control early? Tell us below."
 }

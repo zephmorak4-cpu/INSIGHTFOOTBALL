@@ -24,6 +24,9 @@ class StoryboardGeneratorService:
         return self.run(load_json_file(script_package_path), load_text_file(voiceover_path))
 
     def run(self, package: dict[str, Any], voiceover: str) -> dict[str, Any]:
+        package = dict(package)
+        if "final_voiceover" not in package and "full_voiceover" in package:
+            package["final_voiceover"] = package["full_voiceover"]
         production_id = package.get("production_id", "unknown-production")
         logger = StructuredLogger(self.config.log_directory, f"storyboard-generator-{production_id}")
         try:
@@ -42,4 +45,3 @@ class StoryboardGeneratorService:
     @staticmethod
     def _error(production_id: str, issues: list[str]) -> dict[str, Any]:
         return {"success": False, "agent_id": "IF-A06", "agent_name": "Storyboard Generator", "production_id": production_id, "error": {"code": "STORYBOARD_GENERATION_FAILED", "issues": issues}, "approval_status": "blocked", "next_component": None}
-

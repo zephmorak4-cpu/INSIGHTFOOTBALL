@@ -50,6 +50,11 @@ def main() -> int:
         help="Daily Input JSON used by the editorial orchestrator.",
     )
     args = parser.parse_args()
+    if os.environ.get("INSIGHT_FOOTBALL_ENV", "").lower() == "production":
+        normalized_input = args.daily_input.replace("\\", "/")
+        if "examples/" in normalized_input and os.environ.get("INSIGHT_FOOTBALL_ALLOW_SAMPLE_DAILY_INPUT", "").lower() != "true":
+            print(json.dumps({"success": False, "error": "Production runs cannot use example Daily Input files."}, indent=2))
+            return 1
 
     python = sys.executable
     steps = [
