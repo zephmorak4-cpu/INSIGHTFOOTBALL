@@ -20,6 +20,8 @@ services:
         value: ffmpeg
       - key: DAILY_INPUT_PATH
         value: editorial-brain/examples/liverpool-arsenal-daily-input.json
+      - key: INSIGHT_FOOTBALL_RUN_TESTS_ON_RENDER
+        value: "false"
       - key: FFMPEG_BINARY_PATH
         sync: false
       - key: OPENAI_API_KEY

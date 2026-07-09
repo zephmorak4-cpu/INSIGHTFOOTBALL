@@ -97,7 +97,7 @@ class RenderingEngineTests(unittest.TestCase):
                 FFmpegAdapter().download_artifacts("job", Path(temp))
 
     def test_ffmpeg_failure_when_unavailable(self):
-        with patch("shutil.which", return_value=None):
+        with patch("shutil.which", return_value=None), patch("imageio_ffmpeg.get_ffmpeg_exe", return_value="missing-ffmpeg"):
             payload = FFmpegAdapter().build_render_payload(self.package)
             result = FFmpegAdapter().submit_render(payload)
             self.assertFalse(result["success"])

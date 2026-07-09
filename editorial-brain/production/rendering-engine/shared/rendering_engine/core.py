@@ -332,7 +332,15 @@ def _ffmpeg_path() -> str | None:
     configured = os.environ.get("FFMPEG_BINARY_PATH")
     if configured and Path(configured).exists():
         return configured
-    return shutil.which("ffmpeg")
+    executable = shutil.which("ffmpeg")
+    if executable:
+        return executable
+    try:
+        import imageio_ffmpeg
+    except ImportError:
+        return None
+    bundled = imageio_ffmpeg.get_ffmpeg_exe()
+    return bundled if bundled and Path(bundled).exists() else None
 
 
 def _build_branded_segments(package: dict[str, Any]) -> list[dict[str, Any]]:
@@ -538,12 +546,15 @@ def _draw_text_box(draw: ImageDraw.ImageDraw, text: str, *, x: int, y: int, max_
 
 def _write_concat_file(path: Path, frame_entries: list[dict[str, Any]]) -> None:
     lines = []
+    base_dir = path.parent
     for entry in frame_entries:
-        frame = str(entry["path"]).replace("\\", "/").replace("'", "'\\''")
+        frame_path = Path(entry["path"])
+        frame = os.path.relpath(frame_path, base_dir).replace("\\", "/").replace("'", "'\\''")
         lines.append(f"file '{frame}'")
         lines.append(f"duration {entry['duration']:.2f}")
     if frame_entries:
-        frame = str(frame_entries[-1]["path"]).replace("\\", "/").replace("'", "'\\''")
+        frame_path = Path(frame_entries[-1]["path"])
+        frame = os.path.relpath(frame_path, base_dir).replace("\\", "/").replace("'", "'\\''")
         lines.append(f"file '{frame}'")
     path.write_text("\n".join(lines) + "\n", encoding="utf-8")
 
