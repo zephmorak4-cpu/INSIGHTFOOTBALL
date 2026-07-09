@@ -79,9 +79,23 @@ def build_live_daily_input(*, target_date: str | None = None, output_path: Path 
         "priority_competitions": list(HIGH_IMPORTANCE_COMPETITIONS),
         "data_availability_notes": {"source": "configured football API", "sample_matches_allowed": False},
     }
+    editor_selection_path = os.environ.get("EDITOR_SELECTION_PATH")
+    if editor_selection_path:
+        payload = apply_editor_selection_file(payload, Path(editor_selection_path))
     output_path.parent.mkdir(parents=True, exist_ok=True)
     output_path.write_text(json.dumps(payload, indent=2, ensure_ascii=True) + "\n", encoding="utf-8")
     return payload
+
+
+def apply_editor_selection_file(payload: dict[str, Any], path: Path) -> dict[str, Any]:
+    import sys
+
+    module_path = ROOT / "editorial-brain" / "editor-match-selector" / "src"
+    if str(module_path) not in sys.path:
+        sys.path.insert(0, str(module_path))
+    from editor_match_selector import apply_editor_selection, load_editor_selection
+
+    return apply_editor_selection(payload, load_editor_selection(path))
 
 
 def fetch_fixtures(production_date: str) -> Any:

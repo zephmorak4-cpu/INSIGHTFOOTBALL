@@ -35,14 +35,14 @@ def render_config_ready() -> bool:
     if not path.exists():
         return False
     text = path.read_text(encoding="utf-8")
-    return "schedule: \"0 9 * * *\"" in text and "INSIGHT_FOOTBALL_RENDERER_PROFILE" in text and "value: ffmpeg" in text
+    return "schedule: \"0 9 * * *\"" in text and "INSIGHT_FOOTBALL_RENDERER_PROFILE" in text and ("value: ffmpeg" in text or "value: creatomate" in text)
 
 
 def main() -> int:
     checks = {
         "repo": {
             "render_yaml_exists": (ROOT / "render.yaml").exists(),
-            "render_config_defaults_to_ffmpeg": render_config_ready(),
+            "render_config_has_renderer_profile": render_config_ready(),
             "aptfile_installs_ffmpeg": (ROOT / "Aptfile").exists() and "ffmpeg" in (ROOT / "Aptfile").read_text(encoding="utf-8"),
             "daily_workflow_exists": (ROOT / ".github" / "workflows" / "daily-production.yml").exists(),
             "approval_workflow_exists": (ROOT / ".github" / "workflows" / "approved-production-publish.yml").exists(),
@@ -58,8 +58,8 @@ def main() -> int:
         },
     }
     blocking = []
-    if not checks["repo"]["render_config_defaults_to_ffmpeg"]:
-        blocking.append("Render config does not default to ffmpeg.")
+    if not checks["repo"]["render_config_has_renderer_profile"]:
+        blocking.append("Render config does not define a production renderer profile.")
     if not checks["repo"]["aptfile_installs_ffmpeg"]:
         blocking.append("Aptfile does not install ffmpeg.")
     if not checks["local_runtime"]["ffmpeg_available"]:

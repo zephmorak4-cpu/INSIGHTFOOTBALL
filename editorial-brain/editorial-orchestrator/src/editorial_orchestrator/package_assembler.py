@@ -55,6 +55,7 @@ def assemble_editorial_package(
         "confidence_scores": confidence_scores,
         "locked_fields": {
             "selected_match": selected_match,
+            "selection_source": match_selection.get("selection_source", "automatic_recommendation"),
             "story_angle": story_hunter["story_angle"],
             "central_question": story_hunter["central_question"],
             "surprising_fact": story_hunter["surprising_fact"],

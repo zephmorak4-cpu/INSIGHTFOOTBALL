@@ -1,10 +1,14 @@
 from __future__ import annotations
 
 import hashlib
+import json
 import os
 import shutil
 import subprocess
 import textwrap
+import time
+import urllib.error
+import urllib.request
 from abc import ABC, abstractmethod
 from pathlib import Path
 from typing import Any
@@ -71,6 +75,26 @@ BRAND_MOTION_STANDARD = {
     "colors": {"deep_navy": "#0B132B", "sports_blue": "#0D47A1", "espn_red": "#E10600", "clean_white": "#F5F5F5", "charcoal": "#1A1A1A"},
     "typography": {"primary": ["Bebas Neue", "Anton"], "secondary": "Montserrat"},
 }
+GLOBAL_CREATOMATE_VARIABLES = [
+    "brand_logo",
+    "corner_logo",
+    "home_team",
+    "away_team",
+    "competition",
+    "home_badge",
+    "away_badge",
+    "competition_logo",
+    "match_title",
+    "central_question",
+    "surprising_fact",
+    "main_insight",
+    "primary_evidence",
+    "secondary_evidence",
+    "viewer_takeaway",
+    "cta_text",
+    "tagline",
+]
+SAMPLE_TERMS = ["Liverpool", "Arsenal", "Anfield", "Emirates", "Salah", "Haaland", "Qarabag", "Vestri"]
 
 
 class RendererInterface(ABC):
@@ -113,35 +137,74 @@ class CreatomateAdapter(RendererInterface):
     renderer_profile = "creatomate"
 
     def validate_package(self, package: dict[str, Any], *, dry_run: bool = True) -> dict[str, Any]:
+        warnings: list[str] = []
+        issues: list[str] = []
         if not dry_run and not os.environ.get("CREATOMATE_API_KEY"):
-            return {"success": False, "error": "CREATOMATE_API_KEY is required outside dry_run mode."}
-        return {"success": True, "dry_run": dry_run, "warnings": [] if os.environ.get("CREATOMATE_API_KEY") else ["Missing API key; dry_run payload only."]}
+            issues.append("CREATOMATE_API_KEY is required in Creatomate live mode.")
+        registry = _creatomate_registry()
+        missing_templates = _missing_live_template_ids(registry)
+        if missing_templates and not dry_run:
+            issues.append("Missing Creatomate template IDs: " + ", ".join(missing_templates))
+        if missing_templates and dry_run:
+            warnings.append("Missing template IDs; dry-run fallback IDs will be used.")
+        return {"success": not issues, "dry_run": dry_run, "warnings": warnings, "issues": issues, "error": "; ".join(issues) if issues else None}
 
     def build_render_payload(self, package: dict[str, Any]) -> dict[str, Any]:
+        variables = _creatomate_variables(package)
+        registry = _creatomate_registry()
+        scenes = _creatomate_scenes(package, registry, variables)
         payload = {
             "renderer": self.renderer_profile,
             "dry_run": True,
-            "template_id": os.environ.get("CREATOMATE_TEMPLATE_ID", "mock-template"),
+            "template_id": _template_id(registry["templates"][0], dry_run=True),
             "output_format": "mp4",
+            "render_audio_mode": os.environ.get("INSIGHT_FOOTBALL_RENDER_AUDIO_MODE", "silent"),
+            "variables": variables,
             "brand_motion_standard": BRAND_MOTION_STANDARD,
-            "modifications": [
-                {"scene_id": scene["scene_id"], "template_id": scene["template_id"], "duration": scene["duration_seconds"], "text": scene["caption_text"], "assets": scene["asset_refs"]}
-                for scene in package["timeline"]["scenes"]
-            ],
-            "captions": package["caption_sync"]["captions"],
-            "audio": package["required_audio"],
+            "template_registry_version": registry.get("version", "1.0"),
+            "scenes": scenes,
+            "modifications": _legacy_scene_modifications(package, variables),
+            "creatomate_modifications": _creatomate_modifications(variables),
+            "captions": _creatomate_captions(variables) if package.get("_editorial_context_applied") else package["caption_sync"]["captions"],
+            "audio": _creatomate_audio(os.environ.get("INSIGHT_FOOTBALL_RENDER_AUDIO_MODE", "silent")),
+            "required_global_variables": GLOBAL_CREATOMATE_VARIABLES,
+            "validation": _validate_creatomate_payload(package, variables, scenes),
         }
+        payload["validation"] = _validate_creatomate_payload(package, variables, scenes, payload=payload)
         write_json(OUTPUT / "creatomate_render_payload.json", payload)
         return payload
 
     def submit_render(self, payload: dict[str, Any], *, dry_run: bool = True) -> dict[str, Any]:
-        return {"success": True, "external_job_id": "creatomate-dry-run", "status": "completed" if dry_run else "queued", "dry_run": dry_run}
+        if payload.get("validation", {}).get("issues"):
+            return {"success": False, "status": "failed", "error": "; ".join(payload["validation"]["issues"]), "dry_run": dry_run}
+        if dry_run:
+            return {"success": True, "external_job_id": "creatomate-dry-run", "status": "completed", "dry_run": True, "creatomate_status": "dry_run_complete"}
+        api_key = os.environ.get("CREATOMATE_API_KEY")
+        if not api_key:
+            return {"success": False, "status": "failed", "error": "CREATOMATE_API_KEY is required in live mode.", "dry_run": False}
+        request = urllib.request.Request(
+            "https://api.creatomate.com/v2/renders",
+            data=json.dumps({"template_id": payload["template_id"], "modifications": payload["creatomate_modifications"]}).encode("utf-8"),
+            headers={"Content-Type": "application/json", "Authorization": f"Bearer {api_key}"},
+            method="POST",
+        )
+        last_error = ""
+        for _ in range(2):
+            try:
+                with urllib.request.urlopen(request, timeout=30) as response:
+                    body = json.loads(response.read().decode("utf-8"))
+                job_id = _creatomate_job_id(body)
+                return {"success": True, "external_job_id": job_id, "status": "queued", "dry_run": False, "creatomate_status": "submitted", "response": body}
+            except (urllib.error.URLError, TimeoutError, json.JSONDecodeError) as exc:
+                last_error = str(exc)
+                time.sleep(1)
+        return {"success": False, "status": "failed", "error": f"Creatomate render submission failed: {last_error}", "dry_run": False}
 
     def check_status(self, job_id: str) -> dict[str, Any]:
         return {"job_id": job_id, "status": "completed", "progress": 100}
 
     def download_artifacts(self, job_id: str, artifact_root: Path) -> dict[str, Any]:
-        return _write_placeholder_artifacts(artifact_root, self.renderer_profile, "Creatomate dry-run does not download media artifacts.")
+        return _write_placeholder_artifacts(artifact_root, self.renderer_profile, "Creatomate dry-run stores payload only; live downloads are handled after Creatomate completion.")
 
     def cancel_render(self, job_id: str) -> dict[str, Any]:
         return {"job_id": job_id, "status": "cancelled"}
@@ -231,6 +294,217 @@ def get_renderer(profile: str) -> RendererInterface:
     return renderers[profile]
 
 
+def _creatomate_registry() -> dict[str, Any]:
+    path = Path("editorial-brain/production/rendering-engine/creatomate-template-registry.json")
+    if not path.exists():
+        return {"version": "missing", "templates": []}
+    return load_json(path)
+
+
+def _missing_live_template_ids(registry: dict[str, Any]) -> list[str]:
+    missing = []
+    for item in registry.get("templates", []):
+        env_name = item.get("creatomate_template_id_env")
+        if env_name and not os.environ.get(env_name) and not os.environ.get("CREATOMATE_TEMPLATE_ID"):
+            missing.append(env_name)
+    return missing
+
+
+def _template_id(template: dict[str, Any], *, dry_run: bool) -> str:
+    env_name = template.get("creatomate_template_id_env", "")
+    configured = os.environ.get(env_name) or os.environ.get("CREATOMATE_TEMPLATE_ID")
+    if configured:
+        return configured
+    if dry_run:
+        return f"dry-run-{template.get('template_key', 'template')}"
+    return ""
+
+
+def _creatomate_variables(package: dict[str, Any]) -> dict[str, str]:
+    match = package.get("match", {})
+    home = str(match.get("home_team", "HOME"))
+    away = str(match.get("away_team", "AWAY"))
+    competition = str(package.get("competition") or match.get("competition", "Competition"))
+    title = f"{home} vs {away}"
+    return {
+        "brand_logo": str(package.get("brand_logo", "{{BRAND_LOGO}}")),
+        "corner_logo": str(package.get("corner_logo", "{{CORNER_LOGO}}")),
+        "home_team": home,
+        "away_team": away,
+        "competition": competition,
+        "home_badge": str(package.get("home_badge", f"{{{{{home.upper().replace(' ', '_')}_BADGE}}}}")),
+        "away_badge": str(package.get("away_badge", f"{{{{{away.upper().replace(' ', '_')}_BADGE}}}}")),
+        "competition_logo": str(package.get("competition_logo", "{{COMPETITION_LOGO}}")),
+        "match_title": title,
+        "kickoff_time": str(match.get("kickoff_time", "")),
+        "story_angle": str(package.get("story_angle", "")),
+        "central_question": str(package.get("central_question", "")),
+        "surprising_fact": str(package.get("surprising_fact", "")),
+        "main_insight": str(package.get("insight_summary", "")),
+        "primary_evidence": _first_text(package.get("primary_evidence", [])),
+        "secondary_evidence": _first_text(package.get("secondary_evidence", [])),
+        "viewer_takeaway": str(package.get("viewer_takeaway", "")),
+        "cta_text": str(package.get("cta_text") or package.get("central_question") or "Tell us what you think."),
+        "tagline": "KNOW MORE. SEE MORE. WIN MORE.",
+    }
+
+
+def _first_text(items: Any) -> str:
+    if isinstance(items, list) and items:
+        first = items[0]
+        if isinstance(first, dict):
+            return str(first.get("simple_translation") or first.get("claim") or first)
+        return str(first)
+    return ""
+
+
+def _creatomate_scenes(package: dict[str, Any], registry: dict[str, Any], variables: dict[str, str]) -> list[dict[str, Any]]:
+    scenes = []
+    for template in registry.get("templates", []):
+        key = template["template_key"]
+        scenes.append(
+            {
+                "template_key": key,
+                "template_id": _template_id(template, dry_run=True),
+                "duration_seconds": template["duration_seconds"],
+                "variables": {name: variables.get(name, "") for name in template.get("required_variables", []) + template.get("optional_variables", [])},
+                "animation_requirements": template.get("animation_requirements", []),
+                "visual_elements": _visual_elements_for_template(key),
+                "transition_sting_before": key not in {"opening_sting", "match_intro"},
+                "persistent_corner_logo": key not in {"opening_sting", "closing_sting"},
+                "logo_rules": {"preserve_aspect_ratio": True, "safe_margin_px": 48, "corner_opacity_percent": 88},
+            }
+        )
+    return scenes
+
+
+def _visual_elements_for_template(key: str) -> list[str]:
+    mapping = {
+        "opening_sting": ["brand_logo", "home_badge", "away_badge", "competition_logo", "stadium_background", "red_motion_streak"],
+        "match_intro": ["home_badge", "away_badge", "vs_text", "competition_logo", "red_accent_line", "background_zoom"],
+        "central_question": ["question_text", "home_badge", "away_badge", "particles", "corner_logo"],
+        "evidence_card": ["stat_card", "keyword", "supporting_icon", "background_motion", "corner_logo"],
+        "tactical_board": ["pitch_graphic", "animated_arrows", "player_markers", "camera_pan", "corner_logo"],
+        "team_comparison": ["comparison_cards", "home_badge", "away_badge", "animated_bars", "corner_logo"],
+        "insight_dashboard": ["dashboard_cards", "animated_bars", "highlight_card", "background_motion", "corner_logo"],
+        "cta_card": ["cta_text", "comment_icon", "corner_logo", "red_accent_line"],
+        "closing_sting": ["brand_logo", "tagline", "final_cta", "particles", "fade_to_black"],
+    }
+    return mapping.get(key, ["background", "text", "motion_element"])
+
+
+def _creatomate_modifications(variables: dict[str, str]) -> dict[str, str]:
+    return {f"{key}.text": value for key, value in variables.items()}
+
+
+def _legacy_scene_modifications(package: dict[str, Any], variables: dict[str, str]) -> list[dict[str, Any]]:
+    dynamic_text = [
+        variables["match_title"],
+        variables["central_question"],
+        variables["surprising_fact"],
+        variables["main_insight"],
+        variables["viewer_takeaway"],
+        variables["cta_text"],
+    ]
+    output = []
+    for index, scene in enumerate(package["timeline"]["scenes"]):
+        text = dynamic_text[index % len(dynamic_text)] if package.get("_editorial_context_applied") else scene.get("caption_text", "")
+        output.append(
+            {
+                "scene_id": scene.get("scene_id"),
+                "template_id": scene.get("template_id", "creatomate_dynamic_scene"),
+                "duration": scene.get("duration_seconds", 4),
+                "text": text,
+                "assets": scene.get("asset_refs", []),
+            }
+        )
+    return output
+
+
+def _creatomate_captions(variables: dict[str, str]) -> list[dict[str, Any]]:
+    lines = [
+        variables["match_title"],
+        variables["central_question"],
+        variables["main_insight"],
+        variables["viewer_takeaway"],
+        variables["cta_text"],
+    ]
+    return [{"caption_id": f"creatomate-caption-{index:02d}", "text": text[:90], "safe_area_status": "compliant"} for index, text in enumerate(lines, start=1) if text]
+
+
+def _creatomate_audio(mode: str) -> dict[str, Any]:
+    return {
+        "mode": mode,
+        "status": "silent_placeholder" if mode == "silent" else "awaiting_voice_asset",
+        "capcut_ready": mode == "silent",
+        "notes": "Audio mode: silent, ready for CapCut voice/audio overlay" if mode == "silent" else "Audio asset required before live publishing.",
+    }
+
+
+def _validate_creatomate_payload(package: dict[str, Any], variables: dict[str, str], scenes: list[dict[str, Any]], payload: dict[str, Any] | None = None) -> dict[str, Any]:
+    issues = []
+    missing = [name for name in GLOBAL_CREATOMATE_VARIABLES if not str(variables.get(name, "")).strip()]
+    if missing:
+        issues.append("Missing Creatomate variables: " + ", ".join(missing))
+    if not any(scene["template_key"] == "opening_sting" for scene in scenes):
+        issues.append("opening_sting template missing")
+    if not any(scene["template_key"] == "closing_sting" for scene in scenes):
+        issues.append("closing_sting template missing")
+    if any(len(scene.get("visual_elements", [])) < 3 for scene in scenes):
+        issues.append("Every Creatomate scene must include at least three visual elements.")
+    if any(not scene.get("animation_requirements") for scene in scenes):
+        issues.append("Every Creatomate scene must include animation requirements.")
+    selected = f"{variables.get('home_team')} {variables.get('away_team')}"
+    text = json.dumps(payload if payload is not None else {"variables": variables, "scenes": scenes}, ensure_ascii=True)
+    leaks = [term for term in SAMPLE_TERMS if term in text and term not in selected]
+    if leaks:
+        issues.append("Sample data leaked into Creatomate payload: " + ", ".join(sorted(set(leaks))))
+    return {"passed": not issues, "issues": sorted(set(issues))}
+
+
+def _creatomate_job_id(body: Any) -> str:
+    if isinstance(body, list) and body and isinstance(body[0], dict):
+        return str(body[0].get("id") or body[0].get("render_id") or "creatomate-render")
+    if isinstance(body, dict):
+        return str(body.get("id") or body.get("render_id") or "creatomate-render")
+    return "creatomate-render"
+
+
+def _current_editorial_package(root: Path) -> dict[str, Any]:
+    daily_path = root / OUTPUT / "daily-run-report.json"
+    if daily_path.exists():
+        daily = load_json(daily_path)
+        for step in daily.get("steps", []):
+            if step.get("name") != "editorial_orchestrator":
+                continue
+            try:
+                stdout = json.loads(step.get("stdout", ""))
+            except json.JSONDecodeError:
+                continue
+            package_path = stdout.get("package_path")
+            if package_path:
+                package = load_json(Path(package_path))
+                if package:
+                    return package
+    candidates = sorted((root / OUTPUT).glob("editorial-package-*.json"), key=lambda p: p.stat().st_mtime, reverse=True)
+    return load_json(candidates[0]) if candidates else {}
+
+
+def _apply_editorial_context(package: dict[str, Any], editorial: dict[str, Any]) -> dict[str, Any]:
+    if not editorial:
+        return package
+    updated = dict(package)
+    metadata = editorial.get("metadata", {})
+    updated["production_id"] = metadata.get("production_id", updated.get("production_id"))
+    updated["match"] = editorial.get("match", updated.get("match"))
+    updated["competition"] = editorial.get("competition", updated.get("competition"))
+    for field in ["story_angle", "central_question", "surprising_fact", "insight_summary", "primary_evidence", "secondary_evidence", "viewer_takeaway"]:
+        if field in editorial:
+            updated[field] = editorial[field]
+    updated["_editorial_context_applied"] = True
+    return updated
+
+
 class RenderJobBuilder:
     def build(self, package: dict[str, Any], renderer: RendererInterface, payload: dict[str, Any], *, dry_run: bool = True) -> dict[str, Any]:
         production_id = package["production_id"]
@@ -296,6 +570,9 @@ def render_validator(package: dict[str, Any], job: dict[str, Any], status: dict[
         issues.append("renderer-ready package failed validation")
     brand_report = _brand_motion_checks(job)
     issues.extend(brand_report["issues"])
+    if job.get("renderer_profile") == "creatomate":
+        creatomate_validation = job.get("render_payload", {}).get("validation", {})
+        issues.extend(creatomate_validation.get("issues", []))
     report = {"production_id": package["production_id"], "component_id": "IF-RE08", "component_name": "Render Validator", "timestamp": now(), "checks": {"video_exists_or_placeholder": final_path.exists() and (not placeholder or allow_placeholder), "duration": package["timeline"]["total_duration_seconds"] <= 60, "aspect_ratio": package["timeline"].get("aspect_ratio") == "9:16", "resolution": package["timeline"].get("resolution") == "1080x1920", "fps": package["timeline"].get("fps") == 30, "audio_documented": bool(package.get("required_audio")), "captions_documented": bool(package.get("caption_sync", {}).get("captions")), "thumbnail_exists": thumb_path.exists(), "job_terminal": status["status"] in {"completed", "failed"}, "legal": package.get("render_readiness_status") != "failed_validation", "brand_motion_standard": brand_report["passed"]}, "brand_motion_report": brand_report, "issues": issues, "warnings": warnings, "placeholder_mode": placeholder, "approval_status": "approved" if not issues else "blocked"}
     write_json(OUTPUT / "render_validation_report.json", report)
     return report
@@ -303,6 +580,7 @@ def render_validator(package: dict[str, Any], job: dict[str, Any], status: dict[
 
 def run_all(root: Path = Path("."), renderer_profile: str = "placeholder", *, dry_run: bool = True) -> dict[str, Any]:
     package = load_json(root / OUTPUT / "renderer-ready-package.json")
+    package = _apply_editorial_context(package, _current_editorial_package(root))
     renderer = get_renderer(renderer_profile)
     validation = renderer.validate_package(package, dry_run=dry_run)
     payload = renderer.build_render_payload(package)
@@ -310,12 +588,12 @@ def run_all(root: Path = Path("."), renderer_profile: str = "placeholder", *, dr
     job = RenderJobBuilder().build(package, renderer, payload, dry_run=dry_run)
     queue = RenderQueueManager()
     queue.queue(job)
-    submit = renderer.submit_render(payload, dry_run=dry_run)
+    submit = renderer.submit_render(payload, dry_run=dry_run) if validation.get("success", True) else {"success": False, "status": "failed", "error": validation.get("error", "renderer validation failed"), "dry_run": dry_run}
     status_name = "completed" if submit.get("success") else "failed"
     artifacts = artifact_manager(package, job, renderer, payload, root)
     status = queue.update(job, status_name, errors=[] if submit.get("success") else [submit.get("error", "render failed")], artifact_refs=artifacts)
     report = render_validator(package, job, status, artifacts)
-    complete = {"production_id": package["production_id"], "match": package["match"], "competition": package["competition"], "source_renderer_ready_package": package["production_id"], "renderer_profile": renderer_profile, "brand_motion_standard": BRAND_MOTION_STANDARD, "render_job": job, "render_status": status, "render_artifacts": artifacts, "render_validation_report": report, "final_video_path": artifacts["final_video_path"], "thumbnail_path": artifacts["thumbnail_path"], "duration_seconds": package["timeline"]["total_duration_seconds"], "file_size": artifacts["file_sizes"].get(artifacts["final_video_path"], 0), "checksums": artifacts["checksums"], "warnings": report["warnings"] + validation.get("warnings", []), "human_review_flags": ["Review placeholder render before publishing."] if report["placeholder_mode"] else [], "approval_status": report["approval_status"], "next_component": "Final Quality Control"}
+    complete = {"production_id": package["production_id"], "match": package["match"], "competition": package["competition"], "source_renderer_ready_package": package["production_id"], "renderer_profile": renderer_profile, "render_audio_mode": os.environ.get("INSIGHT_FOOTBALL_RENDER_AUDIO_MODE", "silent"), "creatomate_status": submit.get("creatomate_status", status["status"]), "brand_motion_standard": BRAND_MOTION_STANDARD, "render_job": job, "render_status": status, "render_artifacts": artifacts, "render_validation_report": report, "final_video_path": artifacts["final_video_path"], "thumbnail_path": artifacts["thumbnail_path"], "duration_seconds": package["timeline"]["total_duration_seconds"], "file_size": artifacts["file_sizes"].get(artifacts["final_video_path"], 0), "checksums": artifacts["checksums"], "warnings": sorted(set(report["warnings"] + validation.get("warnings", []))), "human_review_flags": ["Review placeholder render before publishing."] if report["placeholder_mode"] else [], "approval_status": report["approval_status"], "next_component": "Final Quality Control"}
     write_json(root / OUTPUT / "render-complete-package.json", complete)
     StructuredLogger(root / LOGS, f"rendering-engine-{package['production_id']}").log({"event": "render_complete_package_written", "renderer": renderer_profile, "approval_status": complete["approval_status"]})
     return {"render_job": job, "render_status": status, "render_artifacts": artifacts, "render_validation_report": report, "render_complete_package": complete}

@@ -1,0 +1,105 @@
+{
+  "version": "1.0",
+  "templates": [
+    {
+      "template_key": "opening_sting",
+      "creatomate_template_id_env": "CREATOMATE_TEMPLATE_OPENING_STING",
+      "duration_seconds": 1.5,
+      "required_variables": ["brand_logo", "home_team", "away_team", "home_badge", "away_badge", "competition_logo", "match_title"],
+      "optional_variables": ["tagline"],
+      "animation_requirements": ["logo reveal", "scale-in", "light sweep", "stadium light movement", "short sound cue"],
+      "safe_area_rules": ["center logo safe", "badges visible", "no captions over logo"],
+      "fallback_behavior": "Use global Creatomate template ID in dry-run only."
+    },
+    {
+      "template_key": "match_intro",
+      "creatomate_template_id_env": "CREATOMATE_TEMPLATE_MATCH_INTRO",
+      "duration_seconds": 4.5,
+      "required_variables": ["home_team", "away_team", "competition", "home_badge", "away_badge", "competition_logo", "match_title", "kickoff_time"],
+      "optional_variables": ["story_angle"],
+      "animation_requirements": ["home badge slide left", "away badge slide right", "VS pop", "competition logo fade", "background slow zoom", "red accent wipe"],
+      "safe_area_rules": ["badges not cropped", "title-safe text"],
+      "fallback_behavior": "Use match_intro fallback composition."
+    },
+    {
+      "template_key": "surprising_fact",
+      "creatomate_template_id_env": "CREATOMATE_TEMPLATE_EVIDENCE_CARD",
+      "duration_seconds": 4.5,
+      "required_variables": ["surprising_fact", "home_team", "away_team", "corner_logo"],
+      "optional_variables": ["primary_evidence"],
+      "animation_requirements": ["fact text reveal", "keyword animate", "supporting icon appears", "background motion"],
+      "safe_area_rules": ["captions below fact card"],
+      "fallback_behavior": "Use evidence_card template."
+    },
+    {
+      "template_key": "central_question",
+      "creatomate_template_id_env": "CREATOMATE_TEMPLATE_CENTRAL_QUESTION",
+      "duration_seconds": 4.5,
+      "required_variables": ["central_question", "home_badge", "away_badge", "corner_logo"],
+      "optional_variables": ["match_title"],
+      "animation_requirements": ["question text reveal", "badges remain visible", "camera push-in", "subtle particles"],
+      "safe_area_rules": ["question within title safe"],
+      "fallback_behavior": "Use match_intro template."
+    },
+    {
+      "template_key": "evidence_card",
+      "creatomate_template_id_env": "CREATOMATE_TEMPLATE_EVIDENCE_CARD",
+      "duration_seconds": 5.0,
+      "required_variables": ["primary_evidence", "secondary_evidence", "corner_logo"],
+      "optional_variables": ["home_team", "away_team"],
+      "animation_requirements": ["stat card slides in", "number animates", "icon appears", "background motion"],
+      "safe_area_rules": ["card avoids subtitles"],
+      "fallback_behavior": "Use central_question template."
+    },
+    {
+      "template_key": "tactical_board",
+      "creatomate_template_id_env": "CREATOMATE_TEMPLATE_TACTICAL_BOARD",
+      "duration_seconds": 6.0,
+      "required_variables": ["main_insight", "home_team", "away_team", "corner_logo"],
+      "optional_variables": ["key_advantage"],
+      "animation_requirements": ["pitch graphic appears", "arrows animate", "player markers move", "camera pan"],
+      "safe_area_rules": ["pitch clear of watermark"],
+      "fallback_behavior": "Use dashboard template."
+    },
+    {
+      "template_key": "team_comparison",
+      "creatomate_template_id_env": "CREATOMATE_TEMPLATE_TEAM_COMPARISON",
+      "duration_seconds": 6.0,
+      "required_variables": ["home_team", "away_team", "home_badge", "away_badge", "main_insight"],
+      "optional_variables": ["primary_evidence", "secondary_evidence"],
+      "animation_requirements": ["comparison cards slide", "bars animate", "red accent highlight"],
+      "safe_area_rules": ["badges preserve aspect ratio"],
+      "fallback_behavior": "Use evidence_card template."
+    },
+    {
+      "template_key": "insight_dashboard",
+      "creatomate_template_id_env": "CREATOMATE_TEMPLATE_DASHBOARD",
+      "duration_seconds": 9.0,
+      "required_variables": ["main_insight", "viewer_takeaway", "corner_logo"],
+      "optional_variables": ["key_advantage"],
+      "animation_requirements": ["cards reveal one by one", "bars animate", "key advantage highlighted", "no internal labels"],
+      "safe_area_rules": ["dashboard not covered by logo"],
+      "fallback_behavior": "Use team_comparison template."
+    },
+    {
+      "template_key": "cta_card",
+      "creatomate_template_id_env": "CREATOMATE_TEMPLATE_CTA",
+      "duration_seconds": 3.5,
+      "required_variables": ["cta_text", "corner_logo", "match_title"],
+      "optional_variables": ["central_question"],
+      "animation_requirements": ["question appears", "comment icon pulses", "logo visible"],
+      "safe_area_rules": ["CTA text below safe title"],
+      "fallback_behavior": "Use closing_sting template."
+    },
+    {
+      "template_key": "closing_sting",
+      "creatomate_template_id_env": "CREATOMATE_TEMPLATE_CLOSING_STING",
+      "duration_seconds": 4.0,
+      "required_variables": ["brand_logo", "tagline"],
+      "optional_variables": ["cta_text"],
+      "animation_requirements": ["logo center animation", "tagline appears", "final CTA appears", "fade to black"],
+      "safe_area_rules": ["center logo safe", "tagline readable"],
+      "fallback_behavior": "Use global Creatomate template ID in dry-run only."
+    }
+  ]
+}

@@ -69,7 +69,10 @@ class RuleBasedMatchSelectorClient:
         if not fixtures:
             return json.dumps({"error": "No fixtures available"})
 
+        editor_selection = self.daily_input.get("editor_selection")
         ranked = sorted(fixtures, key=self._score_fixture, reverse=True)
+        if isinstance(editor_selection, dict):
+            ranked = sorted(ranked, key=lambda item: 0 if item.get("selection_source") == "human_editor" else 1)
         selected = ranked[0]
         score = self._score_fixture(selected)
         runner_up_matches = [
@@ -99,6 +102,7 @@ class RuleBasedMatchSelectorClient:
                 "country": selected.get("country", ""),
             },
             "selected_reason": self._selection_reason(selected),
+            "selection_source": selected.get("selection_source", "automatic_recommendation"),
             "selection_score": int(round(score)),
             "audience_interest_score": int(selected.get("audience_interest", 0)),
             "importance_score": int(selected.get("importance", 0)),

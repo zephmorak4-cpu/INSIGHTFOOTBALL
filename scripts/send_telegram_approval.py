@@ -57,6 +57,7 @@ def build_message(run_url: str) -> str:
     readiness = load_json(OUTPUT / "publish_readiness_report.json")
     publishing = load_json(OUTPUT / "publishing_report.json")
     package = approval_package()
+    render = load_json(OUTPUT / "render-complete-package.json")
 
     production_id = package_production_id(package) or str(readiness.get("production_id") or "unknown-production")
     match = package.get("match", {})
@@ -65,9 +66,15 @@ def build_message(run_url: str) -> str:
     editorial_warnings = package.get("warnings", [])
     if isinstance(editorial_warnings, list):
         warnings = list(editorial_warnings) + list(warnings)
+    warnings = _clean_warnings(warnings, match)
     warning_text = "\n".join(f"- {warning}" for warning in warnings[:6]) if warnings else "- None"
     story_angle = package.get("story_angle") or package.get("insight_summary") or "See package for editorial angle."
     central_question = package.get("central_question", "See package for central question.")
+    selected_by = "Human editor" if _selected_by_editor(package) else "Automatic recommendation"
+    audio_mode = render.get("render_audio_mode", "silent")
+    render_mode = render.get("renderer_profile", "unknown")
+    creatomate_status = render.get("creatomate_status", "not_used")
+    video_status = "attached" if find_approval_video() else str(render.get("render_status", {}).get("status", "pending"))
 
     return "\n".join(
         [
@@ -75,22 +82,55 @@ def build_message(run_url: str) -> str:
             "",
             f"Production: {production_id}",
             f"Match: {match_name}",
+            f"Competition: {match.get('competition') or package.get('competition', 'unknown')}",
+            f"Selected by: {selected_by}",
+            f"Audio mode: {audio_mode}, ready for CapCut voice/audio overlay" if audio_mode == "silent" else f"Audio mode: {audio_mode}",
+            f"Render mode: {render_mode}",
+            f"Readiness: {readiness.get('final_status', 'unknown')}",
+            f"Score: {readiness.get('overall_score', 'unknown')}",
+            "",
             f"Story: {story_angle}",
             f"Question: {central_question}",
-            f"Daily run: {'passed' if daily.get('success') else 'failed'}",
-            f"Publish readiness: {readiness.get('final_status', 'unknown')}",
-            f"Readiness score: {readiness.get('overall_score', 'unknown')}",
-            f"Publishing mode: {'dry-run' if publishing.get('dry_run', True) else 'live'}",
+            f"Video status: {video_status}",
+            f"Creatomate status: {creatomate_status}",
             "",
             "Warnings:",
             warning_text,
             "",
             "Approval gate:",
-            "Review the GitHub Actions artifacts and approve manually before any production publishing workflow is run.",
+            "Review video, approve, then publish.",
             "",
             f"Run: {run_url}" if run_url else "Run: unavailable",
         ]
     )
+
+
+def _selected_by_editor(package: dict[str, object]) -> bool:
+    agent_outputs = package.get("agent_outputs", {})
+    if isinstance(agent_outputs, dict):
+        selection = agent_outputs.get("match_selector", {})
+        if isinstance(selection, dict) and selection.get("selection_source") == "human_editor":
+            return True
+    locked = package.get("locked_fields", {})
+    return isinstance(locked, dict) and locked.get("selection_source") == "human_editor"
+
+
+def _clean_warnings(warnings: object, match: dict[str, object]) -> list[str]:
+    if not isinstance(warnings, list):
+        return []
+    selected_text = f"{match.get('home_team', '')} {match.get('away_team', '')}"
+    cleaned = []
+    for warning in warnings:
+        text = str(warning)
+        if not text.strip():
+            continue
+        if "sample claim" in text.lower():
+            continue
+        if any(team in text for team in ["Liverpool", "Arsenal"]) and not any(team in selected_text for team in ["Liverpool", "Arsenal"]):
+            continue
+        if text not in cleaned:
+            cleaned.append(text)
+    return cleaned
 
 
 def compact_caption(run_url: str) -> str:

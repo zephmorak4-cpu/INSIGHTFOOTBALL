@@ -17,7 +17,9 @@ services:
       - key: INSIGHT_FOOTBALL_REQUIRE_HUMAN_APPROVAL
         value: "true"
       - key: INSIGHT_FOOTBALL_RENDERER_PROFILE
-        value: ffmpeg
+        value: creatomate
+      - key: INSIGHT_FOOTBALL_RENDER_AUDIO_MODE
+        value: silent
       - key: DAILY_INPUT_PATH
         value: editorial-brain/examples/liverpool-arsenal-daily-input.json
       - key: INSIGHT_FOOTBALL_RUN_TESTS_ON_RENDER
@@ -45,4 +47,24 @@ services:
       - key: CREATOMATE_API_KEY
         sync: false
       - key: CREATOMATE_TEMPLATE_ID
+        sync: false
+      - key: CREATOMATE_TEMPLATE_OPENING_STING
+        sync: false
+      - key: CREATOMATE_TEMPLATE_MATCH_INTRO
+        sync: false
+      - key: CREATOMATE_TEMPLATE_CENTRAL_QUESTION
+        sync: false
+      - key: CREATOMATE_TEMPLATE_EVIDENCE_CARD
+        sync: false
+      - key: CREATOMATE_TEMPLATE_TACTICAL_BOARD
+        sync: false
+      - key: CREATOMATE_TEMPLATE_TEAM_COMPARISON
+        sync: false
+      - key: CREATOMATE_TEMPLATE_DASHBOARD
+        sync: false
+      - key: CREATOMATE_TEMPLATE_CTA
+        sync: false
+      - key: CREATOMATE_TEMPLATE_CLOSING_STING
+        sync: false
+      - key: EDITOR_SELECTION_PATH
         sync: false

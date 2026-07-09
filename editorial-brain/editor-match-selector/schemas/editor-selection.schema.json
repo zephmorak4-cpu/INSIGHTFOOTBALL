@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "InsightFootballEditorSelection",
+  "type": "object",
+  "required": [
+    "production_id",
+    "production_date",
+    "selected_match",
+    "home_team",
+    "away_team",
+    "competition",
+    "kickoff_time",
+    "match_priority",
+    "editor_notes"
+  ],
+  "properties": {
+    "production_id": { "type": "string", "minLength": 1 },
+    "production_date": { "type": "string", "minLength": 1 },
+    "selected_match": { "type": "string", "minLength": 1 },
+    "home_team": { "type": "string", "minLength": 1 },
+    "away_team": { "type": "string", "minLength": 1 },
+    "competition": { "type": "string", "minLength": 1 },
+    "kickoff_time": { "type": "string", "minLength": 1 },
+    "match_priority": { "type": "string", "minLength": 1 },
+    "story_angle_optional": { "type": "string" },
+    "editor_notes": { "type": "string" }
+  }
+}

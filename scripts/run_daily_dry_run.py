@@ -42,6 +42,23 @@ def load_json(path: Path) -> dict[str, object]:
     return json.loads(path.read_text(encoding="utf-8"))
 
 
+def apply_editor_selection_if_present(daily_input_path: str) -> str:
+    editor_path = os.environ.get("EDITOR_SELECTION_PATH")
+    if not editor_path:
+        return daily_input_path
+    module_path = ROOT / "editorial-brain" / "editor-match-selector" / "src"
+    if str(module_path) not in sys.path:
+        sys.path.insert(0, str(module_path))
+    from editor_match_selector import apply_editor_selection, load_editor_selection
+
+    daily_input = load_json(ROOT / daily_input_path)
+    updated = apply_editor_selection(daily_input, load_editor_selection(Path(editor_path)))
+    output = OUTPUT / "editor-selected-daily-input.json"
+    OUTPUT.mkdir(parents=True, exist_ok=True)
+    output.write_text(json.dumps(updated, indent=2, ensure_ascii=True) + "\n", encoding="utf-8")
+    return str(output.relative_to(ROOT))
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description="Run INSIGHT FOOTBALL daily dry-run production flow.")
     parser.add_argument(
@@ -50,6 +67,7 @@ def main() -> int:
         help="Daily Input JSON used by the editorial orchestrator.",
     )
     args = parser.parse_args()
+    args.daily_input = apply_editor_selection_if_present(args.daily_input)
     if os.environ.get("INSIGHT_FOOTBALL_ENV", "").lower() == "production":
         normalized_input = args.daily_input.replace("\\", "/")
         if "examples/" in normalized_input and os.environ.get("INSIGHT_FOOTBALL_ALLOW_SAMPLE_DAILY_INPUT", "").lower() != "true":
