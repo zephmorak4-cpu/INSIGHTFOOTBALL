@@ -44,6 +44,24 @@ class UrgentProductionEditorGuardTests(unittest.TestCase):
         self.assertEqual(selection["selected_by"], "human_editor")
         self.assertEqual(selection["match"], "France vs Morocco")
 
+    def test_live_builder_uses_editor_selection_without_fixture_api(self):
+        import scripts.live_daily_input_builder as builder
+
+        with tempfile.TemporaryDirectory() as tmp:
+            output = Path(tmp) / "live-daily-input.json"
+            env = {
+                "INSIGHT_FOOTBALL_ENV": "production",
+                "EDITOR_SELECTION_PATH": str(ROOT / "examples" / "editor-selection-france-morocco.json"),
+                "APP_FOOTBALL_API_KEY": "",
+                "API_FOOTBALL_API_KEY": "",
+            }
+            with patch.dict(os.environ, env), patch.object(builder, "fetch_fixtures", side_effect=AssertionError("fixture API must not be called")):
+                payload = builder.build_live_daily_input(target_date="2026-07-09", output_path=output)
+
+        self.assertEqual(payload["production_metadata"]["match"], "France vs Morocco")
+        self.assertEqual(payload["production_metadata"]["selected_by"], "human_editor")
+        self.assertEqual(payload["fixtures"][0]["selection_source"], "human_editor")
+
     def test_telegram_message_not_sent_without_human_editor_selection(self):
         import scripts.send_telegram_approval as telegram
 

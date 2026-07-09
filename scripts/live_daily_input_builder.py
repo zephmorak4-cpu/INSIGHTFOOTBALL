@@ -64,6 +64,13 @@ def build_live_daily_input(*, target_date: str | None = None, output_path: Path 
     except RuntimeError as exc:
         raise RuntimeError(json.dumps(structured_error(exc)["error"])) from exc
     production_date = target_date or datetime.now(ZoneInfo("Africa/Lagos")).date().isoformat()
+    editor_selection_path = os.environ.get("EDITOR_SELECTION_PATH")
+    if editor_selection_path:
+        payload = apply_editor_selection_file(base_editor_payload(production_date), Path(editor_selection_path))
+        output_path.parent.mkdir(parents=True, exist_ok=True)
+        output_path.write_text(json.dumps(payload, indent=2, ensure_ascii=True) + "\n", encoding="utf-8")
+        return payload
+
     raw = fetch_fixtures(production_date)
     fixtures = normalize_fixtures(raw, production_date)
     if not fixtures:
@@ -88,12 +95,32 @@ def build_live_daily_input(*, target_date: str | None = None, output_path: Path 
         "priority_competitions": list(HIGH_IMPORTANCE_COMPETITIONS),
         "data_availability_notes": {"source": "configured football API", "sample_matches_allowed": False},
     }
-    editor_selection_path = os.environ.get("EDITOR_SELECTION_PATH")
-    if editor_selection_path:
-        payload = apply_editor_selection_file(payload, Path(editor_selection_path))
     output_path.parent.mkdir(parents=True, exist_ok=True)
     output_path.write_text(json.dumps(payload, indent=2, ensure_ascii=True) + "\n", encoding="utf-8")
     return payload
+
+
+def base_editor_payload(production_date: str) -> dict[str, Any]:
+    return {
+        "production_metadata": {
+            "date": production_date,
+            "production_id": f"if-{production_date}-editor-selected",
+            "competition": "editor-selected",
+            "match": "editor-selected",
+            "kickoff_time": "editor-selected",
+            "country": "editor-selected",
+            "video_platform": "Telegram Approval",
+            "language": "English",
+            "producer": "INSIGHT FOOTBALL",
+            "status": "production",
+            "input_source": "editor_selection",
+        },
+        "fixtures": [],
+        "match_context": {},
+        "audience_notes": {"target": "general football fans", "region": "global"},
+        "priority_competitions": list(HIGH_IMPORTANCE_COMPETITIONS),
+        "data_availability_notes": {"source": "editor selection", "sample_matches_allowed": False},
+    }
 
 
 def apply_editor_selection_file(payload: dict[str, Any], path: Path) -> dict[str, Any]:
