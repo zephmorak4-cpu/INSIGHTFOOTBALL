@@ -85,6 +85,16 @@ def main() -> int:
             return 1
 
     python = sys.executable
+    render_command = [
+        python,
+        "-m",
+        "render_validator.cli",
+        "--renderer-profile",
+        os.environ.get("INSIGHT_FOOTBALL_RENDERER_PROFILE", "placeholder"),
+    ]
+    if os.environ.get("INSIGHT_FOOTBALL_DRY_RUN", "true").lower() == "false":
+        render_command.append("--live")
+
     step_plan = [
         (
             "editorial_orchestrator",
@@ -101,7 +111,7 @@ def main() -> int:
         ),
         (
             "rendering_engine",
-            [python, "-m", "render_validator.cli", "--renderer-profile", os.environ.get("INSIGHT_FOOTBALL_RENDERER_PROFILE", "placeholder")],
+            render_command,
             [
                 ROOT / "editorial-brain" / "production" / "rendering-engine" / "shared",
                 ROOT / "editorial-brain" / "production" / "rendering-engine" / "render-validator" / "src",
