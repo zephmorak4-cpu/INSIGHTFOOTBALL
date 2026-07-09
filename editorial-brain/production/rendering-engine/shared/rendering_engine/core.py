@@ -17,6 +17,8 @@ OUTPUT = Path("editorial-brain/output")
 LOGS = Path("editorial-brain/logs")
 RENDERS = Path("renders")
 SUPPORTED_RENDERERS = ["creatomate", "remotion", "ffmpeg", "placeholder"]
+BASE_RENDER_SIZE = (1080, 1920)
+DEFAULT_OUTPUT_SIZE = (720, 1280)
 BRAND_MOTION_STANDARD = {
     "standard_id": "IF-BMS-1.0",
     "version": "1.0",
@@ -193,7 +195,7 @@ class FFmpegAdapter(PlaceholderAdapter):
         payload = {
             "renderer": self.renderer_profile,
             "ffmpeg_path": _ffmpeg_path(),
-            "output_resolution": "1080x1920",
+            "output_resolution": f"{DEFAULT_OUTPUT_SIZE[0]}x{DEFAULT_OUTPUT_SIZE[1]}",
             "fps": 30,
             "output_format": "mp4",
             "brand_motion_standard": BRAND_MOTION_STANDARD,
@@ -395,7 +397,7 @@ def _render_ffmpeg_artifacts(package: dict[str, Any], payload: dict[str, Any], a
         "created_at": now(),
         "production_id": package["production_id"],
         "duration_seconds": round(sum(entry["duration"] for entry in frame_entries), 2),
-        "resolution": "1080x1920",
+        "resolution": f"{DEFAULT_OUTPUT_SIZE[0]}x{DEFAULT_OUTPUT_SIZE[1]}",
         "fps": payload["fps"],
         "brand_motion_standard": payload["brand_motion_standard"]["standard_id"],
         "segments": payload["segments"],
@@ -405,7 +407,7 @@ def _render_ffmpeg_artifacts(package: dict[str, Any], payload: dict[str, Any], a
 
 
 def _draw_segment_frame(package: dict[str, Any], segment: dict[str, Any], path: Path) -> None:
-    width, height = 1080, 1920
+    width, height = BASE_RENDER_SIZE
     colors = BRAND_MOTION_STANDARD["colors"]
     image = Image.new("RGB", (width, height), colors["deep_navy"])
     draw = ImageDraw.Draw(image)
@@ -425,6 +427,9 @@ def _draw_segment_frame(package: dict[str, Any], segment: dict[str, Any], path: 
         _draw_corner_logo(draw)
         _draw_brand_panel(draw, segment, package)
         _draw_lower_third(draw, segment)
+    output_width, output_height = DEFAULT_OUTPUT_SIZE
+    if (width, height) != (output_width, output_height):
+        image = image.resize((output_width, output_height), Image.Resampling.LANCZOS)
     image.save(path)
 
 
@@ -560,9 +565,12 @@ def _write_concat_file(path: Path, frame_entries: list[dict[str, Any]]) -> None:
 
 
 def _run_ffmpeg_encode(ffmpeg_path: str, concat_path: Path, video_path: Path) -> None:
+    output_width, output_height = DEFAULT_OUTPUT_SIZE
     command = [
         ffmpeg_path,
         "-y",
+        "-threads",
+        "1",
         "-f",
         "concat",
         "-safe",
@@ -570,7 +578,13 @@ def _run_ffmpeg_encode(ffmpeg_path: str, concat_path: Path, video_path: Path) ->
         "-i",
         str(concat_path),
         "-vf",
-        "scale=1080:1920,format=yuv420p",
+        f"scale={output_width}:{output_height},format=yuv420p",
+        "-c:v",
+        "libx264",
+        "-preset",
+        "ultrafast",
+        "-crf",
+        "28",
         "-r",
         "30",
         "-movflags",
