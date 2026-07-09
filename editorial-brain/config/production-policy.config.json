@@ -1,0 +1,5 @@
+{
+  "production_requires_editor_selection": true,
+  "allow_automatic_match_selection_in_production": false,
+  "allow_match_selector_fallback": false
+}

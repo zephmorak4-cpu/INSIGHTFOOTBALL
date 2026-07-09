@@ -1,11 +1,14 @@
 from __future__ import annotations
 
 import os
+import json
 import subprocess
 import sys
 from pathlib import Path
 from datetime import datetime
 from zoneinfo import ZoneInfo
+
+from production_editor_guard import guard_production_editor_selection, structured_error, write_blocked_report
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -21,6 +24,14 @@ def main() -> int:
     run_tests = os.environ.get("INSIGHT_FOOTBALL_RUN_TESTS_ON_RENDER", "true").lower() == "true"
     production = os.environ.get("INSIGHT_FOOTBALL_ENV", "").lower() == "production"
     sample_allowed = os.environ.get("INSIGHT_FOOTBALL_ALLOW_SAMPLE_DAILY_INPUT", "").lower() == "true"
+
+    try:
+        guard_production_editor_selection()
+    except RuntimeError as exc:
+        error = structured_error(exc)
+        write_blocked_report(error)
+        print(json.dumps(error, indent=2))
+        return 1
 
     if run_tests:
         tests_status = run([sys.executable, "scripts/run_tests.py"])

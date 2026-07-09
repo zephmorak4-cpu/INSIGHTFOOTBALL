@@ -8,6 +8,8 @@ import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
+from production_editor_guard import guard_production_editor_selection, structured_error, write_blocked_report
+
 
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "editorial-brain" / "output"
@@ -67,6 +69,14 @@ def main() -> int:
         help="Daily Input JSON used by the editorial orchestrator.",
     )
     args = parser.parse_args()
+    if os.environ.get("INSIGHT_FOOTBALL_ENV", "").lower() == "production":
+        try:
+            guard_production_editor_selection()
+        except RuntimeError as exc:
+            error = structured_error(exc)
+            write_blocked_report(error)
+            print(json.dumps(error, indent=2))
+            return 1
     args.daily_input = apply_editor_selection_if_present(args.daily_input)
     if os.environ.get("INSIGHT_FOOTBALL_ENV", "").lower() == "production":
         normalized_input = args.daily_input.replace("\\", "/")
@@ -75,8 +85,8 @@ def main() -> int:
             return 1
 
     python = sys.executable
-    steps = [
-        run_step(
+    step_plan = [
+        (
             "editorial_orchestrator",
             [
                 python,
@@ -89,7 +99,7 @@ def main() -> int:
             ],
             [ROOT / "editorial-brain" / "editorial-orchestrator" / "src"],
         ),
-        run_step(
+        (
             "rendering_engine",
             [python, "-m", "render_validator.cli", "--renderer-profile", os.environ.get("INSIGHT_FOOTBALL_RENDERER_PROFILE", "placeholder")],
             [
@@ -97,7 +107,7 @@ def main() -> int:
                 ROOT / "editorial-brain" / "production" / "rendering-engine" / "render-validator" / "src",
             ],
         ),
-        run_step(
+        (
             "publish_readiness_gate",
             [python, "-m", "publish_readiness_gate.cli"],
             [
@@ -105,7 +115,7 @@ def main() -> int:
                 ROOT / "editorial-brain" / "production" / "final-quality-control" / "publish-readiness-gate" / "src",
             ],
         ),
-        run_step(
+        (
             "publishing_dry_run",
             [python, "-m", "publishing_report_generator.cli"],
             [
@@ -113,7 +123,7 @@ def main() -> int:
                 ROOT / "distribution" / "publishing-engine" / "publishing-report-generator" / "src",
             ],
         ),
-        run_step(
+        (
             "analytics_learning",
             [python, "-m", "daily_performance_reporter.cli"],
             [
@@ -122,6 +132,12 @@ def main() -> int:
             ],
         ),
     ]
+    steps = []
+    for name, command, pythonpath in step_plan:
+        step = run_step(name, command, pythonpath)
+        steps.append(step)
+        if not step["success"]:
+            break
 
     success = all(step["success"] for step in steps)
     publish_readiness = load_json(OUTPUT / "publish_readiness_report.json")

@@ -17,14 +17,17 @@ class EditorMatchSelectorTests(unittest.TestCase):
         return {
             "production_id": "if-2026-07-09-france-morocco",
             "production_date": "2026-07-09",
-            "selected_match": "France vs Morocco",
+            "selected_by": "human_editor",
+            "match": "France vs Morocco",
             "home_team": "France",
             "away_team": "Morocco",
-            "competition": "International Friendly",
-            "kickoff_time": "2026-07-09T20:00:00+01:00",
-            "match_priority": "editor_pick",
+            "competition": "FIFA World Cup",
+            "kickoff_time": "2026-07-09T21:00:00+01:00",
+            "priority": "high",
             "story_angle_optional": "France control against Morocco transitions.",
             "editor_notes": "Use editor pick.",
+            "audio_mode": "silent",
+            "render_mode": "creatomate",
         }
 
     def test_editor_selected_france_morocco_is_used(self):

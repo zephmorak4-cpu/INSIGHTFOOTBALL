@@ -16,6 +16,12 @@ services:
         value: "true"
       - key: INSIGHT_FOOTBALL_REQUIRE_HUMAN_APPROVAL
         value: "true"
+      - key: PRODUCTION_REQUIRES_EDITOR_SELECTION
+        value: "true"
+      - key: ALLOW_AUTOMATIC_MATCH_SELECTION_IN_PRODUCTION
+        value: "false"
+      - key: ALLOW_MATCH_SELECTOR_FALLBACK
+        value: "false"
       - key: INSIGHT_FOOTBALL_RENDERER_PROFILE
         value: creatomate
       - key: INSIGHT_FOOTBALL_RENDER_AUDIO_MODE

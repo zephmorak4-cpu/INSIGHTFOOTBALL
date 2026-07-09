@@ -8,14 +8,22 @@ from typing import Any
 REQUIRED_FIELDS = [
     "production_id",
     "production_date",
-    "selected_match",
+    "selected_by",
+    "match",
     "home_team",
     "away_team",
     "competition",
     "kickoff_time",
-    "match_priority",
+    "priority",
     "editor_notes",
+    "audio_mode",
+    "render_mode",
 ]
+BLOCKED_SELECTED_BY = {"automatic", "automatic_recommendation", "system", "match_selector"}
+ERROR_SELECTION_REQUIRED = {
+    "code": "EDITOR_SELECTION_REQUIRED",
+    "message": "No editor-selected match was provided. Production cannot continue. Please choose the match manually.",
+}
 
 
 def load_editor_selection(path: Path) -> dict[str, Any]:
@@ -30,9 +38,13 @@ def validate_editor_selection(selection: dict[str, Any]) -> None:
     missing = [field for field in REQUIRED_FIELDS if not str(selection.get(field, "")).strip()]
     if missing:
         raise ValueError("Editor selection missing required fields: " + ", ".join(missing))
+    if str(selection.get("selected_by", "")).strip().lower() in BLOCKED_SELECTED_BY:
+        raise ValueError("PRODUCTION_REQUIRES_HUMAN_EDITOR_SELECTION")
+    if selection.get("selected_by") != "human_editor":
+        raise ValueError("selected_by must be human_editor.")
     expected = f"{selection['home_team']} vs {selection['away_team']}"
-    if selection["selected_match"] != expected:
-        raise ValueError("selected_match must equal '<home_team> vs <away_team>'.")
+    if selection["match"] != expected:
+        raise ValueError("match must equal '<home_team> vs <away_team>'.")
 
 
 def editor_fixture(selection: dict[str, Any]) -> dict[str, Any]:
@@ -49,7 +61,8 @@ def editor_fixture(selection: dict[str, Any]) -> dict[str, Any]:
         "available_data": 8,
         "story_potential": 10,
         "selection_source": "human_editor",
-        "match_priority": selection["match_priority"],
+        "selected_by": "human_editor",
+        "match_priority": selection["priority"],
     }
 
 
@@ -62,22 +75,16 @@ def apply_editor_selection(daily_input: dict[str, Any], selection: dict[str, Any
             "date": selection["production_date"],
             "production_id": selection["production_id"],
             "competition": selection["competition"],
-            "match": selection["selected_match"],
+            "match": selection["match"],
             "kickoff_time": selection["kickoff_time"],
             "input_source": "editor_selection",
+            "selected_by": "human_editor",
+            "audio_mode": selection["audio_mode"],
+            "render_mode": selection["render_mode"],
         }
     )
     updated["production_metadata"] = metadata
-    existing = [
-        item
-        for item in updated.get("fixtures", [])
-        if not (
-            item.get("home_team") == fixture["home_team"]
-            and item.get("away_team") == fixture["away_team"]
-            and item.get("competition") == fixture["competition"]
-        )
-    ]
-    updated["fixtures"] = [fixture, *existing]
+    updated["fixtures"] = [fixture]
     updated["editor_selection"] = selection
     context = {
         "recent_form": {

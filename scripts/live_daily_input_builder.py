@@ -10,6 +10,11 @@ from pathlib import Path
 from typing import Any
 from zoneinfo import ZoneInfo
 
+try:
+    from production_editor_guard import guard_production_editor_selection, structured_error
+except ImportError:
+    from scripts.production_editor_guard import guard_production_editor_selection, structured_error
+
 
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_OUTPUT = ROOT / "editorial-brain" / "output" / "live-daily-input.json"
@@ -54,6 +59,10 @@ COUNTRY_SPECIFIC_COMPETITIONS = {
 
 
 def build_live_daily_input(*, target_date: str | None = None, output_path: Path = DEFAULT_OUTPUT) -> dict[str, Any]:
+    try:
+        guard_production_editor_selection()
+    except RuntimeError as exc:
+        raise RuntimeError(json.dumps(structured_error(exc)["error"])) from exc
     production_date = target_date or datetime.now(ZoneInfo("Africa/Lagos")).date().isoformat()
     raw = fetch_fixtures(production_date)
     fixtures = normalize_fixtures(raw, production_date)

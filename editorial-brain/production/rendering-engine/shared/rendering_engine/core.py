@@ -501,8 +501,27 @@ def _apply_editorial_context(package: dict[str, Any], editorial: dict[str, Any])
     for field in ["story_angle", "central_question", "surprising_fact", "insight_summary", "primary_evidence", "secondary_evidence", "viewer_takeaway"]:
         if field in editorial:
             updated[field] = editorial[field]
+    if "locked_fields" in editorial:
+        updated["locked_fields"] = editorial["locked_fields"]
+    if "agent_outputs" in editorial:
+        updated["agent_outputs"] = editorial["agent_outputs"]
+    if isinstance(metadata, dict):
+        updated["metadata"] = metadata
     updated["_editorial_context_applied"] = True
     return updated
+
+
+def _package_human_selected(package: dict[str, Any]) -> bool:
+    locked = package.get("locked_fields", {})
+    if isinstance(locked, dict) and locked.get("selection_source") == "human_editor":
+        return True
+    agent_outputs = package.get("agent_outputs", {})
+    if isinstance(agent_outputs, dict):
+        match_selector = agent_outputs.get("match_selector", {})
+        if isinstance(match_selector, dict) and match_selector.get("selection_source") == "human_editor":
+            return True
+    metadata = package.get("metadata", {})
+    return isinstance(metadata, dict) and metadata.get("selected_by") == "human_editor"
 
 
 class RenderJobBuilder:
@@ -581,6 +600,8 @@ def render_validator(package: dict[str, Any], job: dict[str, Any], status: dict[
 def run_all(root: Path = Path("."), renderer_profile: str = "placeholder", *, dry_run: bool = True) -> dict[str, Any]:
     package = load_json(root / OUTPUT / "renderer-ready-package.json")
     package = _apply_editorial_context(package, _current_editorial_package(root))
+    if os.environ.get("INSIGHT_FOOTBALL_ENV", "").lower() == "production" and not _package_human_selected(package):
+        raise RuntimeError("PRODUCTION_REQUIRES_HUMAN_EDITOR_SELECTION")
     renderer = get_renderer(renderer_profile)
     validation = renderer.validate_package(package, dry_run=dry_run)
     payload = renderer.build_render_payload(package)

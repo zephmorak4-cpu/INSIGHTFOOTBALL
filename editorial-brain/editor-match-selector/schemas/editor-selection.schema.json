@@ -5,24 +5,32 @@
   "required": [
     "production_id",
     "production_date",
-    "selected_match",
+    "selected_by",
+    "match",
     "home_team",
     "away_team",
     "competition",
     "kickoff_time",
-    "match_priority",
-    "editor_notes"
+    "priority",
+    "editor_notes",
+    "audio_mode",
+    "render_mode"
   ],
   "properties": {
     "production_id": { "type": "string", "minLength": 1 },
     "production_date": { "type": "string", "minLength": 1 },
+    "selected_by": { "type": "string", "enum": ["human_editor"] },
+    "match": { "type": "string", "minLength": 1 },
     "selected_match": { "type": "string", "minLength": 1 },
     "home_team": { "type": "string", "minLength": 1 },
     "away_team": { "type": "string", "minLength": 1 },
     "competition": { "type": "string", "minLength": 1 },
     "kickoff_time": { "type": "string", "minLength": 1 },
+    "priority": { "type": "string", "minLength": 1 },
     "match_priority": { "type": "string", "minLength": 1 },
     "story_angle_optional": { "type": "string" },
-    "editor_notes": { "type": "string" }
+    "editor_notes": { "type": "string" },
+    "audio_mode": { "type": "string", "enum": ["silent", "human_voice", "ai_voice"] },
+    "render_mode": { "type": "string", "enum": ["creatomate", "ffmpeg", "placeholder", "remotion"] }
   }
 }

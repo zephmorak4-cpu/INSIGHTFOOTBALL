@@ -118,7 +118,8 @@ def _selected_by_editor(package: dict[str, object]) -> bool:
 def _clean_warnings(warnings: object, match: dict[str, object]) -> list[str]:
     if not isinstance(warnings, list):
         return []
-    selected_text = f"{match.get('home_team', '')} {match.get('away_team', '')}"
+    selected_text = f"{match.get('home_team', '')} {match.get('away_team', '')} {match.get('competition', '')}"
+    stale_terms = ["Liverpool", "Arsenal", "Qarabag", "Vestri", "Premier League"]
     cleaned = []
     for warning in warnings:
         text = str(warning)
@@ -126,7 +127,7 @@ def _clean_warnings(warnings: object, match: dict[str, object]) -> list[str]:
             continue
         if "sample claim" in text.lower():
             continue
-        if any(team in text for team in ["Liverpool", "Arsenal"]) and not any(team in selected_text for team in ["Liverpool", "Arsenal"]):
+        if any(term in text for term in stale_terms) and not any(term in selected_text for term in stale_terms):
             continue
         if text not in cleaned:
             cleaned.append(text)
@@ -227,6 +228,10 @@ def main() -> int:
     chat_id = os.environ.get("TELEGRAM_APPROVAL_CHAT_ID") or os.environ.get("TELEGRAM_CHANNEL_ID", "")
     message = build_message(args.run_url)
     video_path = find_approval_video()
+    package = approval_package()
+    if not _selected_by_editor(package):
+        print(json.dumps({"sent": False, "reason": "PRODUCTION_REQUIRES_HUMAN_EDITOR_SELECTION", "message": "Telegram approval blocked because selected_by is not human_editor."}, indent=2))
+        return 1
 
     if args.dry_run or not token or not chat_id:
         print(json.dumps({"sent": False, "reason": "dry_run_or_missing_telegram_secrets", "message": message, "video_attachment": str(video_path) if video_path else None}, indent=2))
