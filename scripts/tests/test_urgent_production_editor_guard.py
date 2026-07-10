@@ -56,7 +56,7 @@ class UrgentProductionEditorGuardTests(unittest.TestCase):
                 "API_FOOTBALL_API_KEY": "",
             }
             with patch.dict(os.environ, env), patch.object(builder, "fetch_fixtures", side_effect=AssertionError("fixture API must not be called")):
-                payload = builder.build_live_daily_input(target_date="2026-07-09", output_path=output)
+                payload = builder.build_live_daily_input(target_date="2026-07-10", output_path=output)
 
         self.assertEqual(payload["production_metadata"]["match"], "France vs Morocco")
         self.assertEqual(payload["production_metadata"]["selected_by"], "human_editor")
@@ -98,14 +98,14 @@ class UrgentProductionEditorGuardTests(unittest.TestCase):
     @staticmethod
     def selection(selected_by: str = "human_editor") -> dict[str, str]:
         return {
-            "production_id": "if-2026-07-09-france-morocco",
-            "production_date": "2026-07-09",
+            "production_id": "if-2026-07-10-france-morocco",
+            "production_date": "2026-07-10",
             "selected_by": selected_by,
             "match": "France vs Morocco",
             "home_team": "France",
             "away_team": "Morocco",
             "competition": "FIFA World Cup",
-            "kickoff_time": "2026-07-09T21:00:00+01:00",
+            "kickoff_time": "2026-07-10T21:00:00+01:00",
             "priority": "high",
             "editor_notes": "Use this match for today's INSIGHT FOOTBALL video.",
             "audio_mode": "silent",

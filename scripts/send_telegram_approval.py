@@ -345,38 +345,65 @@ def create_production_package_zip() -> Path:
     return zip_path
 
 
-def send_message(token: str, chat_id: str, text: str) -> None:
+def _telegram_response_body(response: object) -> dict[str, object]:
+    try:
+        raw = response.read()
+    except AttributeError:
+        return {}
+    if not raw:
+        return {}
+    try:
+        return json.loads(raw.decode("utf-8", errors="replace"))
+    except json.JSONDecodeError:
+        return {"ok": False, "raw_response": raw.decode("utf-8", errors="replace")[:500]}
+
+
+def _telegram_message_id(payload: dict[str, object]) -> int | None:
+    result = payload.get("result")
+    if isinstance(result, dict) and isinstance(result.get("message_id"), int):
+        return result["message_id"]
+    return None
+
+
+def send_message(token: str, chat_id: str, text: str) -> dict[str, object]:
     url = f"https://api.telegram.org/bot{token}/sendMessage"
     body = urllib.parse.urlencode({"chat_id": chat_id, "text": text, "disable_web_page_preview": "true"}).encode("utf-8")
     request = urllib.request.Request(url, data=body, method="POST")
     try:
         with urllib.request.urlopen(request, timeout=30) as response:
-            response.read()
+            return _telegram_response_body(response)
     except urllib.error.HTTPError as exc:
         detail = exc.read().decode("utf-8", errors="replace")
         raise RuntimeError(f"Telegram sendMessage failed: HTTP {exc.code} {detail}") from exc
 
 
-def send_video(token: str, chat_id: str, video_path: Path, caption: str) -> None:
+def send_video(token: str, chat_id: str, video_path: Path, caption: str, retries: int = 1) -> dict[str, object]:
     url = f"https://api.telegram.org/bot{token}/sendVideo"
     fields = {"chat_id": chat_id, "caption": caption, "supports_streaming": "true"}
     body, content_type = _multipart_body(fields, "video", video_path)
     request = urllib.request.Request(url, data=body, method="POST", headers={"Content-Type": content_type})
-    try:
-        with urllib.request.urlopen(request, timeout=120) as response:
-            response.read()
-    except urllib.error.HTTPError as exc:
-        detail = exc.read().decode("utf-8", errors="replace")
-        raise RuntimeError(f"Telegram sendVideo failed: HTTP {exc.code} {detail}") from exc
+    last_error = ""
+    for attempt in range(retries + 1):
+        try:
+            with urllib.request.urlopen(request, timeout=120) as response:
+                payload = _telegram_response_body(response)
+                payload["attempts"] = attempt + 1
+                return payload
+        except urllib.error.HTTPError as exc:
+            detail = exc.read().decode("utf-8", errors="replace")
+            last_error = f"HTTP {exc.code} {detail}"
+        except urllib.error.URLError as exc:
+            last_error = str(exc)
+    raise RuntimeError(f"Telegram sendVideo failed after {retries + 1} attempt(s): {last_error}")
 
 
-def send_document(token: str, chat_id: str, document_path: Path, caption: str) -> None:
+def send_document(token: str, chat_id: str, document_path: Path, caption: str) -> dict[str, object]:
     url = f"https://api.telegram.org/bot{token}/sendDocument"
     body, content_type = _multipart_body({"chat_id": chat_id, "caption": caption[:1024]}, "document", document_path)
     request = urllib.request.Request(url, data=body, method="POST", headers={"Content-Type": content_type})
     try:
         with urllib.request.urlopen(request, timeout=120) as response:
-            response.read()
+            return _telegram_response_body(response)
     except urllib.error.HTTPError as exc:
         detail = exc.read().decode("utf-8", errors="replace")
         raise RuntimeError(f"Telegram sendDocument failed: HTTP {exc.code} {detail}") from exc
@@ -427,27 +454,31 @@ def main() -> int:
     try:
         if not render_ready_for_video():
             alert = build_failure_alert()
-            send_message(token, chat_id, alert)
-            report = {"sent": True, "delivery_type": "render_failure_alert", "chat_id": chat_id, "video_attached": False, "reason": "no_validated_real_mp4"}
+            response = send_message(token, chat_id, alert)
+            report = {"sent": True, "delivery_type": "render_failure_alert", "chat_id": chat_id, "message_id": _telegram_message_id(response), "video_attached": False, "reason": "no_validated_real_mp4"}
             (OUTPUT / "telegram_video_delivery_report.json").write_text(json.dumps(report, indent=2), encoding="utf-8")
             print(json.dumps(report, indent=2))
             return 0
 
         assert video_path is not None
-        send_video(token, chat_id, video_path, compact_caption(args.run_url))
-        video_report = {"sent": True, "chat_id": chat_id, "video_attached": True, "video_path": str(video_path), "message_type": "sendVideo"}
+        video_response = send_video(token, chat_id, video_path, compact_caption(args.run_url))
+        video_report = {"sent": True, "chat_id": chat_id, "video_attached": True, "video_path": str(video_path), "message_type": "sendVideo", "message_id": _telegram_message_id(video_response), "attempts": video_response.get("attempts", 1)}
         (OUTPUT / "telegram_video_delivery_report.json").write_text(json.dumps(video_report, indent=2), encoding="utf-8")
 
+        script_message_ids = []
         script_parts = split_messages(script_message())
         for part in script_parts:
-            send_message(token, chat_id, part)
-        script_report = {"sent": True, "chat_id": chat_id, "parts": len(script_parts), "message_type": "sendMessage"}
+            script_response = send_message(token, chat_id, part)
+            message_id = _telegram_message_id(script_response)
+            if message_id is not None:
+                script_message_ids.append(message_id)
+        script_report = {"sent": True, "chat_id": chat_id, "parts": len(script_parts), "message_type": "sendMessage", "message_ids": script_message_ids}
         (OUTPUT / "telegram_script_delivery_report.json").write_text(json.dumps(script_report, indent=2), encoding="utf-8")
 
-        send_message(token, chat_id, production_summary())
+        summary_response = send_message(token, chat_id, production_summary())
         zip_path = create_production_package_zip()
-        send_document(token, chat_id, zip_path, "INSIGHT FOOTBALL production package ZIP")
-        full_report = {"sent": True, "chat_id": chat_id, "video_attached": True, "script_sent": True, "zip_sent": True, "zip_path": str(zip_path)}
+        zip_response = send_document(token, chat_id, zip_path, "INSIGHT FOOTBALL production package ZIP")
+        full_report = {"sent": True, "chat_id": chat_id, "video_attached": True, "script_sent": True, "zip_sent": True, "zip_path": str(zip_path), "video_message_id": video_report.get("message_id"), "script_message_ids": script_message_ids, "summary_message_id": _telegram_message_id(summary_response), "zip_message_id": _telegram_message_id(zip_response)}
         (OUTPUT / "full-production-delivery-report.json").write_text(json.dumps(full_report, indent=2), encoding="utf-8")
         print(json.dumps(full_report, indent=2))
     except RuntimeError as exc:

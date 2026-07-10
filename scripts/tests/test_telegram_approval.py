@@ -5,8 +5,10 @@ import json
 import sys
 import tempfile
 import unittest
+import urllib.error
+from io import BytesIO
 from pathlib import Path
-from unittest.mock import patch
+from unittest.mock import Mock, patch
 
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -79,6 +81,33 @@ class TelegramApprovalTests(unittest.TestCase):
                 alert = telegram.build_failure_alert()
         self.assertIn("INSIGHT FOOTBALL RENDER FAILURE", alert)
         self.assertNotIn("completed", alert.lower())
+
+    def test_send_video_returns_message_id_and_attempts(self):
+        with tempfile.TemporaryDirectory() as temp:
+            video = Path(temp) / "final_video.mp4"
+            video.write_bytes(b"fake mp4")
+            response = Mock()
+            response.read.return_value = b'{"ok": true, "result": {"message_id": 77}}'
+            response.__enter__ = Mock(return_value=response)
+            response.__exit__ = Mock(return_value=None)
+            with patch("urllib.request.urlopen", return_value=response):
+                payload = telegram.send_video("token", "123", video, "caption")
+        self.assertEqual(payload["attempts"], 1)
+        self.assertEqual(telegram._telegram_message_id(payload), 77)
+
+    def test_send_video_retries_failed_upload(self):
+        with tempfile.TemporaryDirectory() as temp:
+            video = Path(temp) / "final_video.mp4"
+            video.write_bytes(b"fake mp4")
+            failure = urllib.error.HTTPError("https://api.telegram.org", 500, "Server Error", {}, BytesIO(b"temporary"))
+            response = Mock()
+            response.read.return_value = b'{"ok": true, "result": {"message_id": 88}}'
+            response.__enter__ = Mock(return_value=response)
+            response.__exit__ = Mock(return_value=None)
+            with patch("urllib.request.urlopen", side_effect=[failure, response]):
+                payload = telegram.send_video("token", "123", video, "caption", retries=1)
+        self.assertEqual(payload["attempts"], 2)
+        self.assertEqual(telegram._telegram_message_id(payload), 88)
 
 
 if __name__ == "__main__":
