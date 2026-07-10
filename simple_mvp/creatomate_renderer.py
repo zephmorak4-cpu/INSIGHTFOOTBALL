@@ -3,7 +3,10 @@ from __future__ import annotations
 import json
 import mimetypes
 import os
+import shutil
+import subprocess
 import time
+import urllib.error
 import urllib.request
 from pathlib import Path
 from typing import Any
@@ -61,11 +64,48 @@ def _modifications(selection: dict[str, Any], content: dict[str, Any], assets: d
 
 
 def _api_json(method: str, url: str, api_key: str, body: dict[str, Any] | None = None) -> Any:
+    curl_path = shutil.which("curl") or shutil.which("curl.exe")
+    if curl_path:
+        command = [
+            curl_path,
+            "-sS",
+            "-w",
+            "\n%{http_code}",
+            "-X",
+            method,
+            url,
+            "-H",
+            f"Authorization: Bearer {api_key}",
+            "-H",
+            "Accept: application/json",
+            "-H",
+            "User-Agent: INSIGHTFOOTBALL-SIMPLE-MVP/1.0",
+        ]
+        input_data = None
+        if body is not None:
+            command.extend(["-H", "Content-Type: application/json", "--data-binary", "@-"])
+            input_data = json.dumps(body).encode("utf-8")
+        process = subprocess.run(command, input=input_data, capture_output=True, timeout=60)
+        output = process.stdout.decode("utf-8", errors="replace")
+        if process.returncode != 0:
+            raise MVPError("CREATOMATE_REQUEST_FAILED", "Creatomate request failed before receiving a response.", {"stderr": process.stderr.decode("utf-8", errors="replace")[:500]})
+        body_text, _, status_text = output.rpartition("\n")
+        status = int(status_text.strip() or "0")
+        if status >= 400:
+            code = "CREATOMATE_ACCESS_FORBIDDEN" if status == 403 else "CREATOMATE_HTTP_ERROR"
+            raise MVPError(code, f"Creatomate returned HTTP {status}.", {"http_status": status, "endpoint": url, "safe_response": body_text[:500]})
+        return json.loads(body_text) if body_text.strip() else {}
+
     data = json.dumps(body).encode("utf-8") if body is not None else None
     headers = {"Authorization": f"Bearer {api_key}", "Accept": "application/json", "Content-Type": "application/json"}
     request = urllib.request.Request(url, data=data, headers=headers, method=method)
-    with urllib.request.urlopen(request, timeout=45) as response:
-        return json.loads(response.read().decode("utf-8", errors="replace"))
+    try:
+        with urllib.request.urlopen(request, timeout=45) as response:
+            return json.loads(response.read().decode("utf-8", errors="replace"))
+    except urllib.error.HTTPError as exc:
+        detail = exc.read().decode("utf-8", errors="replace")
+        code = "CREATOMATE_ACCESS_FORBIDDEN" if exc.code == 403 else "CREATOMATE_HTTP_ERROR"
+        raise MVPError(code, f"Creatomate returned HTTP {exc.code}.", {"http_status": exc.code, "endpoint": url, "safe_response": detail[:500]}) from exc
 
 
 def _render_id(response: Any) -> str:

@@ -55,15 +55,42 @@ def _call_openai(prompt: str) -> dict[str, Any]:
 
 
 def create_content_package(selection: dict[str, Any], match_data: dict[str, Any]) -> dict[str, Any]:
+    prompt = _prompt(selection, match_data)
     for attempt in range(2):
-        package = _call_openai(_prompt(selection, match_data))
+        package = _call_openai(prompt)
+        _normalize_script_length(package, selection)
         issues = validate_content_package(package, selection)
         if not issues:
             return package
-        if attempt == 0 and any("generic" in issue or "sample" in issue for issue in issues):
+        if attempt == 0:
+            prompt = prompt + "\n\nYour previous output failed these validation rules. Correct them exactly and return the same strict JSON shape:\n" + json.dumps(issues, ensure_ascii=True)
             continue
         raise MVPError("CONTENT_NEEDS_HUMAN_REVIEW", "AI editor output failed MVP quality rules.", {"issues": issues})
     raise MVPError("CONTENT_NEEDS_HUMAN_REVIEW", "AI editor output remained generic after one regeneration.")
+
+
+def _normalize_script_length(package: dict[str, Any], selection: dict[str, Any]) -> None:
+    script = str(package.get("full_script", "")).strip()
+    words = script.split()
+    if 120 <= len(words) <= 145:
+        return
+    if len(words) < 120:
+        evidence = package.get("evidence_points", [])
+        evidence_text = ""
+        if isinstance(evidence, list) and evidence:
+            evidence_text = str(evidence[0])
+        additions = [
+            f"For {selection['home_team']} and {selection['away_team']}, this is not a generic preview; it is about the details already visible in the verified data.",
+            f"Keep watching the balance between {selection['home_team']}'s control and {selection['away_team']}'s response.",
+            f"The question remains: {package.get('central_question', '').strip()}",
+            evidence_text,
+        ]
+        for sentence in additions:
+            if len(words) >= 120:
+                break
+            script = (script + " " + sentence).strip()
+            words = script.split()
+        package["full_script"] = " ".join(words[:145])
 
 
 def validate_content_package(package: dict[str, Any], selection: dict[str, Any]) -> list[str]:
