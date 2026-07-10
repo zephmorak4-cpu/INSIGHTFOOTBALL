@@ -27,7 +27,9 @@ services:
       - key: INSIGHT_FOOTBALL_RENDER_AUDIO_MODE
         value: silent
       - key: DAILY_INPUT_PATH
-        value: editorial-brain/examples/liverpool-arsenal-daily-input.json
+        value: disabled-by-simple-mvp
+      - key: MANUAL_MATCH_INPUT_PATH
+        value: simple_mvp/manual_match_input.json
       - key: INSIGHT_FOOTBALL_RUN_TESTS_ON_RENDER
         value: "false"
       - key: FFMPEG_BINARY_PATH
@@ -53,7 +55,11 @@ services:
       - key: CREATOMATE_API_KEY
         sync: false
       - key: CREATOMATE_TEMPLATE_ID
-        value: 53cc8c59-21fc-4772-86a4-4b5e0b106e83
+        sync: false
+      - key: CREATOMATE_MASTER_TEMPLATE_ID
+        sync: false
+      - key: INSIGHT_FOOTBALL_LOGO_URL
+        sync: false
       - key: CREATOMATE_TEMPLATE_MODE
         value: quick_promo
       - key: CREATOMATE_VIDEO_SOURCE
@@ -83,4 +89,4 @@ services:
       - key: CREATOMATE_TEMPLATE_CLOSING_STING
         sync: false
       - key: EDITOR_SELECTION_PATH
-        value: examples/editor-selection-france-morocco.json
+        value: disabled-by-simple-mvp

@@ -24,18 +24,18 @@ class UrgentProductionEditorGuardTests(unittest.TestCase):
         return subprocess.run([str(PYTHON), "scripts/render_daily_entrypoint.py"], cwd=ROOT, env=env, text=True, capture_output=True, timeout=60)
 
     def test_production_fails_if_editor_selection_missing(self):
-        env = {"EDITOR_SELECTION_PATH": ""}
+        env = {"MANUAL_MATCH_INPUT_PATH": "missing/manual_match_input.json"}
         result = self.run_entrypoint(env)
         self.assertNotEqual(result.returncode, 0)
-        self.assertIn("EDITOR_SELECTION_REQUIRED", result.stdout)
+        self.assertIn("MANUAL_MATCH_INPUT_MISSING", result.stdout)
 
     def test_production_fails_if_selected_by_is_automatic(self):
         with tempfile.TemporaryDirectory() as tmp:
             selection = Path(tmp) / "editor-selection.json"
             selection.write_text(json.dumps(self.selection(selected_by="automatic_recommendation")), encoding="utf-8")
-            result = self.run_entrypoint({"EDITOR_SELECTION_PATH": str(selection)})
+            result = self.run_entrypoint({"MANUAL_MATCH_INPUT_PATH": str(selection)})
         self.assertNotEqual(result.returncode, 0)
-        self.assertIn("PRODUCTION_REQUIRES_HUMAN_EDITOR_SELECTION", result.stdout)
+        self.assertIn("HUMAN_SELECTION_REQUIRED", result.stdout)
 
     def test_production_passes_editor_guard_for_human_editor(self):
         from scripts.production_editor_guard import load_valid_editor_selection
@@ -74,11 +74,11 @@ class UrgentProductionEditorGuardTests(unittest.TestCase):
                 self.assertEqual(telegram.main(), 1)
 
     def test_qarabag_vestri_cannot_be_selected_automatically_in_production(self):
-        result = self.run_entrypoint({"EDITOR_SELECTION_PATH": ""})
+        result = self.run_entrypoint({"MANUAL_MATCH_INPUT_PATH": "missing/manual_match_input.json"})
         self.assertNotEqual(result.returncode, 0)
-        self.assertIn("EDITOR_SELECTION_REQUIRED", result.stdout)
-        report = json.loads((ROOT / "editorial-brain" / "output" / "daily-run-report.json").read_text(encoding="utf-8"))
-        self.assertEqual(report["steps"], [])
+        self.assertIn("MANUAL_MATCH_INPUT_MISSING", result.stdout)
+        report = json.loads((ROOT / "simple_mvp" / "output" / "mvp_production_report.json").read_text(encoding="utf-8"))
+        self.assertEqual(report["error"]["code"], "MANUAL_MATCH_INPUT_MISSING")
 
     def test_warnings_filter_removes_stale_assets_for_france_morocco(self):
         import scripts.send_telegram_approval as telegram
@@ -105,6 +105,7 @@ class UrgentProductionEditorGuardTests(unittest.TestCase):
             "home_team": "France",
             "away_team": "Morocco",
             "competition": "FIFA World Cup",
+            "stage": "Quarter-final",
             "kickoff_time": "2026-07-10T21:00:00+01:00",
             "priority": "high",
             "editor_notes": "Use this match for today's INSIGHT FOOTBALL video.",

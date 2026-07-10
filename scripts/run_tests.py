@@ -6,7 +6,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-TEST_ROOTS = ("editorial-brain", "distribution", "analytics", "scripts")
+TEST_ROOTS = ("editorial-brain", "distribution", "analytics", "scripts", "simple_mvp")
 
 
 def discover_tests() -> list[str]:
