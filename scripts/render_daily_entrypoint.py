@@ -48,6 +48,8 @@ def main() -> int:
 
     production_status = run([sys.executable, "scripts/run_daily_dry_run.py", "--daily-input", daily_input])
     if production_status != 0:
+        run_url = os.environ.get("RENDER_RUN_URL", "")
+        run([sys.executable, "scripts/send_telegram_approval.py", "--run-url", run_url])
         return production_status
 
     run_url = os.environ.get("RENDER_RUN_URL", "")

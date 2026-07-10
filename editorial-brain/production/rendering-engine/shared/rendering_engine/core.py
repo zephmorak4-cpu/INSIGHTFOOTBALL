@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import mimetypes
 import os
 import shutil
 import subprocess
@@ -21,6 +22,20 @@ OUTPUT = Path("editorial-brain/output")
 LOGS = Path("editorial-brain/logs")
 RENDERS = Path("renders")
 SUPPORTED_RENDERERS = ["creatomate", "remotion", "ffmpeg", "placeholder"]
+CREATOMATE_TEMPLATES_ENDPOINT = "https://api.creatomate.com/v1/templates"
+CREATOMATE_RENDERS_ENDPOINT = "https://api.creatomate.com/v2/renders"
+CREATOMATE_REQUIRED_TEMPLATE_ENVS = [
+    "CREATOMATE_TEMPLATE_OPENING_STING",
+    "CREATOMATE_TEMPLATE_MATCH_INTRO",
+    "CREATOMATE_TEMPLATE_SURPRISING_FACT",
+    "CREATOMATE_TEMPLATE_CENTRAL_QUESTION",
+    "CREATOMATE_TEMPLATE_EVIDENCE_CARD",
+    "CREATOMATE_TEMPLATE_TACTICAL_BOARD",
+    "CREATOMATE_TEMPLATE_TEAM_COMPARISON",
+    "CREATOMATE_TEMPLATE_DASHBOARD",
+    "CREATOMATE_TEMPLATE_CTA",
+    "CREATOMATE_TEMPLATE_CLOSING_STING",
+]
 BASE_RENDER_SIZE = (1080, 1920)
 DEFAULT_OUTPUT_SIZE = (720, 1280)
 BRAND_MOTION_STANDARD = {
@@ -139,10 +154,10 @@ class CreatomateAdapter(RendererInterface):
     def validate_package(self, package: dict[str, Any], *, dry_run: bool = True) -> dict[str, Any]:
         warnings: list[str] = []
         issues: list[str] = []
-        if not dry_run and not os.environ.get("CREATOMATE_API_KEY"):
+        if not dry_run and not _clean_env("CREATOMATE_API_KEY"):
             issues.append("CREATOMATE_API_KEY is required in Creatomate live mode.")
         registry = _creatomate_registry()
-        missing_templates = _missing_live_template_ids(registry)
+        missing_templates = _missing_live_template_ids(registry, require_all=True)
         if missing_templates and not dry_run:
             issues.append("Missing Creatomate template IDs: " + ", ".join(missing_templates))
         if missing_templates and dry_run:
@@ -155,9 +170,10 @@ class CreatomateAdapter(RendererInterface):
         scenes = _creatomate_scenes(package, registry, variables)
         payload = {
             "renderer": self.renderer_profile,
-            "dry_run": True,
+            "dry_run": os.environ.get("INSIGHT_FOOTBALL_DRY_RUN", "true").lower() != "false",
             "template_id": _template_id(registry["templates"][0], dry_run=True),
             "output_format": "mp4",
+            "metadata": {"production_id": package["production_id"], "match": variables["match_title"], "competition": variables["competition"]},
             "render_audio_mode": os.environ.get("INSIGHT_FOOTBALL_RENDER_AUDIO_MODE", "silent"),
             "variables": variables,
             "brand_motion_standard": BRAND_MOTION_STANDARD,
@@ -170,6 +186,9 @@ class CreatomateAdapter(RendererInterface):
             "required_global_variables": GLOBAL_CREATOMATE_VARIABLES,
             "validation": _validate_creatomate_payload(package, variables, scenes),
         }
+        webhook_url = os.environ.get("CREATOMATE_WEBHOOK_URL", "").strip()
+        if webhook_url:
+            payload["webhook_url"] = webhook_url
         payload["validation"] = _validate_creatomate_payload(package, variables, scenes, payload=payload)
         write_json(OUTPUT / "creatomate_render_payload.json", payload)
         return payload
@@ -178,33 +197,107 @@ class CreatomateAdapter(RendererInterface):
         if payload.get("validation", {}).get("issues"):
             return {"success": False, "status": "failed", "error": "; ".join(payload["validation"]["issues"]), "dry_run": dry_run}
         if dry_run:
-            return {"success": True, "external_job_id": "creatomate-dry-run", "status": "completed", "dry_run": True, "creatomate_status": "dry_run_complete"}
-        api_key = os.environ.get("CREATOMATE_API_KEY")
+            return {"success": True, "external_job_id": "creatomate-dry-run", "status": "dry_run", "dry_run": True, "creatomate_status": "dry_run_complete"}
+        diagnostic = creatomate_connection_diagnostic()
+        if diagnostic["approval_status"] != "approved":
+            return {"success": False, "status": "failed", "error": "; ".join(diagnostic["blocking_issues"]), "dry_run": False, "creatomate_status": diagnostic["authentication_status"], "diagnostic": diagnostic}
+        api_key = _clean_env("CREATOMATE_API_KEY")
         if not api_key:
             return {"success": False, "status": "failed", "error": "CREATOMATE_API_KEY is required in live mode.", "dry_run": False}
+        render_body = {"template_id": payload["template_id"], "modifications": payload["creatomate_modifications"], "output_format": payload.get("output_format", "mp4"), "metadata": payload.get("metadata", {})}
+        if payload.get("webhook_url"):
+            render_body["webhook_url"] = payload["webhook_url"]
+        write_json(OUTPUT / "creatomate_render_payload.json", render_body)
         request = urllib.request.Request(
-            "https://api.creatomate.com/v2/renders",
-            data=json.dumps({"template_id": payload["template_id"], "modifications": payload["creatomate_modifications"]}).encode("utf-8"),
+            CREATOMATE_RENDERS_ENDPOINT,
+            data=json.dumps(render_body).encode("utf-8"),
             headers={"Content-Type": "application/json", "Authorization": f"Bearer {api_key}"},
             method="POST",
         )
-        last_error = ""
+        last_error: dict[str, Any] = {}
         for _ in range(2):
             try:
                 with urllib.request.urlopen(request, timeout=30) as response:
                     body = json.loads(response.read().decode("utf-8"))
                 job_id = _creatomate_job_id(body)
-                return {"success": True, "external_job_id": job_id, "status": "queued", "dry_run": False, "creatomate_status": "submitted", "response": body}
-            except (urllib.error.URLError, TimeoutError, json.JSONDecodeError) as exc:
-                last_error = str(exc)
+                write_json(OUTPUT / "creatomate_render_response.json", body)
+                status = self._poll_until_terminal(job_id, api_key, body)
+                if status.get("status") == "succeeded" and status.get("output_url"):
+                    return {"success": True, "external_job_id": job_id, "status": "succeeded", "dry_run": False, "creatomate_status": "succeeded", "response": body, "status_response": status, "output_url": status["output_url"]}
+                return {"success": False, "external_job_id": job_id, "status": status.get("status", "failed"), "dry_run": False, "creatomate_status": status.get("status", "failed"), "error": status.get("error", "Creatomate render did not produce a downloadable MP4."), "response": body, "status_response": status}
+            except urllib.error.HTTPError as exc:
+                last_error = _creatomate_http_error(exc, payload)
+                if exc.code == 403:
+                    write_json(OUTPUT / "creatomate_render_response.json", last_error)
+                    return {"success": False, "status": "failed", "dry_run": False, "creatomate_status": "forbidden", "error": "CREATOMATE_ACCESS_FORBIDDEN", "failure": last_error}
                 time.sleep(1)
-        return {"success": False, "status": "failed", "error": f"Creatomate render submission failed: {last_error}", "dry_run": False}
+            except (urllib.error.URLError, TimeoutError, json.JSONDecodeError) as exc:
+                last_error = {"code": "CREATOMATE_SUBMISSION_FAILED", "error": str(exc), "endpoint": CREATOMATE_RENDERS_ENDPOINT}
+                time.sleep(1)
+        return {"success": False, "status": "failed", "error": "Creatomate render submission failed.", "dry_run": False, "failure": last_error}
 
     def check_status(self, job_id: str) -> dict[str, Any]:
-        return {"job_id": job_id, "status": "completed", "progress": 100}
+        api_key = _clean_env("CREATOMATE_API_KEY")
+        if not api_key:
+            return {"job_id": job_id, "status": "failed", "error": "CREATOMATE_API_KEY missing"}
+        return self._fetch_status(job_id, api_key)
 
     def download_artifacts(self, job_id: str, artifact_root: Path) -> dict[str, Any]:
-        return _write_placeholder_artifacts(artifact_root, self.renderer_profile, "Creatomate dry-run stores payload only; live downloads are handled after Creatomate completion.")
+        return _write_placeholder_artifacts(artifact_root, self.renderer_profile, "Creatomate dry-run stores payload only.")
+
+    def download_creatomate_video(self, output_url: str, artifact_root: Path, response: dict[str, Any] | None = None) -> dict[str, Any]:
+        artifact_root.mkdir(parents=True, exist_ok=True)
+        video_path = artifact_root / "final_video.mp4"
+        thumb_path = artifact_root / "thumbnail_frame.png"
+        report = {"source_url": output_url, "target_path": str(video_path), "content_type": "", "file_size": 0, "checks": {}, "approval_status": "blocked"}
+        request = urllib.request.Request(output_url, headers={"Accept": "video/mp4,*/*"})
+        with urllib.request.urlopen(request, timeout=120) as response_obj:
+            content_type = response_obj.headers.get("Content-Type", "")
+            data = response_obj.read()
+        video_path.write_bytes(data)
+        if response is not None:
+            write_json(artifact_root / "creatomate_render_response.json", response)
+        report["content_type"] = content_type
+        report["file_size"] = video_path.stat().st_size
+        mime_type = mimetypes.guess_type(video_path.name)[0] or ""
+        checks = {
+            "exists": video_path.exists(),
+            "size_gt_zero": video_path.stat().st_size > 0,
+            "mime_mp4": "video/mp4" in content_type.lower() or mime_type == "video/mp4",
+            "not_placeholder": "placeholder" not in video_path.name,
+        }
+        report["checks"] = checks
+        report["approval_status"] = "approved" if all(checks.values()) else "blocked"
+        write_json(artifact_root / "download_report.json", report)
+        write_json(OUTPUT / "download_report.json", report)
+        if not thumb_path.exists():
+            write_json(thumb_path.with_suffix(".placeholder.json"), {"artifact_type": "thumbnail_placeholder", "reason": "Creatomate MP4 downloaded; thumbnail extraction unavailable."})
+            thumb_path = thumb_path.with_suffix(".placeholder.json")
+        return {"final_video_path": str(video_path), "thumbnail_path": str(thumb_path), "placeholder": False, "download_report": report, "reason": "Creatomate MP4 downloaded."}
+
+    def _poll_until_terminal(self, job_id: str, api_key: str, initial_body: Any) -> dict[str, Any]:
+        wait_seconds = float(os.environ.get("CREATOMATE_POLL_SECONDS", "1"))
+        attempts = int(os.environ.get("CREATOMATE_POLL_ATTEMPTS", "6"))
+        status = _creatomate_status_from_body(initial_body)
+        if status.get("status") == "succeeded" and status.get("output_url"):
+            return status
+        for _ in range(attempts):
+            status = self._fetch_status(job_id, api_key)
+            if status.get("status") in {"succeeded", "failed", "cancelled"}:
+                return status
+            time.sleep(wait_seconds)
+        return {**status, "status": status.get("status", "rendering"), "error": "Creatomate render did not finish before polling timeout."}
+
+    def _fetch_status(self, job_id: str, api_key: str) -> dict[str, Any]:
+        request = urllib.request.Request(f"{CREATOMATE_RENDERS_ENDPOINT}/{job_id}", headers={"Authorization": f"Bearer {api_key}", "Accept": "application/json"})
+        try:
+            with urllib.request.urlopen(request, timeout=30) as response:
+                body = json.loads(response.read().decode("utf-8"))
+            status = _creatomate_status_from_body(body)
+            write_json(OUTPUT / "render_status.json", {"job_id": job_id, **status})
+            return status
+        except urllib.error.HTTPError as exc:
+            return {"job_id": job_id, "status": "failed", "error": _safe_excerpt(exc.read().decode("utf-8", errors="replace")), "http_status": exc.code}
 
     def cancel_render(self, job_id: str) -> dict[str, Any]:
         return {"job_id": job_id, "status": "cancelled"}
@@ -294,6 +387,106 @@ def get_renderer(profile: str) -> RendererInterface:
     return renderers[profile]
 
 
+def _clean_env(name: str) -> str:
+    value = os.environ.get(name, "").strip()
+    if len(value) >= 2 and value[0] == value[-1] and value[0] in {"'", '"'}:
+        return ""
+    return value
+
+
+def _safe_excerpt(text: str, limit: int = 500) -> str:
+    api_key = os.environ.get("CREATOMATE_API_KEY", "")
+    cleaned = text.replace(api_key, "[REDACTED]") if api_key else text
+    return cleaned[:limit]
+
+
+def _configured_template_ids() -> dict[str, str]:
+    configured = {}
+    fallback = os.environ.get("CREATOMATE_TEMPLATE_ID", "").strip()
+    for env_name in CREATOMATE_REQUIRED_TEMPLATE_ENVS:
+        value = os.environ.get(env_name, "").strip() or fallback
+        if value:
+            configured[env_name] = value
+    return configured
+
+
+def _template_ids_from_response(body: Any) -> set[str]:
+    if isinstance(body, dict):
+        items = body.get("templates") or body.get("data") or body.get("items") or body.get("response") or []
+    else:
+        items = body
+    ids = set()
+    if isinstance(items, list):
+        for item in items:
+            if isinstance(item, dict):
+                for key in ["id", "template_id", "templateId"]:
+                    if item.get(key):
+                        ids.add(str(item[key]))
+    return ids
+
+
+def creatomate_connection_diagnostic() -> dict[str, Any]:
+    api_key = _clean_env("CREATOMATE_API_KEY")
+    configured_templates = _configured_template_ids()
+    missing_envs = [env for env in CREATOMATE_REQUIRED_TEMPLATE_ENVS if env not in configured_templates]
+    report: dict[str, Any] = {
+        "api_key_present": bool(api_key),
+        "authentication_status": "not_checked",
+        "http_status": None,
+        "project_access_status": "not_checked",
+        "templates_found": [],
+        "templates_missing": missing_envs,
+        "response_body_safe_excerpt": "",
+        "blocking_issues": [],
+        "approval_status": "blocked",
+    }
+    if not api_key:
+        report["authentication_status"] = "missing_api_key"
+        report["blocking_issues"].append("CREATOMATE_API_KEY is missing, blank, or wrapped in quotes.")
+        write_json(OUTPUT / "creatomate_connection_report.json", report)
+        return report
+    request = urllib.request.Request(CREATOMATE_TEMPLATES_ENDPOINT, headers={"Authorization": f"Bearer {api_key}", "Accept": "application/json"})
+    try:
+        with urllib.request.urlopen(request, timeout=30) as response:
+            body_text = response.read().decode("utf-8", errors="replace")
+            status = response.status
+    except urllib.error.HTTPError as exc:
+        body_text = exc.read().decode("utf-8", errors="replace")
+        status = exc.code
+    except urllib.error.URLError as exc:
+        body_text = str(exc)
+        status = None
+    report["http_status"] = status
+    report["response_body_safe_excerpt"] = _safe_excerpt(body_text)
+    if status != 200:
+        report["authentication_status"] = "failed"
+        report["project_access_status"] = "blocked"
+        report["blocking_issues"].append(f"Creatomate template listing failed with HTTP status {status}.")
+        write_json(OUTPUT / "creatomate_connection_report.json", report)
+        return report
+    try:
+        body = json.loads(body_text)
+    except json.JSONDecodeError:
+        body = []
+    accessible_ids = _template_ids_from_response(body)
+    found, missing = [], list(missing_envs)
+    for env_name, template_id in configured_templates.items():
+        entry = {"env": env_name, "template_id": template_id}
+        if template_id in accessible_ids:
+            found.append(entry)
+        else:
+            missing.append(env_name)
+    report["authentication_status"] = "authenticated"
+    report["project_access_status"] = "accessible" if not missing else "template_mismatch"
+    report["templates_found"] = found
+    report["templates_missing"] = sorted(set(missing))
+    if report["templates_missing"]:
+        report["blocking_issues"].append("Configured Creatomate template IDs are missing from the API key's project.")
+    report["approval_status"] = "approved" if not report["blocking_issues"] else "blocked"
+    write_json(OUTPUT / "creatomate_connection_report.json", report)
+    return report
+
+
 def _creatomate_registry() -> dict[str, Any]:
     path = Path("editorial-brain/production/rendering-engine/creatomate-template-registry.json")
     if not path.exists():
@@ -301,11 +494,15 @@ def _creatomate_registry() -> dict[str, Any]:
     return load_json(path)
 
 
-def _missing_live_template_ids(registry: dict[str, Any]) -> list[str]:
+def _missing_live_template_ids(registry: dict[str, Any], *, require_all: bool = False) -> list[str]:
     missing = []
+    if require_all:
+        for env_name in CREATOMATE_REQUIRED_TEMPLATE_ENVS:
+            if not os.environ.get(env_name) and not os.environ.get("CREATOMATE_TEMPLATE_ID"):
+                missing.append(env_name)
     for item in registry.get("templates", []):
         env_name = item.get("creatomate_template_id_env")
-        if env_name and not os.environ.get(env_name) and not os.environ.get("CREATOMATE_TEMPLATE_ID"):
+        if env_name and not os.environ.get(env_name) and not os.environ.get("CREATOMATE_TEMPLATE_ID") and env_name not in missing:
             missing.append(env_name)
     return missing
 
@@ -470,6 +667,56 @@ def _creatomate_job_id(body: Any) -> str:
     return "creatomate-render"
 
 
+def _creatomate_status_from_body(body: Any) -> dict[str, Any]:
+    item = body[0] if isinstance(body, list) and body and isinstance(body[0], dict) else body
+    if not isinstance(item, dict):
+        return {"status": "failed", "error": "Unexpected Creatomate status response."}
+    raw_status = str(item.get("status") or item.get("state") or "rendering").lower()
+    status_map = {"done": "succeeded", "completed": "succeeded", "success": "succeeded", "rendered": "succeeded", "queued": "submitted", "pending": "submitted", "processing": "rendering"}
+    status = status_map.get(raw_status, raw_status)
+    output_url = item.get("url") or item.get("output_url") or item.get("outputUrl") or item.get("mp4_url")
+    if not output_url and isinstance(item.get("output"), dict):
+        output = item["output"]
+        output_url = output.get("url") or output.get("mp4_url")
+    return {"job_id": str(item.get("id") or item.get("render_id") or ""), "status": status, "output_url": output_url, "error": item.get("error") or item.get("message")}
+
+
+def _creatomate_http_error(exc: urllib.error.HTTPError, payload: dict[str, Any]) -> dict[str, Any]:
+    detail = exc.read().decode("utf-8", errors="replace")
+    return {
+        "code": "CREATOMATE_ACCESS_FORBIDDEN" if exc.code == 403 else "CREATOMATE_HTTP_ERROR",
+        "probable_causes": [
+            "invalid API key",
+            "API key from a different Creatomate project",
+            "template ID belongs to another project",
+            "Authorization header missing or malformed",
+            "request sent to the wrong Creatomate endpoint",
+            "account/project access restriction",
+        ] if exc.code == 403 else [],
+        "http_status": exc.code,
+        "safe_response_excerpt": _safe_excerpt(detail),
+        "request_endpoint": CREATOMATE_RENDERS_ENDPOINT,
+        "template_id": payload.get("template_id"),
+        "production_id": payload.get("metadata", {}).get("production_id"),
+        "timestamp": now(),
+    }
+
+
+def _write_failed_render_artifacts(root: Path, renderer: str, submit_result: dict[str, Any]) -> dict[str, Any]:
+    root.mkdir(parents=True, exist_ok=True)
+    failure = {
+        "artifact_type": "render_failure",
+        "renderer": renderer,
+        "created_at": now(),
+        "status": submit_result.get("creatomate_status") or submit_result.get("status", "failed"),
+        "error": submit_result.get("error"),
+        "failure": submit_result.get("failure") or submit_result.get("diagnostic") or {},
+    }
+    write_json(root / "render_status.json", failure)
+    write_json(OUTPUT / "render_status.json", failure)
+    return {"final_video_path": str(root / "final_video.mp4"), "thumbnail_path": str(root / "thumbnail_frame.png"), "placeholder": False, "approval_status": "blocked", "failure": failure, "reason": "Creatomate did not produce a real MP4."}
+
+
 def _current_editorial_package(root: Path) -> dict[str, Any]:
     daily_path = root / OUTPUT / "daily-run-report.json"
     if daily_path.exists():
@@ -537,42 +784,55 @@ class RenderQueueManager:
         return self._status(job, "queued", 0)
 
     def update(self, job: dict[str, Any], status: str, *, errors: list[str] | None = None, artifact_refs: dict[str, Any] | None = None) -> dict[str, Any]:
-        progress = {"queued": 0, "validating": 20, "rendering": 60, "completed": 100, "failed": 100, "cancelled": 100}.get(status, 0)
+        progress = {"queued": 0, "submitted": 25, "validating": 20, "rendering": 60, "completed": 100, "succeeded": 100, "failed": 100, "cancelled": 100}.get(status, 0)
         return self._status(job, status, progress, errors=errors or [], artifact_refs=artifact_refs or {})
 
     def _status(self, job: dict[str, Any], status: str, progress: int, *, errors: list[str] | None = None, artifact_refs: dict[str, Any] | None = None) -> dict[str, Any]:
-        payload = {"job_id": job["job_id"], "production_id": job["production_id"], "renderer_profile": job["renderer_profile"], "status": status, "progress": progress, "started_at": job["timestamp"], "completed_at": now() if status in {"completed", "failed", "cancelled"} else None, "duration_seconds": job["estimated_duration_seconds"] if status == "completed" else 0, "errors": errors or [], "warnings": job.get("warnings", []), "artifact_refs": artifact_refs or {}}
+        payload = {"job_id": job["job_id"], "production_id": job["production_id"], "renderer_profile": job["renderer_profile"], "status": status, "progress": progress, "started_at": job["timestamp"], "completed_at": now() if status in {"completed", "succeeded", "failed", "cancelled"} else None, "duration_seconds": job["estimated_duration_seconds"] if status in {"completed", "succeeded"} else 0, "errors": errors or [], "warnings": job.get("warnings", []), "artifact_refs": artifact_refs or {}}
         write_json(OUTPUT / "render_status.json", payload)
         return payload
 
 
-def artifact_manager(package: dict[str, Any], job: dict[str, Any], renderer: RendererInterface, payload: dict[str, Any], root: Path = Path(".")) -> dict[str, Any]:
+def artifact_manager(package: dict[str, Any], job: dict[str, Any], renderer: RendererInterface, payload: dict[str, Any], root: Path = Path("."), submit_result: dict[str, Any] | None = None) -> dict[str, Any]:
     artifact_root = root / RENDERS / package["production_id"]
     artifact_root.mkdir(parents=True, exist_ok=True)
     logs_path = artifact_root / "logs"
     logs_path.mkdir(exist_ok=True)
     write_json(artifact_root / "render_job.json", job)
     write_json(artifact_root / "render_payload.json", payload)
-    artifacts = renderer.download_artifacts(job["job_id"], artifact_root)
+    submit_result = submit_result or {}
+    if isinstance(renderer, CreatomateAdapter) and not job.get("dry_run"):
+        if submit_result.get("success") and submit_result.get("output_url"):
+            artifacts = renderer.download_creatomate_video(str(submit_result["output_url"]), artifact_root, submit_result.get("response"))
+        else:
+            artifacts = _write_failed_render_artifacts(artifact_root, renderer.renderer_profile, submit_result)
+    else:
+        artifacts = renderer.download_artifacts(job["job_id"], artifact_root)
     final_video = artifacts["final_video_path"]
     thumbnail = artifacts["thumbnail_path"]
-    output = {"production_id": package["production_id"], "job_id": job["job_id"], "artifact_root": str(artifact_root), "final_video_path": final_video, "thumbnail_path": thumbnail, "payload_path": str(artifact_root / "render_payload.json"), "logs_path": str(logs_path), "file_sizes": _file_sizes([final_video, thumbnail, str(artifact_root / "render_payload.json")]), "checksums": _checksums([final_video, thumbnail, str(artifact_root / "render_payload.json")]), "missing_artifacts": [path for path in [final_video, thumbnail] if not Path(path).exists()], "approval_status": "approved"}
+    output = {"production_id": package["production_id"], "job_id": job["job_id"], "artifact_root": str(artifact_root), "final_video_path": final_video, "thumbnail_path": thumbnail, "payload_path": str(artifact_root / "render_payload.json"), "logs_path": str(logs_path), "file_sizes": _file_sizes([final_video, thumbnail, str(artifact_root / "render_payload.json")]), "checksums": _checksums([final_video, thumbnail, str(artifact_root / "render_payload.json")]), "missing_artifacts": [path for path in [final_video, thumbnail] if not final_video or not Path(path).exists()], "placeholder": bool(artifacts.get("placeholder")), "download_report": artifacts.get("download_report", {}), "approval_status": "approved" if artifacts.get("approval_status", "approved") == "approved" else "blocked"}
     write_json(OUTPUT / "render_artifacts.json", output)
     write_json(artifact_root / "render_artifacts.json", output)
     return output
 
 
 def render_validator(package: dict[str, Any], job: dict[str, Any], status: dict[str, Any], artifacts: dict[str, Any], *, allow_placeholder: bool = True) -> dict[str, Any]:
-    final_path = Path(artifacts["final_video_path"])
-    thumb_path = Path(artifacts["thumbnail_path"])
-    placeholder = final_path.suffix == ".json"
+    final_value = str(artifacts.get("final_video_path", ""))
+    thumb_value = str(artifacts.get("thumbnail_path", ""))
+    final_path = Path(final_value) if final_value else Path("__missing_final_video__")
+    thumb_path = Path(thumb_value) if thumb_value else Path("__missing_thumbnail__")
+    placeholder = final_path.suffix == ".json" or bool(artifacts.get("placeholder"))
     issues, warnings = [], list(job.get("warnings", []))
     if not final_path.exists():
         issues.append("video artifact missing")
+    if job.get("renderer_profile") == "creatomate" and not job.get("dry_run") and placeholder:
+        issues.append("live Creatomate render did not produce a real MP4")
     if placeholder and allow_placeholder:
         warnings.append("Structured placeholder video artifact used; no MP4 generated.")
     elif placeholder:
         issues.append("placeholder artifact not allowed")
+    if final_path.exists() and final_path.suffix.lower() != ".mp4" and not placeholder:
+        issues.append("final video is not an MP4")
     if package["timeline"]["total_duration_seconds"] > 60:
         issues.append("duration exceeds 60 seconds")
     if package["timeline"].get("aspect_ratio") != "9:16":
@@ -583,7 +843,7 @@ def render_validator(package: dict[str, Any], job: dict[str, Any], status: dict[
         issues.append("wrong fps")
     if not thumb_path.exists():
         warnings.append("Thumbnail placeholder missing.")
-    if status["status"] not in {"completed", "failed"}:
+    if status["status"] not in {"completed", "failed", "succeeded"}:
         issues.append("render job status not terminal")
     if package.get("render_readiness_status") == "failed_validation":
         issues.append("renderer-ready package failed validation")
@@ -592,7 +852,7 @@ def render_validator(package: dict[str, Any], job: dict[str, Any], status: dict[
     if job.get("renderer_profile") == "creatomate":
         creatomate_validation = job.get("render_payload", {}).get("validation", {})
         issues.extend(creatomate_validation.get("issues", []))
-    report = {"production_id": package["production_id"], "component_id": "IF-RE08", "component_name": "Render Validator", "timestamp": now(), "checks": {"video_exists_or_placeholder": final_path.exists() and (not placeholder or allow_placeholder), "duration": package["timeline"]["total_duration_seconds"] <= 60, "aspect_ratio": package["timeline"].get("aspect_ratio") == "9:16", "resolution": package["timeline"].get("resolution") == "1080x1920", "fps": package["timeline"].get("fps") == 30, "audio_documented": bool(package.get("required_audio")), "captions_documented": bool(package.get("caption_sync", {}).get("captions")), "thumbnail_exists": thumb_path.exists(), "job_terminal": status["status"] in {"completed", "failed"}, "legal": package.get("render_readiness_status") != "failed_validation", "brand_motion_standard": brand_report["passed"]}, "brand_motion_report": brand_report, "issues": issues, "warnings": warnings, "placeholder_mode": placeholder, "approval_status": "approved" if not issues else "blocked"}
+    report = {"production_id": package["production_id"], "component_id": "IF-RE08", "component_name": "Render Validator", "timestamp": now(), "checks": {"video_exists_or_placeholder": final_path.exists() and (not placeholder or allow_placeholder), "duration": package["timeline"]["total_duration_seconds"] <= 60, "aspect_ratio": package["timeline"].get("aspect_ratio") == "9:16", "resolution": package["timeline"].get("resolution") == "1080x1920", "fps": package["timeline"].get("fps") == 30, "audio_documented": bool(package.get("required_audio")), "captions_documented": bool(package.get("caption_sync", {}).get("captions")), "thumbnail_exists": thumb_path.exists(), "job_terminal": status["status"] in {"completed", "failed", "succeeded"}, "legal": package.get("render_readiness_status") != "failed_validation", "brand_motion_standard": brand_report["passed"]}, "brand_motion_report": brand_report, "issues": issues, "warnings": warnings, "placeholder_mode": placeholder, "approval_status": "approved" if not issues else "blocked"}
     write_json(OUTPUT / "render_validation_report.json", report)
     return report
 
@@ -610,11 +870,19 @@ def run_all(root: Path = Path("."), renderer_profile: str = "placeholder", *, dr
     queue = RenderQueueManager()
     queue.queue(job)
     submit = renderer.submit_render(payload, dry_run=dry_run) if validation.get("success", True) else {"success": False, "status": "failed", "error": validation.get("error", "renderer validation failed"), "dry_run": dry_run}
-    status_name = "completed" if submit.get("success") else "failed"
-    artifacts = artifact_manager(package, job, renderer, payload, root)
+    if submit.get("success") and submit.get("status") == "succeeded":
+        status_name = "succeeded"
+    elif submit.get("success") and dry_run:
+        status_name = "completed"
+    elif submit.get("success"):
+        status_name = str(submit.get("status", "rendering"))
+    else:
+        status_name = "failed"
+    artifacts = artifact_manager(package, job, renderer, payload, root, submit)
     status = queue.update(job, status_name, errors=[] if submit.get("success") else [submit.get("error", "render failed")], artifact_refs=artifacts)
     report = render_validator(package, job, status, artifacts)
-    complete = {"production_id": package["production_id"], "match": package["match"], "competition": package["competition"], "source_renderer_ready_package": package["production_id"], "renderer_profile": renderer_profile, "render_audio_mode": os.environ.get("INSIGHT_FOOTBALL_RENDER_AUDIO_MODE", "silent"), "creatomate_status": submit.get("creatomate_status", status["status"]), "brand_motion_standard": BRAND_MOTION_STANDARD, "render_job": job, "render_status": status, "render_artifacts": artifacts, "render_validation_report": report, "final_video_path": artifacts["final_video_path"], "thumbnail_path": artifacts["thumbnail_path"], "duration_seconds": package["timeline"]["total_duration_seconds"], "file_size": artifacts["file_sizes"].get(artifacts["final_video_path"], 0), "checksums": artifacts["checksums"], "warnings": sorted(set(report["warnings"] + validation.get("warnings", []))), "human_review_flags": ["Review placeholder render before publishing."] if report["placeholder_mode"] else [], "approval_status": report["approval_status"], "next_component": "Final Quality Control"}
+    real_video_ready = report["approval_status"] == "approved" and not report["placeholder_mode"] and Path(artifacts["final_video_path"]).suffix.lower() == ".mp4"
+    complete = {"production_id": package["production_id"], "match": package["match"], "competition": package["competition"], "source_renderer_ready_package": package["production_id"], "renderer_profile": renderer_profile, "render_audio_mode": os.environ.get("INSIGHT_FOOTBALL_RENDER_AUDIO_MODE", "silent"), "creatomate_status": submit.get("creatomate_status", status["status"]), "video_status": "ready_for_review" if real_video_ready else status["status"], "creatomate_render_id": submit.get("external_job_id"), "brand_motion_standard": BRAND_MOTION_STANDARD, "render_job": job, "render_status": status, "render_artifacts": artifacts, "render_validation_report": report, "final_video_path": artifacts["final_video_path"], "thumbnail_path": artifacts["thumbnail_path"], "duration_seconds": package["timeline"]["total_duration_seconds"], "file_size": artifacts["file_sizes"].get(artifacts["final_video_path"], 0), "checksums": artifacts["checksums"], "warnings": sorted(set(report["warnings"] + validation.get("warnings", []))), "human_review_flags": ["Review placeholder render before publishing."] if report["placeholder_mode"] else [], "approval_status": report["approval_status"], "next_component": "Final Quality Control"}
     write_json(root / OUTPUT / "render-complete-package.json", complete)
     StructuredLogger(root / LOGS, f"rendering-engine-{package['production_id']}").log({"event": "render_complete_package_written", "renderer": renderer_profile, "approval_status": complete["approval_status"]})
     return {"render_job": job, "render_status": status, "render_artifacts": artifacts, "render_validation_report": report, "render_complete_package": complete}

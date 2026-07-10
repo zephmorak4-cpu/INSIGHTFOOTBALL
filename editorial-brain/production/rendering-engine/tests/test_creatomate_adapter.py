@@ -3,13 +3,15 @@ from __future__ import annotations
 import os
 import sys
 import unittest
+import urllib.error
+from io import BytesIO
 from pathlib import Path
 from unittest.mock import patch
 
 ROOT = Path(__file__).resolve().parents[4]
 sys.path.insert(0, str(ROOT / "editorial-brain" / "production" / "rendering-engine" / "shared"))
 
-from rendering_engine.core import CreatomateAdapter, _creatomate_registry
+from rendering_engine.core import CreatomateAdapter, creatomate_connection_diagnostic, _creatomate_registry
 
 
 def package() -> dict:
@@ -64,6 +66,37 @@ class CreatomateAdapterTests(unittest.TestCase):
         self.assertNotIn("Arsenal", text)
         self.assertIn("France", text)
         self.assertIn("Morocco", text)
+
+    def test_connection_diagnostic_missing_key_fails(self):
+        with patch.dict(os.environ, {}, clear=True):
+            report = creatomate_connection_diagnostic()
+        self.assertEqual(report["approval_status"], "blocked")
+        self.assertIn("CREATOMATE_API_KEY", report["blocking_issues"][0])
+
+    def test_connection_diagnostic_does_not_log_secret(self):
+        secret = "super-secret-creatomate-key"
+        error = urllib.error.HTTPError("https://api.creatomate.com/v1/templates", 403, "Forbidden", {}, None)
+        error.fp = BytesIO(f"bad key {secret}".encode("utf-8"))
+        with patch.dict(os.environ, {"CREATOMATE_API_KEY": secret}, clear=True), patch("urllib.request.urlopen", side_effect=error):
+            report = creatomate_connection_diagnostic()
+        self.assertNotIn(secret, json_text(report))
+
+    def test_submit_403_returns_structured_forbidden(self):
+        env = {"CREATOMATE_API_KEY": "key", "CREATOMATE_TEMPLATE_ID": "template-1"}
+        payload = CreatomateAdapter().build_render_payload(package())
+        error = urllib.error.HTTPError("https://api.creatomate.com/v2/renders", 403, "Forbidden", {}, None)
+        error.fp = BytesIO(b"template forbidden")
+        with patch.dict(os.environ, env, clear=True), patch("rendering_engine.core.creatomate_connection_diagnostic", return_value={"approval_status": "approved", "blocking_issues": []}), patch("urllib.request.urlopen", side_effect=error):
+            result = CreatomateAdapter().submit_render(payload, dry_run=False)
+        self.assertFalse(result["success"])
+        self.assertEqual(result["error"], "CREATOMATE_ACCESS_FORBIDDEN")
+        self.assertEqual(result["failure"]["http_status"], 403)
+
+
+def json_text(value: object) -> str:
+    import json
+
+    return json.dumps(value, sort_keys=True)
 
 
 if __name__ == "__main__":
