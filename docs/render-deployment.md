@@ -79,14 +79,18 @@ Runtime controls:
 
 ```text
 INSIGHT_FOOTBALL_ENV=production
-INSIGHT_FOOTBALL_DRY_RUN=true
+INSIGHT_FOOTBALL_DRY_RUN=false
 INSIGHT_FOOTBALL_REQUIRE_HUMAN_APPROVAL=true
 INSIGHT_FOOTBALL_RUN_TESTS_ON_RENDER=true
-INSIGHT_FOOTBALL_RENDERER_PROFILE=ffmpeg
-DAILY_INPUT_PATH=editorial-brain/examples/liverpool-arsenal-daily-input.json
+INSIGHT_FOOTBALL_RENDERER_PROFILE=creatomate
+CREATOMATE_TEMPLATE_ID=53cc8c59-21fc-4772-86a4-4b5e0b106e83
+CREATOMATE_TEMPLATE_MODE=quick_promo
+CREATOMATE_VIDEO_SOURCE=https://creatomate.com/files/assets/7347c3b7-e1a8-4439-96f1-f3dfc95c3d28
+CREATOMATE_ALLOW_SINGLE_TEMPLATE=true
+EDITOR_SELECTION_PATH=examples/editor-selection-france-morocco.json
 ```
 
-`FFMPEG_BINARY_PATH` is required when `ffmpeg` is not available on the Render PATH. The real MP4 renderer fails loudly instead of falling back to a placeholder video.
+`FFMPEG_BINARY_PATH` is only required for the FFmpeg renderer. Creatomate live mode requires `CREATOMATE_API_KEY` plus the template settings above. The real MP4 renderer fails loudly instead of falling back to a placeholder video.
 
 ## GitHub Secrets For Render Deploys
 

@@ -6,6 +6,7 @@ import mimetypes
 import os
 import shutil
 import subprocess
+import tempfile
 import textwrap
 import time
 import urllib.error
@@ -24,6 +25,7 @@ RENDERS = Path("renders")
 SUPPORTED_RENDERERS = ["creatomate", "remotion", "ffmpeg", "placeholder"]
 CREATOMATE_TEMPLATES_ENDPOINT = "https://api.creatomate.com/v1/templates"
 CREATOMATE_RENDERS_ENDPOINT = "https://api.creatomate.com/v2/renders"
+CREATOMATE_USER_AGENT = "INSIGHTFOOTBALL/1.0 (+https://github.com/zephmorak4-cpu/INSIGHTFOOTBALL)"
 CREATOMATE_REQUIRED_TEMPLATE_ENVS = [
     "CREATOMATE_TEMPLATE_OPENING_STING",
     "CREATOMATE_TEMPLATE_MATCH_INTRO",
@@ -204,34 +206,32 @@ class CreatomateAdapter(RendererInterface):
         api_key = _clean_env("CREATOMATE_API_KEY")
         if not api_key:
             return {"success": False, "status": "failed", "error": "CREATOMATE_API_KEY is required in live mode.", "dry_run": False}
-        render_body = {"template_id": payload["template_id"], "modifications": payload["creatomate_modifications"], "output_format": payload.get("output_format", "mp4"), "metadata": payload.get("metadata", {})}
+        render_body = {
+            "template_id": payload["template_id"],
+            "modifications": payload["creatomate_modifications"],
+            "output_format": payload.get("output_format", "mp4"),
+            "metadata": json.dumps(payload.get("metadata", {}), ensure_ascii=True),
+        }
         if payload.get("webhook_url"):
             render_body["webhook_url"] = payload["webhook_url"]
         write_json(OUTPUT / "creatomate_render_payload.json", render_body)
-        request = urllib.request.Request(
-            CREATOMATE_RENDERS_ENDPOINT,
-            data=json.dumps(render_body).encode("utf-8"),
-            headers={"Content-Type": "application/json", "Authorization": f"Bearer {api_key}"},
-            method="POST",
-        )
         last_error: dict[str, Any] = {}
         for _ in range(2):
             try:
-                with urllib.request.urlopen(request, timeout=30) as response:
-                    body = json.loads(response.read().decode("utf-8"))
+                status_code, body_text, body = _creatomate_api_json("POST", CREATOMATE_RENDERS_ENDPOINT, api_key, render_body)
+                if status_code >= 400:
+                    if status_code == 403:
+                        last_error = _creatomate_http_error_from_text(status_code, body_text, payload)
+                        write_json(OUTPUT / "creatomate_render_response.json", last_error)
+                        return {"success": False, "status": "failed", "dry_run": False, "creatomate_status": "forbidden", "error": "CREATOMATE_ACCESS_FORBIDDEN", "failure": last_error}
+                    raise RuntimeError(f"Creatomate HTTP {status_code}: {_safe_excerpt(body_text)}")
                 job_id = _creatomate_job_id(body)
                 write_json(OUTPUT / "creatomate_render_response.json", body)
                 status = self._poll_until_terminal(job_id, api_key, body)
                 if status.get("status") == "succeeded" and status.get("output_url"):
                     return {"success": True, "external_job_id": job_id, "status": "succeeded", "dry_run": False, "creatomate_status": "succeeded", "response": body, "status_response": status, "output_url": status["output_url"]}
                 return {"success": False, "external_job_id": job_id, "status": status.get("status", "failed"), "dry_run": False, "creatomate_status": status.get("status", "failed"), "error": status.get("error", "Creatomate render did not produce a downloadable MP4."), "response": body, "status_response": status}
-            except urllib.error.HTTPError as exc:
-                last_error = _creatomate_http_error(exc, payload)
-                if exc.code == 403:
-                    write_json(OUTPUT / "creatomate_render_response.json", last_error)
-                    return {"success": False, "status": "failed", "dry_run": False, "creatomate_status": "forbidden", "error": "CREATOMATE_ACCESS_FORBIDDEN", "failure": last_error}
-                time.sleep(1)
-            except (urllib.error.URLError, TimeoutError, json.JSONDecodeError) as exc:
+            except (urllib.error.URLError, TimeoutError, json.JSONDecodeError, RuntimeError) as exc:
                 last_error = {"code": "CREATOMATE_SUBMISSION_FAILED", "error": str(exc), "endpoint": CREATOMATE_RENDERS_ENDPOINT}
                 time.sleep(1)
         return {"success": False, "status": "failed", "error": "Creatomate render submission failed.", "dry_run": False, "failure": last_error}
@@ -250,7 +250,7 @@ class CreatomateAdapter(RendererInterface):
         video_path = artifact_root / "final_video.mp4"
         thumb_path = artifact_root / "thumbnail_frame.png"
         report = {"source_url": output_url, "target_path": str(video_path), "content_type": "", "file_size": 0, "checks": {}, "approval_status": "blocked"}
-        request = urllib.request.Request(output_url, headers={"Accept": "video/mp4,*/*"})
+        request = urllib.request.Request(output_url, headers={"Accept": "video/mp4,*/*", "User-Agent": CREATOMATE_USER_AGENT})
         with urllib.request.urlopen(request, timeout=120) as response_obj:
             content_type = response_obj.headers.get("Content-Type", "")
             data = response_obj.read()
@@ -289,10 +289,10 @@ class CreatomateAdapter(RendererInterface):
         return {**status, "status": status.get("status", "rendering"), "error": "Creatomate render did not finish before polling timeout."}
 
     def _fetch_status(self, job_id: str, api_key: str) -> dict[str, Any]:
-        request = urllib.request.Request(f"{CREATOMATE_RENDERS_ENDPOINT}/{job_id}", headers={"Authorization": f"Bearer {api_key}", "Accept": "application/json"})
         try:
-            with urllib.request.urlopen(request, timeout=30) as response:
-                body = json.loads(response.read().decode("utf-8"))
+            status_code, body_text, body = _creatomate_api_json("GET", f"{CREATOMATE_RENDERS_ENDPOINT}/{job_id}", api_key)
+            if status_code >= 400:
+                return {"job_id": job_id, "status": "failed", "error": _safe_excerpt(body_text), "http_status": status_code}
             status = _creatomate_status_from_body(body)
             write_json(OUTPUT / "render_status.json", {"job_id": job_id, **status})
             return status
@@ -400,9 +400,56 @@ def _safe_excerpt(text: str, limit: int = 500) -> str:
     return cleaned[:limit]
 
 
+def _creatomate_api_json(method: str, url: str, api_key: str, body: dict[str, Any] | None = None) -> tuple[int, str, Any]:
+    curl_path = shutil.which("curl") or shutil.which("curl.exe")
+    if curl_path:
+        command = [
+            curl_path,
+            "-sS",
+            "-w",
+            "\n%{http_code}",
+            "-X",
+            method,
+            url,
+            "-H",
+            f"Authorization: Bearer {api_key}",
+            "-H",
+            "Accept: application/json",
+            "-H",
+            f"User-Agent: {CREATOMATE_USER_AGENT}",
+        ]
+        input_data = None
+        if body is not None:
+            command.extend(["-H", "Content-Type: application/json", "--data-binary", "@-"])
+            input_data = json.dumps(body).encode("utf-8")
+        process = subprocess.run(command, input=input_data, capture_output=True, timeout=45)
+        output = process.stdout.decode("utf-8", errors="replace")
+        if process.returncode != 0:
+            raise RuntimeError(_safe_excerpt(process.stderr.decode("utf-8", errors="replace") or output))
+        body_text, _, status_text = output.rpartition("\n")
+        status = int(status_text.strip() or "0")
+        parsed = json.loads(body_text) if body_text.strip() else {}
+        return status, body_text, parsed
+
+    data = json.dumps(body).encode("utf-8") if body is not None else None
+    headers = {"Authorization": f"Bearer {api_key}", "Accept": "application/json", "User-Agent": CREATOMATE_USER_AGENT}
+    if body is not None:
+        headers["Content-Type"] = "application/json"
+    request = urllib.request.Request(url, data=data, headers=headers, method=method)
+    try:
+        with urllib.request.urlopen(request, timeout=30) as response:
+            text = response.read().decode("utf-8", errors="replace")
+            return response.status, text, json.loads(text) if text.strip() else {}
+    except urllib.error.HTTPError as exc:
+        text = exc.read().decode("utf-8", errors="replace")
+        return exc.code, text, json.loads(text) if text.strip().startswith(("{", "[")) else {"error": text}
+
+
 def _configured_template_ids() -> dict[str, str]:
     configured = {}
     fallback = os.environ.get("CREATOMATE_TEMPLATE_ID", "").strip()
+    if fallback and os.environ.get("CREATOMATE_ALLOW_SINGLE_TEMPLATE", "true").lower() == "true":
+        return {"CREATOMATE_TEMPLATE_ID": fallback}
     for env_name in CREATOMATE_REQUIRED_TEMPLATE_ENVS:
         value = os.environ.get(env_name, "").strip() or fallback
         if value:
@@ -428,7 +475,8 @@ def _template_ids_from_response(body: Any) -> set[str]:
 def creatomate_connection_diagnostic() -> dict[str, Any]:
     api_key = _clean_env("CREATOMATE_API_KEY")
     configured_templates = _configured_template_ids()
-    missing_envs = [env for env in CREATOMATE_REQUIRED_TEMPLATE_ENVS if env not in configured_templates]
+    single_template_mode = bool(os.environ.get("CREATOMATE_TEMPLATE_ID")) and os.environ.get("CREATOMATE_ALLOW_SINGLE_TEMPLATE", "true").lower() == "true"
+    missing_envs = [] if single_template_mode else [env for env in CREATOMATE_REQUIRED_TEMPLATE_ENVS if env not in configured_templates]
     report: dict[str, Any] = {
         "api_key_present": bool(api_key),
         "authentication_status": "not_checked",
@@ -445,29 +493,27 @@ def creatomate_connection_diagnostic() -> dict[str, Any]:
         report["blocking_issues"].append("CREATOMATE_API_KEY is missing, blank, or wrapped in quotes.")
         write_json(OUTPUT / "creatomate_connection_report.json", report)
         return report
-    request = urllib.request.Request(CREATOMATE_TEMPLATES_ENDPOINT, headers={"Authorization": f"Bearer {api_key}", "Accept": "application/json"})
     try:
-        with urllib.request.urlopen(request, timeout=30) as response:
-            body_text = response.read().decode("utf-8", errors="replace")
-            status = response.status
-    except urllib.error.HTTPError as exc:
-        body_text = exc.read().decode("utf-8", errors="replace")
-        status = exc.code
-    except urllib.error.URLError as exc:
+        status, body_text, body = _creatomate_api_json("GET", CREATOMATE_TEMPLATES_ENDPOINT, api_key)
+    except (urllib.error.URLError, RuntimeError) as exc:
         body_text = str(exc)
         status = None
+        body = []
     report["http_status"] = status
     report["response_body_safe_excerpt"] = _safe_excerpt(body_text)
     if status != 200:
         report["authentication_status"] = "failed"
         report["project_access_status"] = "blocked"
+        if status == 403 and "cloudflare" in body_text.lower() and single_template_mode:
+            report["authentication_status"] = "template_listing_blocked"
+            report["project_access_status"] = "render_endpoint_will_validate_template"
+            report["approval_status"] = "approved"
+            report["warnings"] = ["Template listing endpoint returned 403, but single-template render mode is enabled; render submission will validate access."]
+            write_json(OUTPUT / "creatomate_connection_report.json", report)
+            return report
         report["blocking_issues"].append(f"Creatomate template listing failed with HTTP status {status}.")
         write_json(OUTPUT / "creatomate_connection_report.json", report)
         return report
-    try:
-        body = json.loads(body_text)
-    except json.JSONDecodeError:
-        body = []
     accessible_ids = _template_ids_from_response(body)
     found, missing = [], list(missing_envs)
     for env_name, template_id in configured_templates.items():
@@ -591,7 +637,20 @@ def _visual_elements_for_template(key: str) -> list[str]:
 
 
 def _creatomate_modifications(variables: dict[str, str]) -> dict[str, str]:
+    if os.environ.get("CREATOMATE_TEMPLATE_MODE", "").lower() in {"quick_promo", "single_video_text"}:
+        return {
+            os.environ.get("CREATOMATE_FIELD_VIDEO_SOURCE", "Video.source"): os.environ.get("CREATOMATE_VIDEO_SOURCE", "https://creatomate.com/files/assets/7347c3b7-e1a8-4439-96f1-f3dfc95c3d28"),
+            os.environ.get("CREATOMATE_FIELD_TEXT_1", "Text-1.text"): variables["match_title"],
+            os.environ.get("CREATOMATE_FIELD_TEXT_2", "Text-2.text"): _creatomate_rich_text(variables),
+        }
     return {f"{key}.text": value for key, value in variables.items()}
+
+
+def _creatomate_rich_text(variables: dict[str, str]) -> str:
+    return "\n".join([
+        variables["central_question"],
+        f"[size 75%]{variables['main_insight'][:180]}[/size]",
+    ])
 
 
 def _legacy_scene_modifications(package: dict[str, Any], variables: dict[str, str]) -> list[dict[str, Any]]:
@@ -672,7 +731,7 @@ def _creatomate_status_from_body(body: Any) -> dict[str, Any]:
     if not isinstance(item, dict):
         return {"status": "failed", "error": "Unexpected Creatomate status response."}
     raw_status = str(item.get("status") or item.get("state") or "rendering").lower()
-    status_map = {"done": "succeeded", "completed": "succeeded", "success": "succeeded", "rendered": "succeeded", "queued": "submitted", "pending": "submitted", "processing": "rendering"}
+    status_map = {"done": "succeeded", "completed": "succeeded", "success": "succeeded", "rendered": "succeeded", "queued": "submitted", "pending": "submitted", "planned": "rendering", "processing": "rendering"}
     status = status_map.get(raw_status, raw_status)
     output_url = item.get("url") or item.get("output_url") or item.get("outputUrl") or item.get("mp4_url")
     if not output_url and isinstance(item.get("output"), dict):
@@ -683,8 +742,12 @@ def _creatomate_status_from_body(body: Any) -> dict[str, Any]:
 
 def _creatomate_http_error(exc: urllib.error.HTTPError, payload: dict[str, Any]) -> dict[str, Any]:
     detail = exc.read().decode("utf-8", errors="replace")
+    return _creatomate_http_error_from_text(exc.code, detail, payload)
+
+
+def _creatomate_http_error_from_text(status_code: int, detail: str, payload: dict[str, Any]) -> dict[str, Any]:
     return {
-        "code": "CREATOMATE_ACCESS_FORBIDDEN" if exc.code == 403 else "CREATOMATE_HTTP_ERROR",
+        "code": "CREATOMATE_ACCESS_FORBIDDEN" if status_code == 403 else "CREATOMATE_HTTP_ERROR",
         "probable_causes": [
             "invalid API key",
             "API key from a different Creatomate project",
@@ -692,8 +755,8 @@ def _creatomate_http_error(exc: urllib.error.HTTPError, payload: dict[str, Any])
             "Authorization header missing or malformed",
             "request sent to the wrong Creatomate endpoint",
             "account/project access restriction",
-        ] if exc.code == 403 else [],
-        "http_status": exc.code,
+        ] if status_code == 403 else [],
+        "http_status": status_code,
         "safe_response_excerpt": _safe_excerpt(detail),
         "request_endpoint": CREATOMATE_RENDERS_ENDPOINT,
         "template_id": payload.get("template_id"),

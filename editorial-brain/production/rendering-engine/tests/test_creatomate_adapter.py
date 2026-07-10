@@ -67,6 +67,18 @@ class CreatomateAdapterTests(unittest.TestCase):
         self.assertIn("France", text)
         self.assertIn("Morocco", text)
 
+    def test_quick_promo_template_uses_dynamic_fields(self):
+        env = {
+            "CREATOMATE_TEMPLATE_MODE": "quick_promo",
+            "CREATOMATE_VIDEO_SOURCE": "https://example.com/video.mp4",
+        }
+        with patch.dict(os.environ, env, clear=False):
+            payload = CreatomateAdapter().build_render_payload(package())
+        modifications = payload["creatomate_modifications"]
+        self.assertEqual(modifications["Video.source"], "https://example.com/video.mp4")
+        self.assertEqual(modifications["Text-1.text"], "France vs Morocco")
+        self.assertIn("Can Morocco break France's control?", modifications["Text-2.text"])
+
     def test_connection_diagnostic_missing_key_fails(self):
         with patch.dict(os.environ, {}, clear=True):
             report = creatomate_connection_diagnostic()
