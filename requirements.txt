@@ -1,2 +1,1 @@
-Pillow>=10,<13
-imageio-ffmpeg>=0.5,<0.7
+# Clean MVP uses Python standard library only.

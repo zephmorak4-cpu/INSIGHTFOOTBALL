@@ -6,7 +6,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-TEST_ROOTS = ("editorial-brain", "distribution", "analytics", "scripts", "simple_mvp")
+TEST_ROOTS = ("tests",)
 
 
 def discover_tests() -> list[str]:
@@ -21,12 +21,10 @@ def discover_tests() -> list[str]:
 def main() -> int:
     tests = discover_tests()
     if not tests:
-        print("No tests discovered.", file=sys.stderr)
+        print("No active MVP tests discovered.", file=sys.stderr)
         return 1
-
-    command = [sys.executable, "-m", "unittest", *tests]
-    print(f"Running {len(tests)} test files...")
-    return subprocess.call(command, cwd=ROOT)
+    print(f"Running {len(tests)} active MVP test files...")
+    return subprocess.call([sys.executable, "-m", "unittest", *tests], cwd=ROOT)
 
 
 if __name__ == "__main__":

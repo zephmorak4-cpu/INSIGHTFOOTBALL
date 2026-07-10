@@ -1,92 +1,39 @@
 services:
-  - type: cron
-    name: insight-football-daily-production
+  - type: worker
+    name: insight-football-clean-mvp
     runtime: python
     repo: https://github.com/zephmorak4-cpu/INSIGHTFOOTBALL.git
     branch: main
     plan: starter
     region: oregon
-    schedule: "0 9 * * *"
     buildCommand: "python -m pip install --upgrade pip && python -m pip install -r requirements.txt"
-    startCommand: "python scripts/render_daily_entrypoint.py"
+    startCommand: "python -m app.telegram.polling"
     envVars:
-      - key: INSIGHT_FOOTBALL_ENV
+      - key: APP_ENV
         value: production
-      - key: INSIGHT_FOOTBALL_DRY_RUN
-        value: "false"
-      - key: INSIGHT_FOOTBALL_REQUIRE_HUMAN_APPROVAL
-        value: "true"
-      - key: PRODUCTION_REQUIRES_EDITOR_SELECTION
-        value: "true"
-      - key: ALLOW_AUTOMATIC_MATCH_SELECTION_IN_PRODUCTION
-        value: "false"
-      - key: ALLOW_MATCH_SELECTOR_FALLBACK
-        value: "false"
-      - key: INSIGHT_FOOTBALL_RENDERER_PROFILE
-        value: creatomate
-      - key: INSIGHT_FOOTBALL_RENDER_AUDIO_MODE
-        value: silent
-      - key: DAILY_INPUT_PATH
-        value: disabled-by-simple-mvp
-      - key: MANUAL_MATCH_INPUT_PATH
-        value: simple_mvp/manual_match_input.json
-      - key: INSIGHT_FOOTBALL_RUN_TESTS_ON_RENDER
-        value: "false"
-      - key: FFMPEG_BINARY_PATH
-        sync: false
+      - key: LOG_LEVEL
+        value: INFO
       - key: OPENAI_API_KEY
+        sync: false
+      - key: TELEGRAM_BOT_TOKEN
+        sync: false
+      - key: TELEGRAM_CHAT_ID
+        sync: false
+      - key: TELEGRAM_APPROVAL_CHAT_ID
+        sync: false
+      - key: FOOTBALL_API_KEY
         sync: false
       - key: APP_FOOTBALL_API_KEY
         sync: false
       - key: API_FOOTBALL_API_KEY
         sync: false
       - key: FOOTBALL_API_BASE_URL
-        sync: false
+        value: https://v3.football.api-sports.io
       - key: NEWS_API_KEY
         sync: false
       - key: GNEWS_API_KEY
         sync: false
-      - key: TELEGRAM_BOT_TOKEN
+      - key: WEATHER_API_KEY
         sync: false
-      - key: TELEGRAM_APPROVAL_CHAT_ID
-        sync: false
-      - key: TELEGRAM_CHANNEL_ID
-        sync: false
-      - key: CREATOMATE_API_KEY
-        sync: false
-      - key: CREATOMATE_TEMPLATE_ID
-        sync: false
-      - key: CREATOMATE_MASTER_TEMPLATE_ID
-        sync: false
-      - key: INSIGHT_FOOTBALL_LOGO_URL
-        sync: false
-      - key: CREATOMATE_TEMPLATE_MODE
-        value: quick_promo
-      - key: CREATOMATE_VIDEO_SOURCE
-        value: https://creatomate.com/files/assets/7347c3b7-e1a8-4439-96f1-f3dfc95c3d28
-      - key: CREATOMATE_ALLOW_SINGLE_TEMPLATE
-        value: "true"
-      - key: CREATOMATE_POLL_ATTEMPTS
-        value: "12"
-      - key: CREATOMATE_POLL_SECONDS
-        value: "5"
-      - key: CREATOMATE_TEMPLATE_OPENING_STING
-        sync: false
-      - key: CREATOMATE_TEMPLATE_MATCH_INTRO
-        sync: false
-      - key: CREATOMATE_TEMPLATE_CENTRAL_QUESTION
-        sync: false
-      - key: CREATOMATE_TEMPLATE_EVIDENCE_CARD
-        sync: false
-      - key: CREATOMATE_TEMPLATE_TACTICAL_BOARD
-        sync: false
-      - key: CREATOMATE_TEMPLATE_TEAM_COMPARISON
-        sync: false
-      - key: CREATOMATE_TEMPLATE_DASHBOARD
-        sync: false
-      - key: CREATOMATE_TEMPLATE_CTA
-        sync: false
-      - key: CREATOMATE_TEMPLATE_CLOSING_STING
-        sync: false
-      - key: EDITOR_SELECTION_PATH
-        value: disabled-by-simple-mvp
+      - key: DATA_DIR
+        value: data
