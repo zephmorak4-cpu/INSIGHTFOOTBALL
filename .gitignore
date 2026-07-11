@@ -21,6 +21,7 @@ env/
 # Logs and temporary files
 *.log
 logs/
+data/
 tmp/
 temp/
 *.tmp

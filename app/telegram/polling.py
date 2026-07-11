@@ -20,13 +20,21 @@ def _api(token: str, method: str, params: dict[str, object]) -> dict[str, object
         return json.loads(response.read().decode("utf-8", errors="replace"))
 
 
+def _initial_offset(token: str) -> int:
+    data = _api(token, "getUpdates", {"timeout": 1})
+    updates = data.get("result", [])
+    if not updates:
+        return 0
+    return max(int(update.get("update_id", 0)) for update in updates) + 1
+
+
 def main() -> int:
     settings = load_settings()
     if not settings.telegram_bot_token:
         print("TELEGRAM_BOT_TOKEN is not configured.")
         return 1
     bot = TelegramBot(settings)
-    offset = 0
+    offset = _initial_offset(settings.telegram_bot_token)
     pending_match_by_chat: dict[str, str] = {}
     print("INSIGHT FOOTBALL Telegram polling started.")
     while True:
