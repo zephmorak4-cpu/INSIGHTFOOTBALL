@@ -32,3 +32,8 @@ def parse_match_message(text: str, run_id: str = "") -> MatchRequest:
     if not match or not competition:
         raise AppError("INVALID_INPUT", "message_parser", FORMAT_HINT, False, run_id)
     return MatchRequest(home_team=match.group(1).strip(), away_team=match.group(2).strip(), competition=competition.strip(), raw_text=text)
+
+
+def looks_like_match_only(text: str) -> bool:
+    cleaned = text.strip()
+    return bool(re.match(r"^(.+?)\s+(?:vs|v|versus)\s+(.+)$", cleaned, flags=re.I)) and "\n" not in cleaned and "|" not in cleaned

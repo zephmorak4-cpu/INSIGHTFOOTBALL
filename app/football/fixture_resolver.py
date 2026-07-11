@@ -45,6 +45,11 @@ def _api_get(url: str, settings: Settings) -> dict[str, Any]:
 
 def _norm(value: str) -> str:
     text = value.lower().replace("-", " ").strip()
+    for noise in ["quarter final", "quarter-final", "semifinal", "semi final", "final", "round of 16", "group stage"]:
+        text = text.replace(noise, "").strip()
+    text = " ".join(text.split())
+    if text == "world cup":
+        text = "fifa world cup"
     return ALIASES.get(text, text)
 
 
@@ -56,7 +61,8 @@ def _matches(item: dict[str, Any], request: MatchRequest) -> bool:
     requested = {_norm(request.home_team), _norm(request.away_team)}
     actual = {home, away}
     competition = _norm(league.get("name", ""))
-    return requested == actual and _norm(request.competition) in competition
+    requested_competition = _norm(request.competition)
+    return requested == actual and (requested_competition in competition or competition in requested_competition)
 
 
 def _identity(item: dict[str, Any]) -> str:
